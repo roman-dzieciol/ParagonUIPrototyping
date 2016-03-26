@@ -158,4 +158,7 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Card)
 		FString Unknown;
+
+	friend bool operator==(const FCardData& LHS, const FCardData& RHS);
 };
+
