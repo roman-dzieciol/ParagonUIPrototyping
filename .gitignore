@@ -1,0 +1,14 @@
+Binaries/
+Build/
+Intermediate/
+Saved/Autosaves/Game/CardIcon_Auto2.uasset
+Saved/Autosaves/
+Saved/Backup/
+Saved/Logs/
+Saved/Config/WorldState/
+Saved/AutoScreenshot.png
+.vs/DeckBuilderDesktop/v14/.suo
+Content.7z
+DeckBuilderDesktop.VC.VC.opendb
+DeckBuilderDesktop.VC.db
+DeckBuilderDesktop.sln
