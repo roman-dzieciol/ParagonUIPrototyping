@@ -12,11 +12,14 @@
 UCLASS(Blueprintable, BlueprintType)
 class DECKBUILDERDESKTOP_API UCardsDeck : public UObject
 {
-	GENERATED_BODY()
+	GENERATED_UCLASS_BODY()
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Deck)
 	TArray<FCardData> Cards;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Deck)
+	int32 MaxCardCount;
 	
 	UFUNCTION(BlueprintCallable, Category = Deck)
 	void AddCard(FCardData CardData);

@@ -3,6 +3,11 @@
 #include "DeckBuilderDesktop.h"
 #include "CardsDeck.h"
 
+UCardsDeck::UCardsDeck(class FObjectInitializer const & ObjectInitializer)
+	: Super(ObjectInitializer)
+{
+	MaxCardCount = 40;
+}
 
 void UCardsDeck::AddCard(FCardData CardData)
 {
