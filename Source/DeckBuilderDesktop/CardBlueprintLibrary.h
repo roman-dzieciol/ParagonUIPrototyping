@@ -13,8 +13,13 @@ class UCardBlueprintLibrary : public UBlueprintFunctionLibrary
 	GENERATED_BODY()
 
 public:
-		/** Starts an analytics session without any custom attributes specified */
 	UFUNCTION(BlueprintCallable, Category = "CardStat Query")
-		static TArray<FCardStat> GetValidCardStats(FCardData CardData);
+	static TArray<FCardStat> GetValidCardStats(FCardData CardData);
+
+	UFUNCTION(BlueprintCallable, Category = "CardData")
+	static TArray<FCardData> CardsDataContainingProperty(TArray<FCardData> CardsData, FName PropertyName);
+
+	UFUNCTION(BlueprintCallable, Category = "CardData")
+	static TArray<FCardData> CardsDataWithCardType(TArray<FCardData> CardsData, FString CardType);
 };
 
