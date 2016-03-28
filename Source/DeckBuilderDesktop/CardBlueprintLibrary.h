@@ -21,5 +21,8 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "CardData")
 	static TArray<FCardData> CardsDataWithCardType(TArray<FCardData> CardsData, FString CardType);
+
+	UFUNCTION(BlueprintCallable, Category = "CardData")
+	static TArray<FCardData> CardsDataWithCardNameSubstring(TArray<FCardData> CardsData, FString Substring);
 };
 

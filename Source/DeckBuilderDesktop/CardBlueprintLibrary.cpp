@@ -72,7 +72,30 @@ TArray<FCardData> UCardBlueprintLibrary::CardsDataContainingProperty(TArray<FCar
 
 TArray<FCardData> UCardBlueprintLibrary::CardsDataWithCardType(TArray<FCardData> CardsData, FString CardType)
 {
-	return CardsData.FilterByPredicate([=](const FCardData& CardData) {
-		return CardData.Type == CardType;
-	});
+	if (CardType.Len() > 0)
+	{
+		return CardsData.FilterByPredicate([=](const FCardData& CardData)
+		{
+			return CardData.Type == CardType;
+		});
+	}
+	else
+	{
+		return CardsData;
+	}
+}
+
+TArray<FCardData> UCardBlueprintLibrary::CardsDataWithCardNameSubstring(TArray<FCardData> CardsData, FString Substring)
+{
+	if (Substring.Len() > 0)
+	{
+		return CardsData.FilterByPredicate([=](const FCardData& CardData)
+		{
+			return CardData.CardName.Contains(Substring);
+		});
+	}
+	else
+	{
+		return CardsData;
+	}
 }
