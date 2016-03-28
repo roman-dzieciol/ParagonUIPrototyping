@@ -99,3 +99,26 @@ TArray<FCardData> UCardBlueprintLibrary::CardsDataWithCardNameSubstring(TArray<F
 		return CardsData;
 	}
 }
+
+TArray<FStatData> UCardBlueprintLibrary::FilterableStatsData(TArray<FStatData> StatsData)
+{
+	TArray<FStatData> FilterableStats = StatsData.FilterByPredicate([=](const FStatData& StatData) {
+		return !StatData.FilterGroup.IsEmpty();
+	});
+
+
+	FilterableStats.StableSort([=](const FStatData& LHS, const FStatData& RHS) {
+		return LHS.FilterGroupIndex < RHS.FilterGroupIndex;
+	});
+
+	FilterableStats.StableSort([=](const FStatData& LHS, const FStatData& RHS) {
+		return LHS.FilterGroup.Compare(RHS.FilterGroup) < 0;
+	});
+
+	return FilterableStats;
+}
+
+FName UCardBlueprintLibrary::MakeValidTableRowName(const FString& InString)
+{
+	return DataTableUtils::MakeValidName(InString);
+}

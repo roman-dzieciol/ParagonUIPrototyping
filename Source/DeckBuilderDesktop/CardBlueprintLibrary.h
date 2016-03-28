@@ -5,6 +5,7 @@
 
 #include "FCardStat.h"
 #include "FCardData.h"
+#include "FStatData.h"
 #include "CardBlueprintLibrary.generated.h"
 
 UCLASS()
@@ -24,5 +25,11 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "CardData")
 	static TArray<FCardData> CardsDataWithCardNameSubstring(TArray<FCardData> CardsData, FString Substring);
+
+	UFUNCTION(BlueprintCallable, Category = "StatData")
+	static TArray<FStatData> FilterableStatsData(TArray<FStatData> StatsData);
+
+	UFUNCTION(BlueprintCallable, Category = "TableRow")
+	static FName MakeValidTableRowName(const FString& InString);
 };
 
