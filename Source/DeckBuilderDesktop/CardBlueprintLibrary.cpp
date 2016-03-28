@@ -70,6 +70,36 @@ TArray<FCardData> UCardBlueprintLibrary::CardsDataContainingProperty(TArray<FCar
 	});
 }
 
+
+TArray<FCardData> UCardBlueprintLibrary::CardsDataContainingPropertyValue(TArray<FCardData> CardsData, FName PropertyName, FString PropertyValue)
+{
+	return CardsData.FilterByPredicate([=](const FCardData& CardData) {
+		UProperty* Property = CardData.StaticStruct()->FindPropertyByName(PropertyName);
+		if (Property)
+		{
+			if (Property->IsA(UFloatProperty::StaticClass()))
+			{
+				UFloatProperty *NumericProp = CastChecked<UFloatProperty>(Property);
+				float value = NumericProp->GetPropertyValue_InContainer(&CardData);
+				if (value != -0.0 && value != 0.0)
+				{
+					return PropertyValue.Equals(FString::Printf(TEXT("%f"), value));
+				}
+			}
+			else if (Property->IsA(UStrProperty::StaticClass()))
+			{
+				UStrProperty *StrProp = CastChecked<UStrProperty>(Property);
+				FString Value = StrProp->GetPropertyValue_InContainer(&CardData);
+				if (Value.Len() > 0)
+				{
+					return PropertyValue.Equals(Value);
+				}
+			}
+		}
+		return false;
+	});
+}
+
 TArray<FCardData> UCardBlueprintLibrary::CardsDataWithCardType(TArray<FCardData> CardsData, FString CardType)
 {
 	if (CardType.Len() > 0)

@@ -21,6 +21,9 @@ public:
 	static TArray<FCardData> CardsDataContainingProperty(TArray<FCardData> CardsData, FName PropertyName);
 
 	UFUNCTION(BlueprintCallable, Category = "CardData")
+	static TArray<FCardData> CardsDataContainingPropertyValue(TArray<FCardData> CardsData, FName PropertyName, FString PropertyValue);
+
+	UFUNCTION(BlueprintCallable, Category = "CardData")
 	static TArray<FCardData> CardsDataWithCardType(TArray<FCardData> CardsData, FString CardType);
 
 	UFUNCTION(BlueprintCallable, Category = "CardData")
