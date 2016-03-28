@@ -5,6 +5,7 @@
 
 #include "FCardStat.h"
 #include "FCardData.h"
+#include "CardsDataFilter.h"
 #include "FStatData.h"
 #include "CardBlueprintLibrary.generated.h"
 
