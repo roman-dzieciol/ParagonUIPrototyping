@@ -17,6 +17,7 @@ TArray<FCardData> UCardsDataFilterByPropertyValue::FilteredCardsData(TArray<FCar
 {
 	if (IsActive())
 	{
+		float ValueFloat = FCString::Atof(*ValueString);
 		return CardsData.FilterByPredicate([=](const FCardData& CardData) {
 			UProperty* Property = CardData.StaticStruct()->FindPropertyByName(*PropertyString);
 			if (Property)
@@ -27,7 +28,7 @@ TArray<FCardData> UCardsDataFilterByPropertyValue::FilteredCardsData(TArray<FCar
 					float value = NumericProp->GetPropertyValue_InContainer(&CardData);
 					if (value != -0.0 && value != 0.0)
 					{
-						return ValueString.Equals(FString::Printf(TEXT("%f"), value));
+						return value == ValueFloat;
 					}
 				}
 				else if (Property->IsA(UStrProperty::StaticClass()))
