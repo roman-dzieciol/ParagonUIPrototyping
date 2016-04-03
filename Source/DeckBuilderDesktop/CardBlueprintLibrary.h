@@ -35,5 +35,8 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "TableRow")
 	static FName MakeValidTableRowName(const FString& InString);
+
+	UFUNCTION(BlueprintCallable, Category = "Card Art")
+	static UTexture2D* LoadCardTextureNamed(const FString& CardName);
 };
 
