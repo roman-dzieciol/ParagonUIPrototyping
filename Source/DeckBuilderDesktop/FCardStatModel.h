@@ -22,4 +22,6 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card Stat")
 		UTexture2D* Icon;
+
+	friend bool operator==(const FCardStatModel& LHS, const FCardStatModel& RHS);
 };
