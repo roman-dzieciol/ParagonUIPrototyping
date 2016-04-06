@@ -158,3 +158,4 @@ UTexture2D* UCardBlueprintLibrary::LoadCardTextureNamed(const FString& CardName)
 	FString TexturePath = FString::Printf(TEXT("/Game/Art/Cards/T_%s.T_%s"), *CardName, *CardName);
 	return LoadObject<UTexture2D>(NULL, *TexturePath, NULL, LOAD_None, NULL);
 }
+

@@ -3,7 +3,7 @@
 #pragma once
 
 #include "Object.h"
-#include "FCardData.h"
+#include "DataTables/FCardData.h"
 #include "CardsDataFilter.generated.h"
 
 /**

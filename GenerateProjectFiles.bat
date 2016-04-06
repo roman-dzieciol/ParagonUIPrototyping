@@ -1,0 +1,1 @@
+"U:\Epic Games\4.11\Engine\Binaries\DotNET\UnrealBuildTool.exe" -projectfiles -project="U:\_Projects\DeckBuilderDesktop 4.11\DeckBuilderDesktop.uproject" -game -engine -progress -2015

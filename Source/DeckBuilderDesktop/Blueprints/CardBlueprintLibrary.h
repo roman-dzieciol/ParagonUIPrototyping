@@ -3,11 +3,13 @@
 #pragma once
 #pragma once
 
-#include "FCardStat.h"
-#include "FCardData.h"
-#include "CardsDataFilter.h"
-#include "FStatData.h"
+#include "DataTables/FCardStat.h"
+#include "DataTables/FCardData.h"
+#include "Filters/CardsDataFilter.h"
+#include "DataTables/FStatData.h"
+#include "Models/FCardModel.h"
 #include "CardBlueprintLibrary.generated.h"
+
 
 UCLASS()
 class UCardBlueprintLibrary : public UBlueprintFunctionLibrary
@@ -38,5 +40,6 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Card Art")
 	static UTexture2D* LoadCardTextureNamed(const FString& CardName);
+
 };
 
