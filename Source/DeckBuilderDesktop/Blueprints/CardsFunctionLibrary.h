@@ -5,8 +5,8 @@
 #pragma once
 
 #include "DataTables/FCardData.h"
+#include "Engine/DataTable.h"
 #include "Models/CardModel.h"
-#include "Models/CardStatModel.h"
 #include "CardsFunctionLibrary.generated.h"
 
 
@@ -18,9 +18,6 @@ class UCardsFunctionLibrary : public UBlueprintFunctionLibrary
 public:
 
 	UFUNCTION(BlueprintCallable, Category = "Card Model")
-	static TArray<UCardStatModel*> ConstructExistingCardStatModelsFromTableData(const FCardData& CardData);
-
-	UFUNCTION(BlueprintCallable, Category = "Card Model")
-	static UCardModel* ConstructCardModelFromTableData(const FCardData& CardData);
+	static UCardModel* ConstructCardModelFromCardData(const FCardData& CardData, UDataTable* StatDataTable);
 };
 

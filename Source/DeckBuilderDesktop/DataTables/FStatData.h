@@ -23,7 +23,7 @@ public:
 		int32 FilterGroupIndex;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Card)
-		FString StatType;
+		FString BonusType;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Card)
 		UTexture2D* Icon;

@@ -2,6 +2,8 @@
 
 #include "UObject.h"
 #include "Engine/Texture2D.h"
+#include "Engine/DataTable.h"
+#include "DataTables/FCardData.h"
 #include "CardStatModel.h"
 #include "CardModel.generated.h"
 
@@ -27,7 +29,12 @@ public:
 		FText Rarity;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card Model")
-		TArray<UCardStatModel*> Stats;
+		TArray<UCardStatModel*> BaseStats;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card Model")
+		TArray<UCardStatModel*> MaxedStats;
+
+	static UCardModel* ConstructFromCardData(const FCardData& CardData, UDataTable* StatDataTable);
 
 	friend bool operator==(const UCardModel& LHS, const UCardModel& RHS);
 };
