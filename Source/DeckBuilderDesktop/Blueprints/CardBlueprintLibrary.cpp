@@ -16,7 +16,7 @@ TArray<FCardStat> UCardBlueprintLibrary::GetValidCardStats(FCardData CardData)
 		{
 			UFloatProperty *NumericProp = CastChecked<UFloatProperty>(Property);
 			float value = NumericProp->GetPropertyValue_InContainer(&CardData);
-			if (value != -0.0 && value != 0.0)
+			if (value != 0.0)
 			{
 				FCardStat stat;
 				stat.Type = NumericProp->GetFName();
@@ -158,4 +158,3 @@ UTexture2D* UCardBlueprintLibrary::LoadCardTextureNamed(const FString& CardName)
 	FString TexturePath = FString::Printf(TEXT("/Game/Art/Cards/T_%s.T_%s"), *CardName, *CardName);
 	return LoadObject<UTexture2D>(NULL, *TexturePath, NULL, LOAD_None, NULL);
 }
-

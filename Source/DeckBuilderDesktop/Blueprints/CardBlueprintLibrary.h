@@ -7,7 +7,7 @@
 #include "DataTables/FCardData.h"
 #include "Filters/CardsDataFilter.h"
 #include "DataTables/FStatData.h"
-#include "Models/FCardModel.h"
+#include "Models/CardModel.h"
 #include "CardBlueprintLibrary.generated.h"
 
 
@@ -40,6 +40,5 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Card Art")
 	static UTexture2D* LoadCardTextureNamed(const FString& CardName);
-
 };
 
