@@ -23,6 +23,12 @@ public:
 		int32 FilterGroupIndex;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Card)
+		FString StatType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Card)
+		UTexture2D* Icon;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Card)
 		FString Reserved;
 
 	friend bool operator==(const FStatData& LHS, const FStatData& RHS);
