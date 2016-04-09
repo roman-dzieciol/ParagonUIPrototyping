@@ -18,7 +18,7 @@ bool operator == (const UCardStatModel& LHS, const UCardStatModel& RHS)
 
 UCardStatModel* UCardStatModel::ConstructWithName(const FName& StatName, const FText& Value, const FStatData& StatData)
 {
-	auto StatModel = NewObject<UCardStatModel>(GetTransientPackage(), StatName);
+	auto StatModel = NewObject<UCardStatModel>(GetTransientPackage(), NAME_None);
 	StatModel->Type = FText::FromName(StatName);
 	StatModel->Value = Value;
 	StatModel->BonusType = FText::FromString(StatData.BonusType);
@@ -50,7 +50,7 @@ UCardStatModel* UCardStatModel::ConstructFromProperty(UProperty* Property, void 
 		}
 		else if (NumericProperty->IsInteger())
 		{
-			auto Value = NumericProperty->GetUnsignedIntPropertyValue(Property->ContainerPtrToValuePtr<float>(Container));
+			auto Value = NumericProperty->GetUnsignedIntPropertyValue(Property->ContainerPtrToValuePtr<int32>(Container));
 			if (Value != 0)
 			{
 				return UCardStatModel::ConstructWithName(Property->GetFName(), FText::FromString(FString::Printf(TEXT("%d"), Value)), StatData);

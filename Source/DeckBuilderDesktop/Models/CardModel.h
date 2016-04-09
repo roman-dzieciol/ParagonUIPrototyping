@@ -29,12 +29,17 @@ public:
 		FText Rarity;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card Model")
+		TArray<UCardStatModel*> AllStats;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card Model")
 		TArray<UCardStatModel*> BaseStats;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card Model")
 		TArray<UCardStatModel*> MaxedStats;
 
 	static UCardModel* ConstructFromCardData(const FCardData& CardData, UDataTable* StatDataTable);
+
+	UCardStatModel* GetStatByName(const FString& StatName) const;
 
 	friend bool operator==(const UCardModel& LHS, const UCardModel& RHS);
 };

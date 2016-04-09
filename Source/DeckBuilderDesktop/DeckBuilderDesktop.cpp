@@ -3,3 +3,5 @@
 #include "DeckBuilderDesktop.h"
 
 IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, DeckBuilderDesktop, "DeckBuilderDesktop" );
+
+DEFINE_LOG_CATEGORY(Deck);

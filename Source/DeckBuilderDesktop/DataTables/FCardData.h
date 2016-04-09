@@ -19,7 +19,7 @@ public:
 		FString CardName;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Card)
-		float Cost;
+		int32 Cost;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Card)
 		FString Type;

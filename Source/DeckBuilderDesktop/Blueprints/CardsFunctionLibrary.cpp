@@ -8,3 +8,8 @@ UCardModel* UCardsFunctionLibrary::ConstructCardModelFromCardData(const FCardDat
 {
 	return UCardModel::ConstructFromCardData(CardData, StatDataTable);
 }
+
+UCardListModel* UCardsFunctionLibrary::ConstructCardListFromCardDataTable(UDataTable* CardDataTable, UDataTable* StatDataTable)
+{
+	return UCardListModel::ConstructCardListFromCardDataTable(CardDataTable, StatDataTable);
+}

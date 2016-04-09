@@ -7,6 +7,7 @@
 #include "DataTables/FCardData.h"
 #include "Engine/DataTable.h"
 #include "Models/CardModel.h"
+#include "Models/CardListModel.h"
 #include "CardsFunctionLibrary.generated.h"
 
 
@@ -19,5 +20,8 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Card Model")
 	static UCardModel* ConstructCardModelFromCardData(const FCardData& CardData, UDataTable* StatDataTable);
+
+	UFUNCTION(BlueprintCallable, Category = "Card List")
+		static UCardListModel* ConstructCardListFromCardDataTable(UDataTable* CardDataTable, UDataTable* StatDataTable);
 };
 
