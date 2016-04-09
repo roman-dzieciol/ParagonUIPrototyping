@@ -3,13 +3,13 @@
 #pragma once
 
 #include "Filters/CardFilter.h"
-#include "CardFilterByStatContains.generated.h"
+#include "CardFilterByStat.generated.h"
 
 /**
  * 
  */
 UCLASS(Blueprintable, BlueprintType)
-class DECKBUILDERDESKTOP_API UCardFilterByStatContains : public UCardFilter
+class DECKBUILDERDESKTOP_API UCardFilterByStat : public UCardFilter
 {
 	GENERATED_UCLASS_BODY()
 

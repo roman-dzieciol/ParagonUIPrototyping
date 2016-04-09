@@ -4,7 +4,7 @@
 #include "Engine/DataTable.h"
 #include "Filters/CardFilter.h"
 #include "Filters/CardFilterGroup.h"
-#include "Filters/CardFilterByStatContains.h"
+#include "Filters/CardFilterByStat.h"
 #include "CardModel.h"
 #include "CardListModel.generated.h"
 
@@ -66,7 +66,7 @@ protected:
 	UCardFilterGroup* AffinityFilter;
 
 	UPROPERTY()
-		UCardFilterByStatContains* TextFilter;
+		UCardFilterByStat* TextFilter;
 
 	UPROPERTY()
 		UCardFilter* SlotFilter;

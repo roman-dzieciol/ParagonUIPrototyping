@@ -1,17 +1,17 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "DeckBuilderDesktop.h"
-#include "CardFilterByStatContains.h"
+#include "CardFilterByStat.h"
 
 
-UCardFilterByStatContains::UCardFilterByStatContains(class FObjectInitializer const & ObjectInitializer)
+UCardFilterByStat::UCardFilterByStat(class FObjectInitializer const & ObjectInitializer)
 	: Super(ObjectInitializer)
 {
-	static FName FNAME_CardFilterByStatContains_Generic(TEXT("StatContains"));
-	FilterName = FNAME_CardFilterByStatContains_Generic;
+	static FName FNAME_CardFilterByStat_Generic(TEXT("Stat"));
+	FilterName = FNAME_CardFilterByStat_Generic;
 }
 
-bool UCardFilterByStatContains::IsMatching(UCardModel* CardModel) const
+bool UCardFilterByStat::IsMatching(UCardModel* CardModel) const
 {
 	if (CardModel)
 	{
@@ -32,7 +32,7 @@ bool UCardFilterByStatContains::IsMatching(UCardModel* CardModel) const
 }
 
 
-FText UCardFilterByStatContains::GetDisplayName() const
+FText UCardFilterByStat::GetDisplayName() const
 {
 	if (!LocalizedName.IsEmpty())
 	{
@@ -49,7 +49,7 @@ FText UCardFilterByStatContains::GetDisplayName() const
 	}
 }
 
-FText UCardFilterByStatContains::GetDisplayValue() const
+FText UCardFilterByStat::GetDisplayValue() const
 {
 	if (!LocalizedValue.IsEmpty())
 	{
