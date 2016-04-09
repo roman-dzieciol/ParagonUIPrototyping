@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Engine/DataTable.h"
-#include "FCardStat.h"
 #include "FCardData.generated.h"
 
 /** Structure that defines a level up table entry */
