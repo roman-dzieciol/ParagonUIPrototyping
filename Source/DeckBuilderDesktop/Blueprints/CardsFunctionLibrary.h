@@ -23,5 +23,14 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Card List")
 		static UCardListModel* ConstructCardListFromCardDataTable(UDataTable* CardDataTable, UDataTable* StatDataTable);
+
+	UFUNCTION(BlueprintCallable, Category = "StatData")
+		static TArray<FStatData> FilterableStatsData(TArray<FStatData> StatsData);
+
+	UFUNCTION(BlueprintCallable, Category = "TableRow")
+		static FName MakeValidTableRowName(const FString& InString);
+
+	UFUNCTION(BlueprintCallable, Category = "Card Art")
+		static UTexture2D* LoadCardTextureNamed(const FString& CardName);
 };
 
