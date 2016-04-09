@@ -1,33 +1,51 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "DeckBuilderDesktop.h"
-#include "CardFilterOr.h"
+#include "CardFilterGroup.h"
 
-UCardFilterOr::UCardFilterOr(class FObjectInitializer const & ObjectInitializer)
+
+
+
+UCardFilterGroup::UCardFilterGroup(class FObjectInitializer const & ObjectInitializer)
 	: Super(ObjectInitializer)
 {
-	static FName FNAME_CardFilterOr_Generic(TEXT("Or"));
-	FilterName = FNAME_CardFilterOr_Generic;
+	static FName FNAME_CardFilterGroup_Generic(TEXT("Group"));
+	FilterName = FNAME_CardFilterGroup_Generic;
 }
 
-bool UCardFilterOr::IsMatching(UCardModel* CardModel) const
+bool UCardFilterGroup::IsMatching(UCardModel* CardModel) const
 {
-	if (Filters.Num() > 0)
-	{
+	switch (Matching) {
+	case ECardFilterGroupMatching::All: {
 		for (auto Filter : Filters)
 		{
-			if (Filter->IsMatching(CardModel))
+			if (!Filter->IsMatching(CardModel))
 			{
-				return true;
+				return false;
 			}
 		}
-		return false;
+		break;
+	}
+	case ECardFilterGroupMatching::Any: {
+		if (Filters.Num() > 0)
+		{
+			for (auto Filter : Filters)
+			{
+				if (Filter->IsMatching(CardModel))
+				{
+					return true;
+				}
+			}
+			return false;
+		}
+		break;
+	}
 	}
 	return true;
 }
 
 
-void UCardFilterOr::RemoveFiltersMatching(FName FilterName, FText DisplayName, FText DisplayValue)
+void UCardFilterGroup::RemoveFiltersMatching(FName FilterName, FText DisplayName, FText DisplayValue)
 {
 	Filters.RemoveAll([=](UCardFilter* Filter) {
 		if (!FilterName.IsEqual(NAME_None) && !Filter->FilterName.IsEqual(FilterName)) {
@@ -47,7 +65,7 @@ void UCardFilterOr::RemoveFiltersMatching(FName FilterName, FText DisplayName, F
 	}
 }
 
-void UCardFilterOr::RemoveFilter(UCardFilter* FilterToRemove)
+void UCardFilterGroup::RemoveFilter(UCardFilter* FilterToRemove)
 {
 	Filters.Remove(FilterToRemove);
 	for (auto Filter : Filters)
@@ -55,4 +73,3 @@ void UCardFilterOr::RemoveFilter(UCardFilter* FilterToRemove)
 		Filter->RemoveFilter(FilterToRemove);
 	}
 }
-

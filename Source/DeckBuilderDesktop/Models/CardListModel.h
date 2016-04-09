@@ -3,8 +3,7 @@
 #include "UObject.h"
 #include "Engine/DataTable.h"
 #include "Filters/CardFilter.h"
-#include "Filters/CardFilterOr.h"
-#include "Filters/CardFilterAnd.h"
+#include "Filters/CardFilterGroup.h"
 #include "Filters/CardFilterByStatContains.h"
 #include "CardModel.h"
 #include "CardListModel.generated.h"
@@ -20,7 +19,7 @@ public:
 	TArray<UCardModel*> AllCards;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card List")
-	UCardFilter* Filter;
+		UCardFilterGroup* Filter;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Card List")
 	TArray<bool> FilterStates;
@@ -58,13 +57,13 @@ public:
 protected:
 
 	UPROPERTY()
-	UCardFilterAnd* MainFilter;
+		UCardFilterGroup* MainFilter;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Card List")
-	UCardFilterAnd* UserFilter;
+		UCardFilterGroup* UserFilter;
 
 	UPROPERTY()
-	UCardFilterOr* AffinityFilter;
+	UCardFilterGroup* AffinityFilter;
 
 	UPROPERTY()
 		UCardFilterByStatContains* TextFilter;

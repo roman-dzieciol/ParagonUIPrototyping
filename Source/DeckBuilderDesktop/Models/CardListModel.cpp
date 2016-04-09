@@ -52,15 +52,18 @@ void UCardListModel::FilterCards()
 
 void UCardListModel::ConstructDefaultFilters()
 {
-	UCardFilterAnd* MainFilter = NewObject<UCardFilterAnd>(GetTransientPackage(), NAME_None);
+	UCardFilterGroup* MainFilter = NewObject<UCardFilterGroup>(GetTransientPackage(), NAME_None);
+	MainFilter->Matching = ECardFilterGroupMatching::All;
 	this->MainFilter = MainFilter;
 	Filter = MainFilter;
 
-	UCardFilterOr* AffinityFilter = NewObject<UCardFilterOr>(GetTransientPackage(), NAME_None);
+	UCardFilterGroup* AffinityFilter = NewObject<UCardFilterGroup>(GetTransientPackage(), NAME_None);
+	AffinityFilter->Matching = ECardFilterGroupMatching::Any;
 	this->AffinityFilter = AffinityFilter;
 	MainFilter->Filters.Add(AffinityFilter);
 
-	UCardFilterAnd* UserFilter = NewObject<UCardFilterAnd>(GetTransientPackage(), NAME_None);
+	UCardFilterGroup* UserFilter = NewObject<UCardFilterGroup>(GetTransientPackage(), NAME_None);
+	UserFilter->Matching = ECardFilterGroupMatching::All;
 	this->UserFilter = UserFilter;
 	MainFilter->Filters.Add(UserFilter);
 
@@ -161,7 +164,8 @@ UCardFilter* UCardListModel::FilterBySlot(const FString& SlotName)
 		PassiveFilter->StatContains = TEXT("Passive");
 		PassiveFilter->bEqualValue = true;
 
-		UCardFilterOr* SlotOrFilter = NewObject<UCardFilterOr>(GetTransientPackage(), NAME_None);
+		UCardFilterGroup* SlotOrFilter = NewObject<UCardFilterGroup>(GetTransientPackage(), NAME_None);
+		SlotOrFilter->Matching = ECardFilterGroupMatching::Any;
 		SlotOrFilter->FilterName = FName(TEXT("Slot"));
 		SlotOrFilter->LocalizedName = FText::FromString(TEXT("Slot"));
 		SlotOrFilter->LocalizedValue = FText::FromString(TEXT("Equipment"));
