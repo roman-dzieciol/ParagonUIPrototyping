@@ -179,6 +179,8 @@ UCardFilter* UCardListModel::FilterBySlot(const FString& SlotName)
 	{
 		UCardFilterByStat* SlotFilter = NewObject<UCardFilterByStat>(GetTransientPackage(), NAME_None);
 		SlotFilter->FilterName = FName(TEXT("Slot"));
+		SlotFilter->LocalizedName = FText::FromString(TEXT("Slot"));
+		SlotFilter->LocalizedValue = FText::FromString(SlotName);
 		SlotFilter->StatName = TEXT("Type");
 		SlotFilter->StatContains = SlotName;
 		SlotFilter->bEqualValue = true;

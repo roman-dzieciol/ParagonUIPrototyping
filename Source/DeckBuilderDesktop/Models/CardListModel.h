@@ -56,23 +56,20 @@ public:
 
 protected:
 
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Card List")
 		UCardFilterGroup* MainFilter;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Card List")
 		UCardFilterGroup* UserFilter;
 
-	UPROPERTY()
-	UCardFilterGroup* AffinityFilter;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Card List")
+		UCardFilterGroup* AffinityFilter;
 
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Card List")
 		UCardFilterByStat* TextFilter;
 
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Card List")
 		UCardFilter* SlotFilter;
-
-	UPROPERTY()
-	TArray<UCardFilter*> ActiveFilters;
 
 	void ConstructDefaultFilters();
 
