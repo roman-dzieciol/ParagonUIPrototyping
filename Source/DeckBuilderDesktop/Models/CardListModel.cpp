@@ -205,4 +205,9 @@ void UCardListModel::RemoveFilter(UCardFilter* FilterToRemove)
 	UserFilter->RemoveFilter(FilterToRemove);
 }
 
+TArray<UCardFilter*> UCardListModel::FindFiltersMatching(FName TypeName, FText DisplayName, FText DisplayValue)
+{
+	return UserFilter->FindFiltersMatching(TypeName, DisplayName, DisplayValue);
+}
+
 

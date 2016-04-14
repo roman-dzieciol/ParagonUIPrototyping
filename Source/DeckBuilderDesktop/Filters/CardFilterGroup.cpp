@@ -73,3 +73,13 @@ void UCardFilterGroup::RemoveFilter(UCardFilter* FilterToRemove)
 		Filter->RemoveFilter(FilterToRemove);
 	}
 }
+
+TArray<UCardFilter*> UCardFilterGroup::FindFiltersMatching(FName FilterName, FText DisplayName, FText DisplayValue) const
+{
+	TArray<UCardFilter*> Result;
+	for (auto Filter : Filters)
+	{
+		Result.Append(Filter->FindFiltersMatching(FilterName, DisplayName, DisplayValue));
+	}
+	return Result;
+}

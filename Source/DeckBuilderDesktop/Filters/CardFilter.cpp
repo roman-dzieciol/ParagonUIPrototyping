@@ -39,3 +39,9 @@ void UCardFilter::RemoveFilter(UCardFilter* FilterToRemove)
 {
 
 }
+
+TArray<UCardFilter*> UCardFilter::FindFiltersMatching(FName FilterName, FText DisplayName, FText DisplayValue) const
+{
+	return TArray<UCardFilter*>();
+}
+

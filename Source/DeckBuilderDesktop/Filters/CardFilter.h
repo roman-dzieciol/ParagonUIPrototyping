@@ -34,8 +34,12 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Card Filter")
 	virtual FText GetDisplayValue() const;
 
-	virtual void RemoveFiltersMatching(FName FilterName, FText DisplayName, FText DisplayValue);
+	UFUNCTION(BlueprintCallable, Category = "Card Filter")
+	virtual void RemoveFiltersMatching(FName MatchFilterName, FText MatchDisplayName, FText MatchDisplayValue);
 
+	UFUNCTION(BlueprintCallable, Category = "Card Filter")
 	virtual void RemoveFilter(UCardFilter* FilterToRemove);
-	
+
+	UFUNCTION(BlueprintCallable, Category = "Card Filter")
+	virtual TArray<UCardFilter*> FindFiltersMatching(FName MatchFilterName, FText MatchDisplayName, FText MatchDisplayValue) const;
 };

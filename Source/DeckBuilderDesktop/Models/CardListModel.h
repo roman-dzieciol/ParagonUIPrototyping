@@ -54,6 +54,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Card List")
 		void RemoveFilter(UCardFilter* FilterToRemove);
 
+	UFUNCTION(BlueprintCallable, Category = "Card List")
+		TArray<UCardFilter*> FindFiltersMatching(FName TypeName, FText DisplayName, FText DisplayValue);
+
 protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Card List")

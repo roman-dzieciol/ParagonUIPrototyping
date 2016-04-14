@@ -28,4 +28,5 @@ public:
 
 	virtual FText GetDisplayName() const override;
 	virtual FText GetDisplayValue() const override;
+	virtual TArray<UCardFilter*> FindFiltersMatching(FName MatchFilterName, FText MatchDisplayName, FText MatchDisplayValue) const override;
 };

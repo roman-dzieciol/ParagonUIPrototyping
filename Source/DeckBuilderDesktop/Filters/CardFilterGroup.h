@@ -34,6 +34,7 @@ public:
 	ECardFilterGroupMatching Matching;
 
 	virtual bool IsMatching(UCardModel* CardModel) const override;
-	virtual void RemoveFiltersMatching(FName FilterName, FText DisplayName, FText DisplayValue) override;
+	virtual void RemoveFiltersMatching(FName MatchFilterName, FText MatchDisplayName, FText MatchDisplayValue) override;
 	virtual void RemoveFilter(UCardFilter* FilterToRemove) override;
+	virtual TArray<UCardFilter*> FindFiltersMatching(FName MatchFilterName, FText MatchDisplayName, FText MatchDisplayValue) const override;
 };
