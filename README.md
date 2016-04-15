@@ -13,8 +13,9 @@ Current implementation tries to follow the design of Paragon's deck builder very
 
 ### TODO
 * Filtering by possible card upgrades.
+* Refactor C++ card filtering
 * Virtual card list, instead of a scrollbox with a lot of cards. This will improve performance a lot.
-* Experiment with MVVM & Presenter patterns, verify that this will not create reference cycles in blueprints. 
+* Experiment with MVVM & Presenter patterns, verify that this will not create reference cycles in blueprints.
 * Serialisation of deck card list.
 * Limiting number of cards.
 * Alert popups.
