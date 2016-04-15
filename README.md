@@ -21,3 +21,7 @@ Current implementation tries to follow the design of Paragon's deck builder very
 * Deck Stats.
 * Alternative Deck Builder prototypes.
 
+### Screenshots
+![](Docs/Screenshots/CardList.png)
+
+![](Docs/Screenshots/Filters.png)
