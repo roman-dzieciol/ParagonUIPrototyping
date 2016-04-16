@@ -21,7 +21,6 @@ bool operator == (const UCardModel& LHS, const UCardModel& RHS)
 
 UCardModel* UCardModel::ConstructFromCardData(const FCardData& CardData, UDataTable* StatDataTable)
 {
-	UE_LOG(Deck, Log, TEXT("ConstructFromCardData: %s %s"), *CardData.CardName, *CardData.StaticStruct()->GetFName().ToString());
 	auto CardModel = NewObject<UCardModel>(GetTransientPackage(), NAME_None);
 	CardModel->CardName = FText::FromString(CardData.CardName);
 	CardModel->Cost = CardData.Cost;
@@ -35,7 +34,6 @@ UCardModel* UCardModel::ConstructFromCardData(const FCardData& CardData, UDataTa
 	CardModel->MaxedStats = CardModel->AllStats.FilterByPredicate([=](const UCardStatModel* CardStatModel) {
 		return CardStatModel->BonusType.ToString().Equals(TEXT("Maxed"));
 	});
-	UE_LOG(Deck, Log, TEXT("ConstructFromCardData 2: %s"), *CardModel->CardName.ToString());
 	return CardModel;
 }
 

@@ -18,7 +18,6 @@ UCardListModel* UCardListModel::ConstructCardListFromCardDataTable(UDataTable* C
 
 	for (auto RowName: CardDataTable->GetRowNames())
 	{
-		UE_LOG(Deck, Log, TEXT("LoadCardsFromDataTable: %s"), *RowName.ToString());
 		FCardData* Row = CardDataTable->FindRow<FCardData>(RowName, TEXT(" UCardListModel::LoadCardsFromDataTable"));
 		if (Row != nullptr)
 		{
