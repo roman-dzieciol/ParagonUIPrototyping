@@ -40,5 +40,5 @@ FName UCardsFunctionLibrary::MakeValidTableRowName(const FString& InString)
 UTexture2D* UCardsFunctionLibrary::LoadCardTextureNamed(const FString& CardName)
 {
 	FString TexturePath = FString::Printf(TEXT("/Game/Art/Cards/T_%s.T_%s"), *CardName, *CardName);
-	return LoadObject<UTexture2D>(NULL, *TexturePath, NULL, LOAD_None, NULL);
+	return LoadObject<UTexture2D>(NULL, *TexturePath, NULL, LOAD_NoWarn, NULL);
 }
