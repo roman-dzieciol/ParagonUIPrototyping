@@ -7,7 +7,7 @@
 #include "DataTables/FCardData.h"
 #include "CardStatModel.generated.h"
 
-UCLASS(Blueprintable, BlueprintType)
+UCLASS(Blueprintable, BlueprintType, EditInlineNew)
 class DECKBUILDERDESKTOP_API UCardStatModel : public UObject
 {
 	GENERATED_UCLASS_BODY()

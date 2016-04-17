@@ -7,7 +7,7 @@
 #include "CardStatModel.h"
 #include "CardModel.generated.h"
 
-UCLASS(Blueprintable, BlueprintType)
+UCLASS(Blueprintable, BlueprintType, EditInlineNew)
 class DECKBUILDERDESKTOP_API UCardModel : public UObject
 {
 	GENERATED_UCLASS_BODY()
@@ -28,13 +28,13 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card Model")
 		FText Rarity;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card Model")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Instanced, Category = "Card Model")
 		TArray<UCardStatModel*> AllStats;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card Model")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Instanced, Category = "Card Model")
 		TArray<UCardStatModel*> BaseStats;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card Model")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Instanced, Category = "Card Model")
 		TArray<UCardStatModel*> MaxedStats;
 
 	static UCardModel* ConstructFromCardData(const FCardData& CardData, UDataTable* StatDataTable);
