@@ -83,8 +83,6 @@ UCardFilterByStat* UCardFilterByStat::ConstructCardFilterByStat(FName InFilterTy
 {
 	UCardFilterByStat* Filter = NewObject<UCardFilterByStat>(GetTransientPackage(), NAME_None);
 	Filter->FilterName = InFilterType;
-	Filter->LocalizedName = FText::FromString(InStatName);
-	Filter->LocalizedValue = FText::FromString(InStatValue);
 	Filter->StatName = InStatName;
 	Filter->StatContains = InStatValue;
 	Filter->bEqualValue = InIsEqualValue;

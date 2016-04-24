@@ -37,7 +37,7 @@ public:
 		UCardFilter* FilterByText(const FString& Text);
 
 	UFUNCTION(BlueprintCallable, Category = "Card List")
-		UCardFilter* GetTextFilter() const;
+		UCardFilterByStat* GetTextFilter() const;
 
 
 	UFUNCTION(BlueprintCallable, Category = "Card List")

@@ -90,7 +90,7 @@ UCardFilter* UCardListModel::FilterByText(const FString& Text)
 	return TextFilter;
 }
 
-UCardFilter* UCardListModel::GetTextFilter() const
+UCardFilterByStat* UCardListModel::GetTextFilter() const
 {
 	return TextFilter;
 }
@@ -137,6 +137,8 @@ UCardFilter* UCardListModel::FilterBySlot(const FString& SlotName)
 	check(UserFilterGroup != nullptr);
 	check(UserFilterGroup->IsValidLowLevel());
 
+	RemoveFiltersMatching(FName(TEXT("Slot")), FText(), FText());
+
 	SlotFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("Slot")), ECardFilterGroupMatching::Any);
 	SlotFilterGroup->LocalizedName = FText::FromString(TEXT("Slot"));
 	SlotFilterGroup->LocalizedValue = FText::FromString(SlotName);
@@ -173,6 +175,9 @@ void UCardListModel::RemoveFiltersMatching(FName TypeName, FText DisplayName, FT
 
 void UCardListModel::RemoveAllFilters()
 {
+	TextFilter->StatContains.Empty();
+	SlotFilterGroup = nullptr;
+
 	UserFilterGroup->RemoveAllFilters();
 }
 
@@ -209,7 +214,16 @@ TArray<UCardFilter*> UCardListModel::GetDisplayableFilters() const
 {
 	check(UserFilterGroup != nullptr);
 	check(UserFilterGroup->IsValidLowLevel());
+	check(TextFilter != nullptr);
+	check(TextFilter->IsValidLowLevel());
 
-	return UserFilterGroup->Filters;
+	TArray<UCardFilter*> DisplayableFilters;
+	DisplayableFilters.Append(UserFilterGroup->Filters);
+
+	if (!TextFilter->StatContains.IsEmpty())
+	{
+		DisplayableFilters.Add(TextFilter);
+	}
+	return DisplayableFilters;
 }
 
