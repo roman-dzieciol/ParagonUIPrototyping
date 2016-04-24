@@ -24,6 +24,8 @@ class DECKBUILDERDESKTOP_API UCardFilter : public UObject
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card Filter")
 		FText LocalizedValue;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card Filter")
+		UCardFilter* Parent;
 	
 public:
 	virtual bool IsMatching(UCardModel* CardModel) const;
@@ -39,6 +41,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Card Filter")
 	virtual void RemoveFilter(UCardFilter* FilterToRemove);
+
+	UFUNCTION(BlueprintCallable, Category = "Card Filter")
+	virtual void RemoveThisFilter();
 
 	UFUNCTION(BlueprintCallable, Category = "Card Filter")
 	virtual TArray<UCardFilter*> FindFiltersMatching(FName MatchFilterName, FText MatchDisplayName, FText MatchDisplayValue) const;

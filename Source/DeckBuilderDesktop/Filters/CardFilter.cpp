@@ -40,6 +40,14 @@ void UCardFilter::RemoveFilter(UCardFilter* FilterToRemove)
 
 }
 
+void UCardFilter::RemoveThisFilter()
+{
+	if (Parent != nullptr && Parent->IsValidLowLevel())
+	{
+		Parent->RemoveFilter(this);
+	}
+}
+
 TArray<UCardFilter*> UCardFilter::FindFiltersMatching(FName FilterName, FText DisplayName, FText DisplayValue) const
 {
 	return TArray<UCardFilter*>();

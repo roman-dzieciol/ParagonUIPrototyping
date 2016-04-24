@@ -74,6 +74,15 @@ void UCardFilterGroup::RemoveFilter(UCardFilter* FilterToRemove)
 	}
 }
 
+void UCardFilterGroup::AddFilter(UCardFilter* FilterToAdd)
+{
+	if (FilterToAdd != nullptr && FilterToAdd->IsValidLowLevel())
+	{
+		Filters.Add(FilterToAdd);
+		FilterToAdd->Parent = this;
+	}
+}
+
 TArray<UCardFilter*> UCardFilterGroup::FindFiltersMatching(FName FilterName, FText DisplayName, FText DisplayValue) const
 {
 	TArray<UCardFilter*> Result;
