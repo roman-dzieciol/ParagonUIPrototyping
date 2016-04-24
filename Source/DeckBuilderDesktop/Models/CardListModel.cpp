@@ -1,6 +1,7 @@
 
 #include "DeckBuilderDesktop.h"
 #include "CardListModel.h"
+#include "Blueprints/CardFilterFactory.h"
 
 UCardListModel::UCardListModel(class FObjectInitializer const & ObjectInitializer)
 	: Super(ObjectInitializer)
@@ -124,19 +125,22 @@ UCardFilter* UCardListModel::FilterByBaseStat(const FString& StatName)
 	return StatFilter;
 }
 
-UCardFilter* UCardListModel::FilterByCost(const int32 CostValue)
+void UCardListModel::FilterByCostValues(const TArray<int32> CostValues)
 {
 	check(UserFilter != nullptr);
+	check(UserFilter->IsValidLowLevel());
 
 	RemoveFiltersMatching(FName(TEXT("Cost")), FText(), FText());
+	for (auto CostValue : CostValues)
+	{
+		UCardFilter* CostFilter = UCardFilterFactory::ConstructFilterByCostValue(CostValue);
+		UserFilter->Filters.Add(CostFilter);
+	}
+}
 
-	UCardFilterByStat* CostFilter = NewObject<UCardFilterByStat>(GetTransientPackage(), NAME_None);
-	CostFilter->FilterName = FName(TEXT("Cost"));
-	CostFilter->StatName = TEXT("Cost");
-	CostFilter->StatContains = FString::FromInt(CostValue);
-	CostFilter->bEqualValue = true;
-	UserFilter->Filters.Add(CostFilter);
-	return CostFilter;
+TArray<UCardFilter*> UCardListModel::GetCostValueFilters() const 
+{
+	return FindFiltersMatching(FName(TEXT("Cost")), FText(), FText());
 }
 
 UCardFilter* UCardListModel::FilterBySlot(const FString& SlotName)
@@ -204,7 +208,7 @@ void UCardListModel::RemoveFilter(UCardFilter* FilterToRemove)
 	UserFilter->RemoveFilter(FilterToRemove);
 }
 
-TArray<UCardFilter*> UCardListModel::FindFiltersMatching(FName TypeName, FText DisplayName, FText DisplayValue)
+TArray<UCardFilter*> UCardListModel::FindFiltersMatching(FName TypeName, FText DisplayName, FText DisplayValue) const
 {
 	return UserFilter->FindFiltersMatching(TypeName, DisplayName, DisplayValue);
 }

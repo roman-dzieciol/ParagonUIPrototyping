@@ -40,7 +40,10 @@ public:
 		UCardFilter* FilterByBaseStat(const FString& StatName);
 
 	UFUNCTION(BlueprintCallable, Category = "Card List")
-		UCardFilter* FilterByCost(int32 CostValue);
+		void FilterByCostValues(const TArray<int32> CostValues);
+
+	UFUNCTION(BlueprintCallable, Category = "Card List")
+		TArray<UCardFilter*> GetCostValueFilters() const;
 
 	UFUNCTION(BlueprintCallable, Category = "Card List")
 		UCardFilter* FilterBySlot(const FString& SlotName);
@@ -55,7 +58,7 @@ public:
 		void RemoveFilter(UCardFilter* FilterToRemove);
 
 	UFUNCTION(BlueprintCallable, Category = "Card List")
-		TArray<UCardFilter*> FindFiltersMatching(FName TypeName, FText DisplayName, FText DisplayValue);
+		TArray<UCardFilter*> FindFiltersMatching(FName TypeName, FText DisplayName, FText DisplayValue) const;
 
 protected:
 
