@@ -75,6 +75,7 @@ void UCardFilterGroup::RemoveFiltersMatching(FName FilterName, FText DisplayName
 
 void UCardFilterGroup::RemoveFilter(UCardFilter* FilterToRemove)
 {
+	UE_LOG(Deck, Verbose, TEXT("UCardFilter::RemoveFilter: %s from: %s"), *FilterToRemove->ToString(), *ToString());
 	Filters.Remove(FilterToRemove);
 	for (auto Filter : Filters)
 	{

@@ -42,6 +42,8 @@ void UCardFilter::RemoveFilter(UCardFilter* FilterToRemove)
 
 void UCardFilter::RemoveThisFilter()
 {
+	UE_LOG(Deck, Verbose, TEXT("UCardFilter::RemoveThisFilter: %s"), *ToString());
+
 	if (Parent != nullptr && Parent->IsValidLowLevel())
 	{
 		Parent->RemoveFilter(this);
@@ -52,5 +54,10 @@ void UCardFilter::RemoveThisFilter()
 TArray<UCardFilter*> UCardFilter::FindFiltersMatching(FName FilterName, FText DisplayName, FText DisplayValue) const
 {
 	return TArray<UCardFilter*>();
+}
+
+FString UCardFilter::ToString() const
+{
+	return FString::Printf(TEXT("CardFilter: %s - %s=%s"), *FilterName.ToString(), *GetDisplayName().ToString(), *GetDisplayValue().ToString());
 }
 

@@ -30,6 +30,8 @@ class DECKBUILDERDESKTOP_API UCardFilter : public UObject
 public:
 	virtual bool IsMatching(UCardModel* CardModel) const;
 
+	virtual FString ToString() const;
+
 	UFUNCTION(BlueprintCallable, Category = "Card Filter")
 	virtual FText GetDisplayName() const;
 

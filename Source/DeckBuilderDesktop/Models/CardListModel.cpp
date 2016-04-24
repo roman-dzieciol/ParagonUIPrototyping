@@ -71,6 +71,7 @@ UCardFilter* UCardListModel::SetAffinityFilters(TArray<FString> AffinityNames)
 {
 	check(AffinityFilterGroup != nullptr);
 	check(AffinityFilterGroup->IsValidLowLevel());
+	UE_LOG(Deck, Verbose, TEXT("UCardListModel::FilterByCostValues: %s"), *FString::Join(AffinityNames, TEXT(", ")));
 
 	AffinityFilterGroup->RemoveAllFilters();
 	for (auto AffinityName : AffinityNames)
@@ -84,6 +85,7 @@ UCardFilter* UCardListModel::FilterByText(const FString& Text)
 {
 	check(TextFilter != nullptr);
 	check(TextFilter->IsValidLowLevel());
+	UE_LOG(Deck, Verbose, TEXT("UCardListModel::FilterByText: %s"), *Text);
 	TextFilter->StatContains = Text;
 	return TextFilter;
 }
@@ -97,6 +99,7 @@ UCardFilter* UCardListModel::FilterByBaseStat(const FString& StatName)
 {
 	check(UserFilterGroup != nullptr);
 	check(UserFilterGroup->IsValidLowLevel());
+	UE_LOG(Deck, Verbose, TEXT("UCardListModel::FilterByBaseStat: %s"), *StatName);
 	
 	UCardFilterByStat* StatFilter = UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Stat")), StatName, FString(), true);
 	StatFilter->LocalizedValue = FText::FromString(StatName);
@@ -113,6 +116,7 @@ void UCardListModel::FilterByCostValues(const TArray<int32> CostValues)
 {
 	check(UserFilterGroup != nullptr);
 	check(UserFilterGroup->IsValidLowLevel());
+	UE_LOG(Deck, Verbose, TEXT("UCardListModel::FilterByCostValues: %s"), *FString::Join(CostValues, TEXT(", ")));
 
 	RemoveFiltersMatching(FName(TEXT("Cost")), FText(), FText());
 	for (auto CostValue : CostValues)
@@ -128,6 +132,8 @@ TArray<UCardFilter*> UCardListModel::GetCostValueFilters() const
 
 UCardFilter* UCardListModel::FilterBySlot(const FString& SlotName)
 {
+	UE_LOG(Deck, Verbose, TEXT("UCardListModel::FilterBySlot: %s"), *SlotName);
+
 	check(UserFilterGroup != nullptr);
 	check(UserFilterGroup->IsValidLowLevel());
 	
@@ -178,6 +184,7 @@ void UCardListModel::RemoveAllFilters()
 void UCardListModel::RemoveFilter(UCardFilter* FilterToRemove)
 {
 	UserFilterGroup->RemoveFilter(FilterToRemove);
+	UE_LOG(Deck, Verbose, TEXT("UCardListModel::RemoveFilter: %s"), *FilterToRemove->ToString());
 }
 
 TArray<UCardFilter*> UCardListModel::FindFiltersMatching(FName TypeName, FText DisplayName, FText DisplayValue) const
