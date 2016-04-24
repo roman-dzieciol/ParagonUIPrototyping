@@ -62,8 +62,9 @@ void UCardListModel::ConstructDefaultFilters()
 	UserFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("UserGroup")), ECardFilterGroupMatching::All);
 	RootFilterGroup->AddFilter(UserFilterGroup);
 
-	// Search by text filter, configured by user, added dynamically to UserFilterGroup
+	// Search by text filter, configured by user
 	TextFilter = UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Text")), TEXT("CardName"), FString(), false);
+	RootFilterGroup->AddFilter(TextFilter);
 }
 
 UCardFilter* UCardListModel::SetAffinityFilters(TArray<FString> AffinityNames)
@@ -79,29 +80,18 @@ UCardFilter* UCardListModel::SetAffinityFilters(TArray<FString> AffinityNames)
 	return AffinityFilterGroup;
 }
 
-
 UCardFilter* UCardListModel::FilterByText(const FString& Text)
 {
 	check(TextFilter != nullptr);
 	check(TextFilter->IsValidLowLevel());
-	check(UserFilterGroup != nullptr);
-	check(UserFilterGroup->IsValidLowLevel());
-
 	TextFilter->StatContains = Text;
-
-	// If search text is not present, remove from user filters, otherwise add to user filters
-	if (Text.IsEmpty())
-	{
-		TextFilter->RemoveThisFilter();
-	}
-	else if (TextFilter->Parent == nullptr)
-	{
-		UserFilterGroup->AddFilter(TextFilter);
-	}
-
 	return TextFilter;
 }
 
+UCardFilter* UCardListModel::GetTextFilter() const
+{
+	return TextFilter;
+}
 
 UCardFilter* UCardListModel::FilterByBaseStat(const FString& StatName)
 {
@@ -112,6 +102,11 @@ UCardFilter* UCardListModel::FilterByBaseStat(const FString& StatName)
 	StatFilter->LocalizedValue = FText::FromString(StatName);
 	UserFilterGroup->AddFilter(StatFilter);
 	return StatFilter;
+}
+
+TArray<UCardFilter*> UCardListModel::GetBaseStatFilters() const
+{
+	return FindFiltersMatching(FName(TEXT("Stat")), FText(), FText());
 }
 
 void UCardListModel::FilterByCostValues(const TArray<int32> CostValues)
@@ -190,4 +185,8 @@ TArray<UCardFilter*> UCardListModel::FindFiltersMatching(FName TypeName, FText D
 	return UserFilterGroup->FindFiltersMatching(TypeName, DisplayName, DisplayValue);
 }
 
+TArray<UCardFilter*> UCardListModel::GetDisplayableFilters() const
+{
+	return UserFilterGroup->Filters;
+}
 

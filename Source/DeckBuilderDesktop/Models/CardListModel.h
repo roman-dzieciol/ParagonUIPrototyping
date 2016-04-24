@@ -37,7 +37,15 @@ public:
 		UCardFilter* FilterByText(const FString& Text);
 
 	UFUNCTION(BlueprintCallable, Category = "Card List")
+		UCardFilter* GetTextFilter() const;
+
+
+	UFUNCTION(BlueprintCallable, Category = "Card List")
 		UCardFilter* FilterByBaseStat(const FString& StatName);
+
+	UFUNCTION(BlueprintCallable, Category = "Card List")
+		TArray<UCardFilter*> GetBaseStatFilters() const;
+
 
 	UFUNCTION(BlueprintCallable, Category = "Card List")
 		void FilterByCostValues(const TArray<int32> CostValues);
@@ -64,6 +72,11 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Card List")
 		TArray<UCardFilter*> FindFiltersMatching(FName TypeName, FText DisplayName, FText DisplayValue) const;
+
+
+	// Get a list of active user filters for displaying in UI
+	UFUNCTION(BlueprintCallable, Category = "Card List")
+		TArray<UCardFilter*> GetDisplayableFilters() const;
 
 protected: // Filter groups
 
