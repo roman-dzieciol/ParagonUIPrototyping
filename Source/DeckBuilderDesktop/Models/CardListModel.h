@@ -80,21 +80,21 @@ public:
 
 protected: // Filter groups
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Card List")
+	UPROPERTY()
 		UCardFilterGroup* RootFilterGroup;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Card List")
+	UPROPERTY()
 		UCardFilterGroup* UserFilterGroup;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Card List")
+	UPROPERTY()
 		UCardFilterGroup* AffinityFilterGroup;
 
 protected: // User filters
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Card List")
+	UPROPERTY()
 		UCardFilterGroup* SlotFilterGroup;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Card List")
+	UPROPERTY()
 		UCardFilterByStat* TextFilter;
 
 protected:
