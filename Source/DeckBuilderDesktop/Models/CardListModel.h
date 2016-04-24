@@ -30,8 +30,10 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Card List")
 		virtual void FilterCards();
 
+
 	UFUNCTION(BlueprintCallable, Category = "Card List")
 		UCardFilter* SetAffinityFilters(TArray<FString> AffinityNames);
+
 
 	UFUNCTION(BlueprintCallable, Category = "Card List")
 		UCardFilter* FilterByText(const FString& Text);
@@ -41,7 +43,7 @@ public:
 
 
 	UFUNCTION(BlueprintCallable, Category = "Card List")
-		UCardFilter* FilterByBaseStat(const FString& StatName);
+		void FilterByBaseStats(const TArray<FText> StatNames);
 
 	UFUNCTION(BlueprintCallable, Category = "Card List")
 		TArray<UCardFilter*> GetBaseStatFilters() const;

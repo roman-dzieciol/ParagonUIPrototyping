@@ -95,16 +95,20 @@ UCardFilterByStat* UCardListModel::GetTextFilter() const
 	return TextFilter;
 }
 
-UCardFilter* UCardListModel::FilterByBaseStat(const FString& StatName)
+void UCardListModel::FilterByBaseStats(const TArray<FText> StatNames)
 {
 	check(UserFilterGroup != nullptr);
 	check(UserFilterGroup->IsValidLowLevel());
-	UE_LOG(Deck, Verbose, TEXT("UCardListModel::FilterByBaseStat: %s"), *StatName);
-	
-	UCardFilterByStat* StatFilter = UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Stat")), StatName, FString(), true);
-	StatFilter->LocalizedValue = FText::FromString(StatName);
-	UserFilterGroup->AddFilter(StatFilter);
-	return StatFilter;
+	UE_LOG(Deck, Verbose, TEXT("UCardListModel::FilterByBaseStats:"));
+
+	RemoveFiltersMatching(FName(TEXT("Stat")), FText(), FText());
+	for (auto StatName : StatNames)
+	{
+		UCardFilterByStat* StatFilter = UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Stat")), StatName.ToString(), FString(), false);
+		StatFilter->LocalizedValue = StatName;
+		UserFilterGroup->AddFilter(StatFilter);
+		UE_LOG(Deck, Verbose, TEXT("UCardListModel::FilterByBaseStats:[] %s"), *StatFilter->ToString());
+	}
 }
 
 TArray<UCardFilter*> UCardListModel::GetBaseStatFilters() const
@@ -132,10 +136,9 @@ TArray<UCardFilter*> UCardListModel::GetCostValueFilters() const
 
 UCardFilter* UCardListModel::FilterBySlot(const FString& SlotName)
 {
-	UE_LOG(Deck, Verbose, TEXT("UCardListModel::FilterBySlot: %s"), *SlotName);
-
 	check(UserFilterGroup != nullptr);
 	check(UserFilterGroup->IsValidLowLevel());
+	UE_LOG(Deck, Verbose, TEXT("UCardListModel::FilterBySlot: %s"), *SlotName);
 
 	RemoveFiltersMatching(FName(TEXT("Slot")), FText(), FText());
 
