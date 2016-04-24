@@ -45,6 +45,7 @@ void UCardFilter::RemoveThisFilter()
 	if (Parent != nullptr && Parent->IsValidLowLevel())
 	{
 		Parent->RemoveFilter(this);
+		Parent = nullptr;
 	}
 }
 

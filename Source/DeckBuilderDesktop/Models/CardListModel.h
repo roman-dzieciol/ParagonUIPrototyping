@@ -17,18 +17,18 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Card List")
 	TArray<UCardModel*> AllCards;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card List")
-		UCardFilterGroup* Filter;
-
+	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Card List")
 	TArray<bool> FilterStates;
 
+public:
+
 	static UCardListModel* ConstructCardListFromCardDataTable(UDataTable* CardDataTable, UDataTable* StatDataTable);
 
-	UFUNCTION(BlueprintCallable, Category = "Card List")
-	virtual void FilterCards();
+public:
 
+	UFUNCTION(BlueprintCallable, Category = "Card List")
+		virtual void FilterCards();
 
 	UFUNCTION(BlueprintCallable, Category = "Card List")
 		UCardFilter* SetAffinityFilters(TArray<FString> AffinityNames);
@@ -45,8 +45,13 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Card List")
 		TArray<UCardFilter*> GetCostValueFilters() const;
 
+
 	UFUNCTION(BlueprintCallable, Category = "Card List")
 		UCardFilter* FilterBySlot(const FString& SlotName);
+
+	UFUNCTION(BlueprintCallable, Category = "Card List")
+		UCardFilter* GetSlotFilter() const;
+
 
 	UFUNCTION(BlueprintCallable, Category = "Card List")
 		void RemoveFiltersMatching(FName TypeName, FText DisplayName, FText DisplayValue);
@@ -60,22 +65,26 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Card List")
 		TArray<UCardFilter*> FindFiltersMatching(FName TypeName, FText DisplayName, FText DisplayValue) const;
 
-protected:
+protected: // Filter groups
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Card List")
-		UCardFilterGroup* MainFilter;
+		UCardFilterGroup* RootFilterGroup;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Card List")
-		UCardFilterGroup* UserFilter;
+		UCardFilterGroup* UserFilterGroup;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Card List")
-		UCardFilterGroup* AffinityFilter;
+		UCardFilterGroup* AffinityFilterGroup;
+
+protected: // User filters
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Card List")
+		UCardFilterGroup* SlotFilterGroup;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Card List")
 		UCardFilterByStat* TextFilter;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Card List")
-		UCardFilter* SlotFilter;
+protected:
 
 	void ConstructDefaultFilters();
 

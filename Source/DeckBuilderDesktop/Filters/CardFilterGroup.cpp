@@ -84,11 +84,24 @@ void UCardFilterGroup::RemoveFilter(UCardFilter* FilterToRemove)
 
 void UCardFilterGroup::AddFilter(UCardFilter* FilterToAdd)
 {
+	check(FilterToAdd != nullptr);
+	check(FilterToAdd->IsValidLowLevel());
+	check(FilterToAdd->Parent == nullptr);
+
 	if (FilterToAdd != nullptr && FilterToAdd->IsValidLowLevel())
 	{
 		Filters.Add(FilterToAdd);
 		FilterToAdd->Parent = this;
 	}
+}
+
+void UCardFilterGroup::RemoveAllFilters()
+{
+	for (auto Filter : Filters)
+	{
+		Filter->Parent = nullptr;
+	}
+	Filters.Empty();
 }
 
 TArray<UCardFilter*> UCardFilterGroup::FindFiltersMatching(FName FilterName, FText DisplayName, FText DisplayValue) const

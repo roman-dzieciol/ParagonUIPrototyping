@@ -36,7 +36,7 @@ UCardListModel* UCardListModel::ConstructCardListFromCardDataTable(UDataTable* C
 
 void UCardListModel::FilterCards()
 {
-	if (Filter == nullptr)
+	if (RootFilterGroup == nullptr)
 	{
 		FilterStates.SetNumZeroed(AllCards.Num());
 		return;
@@ -45,86 +45,84 @@ void UCardListModel::FilterCards()
 	auto StateIt = FilterStates.CreateIterator();
 	for (auto CardModel : AllCards)
 	{
-		*StateIt++ = Filter->IsMatching(CardModel) == false;
+		*StateIt++ = RootFilterGroup->IsMatching(CardModel) == false;
 	}
 }
-
 
 void UCardListModel::ConstructDefaultFilters()
 {
-	UCardFilterGroup* MainFilter = NewObject<UCardFilterGroup>(GetTransientPackage(), NAME_None);
-	MainFilter->Matching = ECardFilterGroupMatching::All;
-	this->MainFilter = MainFilter;
-	Filter = MainFilter;
+	// Root filter group
+	RootFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("MainGroup")), ECardFilterGroupMatching::All);
 
-	UCardFilterGroup* AffinityFilter = NewObject<UCardFilterGroup>(GetTransientPackage(), NAME_None);
-	AffinityFilter->Matching = ECardFilterGroupMatching::Any;
-	this->AffinityFilter = AffinityFilter;
-	MainFilter->Filters.Add(AffinityFilter);
+	// Deck affinity filters, configured by app
+	AffinityFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("AffinityGroup")), ECardFilterGroupMatching::Any);
+	RootFilterGroup->AddFilter(AffinityFilterGroup);
 
-	UCardFilterGroup* UserFilter = NewObject<UCardFilterGroup>(GetTransientPackage(), NAME_None);
-	UserFilter->Matching = ECardFilterGroupMatching::All;
-	this->UserFilter = UserFilter;
-	MainFilter->Filters.Add(UserFilter);
+	// User filters, configured by user
+	UserFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("UserGroup")), ECardFilterGroupMatching::All);
+	RootFilterGroup->AddFilter(UserFilterGroup);
 
+	// Search by text filter, configured by user, added dynamically to UserFilterGroup
 	TextFilter = UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Text")), TEXT("CardName"), FString(), false);
 }
 
-
 UCardFilter* UCardListModel::SetAffinityFilters(TArray<FString> AffinityNames)
 {
-	check(AffinityFilter != nullptr);
+	check(AffinityFilterGroup != nullptr);
+	check(AffinityFilterGroup->IsValidLowLevel());
 
-	AffinityFilter->Filters.Empty();
+	AffinityFilterGroup->RemoveAllFilters();
 	for (auto AffinityName : AffinityNames)
 	{
-		AffinityFilter->Filters.Add(UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Affinity")), TEXT("Affinity"), AffinityName, true));
+		AffinityFilterGroup->AddFilter(UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Affinity")), TEXT("Affinity"), AffinityName, false));
 	}
-	return AffinityFilter;
+	return AffinityFilterGroup;
 }
 
 
 UCardFilter* UCardListModel::FilterByText(const FString& Text)
 {
 	check(TextFilter != nullptr);
-	check(UserFilter != nullptr);
+	check(TextFilter->IsValidLowLevel());
+	check(UserFilterGroup != nullptr);
+	check(UserFilterGroup->IsValidLowLevel());
+
 	TextFilter->StatContains = Text;
 
+	// If search text is not present, remove from user filters, otherwise add to user filters
 	if (Text.IsEmpty())
 	{
-		UserFilter->Filters.Remove(TextFilter);
+		TextFilter->RemoveThisFilter();
 	}
-	else
+	else if (TextFilter->Parent == nullptr)
 	{
-		UserFilter->Filters.AddUnique(TextFilter);
+		UserFilterGroup->AddFilter(TextFilter);
 	}
+
 	return TextFilter;
 }
 
 
 UCardFilter* UCardListModel::FilterByBaseStat(const FString& StatName)
 {
-	check(UserFilter != nullptr);
-	check(UserFilter != nullptr);
-
-
-	RemoveFiltersMatching(FName(TEXT("Stat")), FText(), FText::FromString(StatName));
-
+	check(UserFilterGroup != nullptr);
+	check(UserFilterGroup->IsValidLowLevel());
+	
 	UCardFilterByStat* StatFilter = UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Stat")), StatName, FString(), true);
 	StatFilter->LocalizedValue = FText::FromString(StatName);
-	UserFilter->Filters.Add(StatFilter);
+	UserFilterGroup->AddFilter(StatFilter);
 	return StatFilter;
 }
 
 void UCardListModel::FilterByCostValues(const TArray<int32> CostValues)
 {
-	check(UserFilter != nullptr);
-	check(UserFilter->IsValidLowLevel());
+	check(UserFilterGroup != nullptr);
+	check(UserFilterGroup->IsValidLowLevel());
 
 	RemoveFiltersMatching(FName(TEXT("Cost")), FText(), FText());
 	for (auto CostValue : CostValues)
 	{
-		UserFilter->Filters.Add(UCardFilterFactory::ConstructFilterByCostValue(CostValue));
+		UserFilterGroup->AddFilter(UCardFilterFactory::ConstructFilterByCostValue(CostValue));
 	}
 }
 
@@ -135,59 +133,61 @@ TArray<UCardFilter*> UCardListModel::GetCostValueFilters() const
 
 UCardFilter* UCardListModel::FilterBySlot(const FString& SlotName)
 {
-	check(UserFilter != nullptr);
+	check(UserFilterGroup != nullptr);
+	check(UserFilterGroup->IsValidLowLevel());
 	
-	if (SlotFilter != nullptr)
+	if (SlotFilterGroup == nullptr)
 	{
-		UserFilter->Filters.Remove(SlotFilter);
-		SlotFilter = nullptr;
+		SlotFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("SlotGroup")), ECardFilterGroupMatching::Any);
+		SlotFilterGroup->LocalizedName = FText::FromString(TEXT("Slot"));
+		SlotFilterGroup->LocalizedValue = FText::FromString(SlotName);
+	}
+	else 
+	{
+		SlotFilterGroup->RemoveAllFilters();
 	}
 
 	if (SlotName.Equals(TEXT("Equipment")))
 	{
-		UCardFilterByStat* ActiveFilter =  UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Slot")), TEXT("Type"), TEXT("Active"), true);
-		UCardFilterByStat* PassiveFilter = UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Slot")), TEXT("Type"), TEXT("Passive"), true);
-
-		UCardFilterGroup* SlotOrFilter = NewObject<UCardFilterGroup>(GetTransientPackage(), NAME_None);
-		SlotOrFilter->Matching = ECardFilterGroupMatching::Any;
-		SlotOrFilter->FilterName = FName(TEXT("Slot"));
-		SlotOrFilter->LocalizedName = FText::FromString(TEXT("Slot"));
-		SlotOrFilter->LocalizedValue = FText::FromString(TEXT("Equipment"));
-		SlotOrFilter->Filters.Add(ActiveFilter);
-		SlotOrFilter->Filters.Add(PassiveFilter);
-		this->SlotFilter = SlotOrFilter;
-		UserFilter->Filters.Add(SlotOrFilter);
-		return SlotOrFilter;
+		SlotFilterGroup->AddFilter(UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Slot")), TEXT("Type"), TEXT("Active"), true));
+		SlotFilterGroup->AddFilter(UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Slot")), TEXT("Type"), TEXT("Passive"), true));
 	}
 	else
 	{
-		UCardFilterByStat* SlotFilter = UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Slot")), TEXT("Type"), SlotName, true);
-		SlotFilter->LocalizedName = FText::FromString(TEXT("Slot"));
-		SlotFilter->LocalizedValue = FText::FromString(SlotName);
-		this->SlotFilter = SlotFilter;
-		UserFilter->Filters.Add(SlotFilter);
-		return SlotFilter;
+		SlotFilterGroup->AddFilter(UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Slot")), TEXT("Type"), SlotName, true));
 	}
+
+	UserFilterGroup->AddFilter(SlotFilterGroup);
+	return SlotFilterGroup;
+}
+
+UCardFilter* UCardListModel::GetSlotFilter() const
+{
+	if (SlotFilterGroup != nullptr && SlotFilterGroup->IsValidLowLevel() && SlotFilterGroup->Parent != nullptr)
+	{
+		return SlotFilterGroup;
+	}
+	return nullptr;
 }
 
 void UCardListModel::RemoveFiltersMatching(FName TypeName, FText DisplayName, FText DisplayValue)
 {
-	UserFilter->RemoveFiltersMatching(TypeName, DisplayName, DisplayValue);
+	UserFilterGroup->RemoveFiltersMatching(TypeName, DisplayName, DisplayValue);
 }
 
 void UCardListModel::RemoveAllFilters()
 {
-	UserFilter->Filters.Empty();
+	UserFilterGroup->RemoveAllFilters();
 }
 
 void UCardListModel::RemoveFilter(UCardFilter* FilterToRemove)
 {
-	UserFilter->RemoveFilter(FilterToRemove);
+	UserFilterGroup->RemoveFilter(FilterToRemove);
 }
 
 TArray<UCardFilter*> UCardListModel::FindFiltersMatching(FName TypeName, FText DisplayName, FText DisplayValue) const
 {
-	return UserFilter->FindFiltersMatching(TypeName, DisplayName, DisplayValue);
+	return UserFilterGroup->FindFiltersMatching(TypeName, DisplayName, DisplayValue);
 }
 
 
