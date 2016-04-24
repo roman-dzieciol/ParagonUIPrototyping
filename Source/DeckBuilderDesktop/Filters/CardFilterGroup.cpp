@@ -13,6 +13,14 @@ UCardFilterGroup::UCardFilterGroup(class FObjectInitializer const & ObjectInitia
 	FilterName = FNAME_CardFilterGroup_Generic;
 }
 
+UCardFilterGroup* UCardFilterGroup::ConstructCardFilterGroup(FName InFilterType, ECardFilterGroupMatching InMatching)
+{
+	UCardFilterGroup* Filter = NewObject<UCardFilterGroup>(GetTransientPackage(), NAME_None);
+	Filter->FilterName = InFilterType;
+	Filter->Matching = InMatching;
+	return Filter;
+}
+
 bool UCardFilterGroup::IsMatching(UCardModel* CardModel) const
 {
 	switch (Matching) {

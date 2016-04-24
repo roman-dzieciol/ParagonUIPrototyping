@@ -33,10 +33,15 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card Filter")
 	ECardFilterGroupMatching Matching;
 
+
+	UFUNCTION(BlueprintCallable, Category = "Card Filter Group")
+		static UCardFilterGroup* ConstructCardFilterGroup(FName InFilterType, ECardFilterGroupMatching InMatching);
+
 	virtual bool IsMatching(UCardModel* CardModel) const override;
 	virtual void RemoveFiltersMatching(FName MatchFilterName, FText MatchDisplayName, FText MatchDisplayValue) override;
 	virtual void RemoveFilter(UCardFilter* FilterToRemove) override;
 	virtual TArray<UCardFilter*> FindFiltersMatching(FName MatchFilterName, FText MatchDisplayName, FText MatchDisplayValue) const override;
 
 	virtual void AddFilter(UCardFilter* FilterToAdd);
+	virtual void RemoveAllFilters();
 };
