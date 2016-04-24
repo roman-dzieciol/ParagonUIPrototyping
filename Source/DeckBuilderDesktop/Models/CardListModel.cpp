@@ -136,17 +136,11 @@ UCardFilter* UCardListModel::FilterBySlot(const FString& SlotName)
 
 	check(UserFilterGroup != nullptr);
 	check(UserFilterGroup->IsValidLowLevel());
-	
-	if (SlotFilterGroup == nullptr)
-	{
-		SlotFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("SlotGroup")), ECardFilterGroupMatching::Any);
-		SlotFilterGroup->LocalizedName = FText::FromString(TEXT("Slot"));
-		SlotFilterGroup->LocalizedValue = FText::FromString(SlotName);
-	}
-	else 
-	{
-		SlotFilterGroup->RemoveAllFilters();
-	}
+
+	SlotFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("Slot")), ECardFilterGroupMatching::Any);
+	SlotFilterGroup->LocalizedName = FText::FromString(TEXT("Slot"));
+	SlotFilterGroup->LocalizedValue = FText::FromString(SlotName);
+	UserFilterGroup->AddFilter(SlotFilterGroup);
 
 	if (SlotName.Equals(TEXT("Equipment")))
 	{
@@ -158,7 +152,6 @@ UCardFilter* UCardListModel::FilterBySlot(const FString& SlotName)
 		SlotFilterGroup->AddFilter(UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Slot")), TEXT("Type"), SlotName, true));
 	}
 
-	UserFilterGroup->AddFilter(SlotFilterGroup);
 	return SlotFilterGroup;
 }
 
@@ -185,8 +178,23 @@ void UCardListModel::RemoveAllFilters()
 
 void UCardListModel::RemoveFilter(UCardFilter* FilterToRemove)
 {
-	UserFilterGroup->RemoveFilter(FilterToRemove);
+	check(FilterToRemove != nullptr);
+	check(FilterToRemove->IsValidLowLevel());
+
 	UE_LOG(Deck, Verbose, TEXT("UCardListModel::RemoveFilter: %s"), *FilterToRemove->ToString());
+
+	if (FilterToRemove == TextFilter)
+	{
+		TextFilter->StatContains.Empty();
+		return;
+	}
+
+	if (FilterToRemove == SlotFilterGroup)
+	{
+		SlotFilterGroup = nullptr;
+	}
+
+	FilterToRemove->RemoveThisFilter();
 }
 
 TArray<UCardFilter*> UCardListModel::FindFiltersMatching(FName TypeName, FText DisplayName, FText DisplayValue) const
