@@ -89,11 +89,8 @@ void UCardFilterGroup::AddFilter(UCardFilter* FilterToAdd)
 	check(FilterToAdd->IsValidLowLevel());
 	check(FilterToAdd->Parent == nullptr);
 
-	if (FilterToAdd != nullptr && FilterToAdd->IsValidLowLevel())
-	{
-		Filters.Add(FilterToAdd);
-		FilterToAdd->Parent = this;
-	}
+	Filters.Add(FilterToAdd);
+	FilterToAdd->Parent = this;
 }
 
 void UCardFilterGroup::RemoveAllFilters()

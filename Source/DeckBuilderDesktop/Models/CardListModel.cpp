@@ -173,6 +173,8 @@ UCardFilter* UCardListModel::GetSlotFilter() const
 
 void UCardListModel::RemoveFiltersMatching(FName TypeName, FText DisplayName, FText DisplayValue)
 {
+	check(UserFilterGroup != nullptr);
+	check(UserFilterGroup->IsValidLowLevel());
 	UserFilterGroup->RemoveFiltersMatching(TypeName, DisplayName, DisplayValue);
 }
 
@@ -189,11 +191,17 @@ void UCardListModel::RemoveFilter(UCardFilter* FilterToRemove)
 
 TArray<UCardFilter*> UCardListModel::FindFiltersMatching(FName TypeName, FText DisplayName, FText DisplayValue) const
 {
+	check(UserFilterGroup != nullptr);
+	check(UserFilterGroup->IsValidLowLevel());
+
 	return UserFilterGroup->FindFiltersMatching(TypeName, DisplayName, DisplayValue);
 }
 
 TArray<UCardFilter*> UCardListModel::GetDisplayableFilters() const
 {
+	check(UserFilterGroup != nullptr);
+	check(UserFilterGroup->IsValidLowLevel());
+
 	return UserFilterGroup->Filters;
 }
 
