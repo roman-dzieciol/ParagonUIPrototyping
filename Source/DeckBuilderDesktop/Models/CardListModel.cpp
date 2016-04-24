@@ -67,10 +67,7 @@ void UCardListModel::ConstructDefaultFilters()
 	this->UserFilter = UserFilter;
 	MainFilter->Filters.Add(UserFilter);
 
-	UCardFilterByStat* TextFilter = NewObject<UCardFilterByStat>(GetTransientPackage(), NAME_None);
-	this->TextFilter = TextFilter;
-	TextFilter->FilterName = FName(TEXT("Text"));
-	TextFilter->StatName = TEXT("CardName");
+	TextFilter = UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Text")), TEXT("CardName"), FString(), false);
 }
 
 
@@ -81,11 +78,7 @@ UCardFilter* UCardListModel::SetAffinityFilters(TArray<FString> AffinityNames)
 	AffinityFilter->Filters.Empty();
 	for (auto AffinityName : AffinityNames)
 	{
-		UCardFilterByStat* StatFilter = NewObject<UCardFilterByStat>(GetTransientPackage(), NAME_None);
-		StatFilter->FilterName = FName(TEXT("Affinity"));
-		StatFilter->StatName = TEXT("Affinity");
-		StatFilter->StatContains = AffinityName;
-		AffinityFilter->Filters.Add(StatFilter);
+		AffinityFilter->Filters.Add(UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Affinity")), TEXT("Affinity"), AffinityName, true));
 	}
 	return AffinityFilter;
 }
@@ -117,9 +110,7 @@ UCardFilter* UCardListModel::FilterByBaseStat(const FString& StatName)
 
 	RemoveFiltersMatching(FName(TEXT("Stat")), FText(), FText::FromString(StatName));
 
-	UCardFilterByStat* StatFilter = NewObject<UCardFilterByStat>(GetTransientPackage(), NAME_None);
-	StatFilter->FilterName = FName(TEXT("Stat"));
-	StatFilter->StatName = StatName;
+	UCardFilterByStat* StatFilter = UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Stat")), StatName, FString(), true);
 	StatFilter->LocalizedValue = FText::FromString(StatName);
 	UserFilter->Filters.Add(StatFilter);
 	return StatFilter;
@@ -133,8 +124,7 @@ void UCardListModel::FilterByCostValues(const TArray<int32> CostValues)
 	RemoveFiltersMatching(FName(TEXT("Cost")), FText(), FText());
 	for (auto CostValue : CostValues)
 	{
-		UCardFilter* CostFilter = UCardFilterFactory::ConstructFilterByCostValue(CostValue);
-		UserFilter->Filters.Add(CostFilter);
+		UserFilter->Filters.Add(UCardFilterFactory::ConstructFilterByCostValue(CostValue));
 	}
 }
 
@@ -155,17 +145,8 @@ UCardFilter* UCardListModel::FilterBySlot(const FString& SlotName)
 
 	if (SlotName.Equals(TEXT("Equipment")))
 	{
-		UCardFilterByStat* ActiveFilter = NewObject<UCardFilterByStat>(GetTransientPackage(), NAME_None);
-		ActiveFilter->FilterName = FName(TEXT("Slot"));
-		ActiveFilter->StatName = TEXT("Type");
-		ActiveFilter->StatContains = TEXT("Active");
-		ActiveFilter->bEqualValue = true;
-
-		UCardFilterByStat* PassiveFilter = NewObject<UCardFilterByStat>(GetTransientPackage(), NAME_None);
-		PassiveFilter->FilterName = FName(TEXT("Slot"));
-		PassiveFilter->StatName = TEXT("Type");
-		PassiveFilter->StatContains = TEXT("Passive");
-		PassiveFilter->bEqualValue = true;
+		UCardFilterByStat* ActiveFilter =  UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Slot")), TEXT("Type"), TEXT("Active"), true);
+		UCardFilterByStat* PassiveFilter = UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Slot")), TEXT("Type"), TEXT("Passive"), true);
 
 		UCardFilterGroup* SlotOrFilter = NewObject<UCardFilterGroup>(GetTransientPackage(), NAME_None);
 		SlotOrFilter->Matching = ECardFilterGroupMatching::Any;
@@ -180,13 +161,9 @@ UCardFilter* UCardListModel::FilterBySlot(const FString& SlotName)
 	}
 	else
 	{
-		UCardFilterByStat* SlotFilter = NewObject<UCardFilterByStat>(GetTransientPackage(), NAME_None);
-		SlotFilter->FilterName = FName(TEXT("Slot"));
+		UCardFilterByStat* SlotFilter = UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Slot")), TEXT("Type"), SlotName, true);
 		SlotFilter->LocalizedName = FText::FromString(TEXT("Slot"));
 		SlotFilter->LocalizedValue = FText::FromString(SlotName);
-		SlotFilter->StatName = TEXT("Type");
-		SlotFilter->StatContains = SlotName;
-		SlotFilter->bEqualValue = true;
 		this->SlotFilter = SlotFilter;
 		UserFilter->Filters.Add(SlotFilter);
 		return SlotFilter;
