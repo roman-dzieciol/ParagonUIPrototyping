@@ -24,6 +24,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card Filter")
 		bool bEqualValue;
 
+	UFUNCTION(BlueprintCallable, Category = "Card Filter by Stat")
+		static UCardFilterByStat* ConstructCardFilterByStat(FName InFilterType, FString InStatName, FString InStatValue, bool InIsEqualValue);
+
 	virtual bool IsMatching(UCardModel* CardModel) const override;
 
 	virtual FText GetDisplayName() const override;

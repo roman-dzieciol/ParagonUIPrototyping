@@ -79,3 +79,16 @@ TArray<UCardFilter*> UCardFilterByStat::FindFiltersMatching(FName FilterName, FT
 }
 
 
+UCardFilterByStat* UCardFilterByStat::ConstructCardFilterByStat(FName InFilterType, FString InStatName, FString InStatValue, bool InIsEqualValue)
+{
+	UCardFilterByStat* Filter = NewObject<UCardFilterByStat>(GetTransientPackage(), NAME_None);
+	Filter->FilterName = InFilterType;
+	Filter->LocalizedName = FText::FromString(InStatName);
+	Filter->LocalizedValue = FText::FromString(InStatValue);
+	Filter->StatName = InStatName;
+	Filter->StatContains = InStatValue;
+	Filter->bEqualValue = InIsEqualValue;
+	return Filter;
+}
+
+

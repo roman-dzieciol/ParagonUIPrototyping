@@ -7,10 +7,5 @@
 
 UCardFilter* UCardFilterFactory::ConstructFilterByCostValue(int32 CostValue)
 {
-	UCardFilterByStat* CostFilter = NewObject<UCardFilterByStat>(GetTransientPackage(), NAME_None);
-	CostFilter->FilterName = FName(TEXT("Cost"));
-	CostFilter->StatName = TEXT("Cost");
-	CostFilter->StatContains = FString::FromInt(CostValue);
-	CostFilter->bEqualValue = true;
-	return CostFilter;
+	return UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Cost")), TEXT("Cost"), FString::FromInt(CostValue), true);
 }
