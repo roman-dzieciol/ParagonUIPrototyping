@@ -5,6 +5,7 @@
 #include "Filters/CardFilter.h"
 #include "Filters/CardFilterGroup.h"
 #include "Filters/CardFilterByStat.h"
+#include "Filters/CardFilterMain.h"
 #include "CardModel.h"
 #include "CardListModel.generated.h"
 
@@ -30,16 +31,22 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Card List")
 		virtual void FilterCards();
 
+public:
+
+	// The main filter group
+	UPROPERTY()
+	UCardFilterMain* RootFilterGroup;
+
+	UFUNCTION(BlueprintCallable, Category = "Card List")
+	UCardFilterMain* GetMainFilter() const
+	{
+		return RootFilterGroup;
+	}
+
+public:
 
 	UFUNCTION(BlueprintCallable, Category = "Card List")
 		UCardFilter* SetAffinityFilters(TArray<FString> AffinityNames);
-
-
-	UFUNCTION(BlueprintCallable, Category = "Card List")
-		UCardFilter* FilterByText(const FString& Text);
-
-	UFUNCTION(BlueprintCallable, Category = "Card List")
-		UCardFilterByStat* GetTextFilter() const;
 
 
 	UFUNCTION(BlueprintCallable, Category = "Card List")
@@ -83,9 +90,6 @@ public:
 protected: // Filter groups
 
 	UPROPERTY()
-		UCardFilterGroup* RootFilterGroup;
-
-	UPROPERTY()
 		UCardFilterGroup* UserFilterGroup;
 
 	UPROPERTY()
@@ -95,9 +99,6 @@ protected: // User filters
 
 	UPROPERTY()
 		UCardFilterGroup* SlotFilterGroup;
-
-	UPROPERTY()
-		UCardFilterByStat* TextFilter;
 
 protected:
 

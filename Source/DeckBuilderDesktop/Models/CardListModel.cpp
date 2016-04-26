@@ -52,7 +52,7 @@ void UCardListModel::FilterCards()
 void UCardListModel::ConstructDefaultFilters()
 {
 	// Root filter group
-	RootFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("MainGroup")), ECardFilterGroupMatching::All);
+	RootFilterGroup = UCardFilterMain::ConstructCardFilterMain(FName(TEXT("MainGroup")), ECardFilterGroupMatching::All);
 
 	// Deck affinity filters, configured by app
 	AffinityFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("AffinityGroup")), ECardFilterGroupMatching::Any);
@@ -61,10 +61,6 @@ void UCardListModel::ConstructDefaultFilters()
 	// User filters, configured by user
 	UserFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("UserGroup")), ECardFilterGroupMatching::All);
 	RootFilterGroup->AddFilter(UserFilterGroup);
-
-	// Search by text filter, configured by user
-	TextFilter = UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Text")), TEXT("CardName"), FString(), false);
-	RootFilterGroup->AddFilter(TextFilter);
 }
 
 UCardFilter* UCardListModel::SetAffinityFilters(TArray<FString> AffinityNames)
@@ -79,20 +75,6 @@ UCardFilter* UCardListModel::SetAffinityFilters(TArray<FString> AffinityNames)
 		AffinityFilterGroup->AddFilter(UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Affinity")), TEXT("Affinity"), AffinityName, false));
 	}
 	return AffinityFilterGroup;
-}
-
-UCardFilter* UCardListModel::FilterByText(const FString& Text)
-{
-	check(TextFilter != nullptr);
-	check(TextFilter->IsValidLowLevel());
-	UE_LOG(Deck, Verbose, TEXT("UCardListModel::FilterByText: %s"), *Text);
-	TextFilter->StatContains = Text;
-	return TextFilter;
-}
-
-UCardFilterByStat* UCardListModel::GetTextFilter() const
-{
-	return TextFilter;
 }
 
 void UCardListModel::FilterByBaseStats(const TArray<FText> StatNames)
@@ -178,7 +160,6 @@ void UCardListModel::RemoveFiltersMatching(FName TypeName, FText DisplayName, FT
 
 void UCardListModel::RemoveAllFilters()
 {
-	TextFilter->StatContains.Empty();
 	SlotFilterGroup = nullptr;
 
 	UserFilterGroup->RemoveAllFilters();
@@ -190,13 +171,7 @@ void UCardListModel::RemoveFilter(UCardFilter* FilterToRemove)
 	check(FilterToRemove->IsValidLowLevel());
 
 	UE_LOG(Deck, Verbose, TEXT("UCardListModel::RemoveFilter: %s"), *FilterToRemove->ToString());
-
-	if (FilterToRemove == TextFilter)
-	{
-		TextFilter->StatContains.Empty();
-		return;
-	}
-
+	
 	if (FilterToRemove == SlotFilterGroup)
 	{
 		SlotFilterGroup = nullptr;
@@ -217,15 +192,15 @@ TArray<UCardFilter*> UCardListModel::GetDisplayableFilters() const
 {
 	check(UserFilterGroup != nullptr);
 	check(UserFilterGroup->IsValidLowLevel());
-	check(TextFilter != nullptr);
-	check(TextFilter->IsValidLowLevel());
+	check(RootFilterGroup->TextFilter != nullptr);
+	check(RootFilterGroup->TextFilter->IsValidLowLevel());
 
 	TArray<UCardFilter*> DisplayableFilters;
 	DisplayableFilters.Append(UserFilterGroup->Filters);
 
-	if (!TextFilter->StatContains.IsEmpty())
+	if (!RootFilterGroup->TextFilter->StatContains.IsEmpty())
 	{
-		DisplayableFilters.Add(TextFilter);
+		DisplayableFilters.Add(RootFilterGroup->TextFilter);
 	}
 	return DisplayableFilters;
 }
