@@ -46,13 +46,6 @@ public:
 public:
 
 	UFUNCTION(BlueprintCallable, Category = "Card List")
-		void FilterByCostValues(const TArray<int32> CostValues);
-
-	UFUNCTION(BlueprintCallable, Category = "Card List")
-		TArray<UCardFilter*> GetCostValueFilters() const;
-
-
-	UFUNCTION(BlueprintCallable, Category = "Card List")
 		void RemoveFiltersMatching(FName TypeName, FText DisplayName, FText DisplayValue);
 
 	UFUNCTION(BlueprintCallable, Category = "Card List")

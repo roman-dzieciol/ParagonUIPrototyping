@@ -76,6 +76,21 @@ public:
 	}
 
 
+public:
+
+	// The card cost filters
+	UPROPERTY()
+	UCardFilterGroup* CostValueFilterGroup;
+
+	UFUNCTION(BlueprintCallable, Category = "Card Filter")
+	void FilterByCostValues(const TArray<int32> CostValues);
+
+	UFUNCTION(BlueprintCallable, Category = "Card Filter")
+	TArray<UCardFilter*> GetCostValueFilters() const
+	{
+		return CostValueFilterGroup->Filters;
+	}
+
 protected:
 
 	// Construct default subfilters

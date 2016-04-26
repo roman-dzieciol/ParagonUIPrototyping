@@ -38,6 +38,11 @@ void UCardFilterMain::ConstructSubFilters()
 	BaseStatFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("Stat")), ECardFilterGroupMatching::All);
 	BaseStatFilterGroup->LocalizedName = FText::FromString(TEXT("Stat"));
 	AddFilter(BaseStatFilterGroup);
+
+	// Base stat filters, configured by user
+	CostValueFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("Cost")), ECardFilterGroupMatching::Any);
+	CostValueFilterGroup->LocalizedName = FText::FromString(TEXT("Cost"));
+	AddFilter(CostValueFilterGroup);
 }
 
 #pragma endregion Internal
@@ -97,6 +102,19 @@ void UCardFilterMain::FilterByBaseStats(const TArray<FString> StatNames)
 		auto StatFilter = UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Stat")), StatName, FString(), false);
 		StatFilter->LocalizedValue = FText::FromString(StatName);
 		BaseStatFilterGroup->AddFilter(StatFilter);
+	}
+}
+
+void UCardFilterMain::FilterByCostValues(const TArray<int32> CostValues)
+{
+	check(CostValueFilterGroup != nullptr);
+	check(CostValueFilterGroup->IsValidLowLevel());
+	UE_LOG(Deck, Verbose, TEXT("UCardFilterMain::FilterByCostValues: %s"), *FString::Join(CostValues, TEXT(", ")));
+
+	CostValueFilterGroup->RemoveAllFilters();
+	for (auto CostValue : CostValues)
+	{
+		CostValueFilterGroup->AddFilter(UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Cost")), TEXT("Cost"), FString::FromInt(CostValue), true));
 	}
 }
 

@@ -59,25 +59,6 @@ void UCardListModel::ConstructDefaultFilters()
 	RootFilterGroup->AddFilter(UserFilterGroup);
 }
 
-void UCardListModel::FilterByCostValues(const TArray<int32> CostValues)
-{
-	check(UserFilterGroup != nullptr);
-	check(UserFilterGroup->IsValidLowLevel());
-	UE_LOG(Deck, Verbose, TEXT("UCardListModel::FilterByCostValues: %s"), *FString::Join(CostValues, TEXT(", ")));
-
-	RemoveFiltersMatching(FName(TEXT("Cost")), FText(), FText());
-	for (auto CostValue : CostValues)
-	{
-		UserFilterGroup->AddFilter(UCardFilterFactory::ConstructFilterByCostValue(CostValue));
-	}
-}
-
-TArray<UCardFilter*> UCardListModel::GetCostValueFilters() const 
-{
-	return FindFiltersMatching(FName(TEXT("Cost")), FText(), FText());
-}
-
-
 void UCardListModel::RemoveFiltersMatching(FName TypeName, FText DisplayName, FText DisplayValue)
 {
 	check(UserFilterGroup != nullptr);

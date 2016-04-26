@@ -15,6 +15,4 @@ class DECKBUILDERDESKTOP_API UCardFilterFactory : public UBlueprintFunctionLibra
 	GENERATED_BODY()
 
 public:
-	UFUNCTION(BlueprintCallable, Category = "Card Model")
-		static UCardFilter* ConstructFilterByCostValue(int32 CostValue);
 };
