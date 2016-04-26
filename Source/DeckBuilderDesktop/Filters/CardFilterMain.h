@@ -60,6 +60,20 @@ public:
 		return SlotFilterGroup;
 	}
 
+public:
+
+	// The base stat filters
+	UPROPERTY()
+	UCardFilterGroup* BaseStatFilterGroup;
+
+	UFUNCTION(BlueprintCallable, Category = "Card Filter")
+	void FilterByBaseStats(const TArray<FString> StatNames);
+
+	UFUNCTION(BlueprintCallable, Category = "Card Filter")
+	TArray<UCardFilter*> GetBaseStatFilters() const
+	{
+		return BaseStatFilterGroup->Filters;
+	}
 
 
 protected:

@@ -33,6 +33,11 @@ void UCardFilterMain::ConstructSubFilters()
 	SlotFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("Slot")), ECardFilterGroupMatching::Any);
 	SlotFilterGroup->LocalizedName = FText::FromString(TEXT("Slot"));
 	AddFilter(SlotFilterGroup);
+
+	// Base stat filters, configured by user
+	BaseStatFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("Stat")), ECardFilterGroupMatching::All);
+	BaseStatFilterGroup->LocalizedName = FText::FromString(TEXT("Stat"));
+	AddFilter(BaseStatFilterGroup);
 }
 
 #pragma endregion Internal
@@ -77,6 +82,21 @@ void UCardFilterMain::FilterBySlot(const FString& SlotName)
 	else if (!SlotName.IsEmpty())
 	{
 		SlotFilterGroup->AddFilter(UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Slot")), TEXT("Type"), SlotName, true));
+	}
+}
+
+void UCardFilterMain::FilterByBaseStats(const TArray<FString> StatNames)
+{
+	check(BaseStatFilterGroup != nullptr);
+	check(BaseStatFilterGroup->IsValidLowLevel());
+	UE_LOG(Deck, Verbose, TEXT("UCardFilterMain::FilterByBaseStats: %s"), *FString::Join(StatNames, TEXT(", ")));
+
+	BaseStatFilterGroup->RemoveAllFilters();
+	for (auto StatName : StatNames)
+	{
+		auto StatFilter = UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Stat")), StatName, FString(), false);
+		StatFilter->LocalizedValue = FText::FromString(StatName);
+		BaseStatFilterGroup->AddFilter(StatFilter);
 	}
 }
 

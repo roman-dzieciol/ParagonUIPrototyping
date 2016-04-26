@@ -59,27 +59,6 @@ void UCardListModel::ConstructDefaultFilters()
 	RootFilterGroup->AddFilter(UserFilterGroup);
 }
 
-void UCardListModel::FilterByBaseStats(const TArray<FText> StatNames)
-{
-	check(UserFilterGroup != nullptr);
-	check(UserFilterGroup->IsValidLowLevel());
-	UE_LOG(Deck, Verbose, TEXT("UCardListModel::FilterByBaseStats:"));
-
-	RemoveFiltersMatching(FName(TEXT("Stat")), FText(), FText());
-	for (auto StatName : StatNames)
-	{
-		UCardFilterByStat* StatFilter = UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Stat")), StatName.ToString(), FString(), false);
-		StatFilter->LocalizedValue = StatName;
-		UserFilterGroup->AddFilter(StatFilter);
-		UE_LOG(Deck, Verbose, TEXT("UCardListModel::FilterByBaseStats:[] %s"), *StatFilter->ToString());
-	}
-}
-
-TArray<UCardFilter*> UCardListModel::GetBaseStatFilters() const
-{
-	return FindFiltersMatching(FName(TEXT("Stat")), FText(), FText());
-}
-
 void UCardListModel::FilterByCostValues(const TArray<int32> CostValues)
 {
 	check(UserFilterGroup != nullptr);

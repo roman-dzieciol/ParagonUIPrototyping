@@ -46,13 +46,6 @@ public:
 public:
 
 	UFUNCTION(BlueprintCallable, Category = "Card List")
-		void FilterByBaseStats(const TArray<FText> StatNames);
-
-	UFUNCTION(BlueprintCallable, Category = "Card List")
-		TArray<UCardFilter*> GetBaseStatFilters() const;
-
-
-	UFUNCTION(BlueprintCallable, Category = "Card List")
 		void FilterByCostValues(const TArray<int32> CostValues);
 
 	UFUNCTION(BlueprintCallable, Category = "Card List")
