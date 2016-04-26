@@ -98,40 +98,6 @@ TArray<UCardFilter*> UCardListModel::GetCostValueFilters() const
 	return FindFiltersMatching(FName(TEXT("Cost")), FText(), FText());
 }
 
-UCardFilter* UCardListModel::FilterBySlot(const FString& SlotName)
-{
-	check(UserFilterGroup != nullptr);
-	check(UserFilterGroup->IsValidLowLevel());
-	UE_LOG(Deck, Verbose, TEXT("UCardListModel::FilterBySlot: %s"), *SlotName);
-
-	RemoveFiltersMatching(FName(TEXT("Slot")), FText(), FText());
-
-	SlotFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("Slot")), ECardFilterGroupMatching::Any);
-	SlotFilterGroup->LocalizedName = FText::FromString(TEXT("Slot"));
-	SlotFilterGroup->LocalizedValue = FText::FromString(SlotName);
-	UserFilterGroup->AddFilter(SlotFilterGroup);
-
-	if (SlotName.Equals(TEXT("Equipment")))
-	{
-		SlotFilterGroup->AddFilter(UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Slot")), TEXT("Type"), TEXT("Active"), true));
-		SlotFilterGroup->AddFilter(UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Slot")), TEXT("Type"), TEXT("Passive"), true));
-	}
-	else
-	{
-		SlotFilterGroup->AddFilter(UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Slot")), TEXT("Type"), SlotName, true));
-	}
-
-	return SlotFilterGroup;
-}
-
-UCardFilter* UCardListModel::GetSlotFilter() const
-{
-	if (SlotFilterGroup != nullptr && SlotFilterGroup->IsValidLowLevel() && SlotFilterGroup->Parent != nullptr)
-	{
-		return SlotFilterGroup;
-	}
-	return nullptr;
-}
 
 void UCardListModel::RemoveFiltersMatching(FName TypeName, FText DisplayName, FText DisplayValue)
 {
@@ -142,8 +108,6 @@ void UCardListModel::RemoveFiltersMatching(FName TypeName, FText DisplayName, FT
 
 void UCardListModel::RemoveAllFilters()
 {
-	SlotFilterGroup = nullptr;
-
 	UserFilterGroup->RemoveAllFilters();
 }
 
@@ -154,11 +118,6 @@ void UCardListModel::RemoveFilter(UCardFilter* FilterToRemove)
 
 	UE_LOG(Deck, Verbose, TEXT("UCardListModel::RemoveFilter: %s"), *FilterToRemove->ToString());
 	
-	if (FilterToRemove == SlotFilterGroup)
-	{
-		SlotFilterGroup = nullptr;
-	}
-
 	FilterToRemove->RemoveThisFilter();
 }
 

@@ -28,6 +28,11 @@ void UCardFilterMain::ConstructSubFilters()
 	// Deck affinity filters, configured by app
 	AffinityFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("AffinityGroup")), ECardFilterGroupMatching::Any);
 	AddFilter(AffinityFilterGroup);
+
+	// Card slot filters, configured by user
+	SlotFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("Slot")), ECardFilterGroupMatching::Any);
+	SlotFilterGroup->LocalizedName = FText::FromString(TEXT("Slot"));
+	AddFilter(SlotFilterGroup);
 }
 
 #pragma endregion Internal
@@ -52,6 +57,26 @@ void UCardFilterMain::FilterByAffinities(TArray<FString> AffinityNames)
 	for (auto AffinityName : AffinityNames)
 	{
 		AffinityFilterGroup->AddFilter(UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Affinity")), TEXT("Affinity"), AffinityName, false));
+	}
+}
+
+void UCardFilterMain::FilterBySlot(const FString& SlotName)
+{
+	check(SlotFilterGroup != nullptr);
+	check(SlotFilterGroup->IsValidLowLevel());
+	UE_LOG(Deck, Verbose, TEXT("UCardFilterMain::FilterBySlot: %s"), *SlotName);
+	
+	SlotFilterGroup->LocalizedValue = FText::FromString(SlotName);
+	SlotFilterGroup->RemoveAllFilters();
+
+	if (SlotName.Equals(TEXT("Equipment")))
+	{
+		SlotFilterGroup->AddFilter(UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Slot")), TEXT("Type"), TEXT("Active"), true));
+		SlotFilterGroup->AddFilter(UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Slot")), TEXT("Type"), TEXT("Passive"), true));
+	}
+	else if (!SlotName.IsEmpty())
+	{
+		SlotFilterGroup->AddFilter(UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Slot")), TEXT("Type"), SlotName, true));
 	}
 }
 

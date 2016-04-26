@@ -60,13 +60,6 @@ public:
 
 
 	UFUNCTION(BlueprintCallable, Category = "Card List")
-		UCardFilter* FilterBySlot(const FString& SlotName);
-
-	UFUNCTION(BlueprintCallable, Category = "Card List")
-		UCardFilter* GetSlotFilter() const;
-
-
-	UFUNCTION(BlueprintCallable, Category = "Card List")
 		void RemoveFiltersMatching(FName TypeName, FText DisplayName, FText DisplayValue);
 
 	UFUNCTION(BlueprintCallable, Category = "Card List")
@@ -87,11 +80,6 @@ protected: // Filter groups
 
 	UPROPERTY()
 		UCardFilterGroup* UserFilterGroup;
-
-protected: // User filters
-
-	UPROPERTY()
-		UCardFilterGroup* SlotFilterGroup;
 
 protected:
 

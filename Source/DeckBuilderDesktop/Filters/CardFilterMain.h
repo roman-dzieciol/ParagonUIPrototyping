@@ -42,8 +42,24 @@ public:
 	UPROPERTY()
 	UCardFilterGroup* AffinityFilterGroup;
 
-	UFUNCTION(BlueprintCallable, Category = "Card List")
+	UFUNCTION(BlueprintCallable, Category = "Card Filter")
 	void FilterByAffinities(TArray<FString> AffinityNames);
+
+public:
+
+	// The card slot filters
+	UPROPERTY()
+	UCardFilterGroup* SlotFilterGroup;
+
+	UFUNCTION(BlueprintCallable, Category = "Card Filter")
+	void FilterBySlot(const FString& SlotName);
+
+	UFUNCTION(BlueprintCallable, Category = "Card Filter")
+	UCardFilter* GetSlotFilter() const
+	{
+		return SlotFilterGroup;
+	}
+
 
 
 protected:
