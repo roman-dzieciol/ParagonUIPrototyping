@@ -54,27 +54,9 @@ void UCardListModel::ConstructDefaultFilters()
 	// Root filter group
 	RootFilterGroup = UCardFilterMain::ConstructCardFilterMain(FName(TEXT("MainGroup")), ECardFilterGroupMatching::All);
 
-	// Deck affinity filters, configured by app
-	AffinityFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("AffinityGroup")), ECardFilterGroupMatching::Any);
-	RootFilterGroup->AddFilter(AffinityFilterGroup);
-
 	// User filters, configured by user
 	UserFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("UserGroup")), ECardFilterGroupMatching::All);
 	RootFilterGroup->AddFilter(UserFilterGroup);
-}
-
-UCardFilter* UCardListModel::SetAffinityFilters(TArray<FString> AffinityNames)
-{
-	check(AffinityFilterGroup != nullptr);
-	check(AffinityFilterGroup->IsValidLowLevel());
-	UE_LOG(Deck, Verbose, TEXT("UCardListModel::FilterByCostValues: %s"), *FString::Join(AffinityNames, TEXT(", ")));
-
-	AffinityFilterGroup->RemoveAllFilters();
-	for (auto AffinityName : AffinityNames)
-	{
-		AffinityFilterGroup->AddFilter(UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Affinity")), TEXT("Affinity"), AffinityName, false));
-	}
-	return AffinityFilterGroup;
 }
 
 void UCardListModel::FilterByBaseStats(const TArray<FText> StatNames)

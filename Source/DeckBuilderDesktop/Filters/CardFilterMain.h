@@ -36,6 +36,16 @@ public:
 		return TextFilter;
 	}
 
+public:
+
+	// The affinity filter
+	UPROPERTY()
+	UCardFilterGroup* AffinityFilterGroup;
+
+	UFUNCTION(BlueprintCallable, Category = "Card List")
+	void FilterByAffinities(TArray<FString> AffinityNames);
+
+
 protected:
 
 	// Construct default subfilters

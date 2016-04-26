@@ -46,10 +46,6 @@ public:
 public:
 
 	UFUNCTION(BlueprintCallable, Category = "Card List")
-		UCardFilter* SetAffinityFilters(TArray<FString> AffinityNames);
-
-
-	UFUNCTION(BlueprintCallable, Category = "Card List")
 		void FilterByBaseStats(const TArray<FText> StatNames);
 
 	UFUNCTION(BlueprintCallable, Category = "Card List")
@@ -91,9 +87,6 @@ protected: // Filter groups
 
 	UPROPERTY()
 		UCardFilterGroup* UserFilterGroup;
-
-	UPROPERTY()
-		UCardFilterGroup* AffinityFilterGroup;
 
 protected: // User filters
 
