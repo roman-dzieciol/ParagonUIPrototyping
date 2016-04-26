@@ -89,20 +89,3 @@ TArray<UCardFilter*> UCardListModel::FindFiltersMatching(FName TypeName, FText D
 	return UserFilterGroup->FindFiltersMatching(TypeName, DisplayName, DisplayValue);
 }
 
-TArray<UCardFilter*> UCardListModel::GetDisplayableFilters() const
-{
-	check(UserFilterGroup != nullptr);
-	check(UserFilterGroup->IsValidLowLevel());
-	check(RootFilterGroup->TextFilter != nullptr);
-	check(RootFilterGroup->TextFilter->IsValidLowLevel());
-
-	TArray<UCardFilter*> DisplayableFilters;
-	DisplayableFilters.Append(UserFilterGroup->Filters);
-
-	if (!RootFilterGroup->TextFilter->StatContains.IsEmpty())
-	{
-		DisplayableFilters.Add(RootFilterGroup->TextFilter);
-	}
-	return DisplayableFilters;
-}
-

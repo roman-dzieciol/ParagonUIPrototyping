@@ -58,10 +58,6 @@ public:
 		TArray<UCardFilter*> FindFiltersMatching(FName TypeName, FText DisplayName, FText DisplayValue) const;
 
 
-	// Get a list of active user filters for displaying in UI
-	UFUNCTION(BlueprintCallable, Category = "Card List")
-		TArray<UCardFilter*> GetDisplayableFilters() const;
-
 protected: // Filter groups
 
 	UPROPERTY()

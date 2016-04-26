@@ -91,6 +91,12 @@ public:
 		return CostValueFilterGroup->Filters;
 	}
 
+public:
+
+	// Get a list of active user filters for displaying in UI
+	UFUNCTION(BlueprintCallable, Category = "Card Filter")
+	TArray<UCardFilter*> GetDisplayableFilters() const;
+
 protected:
 
 	// Construct default subfilters

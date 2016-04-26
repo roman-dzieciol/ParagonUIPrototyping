@@ -118,4 +118,25 @@ void UCardFilterMain::FilterByCostValues(const TArray<int32> CostValues)
 	}
 }
 
+TArray<UCardFilter*> UCardFilterMain::GetDisplayableFilters() const
+{
+	check(TextFilter != nullptr && TextFilter->IsValidLowLevel());
+	check(SlotFilterGroup != nullptr && SlotFilterGroup->IsValidLowLevel());
+	check(BaseStatFilterGroup != nullptr && BaseStatFilterGroup->IsValidLowLevel());
+	check(CostValueFilterGroup != nullptr && CostValueFilterGroup->IsValidLowLevel());
+
+	TArray<UCardFilter*> DisplayableFilters;
+
+	if (!TextFilter->StatContains.IsEmpty())
+	{
+		DisplayableFilters.Add(TextFilter);
+	}
+
+	DisplayableFilters.Append(SlotFilterGroup->Filters);
+	DisplayableFilters.Append(BaseStatFilterGroup->Filters);
+	DisplayableFilters.Append(CostValueFilterGroup->Filters);
+
+	return DisplayableFilters;
+}
+
 #pragma endregion SubFilters
