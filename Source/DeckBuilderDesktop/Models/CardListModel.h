@@ -6,6 +6,7 @@
 #include "CardModel.h"
 #include "CardListModel.generated.h"
 
+// Holds a list of all card models and the card filters
 UCLASS(Blueprintable, BlueprintType)
 class DECKBUILDERDESKTOP_API UCardListModel : public UObject
 {
@@ -13,6 +14,7 @@ class DECKBUILDERDESKTOP_API UCardListModel : public UObject
 
 public:
 
+	// List of all card models
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Card List")
 	TArray<UCardModel*> AllCards;
 
@@ -28,15 +30,19 @@ public:
 	UCardFilterMain* RootFilterGroup;
 	
 	// The results of filtering
+	// Always matches the AllCards property
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Card List")
 	TArray<bool> FilterStates;
 
+	// The main filter public accessor for Blueprints
 	UFUNCTION(BlueprintCallable, Category = "Card List")
 	UCardFilterMain* GetMainFilter() const
 	{
 		return RootFilterGroup;
 	}
 
+	// Filter cards in the AllCards property using the RootFilterGroup.
+	// Stores results in the FilterStates property
 	UFUNCTION(BlueprintCallable, Category = "Card List")
 	virtual void FilterCards();
 
