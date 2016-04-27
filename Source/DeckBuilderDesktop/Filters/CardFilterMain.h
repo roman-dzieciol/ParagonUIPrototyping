@@ -97,6 +97,14 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Card Filter")
 	TArray<UCardFilter*> GetDisplayableFilters() const;
 
+	// Clear active filter
+	UFUNCTION(BlueprintCallable, Category = "Card Filter")
+	void ClearFilter(UCardFilter* Filter);
+
+	// Clear all active filters
+	UFUNCTION(BlueprintCallable, Category = "Card Filter")
+	void ClearAllFilters();
+
 protected:
 
 	// Construct default subfilters

@@ -132,11 +132,45 @@ TArray<UCardFilter*> UCardFilterMain::GetDisplayableFilters() const
 		DisplayableFilters.Add(TextFilter);
 	}
 
-	DisplayableFilters.Append(SlotFilterGroup->Filters);
+	if (SlotFilterGroup->Filters.Num() > 0)
+	{
+		DisplayableFilters.Add(SlotFilterGroup);
+	}
+
 	DisplayableFilters.Append(BaseStatFilterGroup->Filters);
 	DisplayableFilters.Append(CostValueFilterGroup->Filters);
 
 	return DisplayableFilters;
+}
+
+void UCardFilterMain::ClearFilter(UCardFilter* Filter)
+{
+	check(Filter != nullptr && Filter->IsValidLowLevel());
+
+	if (TextFilter == Filter)
+	{
+		FilterByText(FString());
+	}
+	else if (SlotFilterGroup == Filter)
+	{
+		FilterBySlot(FString());
+	}
+	else if (BaseStatFilterGroup == Filter)
+	{
+		FilterByBaseStats(TArray<FString>());
+	}
+	else if (CostValueFilterGroup == Filter)
+	{
+		FilterByCostValues(TArray<int32>());
+	}
+}
+
+void UCardFilterMain::ClearAllFilters()
+{
+	ClearFilter(TextFilter);
+	ClearFilter(SlotFilterGroup);
+	ClearFilter(BaseStatFilterGroup);
+	ClearFilter(CostValueFilterGroup);
 }
 
 #pragma endregion SubFilters
