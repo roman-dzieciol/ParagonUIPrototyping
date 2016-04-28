@@ -35,7 +35,7 @@ void UCardFilterMain::ConstructSubFilters()
 	AddFilter(SlotFilterGroup);
 
 	// Base stat filters, configured by user
-	BaseStatFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("Stat")), ECardFilterGroupMatching::All);
+	BaseStatFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("Stat")), ECardFilterGroupMatching::Any);
 	BaseStatFilterGroup->LocalizedName = FText::FromString(TEXT("Stat"));
 	AddFilter(BaseStatFilterGroup);
 
