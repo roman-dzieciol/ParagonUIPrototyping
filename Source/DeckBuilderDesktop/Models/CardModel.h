@@ -38,9 +38,6 @@ public:
 		TArray<UCardStatModel*> MaxedStats;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card Model")
-		TArray<UCardModel*> LinkedCards;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card Model")
 		int32 Count;
 
 	static UCardModel* ConstructFromCardData(const FCardData& CardData, UDataTable* StatDataTable);

@@ -11,56 +11,60 @@ UCardDeckModel::UCardDeckModel(class FObjectInitializer const & ObjectInitialize
 
 void UCardDeckModel::AddCard(UCardModel* CardModel)
 {
-	uint32& Count = Cards.FindOrAdd(CardModel);
-	++Count;
+	auto DeckItem = UDeckItemModel::ConstructDeckItemModel(CardModel);
+	AddDeckItem(DeckItem);
 }
 
-void UCardDeckModel::RemoveCard(UCardModel* CardModel)
+void UCardDeckModel::AddDeckItem(UDeckItemModel* DeckItem)
 {
-	uint32* Count = Cards.Find(CardModel);
-	if (Count)
-	{
-		--(*Count);
-		if (*Count == 0)
-		{
-			Cards.Remove(CardModel);
-		}
-	}
+	DeckItems.Add(DeckItem);
+}
+
+void UCardDeckModel::RemoveDeckItem(UDeckItemModel* DeckItem)
+{
+	DeckItems.Remove(DeckItem);
 }
 
 void UCardDeckModel::RemoveAllCards()
 {
-	Cards.Empty();
+	DeckItems.Empty();
 }
 
 void UCardDeckModel::RemoveAllCardsOfType(FString CardType)
 {
-	auto CardsOfType = GetAllCardsOfType(CardType);
-	for (auto CardModel : CardsOfType)
+	auto ItemsToRemove = GetAllCardsOfType(CardType);
+	for (auto ItemToRemove : ItemsToRemove)
 	{
-		Cards.Remove(CardModel);
+		RemoveDeckItem(ItemToRemove);
 	}
 }
 
-TArray<UCardModel*> UCardDeckModel::GetAllCardsOfType(FString CardType)
+TArray<UDeckItemModel*> UCardDeckModel::GetAllCardsOfType(FString CardType)
 {
-	TArray<UCardModel*> CardModels;
-	Cards.GetKeys(CardModels);
-	return CardModels.FilterByPredicate([=](UCardModel* CardModel) { return CardModel->Type.ToString().Equals(CardType); });
+	return DeckItems.FilterByPredicate([=](UDeckItemModel* DeckItem) 
+	{ 
+		if (DeckItem->CardModel != nullptr)
+		{
+			return DeckItem->CardModel->Type.ToString().Equals(CardType);
+		}
+		return false;
+	});
 }
 
 int32 UCardDeckModel::CountOfCard(UCardModel* CardModel)
 {
-	uint32* Count = Cards.Find(CardModel);
-	return Count ? *Count : 0;
+	return DeckItems.FilterByPredicate([=](UDeckItemModel* DeckItem) 
+	{
+		return DeckItem->CardModel == CardModel;
+	}).Num();
 }
 
 int32 UCardDeckModel::CountOfAllCards()
 {
-	int32 Count = 0;
-	for (const auto& Entry : Cards)
+	auto Count = DeckItems.Num();
+	for (const auto DeckItem : DeckItems)
 	{
-		Count += Entry.Value;
+		Count += DeckItem->LinkedDeckItems.Num();
 	}
 	return Count;
 }

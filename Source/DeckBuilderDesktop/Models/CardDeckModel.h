@@ -4,6 +4,7 @@
 
 #include "Object.h"
 #include "Models/CardModel.h"
+#include "DeckItemModel.h"
 #include "CardDeckModel.generated.h"
 
 /**
@@ -16,16 +17,20 @@ class DECKBUILDERDESKTOP_API UCardDeckModel : public UObject
 
 public:
 	UPROPERTY()
-	TMap<UCardModel*,uint32> Cards;
+	TArray<UDeckItemModel*> DeckItems;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Deck")
 	int32 MaxCardCount;
-	
+
+public:
 	UFUNCTION(BlueprintCallable, Category = "Deck")
-	void AddCard(UCardModel* CardModel);
+	void AddCard(UCardModel* UCardModel);
 
 	UFUNCTION(BlueprintCallable, Category = "Deck")
-	void RemoveCard(UCardModel* CardModel);
+	void AddDeckItem(UDeckItemModel* DeckItem);
+
+	UFUNCTION(BlueprintCallable, Category = "Deck")
+	void RemoveDeckItem(UDeckItemModel* DeckItem);
 
 	UFUNCTION(BlueprintCallable, Category = "Deck")
 	void RemoveAllCards();
@@ -34,10 +39,10 @@ public:
 	void RemoveAllCardsOfType(FString CardType);
 
 	UFUNCTION(BlueprintCallable, Category = "Deck")
-	TArray<UCardModel*> GetAllCardsOfType(FString CardType);
+	TArray<UDeckItemModel*> GetAllCardsOfType(FString CardType);
 
 	UFUNCTION(BlueprintCallable, Category = "Deck")
-	int32 CountOfCard(UCardModel* CardModel);
+	int32 CountOfCard(UCardModel* UCardModel);
 
 	UFUNCTION(BlueprintCallable, Category = "Deck")
 	int32 CountOfAllCards();
