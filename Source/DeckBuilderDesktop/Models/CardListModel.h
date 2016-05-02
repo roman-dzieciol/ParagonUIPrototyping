@@ -46,4 +46,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Card List")
 	virtual void FilterCards();
 
+	// Returns card models matching the filters
+	UFUNCTION(BlueprintCallable, Category = "Card List")
+	virtual TArray<UCardModel*> GetFilteredCards();
+
 };

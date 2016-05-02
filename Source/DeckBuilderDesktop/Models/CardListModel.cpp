@@ -49,3 +49,18 @@ void UCardListModel::FilterCards()
 		*StateIt++ = RootFilterGroup->IsMatching(CardModel) == false;
 	}
 }
+
+TArray<UCardModel*> UCardListModel::GetFilteredCards()
+{
+	FilterCards();
+	TArray<UCardModel*> FilteredCards;
+	auto StateIt = FilterStates.CreateIterator();
+	for (auto CardModel : AllCards)
+	{
+		if (*StateIt++ == false) 
+		{
+			FilteredCards.Add(CardModel);
+		}
+	}
+	return FilteredCards;
+}
