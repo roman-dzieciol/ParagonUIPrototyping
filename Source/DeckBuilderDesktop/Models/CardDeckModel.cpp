@@ -17,7 +17,7 @@ void UCardDeckModel::AddCard(UCardModel* CardModel)
 
 void UCardDeckModel::AddDeckItem(UDeckItemModel* DeckItem)
 {
-	DeckItems.Add(DeckItem);
+	DeckItems.AddUnique(DeckItem);
 }
 
 void UCardDeckModel::RemoveDeckItem(UDeckItemModel* DeckItem)
