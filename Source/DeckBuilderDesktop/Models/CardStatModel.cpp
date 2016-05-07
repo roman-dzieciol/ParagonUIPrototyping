@@ -16,11 +16,11 @@ bool operator == (const UCardStatModel& LHS, const UCardStatModel& RHS)
 		&& LHS.Icon == RHS.Icon;
 }
 
-UCardStatModel* UCardStatModel::ConstructWithName(const FName& StatName, const FText& Value, const FStatData& StatData)
+UCardStatModel* UCardStatModel::ConstructWithName(const FName& StatName, const FText& StatValue, const FStatData& StatData)
 {
 	auto StatModel = NewObject<UCardStatModel>(GetTransientPackage(), NAME_None);
 	StatModel->Type = FText::FromName(StatName);
-	StatModel->Value = Value;
+	StatModel->Value = StatValue;
 	StatModel->BonusType = FText::FromString(StatData.BonusType);
 	StatModel->Icon = StatData.Icon;
 	return StatModel;

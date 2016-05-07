@@ -2,6 +2,7 @@
 
 #include "DeckBuilderDesktop.h"
 #include "CardFilterMain.h"
+#include "Blueprints/CardsFunctionLibrary.h"
 
 #pragma region Internal
 
@@ -30,8 +31,8 @@ void UCardFilterMain::ConstructSubFilters()
 	AddFilter(AffinityFilterGroup);
 
 	// Card slot filters, configured by user
-	SlotFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("Slot")), ECardFilterGroupMatching::Any);
-	SlotFilterGroup->LocalizedName = FText::FromString(TEXT("Slot"));
+	SlotFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("Card Type")), ECardFilterGroupMatching::Any);
+	SlotFilterGroup->LocalizedName = FText::FromString(TEXT("Card Type"));
 	AddFilter(SlotFilterGroup);
 
 	// Base stat filters, configured by user
@@ -70,23 +71,18 @@ void UCardFilterMain::FilterByAffinities(TArray<FString> AffinityNames)
 	}
 }
 
-void UCardFilterMain::FilterBySlot(const FString& SlotName)
+void UCardFilterMain::FilterBySlotNames(TArray<FString> SlotNames)
 {
 	check(SlotFilterGroup != nullptr);
 	check(SlotFilterGroup->IsValidLowLevel());
-	UE_LOG(Deck, Verbose, TEXT("UCardFilterMain::FilterBySlot: %s"), *SlotName);
+	UE_LOG(Deck, Verbose, TEXT("UCardFilterMain::FilterBySlotNames: %s"), *FString::Join(SlotNames, TEXT(", ")));
 	
-	SlotFilterGroup->LocalizedValue = FText::FromString(SlotName);
+	SlotFilterGroup->LocalizedValue = FText::FromString(FString::Join(SlotNames, TEXT(", ")));
 	SlotFilterGroup->RemoveAllFilters();
 
-	if (SlotName.Equals(TEXT("Equipment")))
+	for (auto SlotName : SlotNames)
 	{
-		SlotFilterGroup->AddFilter(UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Slot")), TEXT("Type"), TEXT("Active"), true));
-		SlotFilterGroup->AddFilter(UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Slot")), TEXT("Type"), TEXT("Passive"), true));
-	}
-	else if (!SlotName.IsEmpty())
-	{
-		SlotFilterGroup->AddFilter(UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Slot")), TEXT("Type"), SlotName, true));
+		SlotFilterGroup->AddFilter(UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Card Type")), TEXT("Type"), SlotName, true));
 	}
 }
 
@@ -99,8 +95,26 @@ void UCardFilterMain::FilterByBaseStats(const TArray<FString> StatNames)
 	BaseStatFilterGroup->RemoveAllFilters();
 	for (auto StatName : StatNames)
 	{
-		auto StatFilter = UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Stat")), StatName, FString(), false);
+		auto StatFilter = UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Stats")), StatName, FString(), false);
 		StatFilter->LocalizedValue = FText::FromString(StatName);
+		BaseStatFilterGroup->AddFilter(StatFilter);
+	}
+}
+
+void UCardFilterMain::FilterByBaseStatModels(const TArray<UCardStatModel*>& StatModels)
+{
+	check(BaseStatFilterGroup != nullptr);
+	check(BaseStatFilterGroup->IsValidLowLevel());
+	UE_LOG(Deck, Verbose, TEXT("UCardFilterMain::FilterByBaseStatModels"));
+
+	BaseStatFilterGroup->RemoveAllFilters();
+	for (auto StatModel : StatModels)
+	{
+		FString StatNameString = UCardsFunctionLibrary::MakeValidTableRowName(StatModel->Type.ToString()).ToString();
+		UE_LOG(Deck, Verbose, TEXT("UCardFilterMain::FilterByBaseStatModels# %s"), *StatModel->Type.ToString());
+		auto StatFilter = UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Stats")), StatNameString, FString(), false);
+		StatFilter->LocalizedValue = StatModel->Type;
+		StatFilter->Icon = StatModel->Icon;
 		BaseStatFilterGroup->AddFilter(StatFilter);
 	}
 }
@@ -137,7 +151,11 @@ TArray<UCardFilter*> UCardFilterMain::GetDisplayableFilters() const
 		DisplayableFilters.Add(SlotFilterGroup);
 	}
 
-	DisplayableFilters.Append(BaseStatFilterGroup->Filters);
+	if (BaseStatFilterGroup->Filters.Num() > 0)
+	{
+		DisplayableFilters.Add(BaseStatFilterGroup);
+	}
+
 	DisplayableFilters.Append(CostValueFilterGroup->Filters);
 
 	return DisplayableFilters;
@@ -153,7 +171,7 @@ void UCardFilterMain::ClearFilter(UCardFilter* Filter)
 	}
 	else if (SlotFilterGroup == Filter)
 	{
-		FilterBySlot(FString());
+		FilterBySlotNames(TArray<FString>());
 	}
 	else if (BaseStatFilterGroup == Filter)
 	{

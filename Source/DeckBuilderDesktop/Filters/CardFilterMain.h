@@ -52,7 +52,7 @@ public:
 	UCardFilterGroup* SlotFilterGroup;
 
 	UFUNCTION(BlueprintCallable, Category = "Card Filter")
-	void FilterBySlot(const FString& SlotName);
+	void FilterBySlotNames(TArray<FString> SlotNames);
 
 	UFUNCTION(BlueprintCallable, Category = "Card Filter")
 	UCardFilter* GetSlotFilter() const
@@ -70,9 +70,18 @@ public:
 	void FilterByBaseStats(const TArray<FString> StatNames);
 
 	UFUNCTION(BlueprintCallable, Category = "Card Filter")
+	void FilterByBaseStatModels(const TArray<UCardStatModel*>& StatModel);
+
+	UFUNCTION(BlueprintCallable, Category = "Card Filter")
 	TArray<UCardFilter*> GetBaseStatFilters() const
 	{
 		return BaseStatFilterGroup->Filters;
+	}
+
+	UFUNCTION(BlueprintCallable, Category = "Card Filter")
+	UCardFilter* GetBaseStatFilter() const
+	{
+		return BaseStatFilterGroup;
 	}
 
 

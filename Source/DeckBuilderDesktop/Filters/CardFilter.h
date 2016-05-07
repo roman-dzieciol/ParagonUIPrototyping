@@ -26,6 +26,9 @@ class DECKBUILDERDESKTOP_API UCardFilter : public UObject
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card Filter")
 		UCardFilter* Parent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card Filter")
+		UTexture2D* Icon;
 	
 public:
 	virtual bool IsMatching(UCardModel* CardModel) const;

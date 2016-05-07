@@ -27,7 +27,8 @@ public:
 		UTexture2D* Icon;
 
 
-	static UCardStatModel* ConstructWithName(const FName& StatName, const FText& Value, const FStatData& StatData);
+	UFUNCTION(BlueprintCallable, Category = "Card Stat Model")
+	static UCardStatModel* ConstructWithName(const FName& StatName, const FText& StatValue, const FStatData& StatData);
 
 	static UCardStatModel* ConstructFromProperty(UProperty* Property, void const * Container, const FStatData& StatData);
 
