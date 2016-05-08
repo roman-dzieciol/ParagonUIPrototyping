@@ -34,6 +34,7 @@ UCardModel* UCardModel::ConstructFromCardData(const FCardData& CardData, UDataTa
 	CardModel->MaxedStats = CardModel->AllStats.FilterByPredicate([=](const UCardStatModel* CardStatModel) {
 		return CardStatModel->BonusType.ToString().Equals(TEXT("Maxed"));
 	});
+	CardModel->Count = 6; // Placeholder value
 	return CardModel;
 }
 
