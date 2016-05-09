@@ -35,6 +35,14 @@ UCardListModel* UCardListModel::ConstructCardListFromCardDataTable(UDataTable* C
 	return CardListModel;
 }
 
+UCardListModel* UCardListModel::ConstructCardListWithCardsFrom(UCardListModel* AnotherCardList)
+{
+	auto CardListModel = NewObject<UCardListModel>(GetTransientPackage(), NAME_None);
+	CardListModel->AllCards.Append(AnotherCardList->AllCards);
+	CardListModel->FilterStates.SetNumZeroed(CardListModel->AllCards.Num());
+	return CardListModel;
+}
+
 void UCardListModel::FilterCards()
 {
 	if (RootFilterGroup == nullptr)

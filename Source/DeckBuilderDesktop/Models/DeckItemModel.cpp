@@ -11,3 +11,26 @@ UDeckItemModel* UDeckItemModel::ConstructDeckItemModel(UCardModel* ForCardModel)
 	return Model;
 }
 
+
+void UDeckItemModel::LinkWithCard(UCardModel* CardModelToLink)
+{
+	UDeckItemModel* LinkedDeckItem = UDeckItemModel::ConstructDeckItemModel(CardModelToLink);
+	LinkedDeckItems.Add(LinkedDeckItem);
+	CardModelToLink->IncrementInUseCount();
+}
+
+void UDeckItemModel::UnlinkWithDeckItem(UDeckItemModel* DeckItem)
+{
+	DeckItem->CardModel->DecrementInUseCount();
+	LinkedDeckItems.Remove(DeckItem);
+}
+
+void UDeckItemModel::UnlinkAllCards()
+{
+	for (auto LinkedDeckItem : LinkedDeckItems)
+	{
+		LinkedDeckItem->CardModel->DecrementInUseCount();
+	}
+	LinkedDeckItems.Empty();
+}
+

@@ -21,8 +21,25 @@ public:
 
 	// Linked cards
 	// Consider these a part of the deck
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Deck Item")
+	UPROPERTY()
 	TArray<UDeckItemModel*> LinkedDeckItems;
+
+public:
+
+	UFUNCTION(BlueprintCallable, Category = "Deck Item")
+	TArray<UDeckItemModel*> GetLinkedDeckItems() const
+	{
+		return LinkedDeckItems;
+	}
+
+	UFUNCTION(BlueprintCallable, Category = "Deck Item")
+	void LinkWithCard(UCardModel* CardModelToLink);
+
+	UFUNCTION(BlueprintCallable, Category = "Deck Item")
+	void UnlinkWithDeckItem(UDeckItemModel* DeckItem);
+
+	UFUNCTION(BlueprintCallable, Category = "Deck Item")
+	void UnlinkAllCards();
 
 public:
 	// Named constructor

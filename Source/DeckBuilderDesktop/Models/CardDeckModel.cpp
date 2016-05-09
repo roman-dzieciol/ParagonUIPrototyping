@@ -17,16 +17,27 @@ void UCardDeckModel::AddCard(UCardModel* CardModel)
 
 void UCardDeckModel::AddDeckItem(UDeckItemModel* DeckItem)
 {
-	DeckItems.AddUnique(DeckItem);
+	if (!DeckItems.Contains(DeckItem))
+	{
+		DeckItem->CardModel->IncrementInUseCount();
+		DeckItems.Add(DeckItem);
+	}
 }
 
 void UCardDeckModel::RemoveDeckItem(UDeckItemModel* DeckItem)
 {
+	DeckItem->CardModel->DecrementInUseCount();
+	DeckItem->UnlinkAllCards();
 	DeckItems.Remove(DeckItem);
 }
 
 void UCardDeckModel::RemoveAllCards()
 {
+	for (auto DeckItem : DeckItems)
+	{
+		DeckItem->CardModel->DecrementInUseCount();
+		DeckItem->UnlinkAllCards();
+	}
 	DeckItems.Empty();
 }
 
@@ -53,10 +64,23 @@ TArray<UDeckItemModel*> UCardDeckModel::GetAllCardsOfType(FString CardType)
 
 int32 UCardDeckModel::CountOfCard(UCardModel* CardModel)
 {
-	return DeckItems.FilterByPredicate([=](UDeckItemModel* DeckItem) 
+	// TODO: Use map or event driven updates
+	int32 Count = 0;
+	for (const auto DeckItem : DeckItems)
 	{
-		return DeckItem->CardModel == CardModel;
-	}).Num();
+		if (DeckItem->CardModel == CardModel)
+		{
+			++Count;
+		}
+		for (const auto LinkedDeckItem : DeckItem->LinkedDeckItems)
+		{
+			if (LinkedDeckItem->CardModel == CardModel)
+			{
+				++Count;
+			}
+		}
+	}
+	return Count;
 }
 
 int32 UCardDeckModel::CountOfAllCards()

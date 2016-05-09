@@ -14,6 +14,11 @@ UCardListModel* UCardsFunctionLibrary::ConstructCardListFromCardDataTable(UDataT
 	return UCardListModel::ConstructCardListFromCardDataTable(CardDataTable, StatDataTable);
 }
 
+UCardListModel* UCardsFunctionLibrary::ConstructCardListWithCardsFrom(UCardListModel* AnotherCardList)
+{
+	return UCardListModel::ConstructCardListWithCardsFrom(AnotherCardList);
+}
+
 TArray<FStatData> UCardsFunctionLibrary::FilterableStatsData(TArray<FStatData> StatsData)
 {
 	TArray<FStatData> FilterableStats = StatsData.FilterByPredicate([=](const FStatData& StatData) {

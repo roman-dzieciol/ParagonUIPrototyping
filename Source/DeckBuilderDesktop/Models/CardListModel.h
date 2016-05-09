@@ -23,6 +23,8 @@ public:
 	// Named constructor
 	static UCardListModel* ConstructCardListFromCardDataTable(UDataTable* CardDataTable, UDataTable* StatDataTable);
 
+	static UCardListModel* ConstructCardListWithCardsFrom(UCardListModel* AnotherCardList);
+
 public:
 
 	// The main filter group

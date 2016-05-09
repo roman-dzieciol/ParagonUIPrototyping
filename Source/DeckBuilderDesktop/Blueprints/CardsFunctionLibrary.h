@@ -24,6 +24,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Card List")
 		static UCardListModel* ConstructCardListFromCardDataTable(UDataTable* CardDataTable, UDataTable* StatDataTable);
 
+	UFUNCTION(BlueprintCallable, Category = "Card List")
+	static UCardListModel* ConstructCardListWithCardsFrom(UCardListModel* AnotherCardList);
+
 	UFUNCTION(BlueprintCallable, Category = "StatData")
 		static TArray<FStatData> FilterableStatsData(TArray<FStatData> StatsData);
 
