@@ -3,6 +3,12 @@
 #include "DeckBuilderDesktop.h"
 #include "DeckItemModel.h"
 
+UDeckItemModel::UDeckItemModel(class FObjectInitializer const & ObjectInitializer)
+	: Super(ObjectInitializer)
+{
+	LinkedCardsLimit = 6;
+}
+
 
 UDeckItemModel* UDeckItemModel::ConstructDeckItemModel(UCardModel* ForCardModel)
 {
@@ -12,11 +18,16 @@ UDeckItemModel* UDeckItemModel::ConstructDeckItemModel(UCardModel* ForCardModel)
 }
 
 
-void UDeckItemModel::LinkWithCard(UCardModel* CardModelToLink)
+bool UDeckItemModel::LinkWithCard(UCardModel* CardModelToLink)
 {
-	UDeckItemModel* LinkedDeckItem = UDeckItemModel::ConstructDeckItemModel(CardModelToLink);
-	LinkedDeckItems.Add(LinkedDeckItem);
-	CardModelToLink->IncrementInUseCount();
+	if (LinkedDeckItems.Num() < LinkedCardsLimit)
+	{
+		UDeckItemModel* LinkedDeckItem = UDeckItemModel::ConstructDeckItemModel(CardModelToLink);
+		LinkedDeckItems.Add(LinkedDeckItem);
+		CardModelToLink->IncrementInUseCount();
+		return true;
+	}
+	return false;
 }
 
 void UDeckItemModel::UnlinkWithDeckItem(UDeckItemModel* DeckItem)

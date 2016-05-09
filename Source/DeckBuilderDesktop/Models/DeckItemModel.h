@@ -12,7 +12,7 @@
 UCLASS(Blueprintable, BlueprintType)
 class DECKBUILDERDESKTOP_API UDeckItemModel : public UObject
 {
-	GENERATED_BODY()
+	GENERATED_UCLASS_BODY()
 	
 public:
 	// Reference to type of card
@@ -24,6 +24,9 @@ public:
 	UPROPERTY()
 	TArray<UDeckItemModel*> LinkedDeckItems;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Deck Item")
+	int32 LinkedCardsLimit;
+
 public:
 
 	UFUNCTION(BlueprintCallable, Category = "Deck Item")
@@ -33,7 +36,7 @@ public:
 	}
 
 	UFUNCTION(BlueprintCallable, Category = "Deck Item")
-	void LinkWithCard(UCardModel* CardModelToLink);
+	bool LinkWithCard(UCardModel* CardModelToLink);
 
 	UFUNCTION(BlueprintCallable, Category = "Deck Item")
 	void UnlinkWithDeckItem(UDeckItemModel* DeckItem);
