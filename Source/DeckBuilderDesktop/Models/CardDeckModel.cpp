@@ -50,7 +50,7 @@ void UCardDeckModel::RemoveAllCardsOfType(FString CardType)
 	}
 }
 
-TArray<UDeckItemModel*> UCardDeckModel::GetAllCardsOfType(FString CardType)
+TArray<UDeckItemModel*> UCardDeckModel::GetAllCardsOfType(FString CardType) const
 {
 	return DeckItems.FilterByPredicate([=](UDeckItemModel* DeckItem) 
 	{ 
@@ -62,7 +62,7 @@ TArray<UDeckItemModel*> UCardDeckModel::GetAllCardsOfType(FString CardType)
 	});
 }
 
-int32 UCardDeckModel::CountOfCard(UCardModel* CardModel)
+int32 UCardDeckModel::CountOfCard(UCardModel* CardModel) const
 {
 	// TODO: Use map or event driven updates
 	int32 Count = 0;
@@ -83,7 +83,7 @@ int32 UCardDeckModel::CountOfCard(UCardModel* CardModel)
 	return Count;
 }
 
-int32 UCardDeckModel::CountOfAllCards()
+int32 UCardDeckModel::CountOfAllCards() const
 {
 	auto Count = DeckItems.Num();
 	for (const auto DeckItem : DeckItems)
@@ -91,4 +91,9 @@ int32 UCardDeckModel::CountOfAllCards()
 		Count += DeckItem->LinkedDeckItems.Num();
 	}
 	return Count;
+}
+
+bool UCardDeckModel::CanAddCard() const
+{
+	return CountOfAllCards() < MaxCardCount;
 }

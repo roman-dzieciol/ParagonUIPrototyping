@@ -39,11 +39,14 @@ public:
 	void RemoveAllCardsOfType(FString CardType);
 
 	UFUNCTION(BlueprintCallable, Category = "Deck")
-	TArray<UDeckItemModel*> GetAllCardsOfType(FString CardType);
+	TArray<UDeckItemModel*> GetAllCardsOfType(FString CardType) const;
 
 	UFUNCTION(BlueprintCallable, Category = "Deck")
-	int32 CountOfCard(UCardModel* UCardModel);
+	int32 CountOfCard(UCardModel* UCardModel) const;
 
 	UFUNCTION(BlueprintCallable, Category = "Deck")
-	int32 CountOfAllCards();
+	int32 CountOfAllCards() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Deck")
+	bool CanAddCard() const;
 };
