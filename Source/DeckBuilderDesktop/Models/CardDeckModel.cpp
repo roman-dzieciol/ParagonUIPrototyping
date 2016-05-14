@@ -9,36 +9,90 @@ UCardDeckModel::UCardDeckModel(class FObjectInitializer const & ObjectInitialize
 	MaxCardCount = 40;
 }
 
-void UCardDeckModel::AddCard(UCardModel* CardModel)
+void UCardDeckModel::IncrementInUseCount(UDeckItemModel* DeckItem)
 {
-	auto DeckItem = UDeckItemModel::ConstructDeckItemModel(CardModel);
-	AddDeckItem(DeckItem);
+	DeckItemsByCardModel.Emplace(DeckItem->CardModel, DeckItem);
 }
 
-void UCardDeckModel::AddDeckItem(UDeckItemModel* DeckItem)
+void UCardDeckModel::DecrementInUseCount(UDeckItemModel* DeckItem)
 {
-	if (!DeckItems.Contains(DeckItem))
+	DeckItemsByCardModel.Remove(DeckItem->CardModel, DeckItem);
+}
+
+bool UCardDeckModel::AddCard(UCardModel* CardModel)
+{
+	auto DeckItem = UDeckItemModel::ConstructDeckItemModel(CardModel);
+	return AddDeckItem(DeckItem);
+}
+
+bool UCardDeckModel::CanAddDeckItem(UDeckItemModel* DeckItem) const
+{
+	return GetCountOfAllCards() < MaxCardCount && !DeckItems.Contains(DeckItem);
+}
+
+bool UCardDeckModel::InternalAddDeckItem(UDeckItemModel* DeckItem)
+{
+	if (!CanAddDeckItem(DeckItem))
 	{
-		DeckItem->CardModel->IncrementInUseCount();
-		DeckItems.Add(DeckItem);
+		return false;
 	}
+
+	IncrementInUseCount(DeckItem);
+	DeckItems.Add(DeckItem);
+	return true;
+}
+
+bool UCardDeckModel::AddDeckItem(UDeckItemModel* DeckItem)
+{
+	if (!InternalAddDeckItem(DeckItem))
+	{
+		return false;
+	}
+
+	OnCardDeckUpdated.Broadcast();
+	return true;
+}
+
+bool UCardDeckModel::AddDeckItemAndLinkWith(UDeckItemModel* DeckItem, UDeckItemModel* LinkingItem)
+{
+	if (!InternalAddDeckItem(DeckItem))
+	{
+		return false;
+	}
+
+	if (!LinkingItem->LinkWithItem(DeckItem))
+	{
+		InternalRemoveDeckItem(DeckItem);
+		return false;
+	}
+
+	OnCardDeckUpdated.Broadcast();
+	return true;
+}
+
+void UCardDeckModel::InternalRemoveDeckItem(UDeckItemModel* DeckItem)
+{
+	DecrementInUseCount(DeckItem);
+	DeckItem->OnRemove();
+
+	for (auto LinkedDeckItem : DeckItem->LinkedDeckItems)
+	{
+		RemoveDeckItem(LinkedDeckItem);
+	}
+	DeckItems.Remove(DeckItem);
 }
 
 void UCardDeckModel::RemoveDeckItem(UDeckItemModel* DeckItem)
 {
-	DeckItem->CardModel->DecrementInUseCount();
-	DeckItem->UnlinkAllCards();
-	DeckItems.Remove(DeckItem);
+	InternalRemoveDeckItem(DeckItem);
+	OnCardDeckUpdated.Broadcast();
 }
 
 void UCardDeckModel::RemoveAllCards()
 {
-	for (auto DeckItem : DeckItems)
-	{
-		DeckItem->CardModel->DecrementInUseCount();
-		DeckItem->UnlinkAllCards();
-	}
+	DeckItemsByCardModel.Empty();
 	DeckItems.Empty();
+	OnCardDeckUpdated.Broadcast();
 }
 
 void UCardDeckModel::RemoveAllCardsOfType(FString CardType)
@@ -46,8 +100,9 @@ void UCardDeckModel::RemoveAllCardsOfType(FString CardType)
 	auto ItemsToRemove = GetAllCardsOfType(CardType);
 	for (auto ItemToRemove : ItemsToRemove)
 	{
-		RemoveDeckItem(ItemToRemove);
+		InternalRemoveDeckItem(ItemToRemove);
 	}
+	OnCardDeckUpdated.Broadcast();
 }
 
 TArray<UDeckItemModel*> UCardDeckModel::GetAllCardsOfType(FString CardType) const
@@ -62,38 +117,19 @@ TArray<UDeckItemModel*> UCardDeckModel::GetAllCardsOfType(FString CardType) cons
 	});
 }
 
-int32 UCardDeckModel::CountOfCard(UCardModel* CardModel) const
+int32 UCardDeckModel::GetCountOfCard(UCardModel* CardModel) const
 {
-	// TODO: Use map or event driven updates
-	int32 Count = 0;
-	for (const auto DeckItem : DeckItems)
-	{
-		if (DeckItem->CardModel == CardModel)
-		{
-			++Count;
-		}
-		for (const auto LinkedDeckItem : DeckItem->LinkedDeckItems)
-		{
-			if (LinkedDeckItem->CardModel == CardModel)
-			{
-				++Count;
-			}
-		}
-	}
-	return Count;
+	TArray<UDeckItemModel*> RelatedDeckItems;
+	DeckItemsByCardModel.MultiFind(CardModel, RelatedDeckItems);
+	return RelatedDeckItems.Num();
 }
 
-int32 UCardDeckModel::CountOfAllCards() const
+int32 UCardDeckModel::GetCountOfAllCards() const
 {
-	auto Count = DeckItems.Num();
-	for (const auto DeckItem : DeckItems)
-	{
-		Count += DeckItem->LinkedDeckItems.Num();
-	}
-	return Count;
+	return DeckItems.Num();
 }
 
 bool UCardDeckModel::CanAddCard() const
 {
-	return CountOfAllCards() < MaxCardCount;
+	return GetCountOfAllCards() < MaxCardCount;
 }

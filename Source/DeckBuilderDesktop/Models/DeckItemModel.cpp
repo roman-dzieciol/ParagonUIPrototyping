@@ -17,31 +17,50 @@ UDeckItemModel* UDeckItemModel::ConstructDeckItemModel(UCardModel* ForCardModel)
 	return Model;
 }
 
-
-bool UDeckItemModel::LinkWithCard(UCardModel* CardModelToLink)
+bool UDeckItemModel::CanLinkItem(UDeckItemModel* DeckItem) const
 {
-	if (LinkedDeckItems.Num() < LinkedCardsLimit)
+	return LinkedDeckItems.Num() < LinkedCardsLimit;
+}
+
+bool UDeckItemModel::LinkWithItem(UDeckItemModel* DeckItem)
+{
+	if (CanLinkItem(DeckItem))
 	{
-		UDeckItemModel* LinkedDeckItem = UDeckItemModel::ConstructDeckItemModel(CardModelToLink);
-		LinkedDeckItems.Add(LinkedDeckItem);
-		CardModelToLink->IncrementInUseCount();
+		LinkedDeckItems.Add(DeckItem);
+		DeckItem->LinkingDeckItem = this;
 		return true;
 	}
 	return false;
 }
 
-void UDeckItemModel::UnlinkWithDeckItem(UDeckItemModel* DeckItem)
+void UDeckItemModel::UnlinkWithItem(UDeckItemModel* DeckItem)
 {
-	DeckItem->CardModel->DecrementInUseCount();
+	DeckItem->LinkingDeckItem = nullptr;
 	LinkedDeckItems.Remove(DeckItem);
 }
 
-void UDeckItemModel::UnlinkAllCards()
+void UDeckItemModel::UnlinkAllItems()
 {
 	for (auto LinkedDeckItem : LinkedDeckItems)
 	{
-		LinkedDeckItem->CardModel->DecrementInUseCount();
+		LinkedDeckItem->LinkingDeckItem = nullptr;
 	}
 	LinkedDeckItems.Empty();
 }
 
+int32 UDeckItemModel::GetItemCount() const
+{
+	return 1 + LinkedDeckItems.Num();
+}
+
+void UDeckItemModel::OnRemove()
+{
+	if (LinkingDeckItem)
+	{
+		LinkingDeckItem->UnlinkWithItem(this);
+	}
+	else 
+	{
+		UnlinkAllItems();
+	}
+}
