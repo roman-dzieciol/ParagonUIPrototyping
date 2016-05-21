@@ -119,9 +119,7 @@ TArray<UDeckItemModel*> UCardDeckModel::GetAllCardsOfType(FString CardType) cons
 
 int32 UCardDeckModel::GetCountOfCard(UCardModel* CardModel) const
 {
-	TArray<UDeckItemModel*> RelatedDeckItems;
-	DeckItemsByCardModel.MultiFind(CardModel, RelatedDeckItems);
-	return RelatedDeckItems.Num();
+	return GetDeckItemsForCardModel(CardModel).Num();
 }
 
 int32 UCardDeckModel::GetCountOfAllCards() const
@@ -132,4 +130,18 @@ int32 UCardDeckModel::GetCountOfAllCards() const
 bool UCardDeckModel::CanAddCard() const
 {
 	return GetCountOfAllCards() < MaxCardCount;
+}
+
+TArray<UDeckItemModel*> UCardDeckModel::GetDeckItemsForCardModel(UCardModel* CardModel) const
+{
+	TArray<UDeckItemModel*> RelatedDeckItems;
+	DeckItemsByCardModel.MultiFind(CardModel, RelatedDeckItems);
+	return RelatedDeckItems;
+}
+
+TArray<UDeckItemModel*> UCardDeckModel::GetUnlinkedDeckItemsForCardModel(UCardModel* CardModel) const
+{
+	return GetDeckItemsForCardModel(CardModel).FilterByPredicate([&](UDeckItemModel* DeckItemModel) {
+		return DeckItemModel->LinkingDeckItem == nullptr;
+	});
 }

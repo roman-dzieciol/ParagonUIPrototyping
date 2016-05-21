@@ -18,12 +18,21 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Card List")
 	TArray<UCardModel*> AllCards;
 
+	UPROPERTY()
+	TMap<FString, UCardModel*> AllCardsByName;
+
 public:
 
 	// Named constructor
 	static UCardListModel* ConstructCardListFromCardDataTable(UDataTable* CardDataTable, UDataTable* StatDataTable);
 
 	static UCardListModel* ConstructCardListWithCardsFrom(UCardListModel* AnotherCardList);
+
+public:
+
+	UFUNCTION(BlueprintCallable, Category = "Card List")
+	UCardModel* GetCardModelNamed(FString CardName) const;
+
 
 public:
 

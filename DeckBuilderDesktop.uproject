@@ -13,7 +13,9 @@
 				"SlateCore",
 				"UMG",
 				"CoreUObject",
-				"Engine"
+				"Engine",
+				"Json",
+				"JsonUtilities"
 			]
 		}
 	]

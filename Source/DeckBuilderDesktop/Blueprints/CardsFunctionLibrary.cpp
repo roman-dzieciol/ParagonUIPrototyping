@@ -2,6 +2,11 @@
 #include "DeckBuilderDesktop.h"
 #include "CardsFunctionLibrary.h"
 #include "DataTables/FStatData.h"
+#include "Models/CardDeckModel.h"
+#include "Models/CardDeckExporterJSON.h"
+#include "Models/CardDeckImporterJSON.h"
+#include "ParagonSaveGame.h"
+#include "Kismet/GameplayStatics.h"
 
 
 UCardModel* UCardsFunctionLibrary::ConstructCardModelFromCardData(const FCardData& CardData, UDataTable* StatDataTable)

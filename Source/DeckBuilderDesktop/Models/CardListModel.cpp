@@ -28,6 +28,7 @@ UCardListModel* UCardListModel::ConstructCardListFromCardDataTable(UDataTable* C
 			if (CardModel != nullptr)
 			{
 				CardListModel->AllCards.Add(CardModel);
+				CardListModel->AllCardsByName.Add(CardModel->CardName.ToString(), CardModel);
 			}
 		}
 	}
@@ -39,8 +40,15 @@ UCardListModel* UCardListModel::ConstructCardListWithCardsFrom(UCardListModel* A
 {
 	auto CardListModel = NewObject<UCardListModel>(GetTransientPackage(), NAME_None);
 	CardListModel->AllCards.Append(AnotherCardList->AllCards);
+	CardListModel->AllCardsByName.Append(AnotherCardList->AllCardsByName);
 	CardListModel->FilterStates.SetNumZeroed(CardListModel->AllCards.Num());
 	return CardListModel;
+}
+
+UCardModel* UCardListModel::GetCardModelNamed(FString CardName) const
+{
+	UCardModel*const* FoundModel = AllCardsByName.Find(CardName);
+	return FoundModel != nullptr ? *FoundModel : nullptr;
 }
 
 void UCardListModel::FilterCards()

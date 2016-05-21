@@ -64,6 +64,11 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Deck")
 	bool CanAddCard() const;
 
+	UFUNCTION(BlueprintCallable, Category = "Deck")
+	TArray<UDeckItemModel*> GetDeckItemsForCardModel(UCardModel* CardModel) const;
+
+	UFUNCTION(BlueprintCallable, Category = "Deck")
+	TArray<UDeckItemModel*> GetUnlinkedDeckItemsForCardModel(UCardModel* CardModel) const;
 
 private:
 

@@ -10,6 +10,8 @@
 #include "Models/CardListModel.h"
 #include "CardsFunctionLibrary.generated.h"
 
+class UCardDeckModel;
+
 
 UCLASS()
 class UCardsFunctionLibrary : public UBlueprintFunctionLibrary
