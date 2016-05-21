@@ -22,6 +22,9 @@ public:
 	TArray<UDeckItemModel*> DeckItems;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Deck")
+	FString DeckName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Deck")
 	int32 MaxCardCount;
 
 	UPROPERTY(EditAnywhere, BlueprintAssignable, Category = "Deck")
