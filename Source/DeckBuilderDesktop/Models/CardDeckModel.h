@@ -7,6 +7,8 @@
 #include "DeckItemModel.h"
 #include "CardDeckModel.generated.h"
 
+class UHeroModel;
+
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FCardDeckUpdated);
 
 /**
@@ -29,6 +31,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintAssignable, Category = "Deck")
 	FCardDeckUpdated OnCardDeckUpdated;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Deck")
+	UHeroModel* HeroModel;
 
 public:
 	UFUNCTION(BlueprintCallable, Category = "Deck")
