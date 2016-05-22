@@ -57,9 +57,17 @@ public:
 	virtual const FSlateBrush* GetEditorIcon() override;
 	virtual const FText GetPaletteCategory() override;
 #endif
+public:
+	// Delegate for selection notification
+	DECLARE_DYNAMIC_DELEGATE_OneParam(FOnSelectionChangedUObject, UObject*, Item);
+
+	UPROPERTY(EditAnywhere, Category = Events, meta = (IsBindableEvent = "True"))
+	FOnSelectionChangedUObject OnSelectionChangedEvent;
 
 protected:
 	TSharedRef<ITableRow> HandleOnGenerateTile(UObject* Item, const TSharedRef< STableViewBase >& OwnerTable) const;
+	void HandleOnSelectionChanged(UObject* Item, ESelectInfo::Type SelectInfo) const;
+
 
 	// UWidget interface
 	virtual TSharedRef<SWidget> RebuildWidget() override;

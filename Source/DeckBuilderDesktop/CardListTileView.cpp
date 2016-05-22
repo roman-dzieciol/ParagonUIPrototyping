@@ -27,6 +27,7 @@ TSharedRef<SWidget> UCardListTileView::RebuildWidget()
 		.ItemWidth(ItemWidth)
 		.ItemHeight(ItemHeight)
 		.OnGenerateTile(BIND_UOBJECT_DELEGATE(STileView< UObject* >::FOnGenerateRow, HandleOnGenerateTile))
+		.OnSelectionChanged(BIND_UOBJECT_DELEGATE(STileView< UObject* >::FOnSelectionChanged, HandleOnSelectionChanged))
 		//.OnSelectionChanged(this, &SSocketManager::SocketSelectionChanged_Execute)
 		//.OnContextMenuOpening(this, &SSocketManager::OnContextMenuOpening)
 		//.OnItemScrolledIntoView(this, &SSocketManager::OnItemScrolledIntoView)
@@ -61,6 +62,14 @@ TSharedRef<ITableRow> UCardListTileView::HandleOnGenerateTile(UObject* Item, con
 		[
 			SNew(STextBlock).Text(Item ? FText::FromString(Item->GetName()) : LOCTEXT("null", "null"))
 		];
+}
+
+void UCardListTileView::HandleOnSelectionChanged(UObject* Item, ESelectInfo::Type SelectInfo) const
+{
+	if (OnSelectionChangedEvent.IsBound())
+	{
+		OnSelectionChangedEvent.Execute(Item);
+	}
 }
 
 void UCardListTileView::SetItemWidth(float Width)
