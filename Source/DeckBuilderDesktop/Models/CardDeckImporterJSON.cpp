@@ -43,6 +43,8 @@ UCardDeckModel* UCardDeckImporterJSON::ImportDeckModel(const FString& InJSONData
 		return nullptr;
 	}
 
+	TMap<UDeckItemModel*, TArray<FString>> CardLinks;
+
 	for (TSharedPtr<FJsonValue> JsonValue : *Cards)
 	{
 		const TSharedPtr<FJsonObject>* JsonObject = nullptr;
@@ -76,35 +78,42 @@ UCardDeckModel* UCardDeckImporterJSON::ImportDeckModel(const FString& InJSONData
 		if (!CardDeckModel->AddDeckItem(DeckItemModel))
 		{
 			OutErrors.Add(FString::Printf(TEXT("Failed to add card to deck: %s"), *CardName));
-			return false;
+			return nullptr;
 		}
-
-
+	
 		TArray<FString> LinkedCardNames;
-		if (DeckObject->TryGetStringArrayField(TEXT("LinkedCards"), LinkedCardNames))
+		if ((*JsonObject)->TryGetStringArrayField(TEXT("LinkedCards"), LinkedCardNames))
 		{
-			for (auto& LinkedCardName : LinkedCardNames)
+			UE_LOG(Deck, Verbose, TEXT("linked: %s"), *FString::Join(LinkedCardNames, TEXT(", ")));
+			CardLinks.Add(DeckItemModel, LinkedCardNames);
+		}
+	}
+
+	// 2nd pass: link cards
+	for (auto& Item : CardLinks)
+	{
+		auto DeckItemModel = Item.Key;
+		for (auto& LinkedCardName : Item.Value)
+		{
+			UCardModel* LinkedCardModel = CardListModel->GetCardModelNamed(LinkedCardName);
+			if (!LinkedCardModel)
 			{
-				UCardModel* LinkedCardModel = CardListModel->GetCardModelNamed(LinkedCardName);
-				if (!LinkedCardModel)
-				{
-					OutErrors.Add(FString::Printf(TEXT("Unknown card: %s"), *LinkedCardName));
-					return nullptr;
-				}
+				OutErrors.Add(FString::Printf(TEXT("Unknown card: %s"), *LinkedCardName));
+				return nullptr;
+			}
 
-				TArray<UDeckItemModel*> UnlinkedDeckItemModels = CardDeckModel->GetUnlinkedDeckItemsForCardModel(LinkedCardModel);
-				UDeckItemModel* UnlinkedDeckItemModel = UnlinkedDeckItemModels.Num() > 0 ? UnlinkedDeckItemModels[0] : nullptr;
-				if (!UnlinkedDeckItemModel)
-				{
-					OutErrors.Add(FString::Printf(TEXT("Not enough unlinked cards: %s"), *LinkedCardName));
-					return nullptr;
-				}
+			TArray<UDeckItemModel*> UnlinkedDeckItemModels = CardDeckModel->GetUnlinkedDeckItemsForCardModel(LinkedCardModel);
+			UDeckItemModel* UnlinkedDeckItemModel = UnlinkedDeckItemModels.Num() > 0 ? UnlinkedDeckItemModels[0] : nullptr;
+			if (!UnlinkedDeckItemModel)
+			{
+				OutErrors.Add(FString::Printf(TEXT("Not enough unlinked cards: %s"), *LinkedCardName));
+				return nullptr;
+			}
 
-				if (!CardDeckModel->AddDeckItemAndLinkWith(UnlinkedDeckItemModel, DeckItemModel))
-				{
-					OutErrors.Add(FString::Printf(TEXT("Failed to add card to deck: %s and link with: %s"), *LinkedCardName, *CardName));
-					return nullptr;
-				}
+			if (!CardDeckModel->LinkDeckItemWith(UnlinkedDeckItemModel, DeckItemModel))
+			{
+				OutErrors.Add(FString::Printf(TEXT("Failed to add card to deck: %s and link with: %s"), *LinkedCardName, *DeckItemModel->CardModel->CardName.ToString()));
+				return nullptr;
 			}
 		}
 	}

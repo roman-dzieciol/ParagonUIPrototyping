@@ -14,7 +14,7 @@ bool UCardDeckExporterJSON::ExportDeckModel(UCardDeckModel* DeckModel, FString& 
 {
 	TSharedRef< TJsonWriter<TCHAR, TPrettyJsonPrintPolicy<TCHAR> > > JsonWriter = TJsonWriterFactory<TCHAR, TPrettyJsonPrintPolicy<TCHAR> >::Create(&OutExportText);
 
-	JsonWriter->WriteObjectStart(TEXT("Deck"));
+	JsonWriter->WriteObjectStart();
 	JsonWriter->WriteValue(TEXT("DeckName"), DeckModel->DeckName);
 	JsonWriter->WriteArrayStart(TEXT("Cards"));
 
