@@ -31,6 +31,17 @@ UCardDeckModel* UDeckListModel::CreateNewDeck()
 	return nullptr;
 }
 
+bool UDeckListModel::RemoveDeckModel(UCardDeckModel* CardDeckModel)
+{
+	auto Index = DeckSlots.IndexOfByKey(CardDeckModel);
+	if (Index != INDEX_NONE)
+	{
+		DeckSlots[Index] = nullptr;
+		return true;
+	}
+	return false;
+}
+
 bool UDeckListModel::SaveDecks()
 {
 	auto Exporter = NewObject<UCardDeckExporterJSON>(GetTransientPackage(), NAME_None);
@@ -46,6 +57,7 @@ bool UDeckListModel::SaveDecks()
 				return false;
 			}
 			DecksAsJSON.Add(JSONData);
+			UE_LOG(Deck, Verbose, TEXT("SAVE: \n%s"), *JSONData);
 		}
 		else
 		{

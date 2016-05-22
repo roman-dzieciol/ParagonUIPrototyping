@@ -60,9 +60,18 @@ bool UCardDeckModel::AddDeckItemAndLinkWith(UDeckItemModel* DeckItem, UDeckItemM
 		return false;
 	}
 
-	if (!LinkingItem->LinkWithItem(DeckItem))
+	if (!LinkDeckItemWith(DeckItem, LinkingItem))
 	{
 		InternalRemoveDeckItem(DeckItem);
+		return false;
+	}
+	return true;
+}
+
+bool UCardDeckModel::LinkDeckItemWith(UDeckItemModel* DeckItem, UDeckItemModel* LinkingItem)
+{
+	if (!LinkingItem->LinkWithItem(DeckItem))
+	{
 		return false;
 	}
 

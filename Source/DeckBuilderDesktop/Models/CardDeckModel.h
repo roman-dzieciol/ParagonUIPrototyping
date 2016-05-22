@@ -41,6 +41,9 @@ public:
 	bool AddDeckItemAndLinkWith(UDeckItemModel* DeckItem, UDeckItemModel* LinkingItem);
 
 	UFUNCTION(BlueprintCallable, Category = "Deck")
+	bool LinkDeckItemWith(UDeckItemModel* DeckItem, UDeckItemModel* LinkingItem);
+
+	UFUNCTION(BlueprintCallable, Category = "Deck")
 	bool CanAddDeckItem(UDeckItemModel* DeckItem) const;
 
 	UFUNCTION(BlueprintCallable, Category = "Deck")

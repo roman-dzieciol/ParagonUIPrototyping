@@ -29,6 +29,9 @@ public:
 	UCardDeckModel* CreateNewDeck();
 
 	UFUNCTION(BlueprintCallable, Category = "Deck List")
+	bool RemoveDeckModel(UCardDeckModel* CardDeckModel);
+
+	UFUNCTION(BlueprintCallable, Category = "Deck List")
 	bool SaveDecks();
 
 	UFUNCTION(BlueprintCallable, Category = "Deck List")
