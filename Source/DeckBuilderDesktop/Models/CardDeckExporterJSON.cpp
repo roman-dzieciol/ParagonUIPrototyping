@@ -4,6 +4,7 @@
 #include "CardDeckExporterJSON.h"
 #include "Json.h"
 #include "CardDeckModel.h"
+#include "HeroModel.h"
 
 UCardDeckExporterJSON::UCardDeckExporterJSON(class FObjectInitializer const & ObjectInitializer)
 	: Super(ObjectInitializer)
@@ -16,6 +17,7 @@ bool UCardDeckExporterJSON::ExportDeckModel(UCardDeckModel* DeckModel, FString& 
 
 	JsonWriter->WriteObjectStart();
 	JsonWriter->WriteValue(TEXT("DeckName"), DeckModel->DeckName);
+	JsonWriter->WriteValue(TEXT("HeroName"), DeckModel->HeroModel->HeroName.ToString());
 	JsonWriter->WriteArrayStart(TEXT("Cards"));
 
 	for (auto& DeckItemModel : DeckModel->DeckItems)

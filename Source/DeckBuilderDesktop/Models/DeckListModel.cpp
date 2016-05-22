@@ -3,6 +3,7 @@
 #include "DeckBuilderDesktop.h"
 #include "DeckListModel.h"
 #include "CardDeckModel.h"
+#include "HeroListModel.h"
 #include "Models/CardListModel.h"
 #include "Models/CardDeckModel.h"
 #include "Models/CardDeckExporterJSON.h"
@@ -70,7 +71,7 @@ bool UDeckListModel::SaveDecks()
 	return UGameplayStatics::SaveGameToSlot(SaveGame, TEXT("DefaultSaveGameSlot"), 0);
 }
 
-bool UDeckListModel::LoadDecks(UCardListModel* CardListModel)
+bool UDeckListModel::LoadDecks(UCardListModel* CardListModel, UHeroListModel* HeroListModel)
 {
 	TArray<UCardDeckModel*> Result;
 	UParagonSaveGame* LoadedSaveGame = Cast<UParagonSaveGame>(UGameplayStatics::CreateSaveGameObject(UParagonSaveGame::StaticClass()));
@@ -91,7 +92,7 @@ bool UDeckListModel::LoadDecks(UCardListModel* CardListModel)
 		else
 		{
 			TArray<FString> ImportErrors;
-			UCardDeckModel* CardDeckModel = Importer->ImportDeckModel(DeckAsJSON, CardListModel, ImportErrors);
+			UCardDeckModel* CardDeckModel = Importer->ImportDeckModel(DeckAsJSON, CardListModel, HeroListModel, ImportErrors);
 			if (!CardDeckModel)
 			{
 				return false;

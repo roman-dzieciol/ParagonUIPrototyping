@@ -7,6 +7,7 @@
 
 class UCardDeckModel;
 class UCardListModel;
+class UHeroListModel;
 
 /**
  * 
@@ -17,5 +18,5 @@ class DECKBUILDERDESKTOP_API UCardDeckImporterJSON : public UObject
 	GENERATED_UCLASS_BODY()
 	
 public:
-	UCardDeckModel* ImportDeckModel(const FString& InJSONData, UCardListModel* CardListModel, TArray<FString>& OutErrors);
+	UCardDeckModel* ImportDeckModel(const FString& InJSONData, UCardListModel* CardListModel, UHeroListModel* HeroListModel, TArray<FString>& OutErrors);
 };

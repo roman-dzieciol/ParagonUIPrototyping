@@ -4,6 +4,7 @@
 #include "CardDeckImporterJSON.h"
 #include "CardDeckModel.h"
 #include "CardListModel.h"
+#include "HeroListModel.h"
 
 
 UCardDeckImporterJSON::UCardDeckImporterJSON(class FObjectInitializer const & ObjectInitializer)
@@ -11,7 +12,7 @@ UCardDeckImporterJSON::UCardDeckImporterJSON(class FObjectInitializer const & Ob
 {
 }
 
-UCardDeckModel* UCardDeckImporterJSON::ImportDeckModel(const FString& InJSONData, UCardListModel* CardListModel, TArray<FString>& OutErrors)
+UCardDeckModel* UCardDeckImporterJSON::ImportDeckModel(const FString& InJSONData, UCardListModel* CardListModel, UHeroListModel* HeroListModel, TArray<FString>& OutErrors)
 {
 	if (InJSONData.IsEmpty())
 	{
@@ -35,6 +36,21 @@ UCardDeckModel* UCardDeckImporterJSON::ImportDeckModel(const FString& InJSONData
 		return nullptr;
 	}
 	CardDeckModel->DeckName = DeckName;
+
+	FString HeroName;
+	if (!DeckObject->TryGetStringField(TEXT("HeroName"), HeroName))
+	{
+		OutErrors.Add(FString::Printf(TEXT("HeroName not present")));
+		return nullptr;
+	}
+
+	UHeroModel* HeroModel = HeroListModel->GetHeroModelNamed(HeroName);
+	if (!HeroModel)
+	{
+		OutErrors.Add(FString::Printf(TEXT("Unknown HeroName")));
+		return nullptr;
+	}
+	CardDeckModel->HeroModel = HeroModel;
 
 	const TArray< TSharedPtr<FJsonValue> >* Cards = nullptr;
 	if (!DeckObject->TryGetArrayField(TEXT("Cards"), Cards))

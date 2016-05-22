@@ -7,6 +7,7 @@
 
 class UCardDeckModel;
 class UCardListModel;
+class UHeroListModel;
 
 /**
  * 
@@ -35,5 +36,5 @@ public:
 	bool SaveDecks();
 
 	UFUNCTION(BlueprintCallable, Category = "Deck List")
-	bool LoadDecks(UCardListModel* CardListModel);
+	bool LoadDecks(UCardListModel* CardListModel, UHeroListModel* HeroListModel);
 };
