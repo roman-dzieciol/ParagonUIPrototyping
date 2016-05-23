@@ -24,7 +24,7 @@ UHeroListModel* UHeroListModel::ConstructFromHeroDataTable(UDataTable* HeroDataT
 			if (HeroModel != nullptr)
 			{
 				HeroListModel->HeroModels.Add(HeroModel);
-				HeroListModel->HeroModelsByName.Add(HeroModel->HeroName.ToString(), HeroModel);
+				HeroListModel->HeroModelsByName.Add(HeroModel->HeroName, HeroModel);
 			}
 		}
 	}

@@ -78,6 +78,10 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Deck")
 	TArray<UDeckItemModel*> GetUnlinkedDeckItemsForCardModel(UCardModel* CardModel) const;
 
+	UFUNCTION(BlueprintCallable, Category = "Deck")
+	TArray<FString> GetDeckAffinities() const;
+
+
 private:
 
 	bool InternalAddDeckItem(UDeckItemModel* DeckItem);

@@ -17,7 +17,7 @@ bool UCardDeckExporterJSON::ExportDeckModel(UCardDeckModel* DeckModel, FString& 
 
 	JsonWriter->WriteObjectStart();
 	JsonWriter->WriteValue(TEXT("DeckName"), DeckModel->DeckName);
-	JsonWriter->WriteValue(TEXT("HeroName"), DeckModel->HeroModel->HeroName.ToString());
+	JsonWriter->WriteValue(TEXT("HeroName"), DeckModel->HeroModel->HeroName);
 	JsonWriter->WriteArrayStart(TEXT("Cards"));
 
 	for (auto& DeckItemModel : DeckModel->DeckItems)

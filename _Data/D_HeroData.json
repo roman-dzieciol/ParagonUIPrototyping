@@ -1,0 +1,143 @@
+[
+	{
+		"Name": "Dekker",
+		"HeroName": "Dekker",
+		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Dekker.T_Dekker'",
+		"Affinities": [
+			"Growth",
+			"Order"
+		]
+	},
+	{
+		"Name": "FengMao",
+		"HeroName": "Feng Mao",
+		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_FengMao.T_FengMao'",
+		"Affinities": [
+			"Fury",
+			"Order"
+		]
+	},
+	{
+		"Name": "Gadget",
+		"HeroName": "Gadget",
+		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Gadget.T_Gadget'",
+		"Affinities": [
+			"Intellect"
+		]
+	},
+	{
+		"Name": "Gideon",
+		"HeroName": "Gideon",
+		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Gideon.T_Gideon'",
+		"Affinities": [
+			"Intellect",
+			"Corruption"
+		]
+	},
+	{
+		"Name": "Grim",
+		"HeroName": "Grim.exe",
+		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Grim.T_Grim'",
+		"Affinities": [
+			"Intellect",
+			"Corruption"
+		]
+	},
+	{
+		"Name": "Grux",
+		"HeroName": "Grux",
+		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Grux.T_Grux'",
+		"Affinities": [
+			"Fury",
+			"Corruption"
+		]
+	},
+	{
+		"Name": "Howitzer",
+		"HeroName": "Howitzer",
+		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Howitzer.T_Howitzer'",
+		"Affinities": [
+			"Fury",
+			"Intellect"
+		]
+	},
+	{
+		"Name": "IggyScorch",
+		"HeroName": "Iggy & Scorch",
+		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_IggyScorch.T_IggyScorch'",
+		"Affinities": [
+			"Fury",
+			"Corruption"
+		]
+	},
+	{
+		"Name": "Kallari",
+		"HeroName": "Kallari",
+		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Kallari.T_Kallari'",
+		"Affinities": [
+			"Corruption"
+		]
+	},
+	{
+		"Name": "Murdock",
+		"HeroName": "Murdock",
+		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Murdock.T_Murdock'",
+		"Affinities": [
+			"Fury",
+			"Intellect"
+		]
+	},
+	{
+		"Name": "Muriel",
+		"HeroName": "Muriel",
+		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Muriel.T_Muriel'",
+		"Affinities": [
+			"Growth",
+			"Order"
+		]
+	},
+	{
+		"Name": "Rampage",
+		"HeroName": "Rampage",
+		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Rampage.T_Rampage'",
+		"Affinities": [
+			"Growth",
+			"Fury"
+		]
+	},
+	{
+		"Name": "Sevarog",
+		"HeroName": "Sevarog",
+		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Sevarog.T_Sevarog'",
+		"Affinities": [
+			"Growth",
+			"Corruption"
+		]
+	},
+	{
+		"Name": "Sparrow",
+		"HeroName": "Sparrow",
+		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Sparrow.T_Sparrow'",
+		"Affinities": [
+			"Growth",
+			"Order"
+		]
+	},
+	{
+		"Name": "Steel",
+		"HeroName": "Steel",
+		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Steel.T_Steel'",
+		"Affinities": [
+			"Intellect",
+			"Order"
+		]
+	},
+	{
+		"Name": "TwinBlast",
+		"HeroName": "TwinBlast",
+		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_TwinBlast.T_TwinBlast'",
+		"Affinities": [
+			"Fury"
+		]
+	}
+]

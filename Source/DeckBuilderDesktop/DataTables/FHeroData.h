@@ -12,10 +12,13 @@ public:
 	FHeroData(){}
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Data")
-		FText HeroName;
+		FString HeroName;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Data")
 		UTexture2D* AvatarTexture;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Data")
+		TArray<FString> Affinities;
 
 	friend bool operator==(const FHeroData& LHS, const FHeroData& RHS);
 };

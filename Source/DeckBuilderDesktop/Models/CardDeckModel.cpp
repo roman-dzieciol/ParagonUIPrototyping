@@ -2,6 +2,7 @@
 
 #include "DeckBuilderDesktop.h"
 #include "CardDeckModel.h"
+#include "HeroModel.h"
 
 UCardDeckModel::UCardDeckModel(class FObjectInitializer const & ObjectInitializer)
 	: Super(ObjectInitializer)
@@ -153,4 +154,12 @@ TArray<UDeckItemModel*> UCardDeckModel::GetUnlinkedDeckItemsForCardModel(UCardMo
 	return GetDeckItemsForCardModel(CardModel).FilterByPredicate([&](UDeckItemModel* DeckItemModel) {
 		return DeckItemModel->LinkingDeckItem == nullptr;
 	});
+}
+
+TArray<FString> UCardDeckModel::GetDeckAffinities() const
+{
+	TArray<FString> Affinities;
+	Affinities.Add(TEXT("Universal"));
+	Affinities.Append(HeroModel->Affinities);
+	return Affinities;
 }

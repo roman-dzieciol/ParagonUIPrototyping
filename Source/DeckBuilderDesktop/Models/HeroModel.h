@@ -16,10 +16,13 @@ class DECKBUILDERDESKTOP_API UHeroModel : public UObject
 	
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero")
-		FText HeroName;
+		FString HeroName;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero List")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero")
 		UTexture2D* AvatarTexture;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero")
+		TArray<FString> Affinities;
 	
 public:
 
