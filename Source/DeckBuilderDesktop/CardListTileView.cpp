@@ -108,6 +108,12 @@ const FText UCardListTileView::GetPaletteCategory()
 
 #endif
 
+
+void UCardListTileView::SetScrollOffset(const float InScrollOffset)
+{
+	MyTileView->SetScrollOffset(InScrollOffset);
+}
+
 /////////////////////////////////////////////////////
 
 #undef LOCTEXT_NAMESPACE

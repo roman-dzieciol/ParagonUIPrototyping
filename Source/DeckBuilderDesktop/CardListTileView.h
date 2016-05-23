@@ -39,15 +39,19 @@ public:
 
 	/** Set item width */
 	UFUNCTION(BlueprintCallable, Category = "Appearance")
-		void SetItemWidth(float Width);
+	void SetItemWidth(float Width);
 
 	/** Set item height */
 	UFUNCTION(BlueprintCallable, Category = "Appearance")
-		void SetItemHeight(float Height);
+	void SetItemHeight(float Height);
 
 	/** Refreshes the list */
 	UFUNCTION(BlueprintCallable, Category = "Behavior")
-		void RequestListRefresh();
+	void RequestListRefresh();
+
+	/** Set the scroll offset of this view (in items) */
+	UFUNCTION(BlueprintCallable, Category = "Appearance")
+	void SetScrollOffset(const float InScrollOffset);
 
 	// UVisual interface
 	virtual void ReleaseSlateResources(bool bReleaseChildren) override;
