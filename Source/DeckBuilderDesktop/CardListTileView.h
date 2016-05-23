@@ -16,11 +16,11 @@ class DECKBUILDERDESKTOP_API UCardListTileView : public UTableViewBase
 public:
 
 	/**  */
-	UPROPERTY(EditAnywhere, Category = Appearance)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Appearance)
 		float ItemWidth;
 
 	/**  */
-	UPROPERTY(EditAnywhere, Category = Appearance)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Appearance)
 		float ItemHeight;
 
 	/**  */
