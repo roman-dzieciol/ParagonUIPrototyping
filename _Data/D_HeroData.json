@@ -6,6 +6,17 @@
 		"Affinities": [
 			"Growth",
 			"Order"
+		],
+		"RecommendedStats": [
+			"EnergyDamage",
+			"MaxHealth",
+			"CooldownReduction",
+			"ManaRegen",
+			"MaxMana"
+		],
+		"NotRecommendedStats": [
+			"PhysicalPen",
+			"PhysicalDamage"
 		]
 	},
 	{
@@ -15,6 +26,17 @@
 		"Affinities": [
 			"Fury",
 			"Order"
+		],
+		"RecommendedStats": [
+			"AttackSpeed",
+			"CritBonus",
+			"CritChance",
+			"PhysicalDamage",
+			"MaxHealth"
+		],
+		"NotRecommendedStats": [
+			"EnergyPen",
+			"EnergyDamage"
 		]
 	},
 	{
@@ -23,6 +45,15 @@
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Gadget.T_Gadget'",
 		"Affinities": [
 			"Intellect"
+		],
+		"RecommendedStats": [
+			"EnergyDamage",
+			"MaxHealth",
+			"CooldownReduction",
+			"ManaRegen",
+			"MaxMana"
+		],
+		"NotRecommendedStats": [
 		]
 	},
 	{
@@ -32,6 +63,17 @@
 		"Affinities": [
 			"Intellect",
 			"Corruption"
+		],
+		"RecommendedStats": [
+			"EnergyDamage",
+			"MaxHealth",
+			"CooldownReduction",
+			"ManaRegen",
+			"MaxMana"
+		],
+		"NotRecommendedStats": [
+			"PhysicalPen",
+			"PhysicalDamage"
 		]
 	},
 	{
@@ -41,6 +83,17 @@
 		"Affinities": [
 			"Intellect",
 			"Corruption"
+		],
+		"RecommendedStats": [
+			"AttackSpeed",
+			"CritBonus",
+			"CritChance",
+			"EnergyDamage",
+			"MaxHealth"
+		],
+		"NotRecommendedStats": [
+			"PhysicalPen",
+			"PhysicalDamage"
 		]
 	},
 	{
@@ -50,6 +103,17 @@
 		"Affinities": [
 			"Fury",
 			"Corruption"
+		],
+		"RecommendedStats": [
+			"AttackSpeed",
+			"CritBonus",
+			"CritChance",
+			"PhysicalDamage",
+			"MaxHealth"
+		],
+		"NotRecommendedStats": [
+			"EnergyPen",
+			"EnergyDamage"
 		]
 	},
 	{
@@ -59,6 +123,12 @@
 		"Affinities": [
 			"Fury",
 			"Intellect"
+		],
+		"RecommendedStats": [
+		],
+		"NotRecommendedStats": [
+			"PhysicalPen",
+			"PhysicalDamage"
 		]
 	},
 	{
@@ -68,6 +138,17 @@
 		"Affinities": [
 			"Fury",
 			"Corruption"
+		],
+		"RecommendedStats": [
+			"EnergyDamage",
+			"MaxHealth",
+			"CooldownReduction",
+			"ManaRegen",
+			"MaxMana"
+		],
+		"NotRecommendedStats": [
+			"PhysicalPen",
+			"PhysicalDamage"
 		]
 	},
 	{
@@ -76,6 +157,17 @@
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Kallari.T_Kallari'",
 		"Affinities": [
 			"Corruption"
+		],
+		"RecommendedStats": [
+			"PhysicalDamage",
+			"MaxHealth",
+			"CooldownReduction",
+			"ManaRegen",
+			"MaxMana"
+		],
+		"NotRecommendedStats": [
+			"EnergyPen",
+			"EnergyDamage"
 		]
 	},
 	{
@@ -85,6 +177,17 @@
 		"Affinities": [
 			"Fury",
 			"Intellect"
+		],
+		"RecommendedStats": [
+			"AttackSpeed",
+			"CritBonus",
+			"CritChance",
+			"EnergyDamage",
+			"MaxHealth"
+		],
+		"NotRecommendedStats": [
+			"PhysicalPen",
+			"PhysicalDamage"
 		]
 	},
 	{
@@ -94,6 +197,17 @@
 		"Affinities": [
 			"Growth",
 			"Order"
+		],
+		"RecommendedStats": [
+			"EnergyDamage",
+			"MaxHealth",
+			"CooldownReduction",
+			"ManaRegen",
+			"MaxMana"
+		],
+		"NotRecommendedStats": [
+			"PhysicalPen",
+			"PhysicalDamage"
 		]
 	},
 	{
@@ -103,6 +217,18 @@
 		"Affinities": [
 			"Growth",
 			"Fury"
+		],
+		"RecommendedStats": [
+			"EnergyArmor",
+			"PhysicalArmor",
+			"MaxHealth",
+			"CooldownReduction",
+			"ManaRegen",
+			"MaxMana"
+		],
+		"NotRecommendedStats": [
+			"EnergyPen",
+			"EnergyDamage"
 		]
 	},
 	{
@@ -112,6 +238,18 @@
 		"Affinities": [
 			"Growth",
 			"Corruption"
+		],
+		"RecommendedStats": [
+			"EnergyArmor",
+			"PhysicalArmor",
+			"MaxHealth",
+			"CooldownReduction",
+			"ManaRegen",
+			"MaxMana"
+		],
+		"NotRecommendedStats": [
+			"EnergyPen",
+			"EnergyDamage"
 		]
 	},
 	{
@@ -121,6 +259,17 @@
 		"Affinities": [
 			"Growth",
 			"Order"
+		],
+		"RecommendedStats": [
+			"AttackSpeed",
+			"CritBonus",
+			"CritChance",
+			"PhysicalDamage",
+			"MaxHealth"
+		],
+		"NotRecommendedStats": [
+			"EnergyPen",
+			"EnergyDamage"
 		]
 	},
 	{
@@ -130,6 +279,18 @@
 		"Affinities": [
 			"Intellect",
 			"Order"
+		],
+		"RecommendedStats": [
+			"EnergyArmor",
+			"PhysicalArmor",
+			"MaxHealth",
+			"CooldownReduction",
+			"ManaRegen",
+			"MaxMana"
+		],
+		"NotRecommendedStats": [
+			"EnergyPen",
+			"EnergyDamage"
 		]
 	},
 	{
@@ -138,6 +299,17 @@
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_TwinBlast.T_TwinBlast'",
 		"Affinities": [
 			"Fury"
+		],
+		"RecommendedStats": [
+			"AttackSpeed",
+			"CritBonus",
+			"CritChance",
+			"PhysicalDamage",
+			"MaxHealth"
+		],
+		"NotRecommendedStats": [
+			"EnergyPen",
+			"EnergyDamage"
 		]
 	}
 ]

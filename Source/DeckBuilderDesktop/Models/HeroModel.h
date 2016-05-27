@@ -23,6 +23,12 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero")
 		TArray<FString> Affinities;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero")
+		TArray<FString> RecommendedStats;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero")
+		TArray<FString> NotRecommendedStats;
 	
 public:
 

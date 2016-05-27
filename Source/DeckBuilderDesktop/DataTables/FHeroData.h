@@ -20,6 +20,12 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Data")
 		TArray<FString> Affinities;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Data")
+		TArray<FString> RecommendedStats;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Data")
+		TArray<FString> NotRecommendedStats;
+
 	friend bool operator==(const FHeroData& LHS, const FHeroData& RHS);
 };
 
