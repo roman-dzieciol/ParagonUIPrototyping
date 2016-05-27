@@ -23,30 +23,39 @@ UCardFilterGroup* UCardFilterGroup::ConstructCardFilterGroup(FName InFilterType,
 
 bool UCardFilterGroup::IsMatching(UCardModel* CardModel) const
 {
+	if (bDisabled)
+	{
+		return true;
+	}
+
+	auto EffectiveFilters = Filters.FilterByPredicate([](UCardFilter* Filter) {
+		return !Filter->bDisabled;
+	});
+
 	switch (Matching) {
 	case ECardFilterGroupMatching::All: {
-		for (auto Filter : Filters)
+		for (auto Filter : EffectiveFilters)
 		{
 			if (!Filter->IsMatching(CardModel))
 			{
 				return false;
 			}
 		}
-		break;
+		return true;
 	}
 	case ECardFilterGroupMatching::Any: {
-		if (Filters.Num() > 0)
+		if (EffectiveFilters.Num() > 0)
 		{
-			for (auto Filter : Filters)
+			for (auto EffectiveFilter : EffectiveFilters)
 			{
-				if (Filter->IsMatching(CardModel))
+				if (EffectiveFilter->IsMatching(CardModel))
 				{
 					return true;
 				}
 			}
 			return false;
 		}
-		break;
+		return true;
 	}
 	}
 	return true;

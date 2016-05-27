@@ -36,9 +36,17 @@ void UCardFilterMain::ConstructSubFilters()
 	AddFilter(SlotFilterGroup);
 
 	// Base stat filters, configured by user
-	BaseStatFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("Stat")), ECardFilterGroupMatching::Any);
+	BaseStatFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("Stat")), ECardFilterGroupMatching::All);
 	BaseStatFilterGroup->LocalizedName = FText::FromString(TEXT("Stat"));
 	AddFilter(BaseStatFilterGroup);
+
+	// Base stat filters, configured by user
+	BaseStatInclusiveFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("Stat")), ECardFilterGroupMatching::Any);
+	BaseStatFilterGroup->AddFilter(BaseStatInclusiveFilterGroup);
+
+	// Base stat filters, configured by user
+	BaseStatExclusiveFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("Stat")), ECardFilterGroupMatching::All);
+	BaseStatFilterGroup->AddFilter(BaseStatExclusiveFilterGroup);
 
 	// Base stat filters, configured by user
 	CostValueFilterGroup = UCardFilterGroup::ConstructCardFilterGroup(FName(TEXT("Cost")), ECardFilterGroupMatching::Any);
@@ -92,12 +100,12 @@ void UCardFilterMain::FilterByBaseStats(const TArray<FString> StatNames)
 	check(BaseStatFilterGroup->IsValidLowLevel());
 	UE_LOG(Deck, Verbose, TEXT("UCardFilterMain::FilterByBaseStats: %s"), *FString::Join(StatNames, TEXT(", ")));
 
-	BaseStatFilterGroup->RemoveAllFilters();
+	ClearBaseStatFilters();
 	for (auto StatName : StatNames)
 	{
 		auto StatFilter = UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Stats")), StatName, FString(), false);
 		StatFilter->LocalizedValue = FText::FromString(StatName);
-		BaseStatFilterGroup->AddFilter(StatFilter);
+		BaseStatInclusiveFilterGroup->AddFilter(StatFilter);
 	}
 }
 
@@ -107,7 +115,7 @@ void UCardFilterMain::FilterByBaseStatModels(const TArray<UCardStatModel*>& Stat
 	check(BaseStatFilterGroup->IsValidLowLevel());
 	UE_LOG(Deck, Verbose, TEXT("UCardFilterMain::FilterByBaseStatModels"));
 
-	BaseStatFilterGroup->RemoveAllFilters();
+	ClearBaseStatFilters();
 	for (auto StatModel : StatModels)
 	{
 		FString StatNameString = UCardsFunctionLibrary::MakeValidTableRowName(StatModel->Type.ToString()).ToString();
@@ -115,7 +123,38 @@ void UCardFilterMain::FilterByBaseStatModels(const TArray<UCardStatModel*>& Stat
 		auto StatFilter = UCardFilterByStat::ConstructCardFilterByStat(FName(TEXT("Stats")), StatNameString, FString(), false);
 		StatFilter->LocalizedValue = StatModel->Type;
 		StatFilter->Icon = StatModel->Icon;
-		BaseStatFilterGroup->AddFilter(StatFilter);
+		BaseStatInclusiveFilterGroup->AddFilter(StatFilter);
+	}
+}
+
+void UCardFilterMain::ClearBaseStatFilters()
+{
+	check(BaseStatFilterGroup != nullptr);
+	check(BaseStatFilterGroup->IsValidLowLevel());
+	UE_LOG(Deck, Verbose, TEXT("UCardFilterMain::ClearBaseStatFilters"));
+	BaseStatInclusiveFilterGroup->RemoveAllFilters();
+	BaseStatExclusiveFilterGroup->RemoveAllFilters();
+}
+
+void UCardFilterMain::AddBaseStatFilters(const TArray<UCardFilterByStat*>& StatFilters)
+{
+	check(BaseStatFilterGroup != nullptr);
+	check(BaseStatFilterGroup->IsValidLowLevel());
+	UE_LOG(Deck, Verbose, TEXT("UCardFilterMain::AddBaseStatFilters"));
+	for (auto StatFilter : StatFilters)
+	{
+		if (StatFilter->bDisabled)
+		{
+			continue;
+		}
+		else if (StatFilter->bExclusive)
+		{
+			BaseStatExclusiveFilterGroup->AddFilter(StatFilter);
+		}
+		else 
+		{
+			BaseStatInclusiveFilterGroup->AddFilter(StatFilter);
+		}
 	}
 }
 

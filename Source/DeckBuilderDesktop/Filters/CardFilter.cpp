@@ -9,6 +9,8 @@ UCardFilter::UCardFilter(class FObjectInitializer const & ObjectInitializer)
 {
 	static FName FNAME_CardFilter_Generic(TEXT("Generic"));
 	FilterName = FNAME_CardFilter_Generic;
+	bExclusive = false;
+	bDisabled = false;
 }
 
 bool UCardFilter::IsMatching(UCardModel* CardModel) const

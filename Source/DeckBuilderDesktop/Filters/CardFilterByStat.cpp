@@ -13,6 +13,11 @@ UCardFilterByStat::UCardFilterByStat(class FObjectInitializer const & ObjectInit
 
 bool UCardFilterByStat::IsMatching(UCardModel* CardModel) const
 {
+	if (bDisabled)
+	{
+		return true;
+	}
+
 	if (CardModel)
 	{
 		auto StatModel = CardModel->GetStatByName(StatName);
@@ -20,15 +25,15 @@ bool UCardFilterByStat::IsMatching(UCardModel* CardModel) const
 		{
 			if (bEqualValue)
 			{
-				return StatModel->Value.ToString().Equals(StatContains);
+				return StatModel->Value.ToString().Equals(StatContains) ^ bExclusive;
 			}
 			else
 			{
-				return StatContains.IsEmpty() || StatModel->Value.ToString().Contains(StatContains);
+				return (StatContains.IsEmpty() || StatModel->Value.ToString().Contains(StatContains)) ^ bExclusive;
 			}
 		}
 	}
-	return false;
+	return false ^ bExclusive;
 }
 
 

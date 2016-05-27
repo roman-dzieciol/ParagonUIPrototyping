@@ -62,15 +62,29 @@ public:
 
 public:
 
-	// The base stat filters
+	// The base stat main filters group
 	UPROPERTY()
-	UCardFilterGroup* BaseStatFilterGroup;
+		UCardFilterGroup* BaseStatFilterGroup;
+
+	// The base stat inclusive filters group
+	UPROPERTY()
+		UCardFilterGroup* BaseStatInclusiveFilterGroup;
+
+	// The base stat exclusive filters group
+	UPROPERTY()
+		UCardFilterGroup* BaseStatExclusiveFilterGroup;
 
 	UFUNCTION(BlueprintCallable, Category = "Card Filter")
 	void FilterByBaseStats(const TArray<FString> StatNames);
 
 	UFUNCTION(BlueprintCallable, Category = "Card Filter")
 	void FilterByBaseStatModels(const TArray<UCardStatModel*>& StatModel);
+
+	UFUNCTION(BlueprintCallable, Category = "Card Filter")
+	void ClearBaseStatFilters();
+
+	UFUNCTION(BlueprintCallable, Category = "Card Filter")
+	void AddBaseStatFilters(const TArray<UCardFilterByStat*>& StatFilters);
 
 	UFUNCTION(BlueprintCallable, Category = "Card Filter")
 	TArray<UCardFilter*> GetBaseStatFilters() const

@@ -17,7 +17,6 @@ class DECKBUILDERDESKTOP_API UCardFilter : public UObject
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card Filter")
 	FName FilterName;
 
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card Filter")
 		FText LocalizedName;
 
@@ -29,6 +28,12 @@ class DECKBUILDERDESKTOP_API UCardFilter : public UObject
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card Filter")
 		UTexture2D* Icon;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card Filter")
+		bool bExclusive;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card Filter")
+		bool bDisabled;
 	
 public:
 	virtual bool IsMatching(UCardModel* CardModel) const;

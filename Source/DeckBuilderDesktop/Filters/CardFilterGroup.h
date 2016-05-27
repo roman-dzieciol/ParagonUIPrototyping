@@ -6,7 +6,7 @@
 #include "CardFilterGroup.generated.h"
 
 
-// Method of specifying polygons for a sprite's render or collision data
+// Group filter matching mode
 UENUM()
 enum class ECardFilterGroupMatching : uint8
 {
