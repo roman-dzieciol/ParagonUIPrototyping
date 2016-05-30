@@ -1,0 +1,23 @@
+[
+	{
+		"Name": "Random",
+		"RewardName": "Random Reward",
+		"RewardType": "Tribute",
+		"Description": "A random reward of common quality or better.",
+		"Icon": "Texture2D'/Game/Art/Widgets/T_Random.T_Random'"
+	},
+	{
+		"Name": "DeckSlot",
+		"RewardName": "Deck Slot",
+		"RewardType": "",
+		"Description": "An additional slot for creating and saving custom decks.",
+		"Icon": "Texture2D'/Game/Art/Widgets/T_DeckSlot.T_DeckSlot'"
+	},
+	{
+		"Name": "StandardCommendation",
+		"RewardName": "Standard Commendation",
+		"RewardType": "Reputation",
+		"Description": "A medium amount of reputation to acknowledge your accomplishments.",
+		"Icon": "Texture2D'/Game/Art/Widgets/T_ReputationLarge.T_ReputationLarge'"
+	}
+]
