@@ -22,6 +22,9 @@ public:
 		UTexture2D* AvatarTexture;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero")
+		UTexture2D* HeroSelectTexture;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero")
 		TArray<FString> Affinities;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero")
