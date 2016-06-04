@@ -13,6 +13,6 @@ UHeroListModel* UHeroFunctionLibrary::ConstructHeroListFromHeroDataTable(UDataTa
 UTexture2D* UHeroFunctionLibrary::LoadKeyTextureNamed(const FString& KeyName)
 {
 	FString TexturePath = FString::Printf(TEXT("/Game/Art/Keys/T_Keys_%s.T_Keys_%s"), *KeyName, *KeyName);
-	return LoadObject<UTexture2D>(NULL, *TexturePath, NULL, LOAD_NoWarn, NULL);
+	return LoadObject<UTexture2D>(NULL, *TexturePath, NULL, LOAD_NoWarn | LOAD_Quiet, NULL);
 }
 
