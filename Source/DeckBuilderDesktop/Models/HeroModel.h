@@ -3,8 +3,11 @@
 #pragma once
 
 #include "Object.h"
+#include "Engine/DataTable.h"
 #include "DataTables/FHeroData.h"
 #include "HeroModel.generated.h"
+
+class UHeroAbilityModel;
 
 /**
  * 
@@ -32,9 +35,11 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero")
 		TArray<FString> NotRecommendedStats;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero")
+		TArray<UHeroAbilityModel*> Abilities;
 	
 public:
-
-	static UHeroModel* ConstructFromHeroData(const FHeroData& HeroData);
+	static UHeroModel* ConstructFromHeroData(const FHeroData& HeroData, UDataTable* HeroAbilityTable);
 	
 };

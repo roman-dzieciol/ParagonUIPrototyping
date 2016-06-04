@@ -10,7 +10,7 @@ UHeroListModel::UHeroListModel(class FObjectInitializer const & ObjectInitialize
 {
 }
 
-UHeroListModel* UHeroListModel::ConstructFromHeroDataTable(UDataTable* HeroDataTable)
+UHeroListModel* UHeroListModel::ConstructFromHeroDataTable(UDataTable* HeroDataTable, UDataTable* HeroAbilityTable)
 {
 	check(HeroDataTable != nullptr);
 
@@ -20,7 +20,7 @@ UHeroListModel* UHeroListModel::ConstructFromHeroDataTable(UDataTable* HeroDataT
 		FHeroData* Row = HeroDataTable->FindRow<FHeroData>(RowName, TEXT(" UHeroListModel::LoadCardsFromDataTable"));
 		if (Row != nullptr)
 		{
-			UHeroModel* HeroModel = UHeroModel::ConstructFromHeroData(*Row);
+			UHeroModel* HeroModel = UHeroModel::ConstructFromHeroData(*Row, HeroAbilityTable);
 			if (HeroModel != nullptr)
 			{
 				HeroListModel->HeroModels.Add(HeroModel);

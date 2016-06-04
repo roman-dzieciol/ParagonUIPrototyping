@@ -18,6 +18,14 @@
 		"NotRecommendedStats": [
 			"PhysicalPen",
 			"PhysicalDamage"
+		],
+		"Abilities": [
+			"Dekker_Pass",
+			"Dekker_LMB",
+			"Dekker_RMB",
+			"Dekker_Q",
+			"Dekker_E",
+			"Dekker_R"
 		]
 	},
 	{
@@ -39,6 +47,14 @@
 		"NotRecommendedStats": [
 			"EnergyPen",
 			"EnergyDamage"
+		],
+		"Abilities": [
+			"FengMao_Pass",
+			"FengMao_LMB",
+			"FengMao_RMB",
+			"FengMao_Q",
+			"FengMao_E",
+			"FengMao_R"
 		]
 	},
 	{
@@ -57,6 +73,14 @@
 			"MaxMana"
 		],
 		"NotRecommendedStats": [
+		],
+		"Abilities": [
+			"Gadget_Pass",
+			"Gadget_LMB",
+			"Gadget_RMB",
+			"Gadget_Q",
+			"Gadget_E",
+			"Gadget_R"
 		]
 	},
 	{
@@ -78,6 +102,14 @@
 		"NotRecommendedStats": [
 			"PhysicalPen",
 			"PhysicalDamage"
+		],
+		"Abilities": [
+			"Gideon_Pass",
+			"Gideon_LMB",
+			"Gideon_RMB",
+			"Gideon_Q",
+			"Gideon_E",
+			"Gideon_R"
 		]
 	},
 	{
@@ -99,6 +131,14 @@
 		"NotRecommendedStats": [
 			"PhysicalPen",
 			"PhysicalDamage"
+		],
+		"Abilities": [
+			"Grim_Pass",
+			"Grim_LMB",
+			"Grim_RMB",
+			"Grim_Q",
+			"Grim_E",
+			"Grim_R"
 		]
 	},
 	{
@@ -120,6 +160,14 @@
 		"NotRecommendedStats": [
 			"EnergyPen",
 			"EnergyDamage"
+		],
+		"Abilities": [
+			"Grux_Pass",
+			"Grux_LMB",
+			"Grux_RMB",
+			"Grux_Q",
+			"Grux_E",
+			"Grux_R"
 		]
 	},
 	{
@@ -136,6 +184,14 @@
 		"NotRecommendedStats": [
 			"PhysicalPen",
 			"PhysicalDamage"
+		],
+		"Abilities": [
+			"Howitzer_Pass",
+			"Howitzer_LMB",
+			"Howitzer_RMB",
+			"Howitzer_Q",
+			"Howitzer_E",
+			"Howitzer_R"
 		]
 	},
 	{
@@ -157,6 +213,14 @@
 		"NotRecommendedStats": [
 			"PhysicalPen",
 			"PhysicalDamage"
+		],
+		"Abilities": [
+			"IggyScorch_Pass",
+			"IggyScorch_LMB",
+			"IggyScorch_RMB",
+			"IggyScorch_Q",
+			"IggyScorch_E",
+			"IggyScorch_R"
 		]
 	},
 	{
@@ -177,6 +241,14 @@
 		"NotRecommendedStats": [
 			"EnergyPen",
 			"EnergyDamage"
+		],
+		"Abilities": [
+			"Kallari_Pass",
+			"Kallari_LMB",
+			"Kallari_RMB",
+			"Kallari_Q",
+			"Kallari_E",
+			"Kallari_R"
 		]
 	},
 	{
@@ -198,6 +270,14 @@
 		"NotRecommendedStats": [
 			"PhysicalPen",
 			"PhysicalDamage"
+		],
+		"Abilities": [
+			"Murdock_Pass",
+			"Murdock_LMB",
+			"Murdock_RMB",
+			"Murdock_Q",
+			"Murdock_E",
+			"Murdock_R"
 		]
 	},
 	{
@@ -219,6 +299,14 @@
 		"NotRecommendedStats": [
 			"PhysicalPen",
 			"PhysicalDamage"
+		],
+		"Abilities": [
+			"Muriel_Pass",
+			"Muriel_LMB",
+			"Muriel_RMB",
+			"Muriel_Q",
+			"Muriel_E",
+			"Muriel_R"
 		]
 	},
 	{
@@ -241,6 +329,14 @@
 		"NotRecommendedStats": [
 			"EnergyPen",
 			"EnergyDamage"
+		],
+		"Abilities": [
+			"Rampage_Pass",
+			"Rampage_LMB",
+			"Rampage_RMB",
+			"Rampage_Q",
+			"Rampage_E",
+			"Rampage_R"
 		]
 	},
 	{
@@ -263,6 +359,14 @@
 		"NotRecommendedStats": [
 			"EnergyPen",
 			"EnergyDamage"
+		],
+		"Abilities": [
+			"Sevarog_Pass",
+			"Sevarog_LMB",
+			"Sevarog_RMB",
+			"Sevarog_Q",
+			"Sevarog_E",
+			"Sevarog_R"
 		]
 	},
 	{
@@ -284,6 +388,14 @@
 		"NotRecommendedStats": [
 			"EnergyPen",
 			"EnergyDamage"
+		],
+		"Abilities": [
+			"Sparrow_Pass",
+			"Sparrow_LMB",
+			"Sparrow_RMB",
+			"Sparrow_Q",
+			"Sparrow_E",
+			"Sparrow_R"
 		]
 	},
 	{
@@ -306,6 +418,14 @@
 		"NotRecommendedStats": [
 			"EnergyPen",
 			"EnergyDamage"
+		],
+		"Abilities": [
+			"Steel_Pass",
+			"Steel_LMB",
+			"Steel_RMB",
+			"Steel_Q",
+			"Steel_E",
+			"Steel_R"
 		]
 	},
 	{
@@ -326,6 +446,14 @@
 		"NotRecommendedStats": [
 			"EnergyPen",
 			"EnergyDamage"
+		],
+		"Abilities": [
+			"TwinBlast_Pass",
+			"TwinBlast_LMB",
+			"TwinBlast_RMB",
+			"TwinBlast_Q",
+			"TwinBlast_E",
+			"TwinBlast_R"
 		]
 	}
 ]

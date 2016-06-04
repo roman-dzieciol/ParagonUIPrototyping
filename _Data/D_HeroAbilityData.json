@@ -1,511 +1,613 @@
 [
 	{
 		"Name": "TwinBlast_Pass",
+		"AbilityName": "TwinBlast_Pass",
 		"Title": "On A Roll",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_TwinBlast_Pass.T_Skill_TwinBlast_Pass'"
 	},
 	{
 		"Name": "TwinBlast_LMB",
+		"AbilityName": "TwinBlast_LMB",
 		"Title": "Doubleshot",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_TwinBlast_LMB.T_Skill_TwinBlast_LMB'"
 	},
 	{
 		"Name": "TwinBlast_RMB",
+		"AbilityName": "TwinBlast_RMB",
 		"Title": "Rocket Dash",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_TwinBlast_RMB.T_Skill_TwinBlast_RMB'"
 	},
 	{
 		"Name": "TwinBlast_Q",
+		"AbilityName": "TwinBlast_Q",
 		"Title": "Nitro",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_TwinBlast_Q.T_Skill_TwinBlast_Q'"
 	},
 	{
 		"Name": "TwinBlast_E",
+		"AbilityName": "TwinBlast_E",
 		"Title": "Grenade!",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_TwinBlast_E.T_Skill_TwinBlast_E'"
 	},
 	{
 		"Name": "TwinBlast_R",
+		"AbilityName": "TwinBlast_R",
 		"Title": "Barrage",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_TwinBlast_R.T_Skill_TwinBlast_R'"
 	},
 	{
 		"Name": "Steel_Pass",
+		"AbilityName": "Steel_Pass",
 		"Title": "Unstoppable Force",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Steel_Pass.T_Skill_Steel_Pass'"
 	},
 	{
 		"Name": "Steel_LMB",
+		"AbilityName": "Steel_LMB",
 		"Title": "Punch",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Steel_LMB.T_Skill_Steel_LMB'"
 	},
 	{
 		"Name": "Steel_RMB",
+		"AbilityName": "Steel_RMB",
 		"Title": "Shield Block",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Steel_RMB.T_Skill_Steel_RMB'"
 	},
 	{
 		"Name": "Steel_Q",
+		"AbilityName": "Steel_Q",
 		"Title": "Charge",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Steel_Q.T_Skill_Steel_Q'"
 	},
 	{
 		"Name": "Steel_E",
+		"AbilityName": "Steel_E",
 		"Title": "Force Shield",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Steel_E.T_Skill_Steel_E'"
 	},
 	{
 		"Name": "Steel_R",
+		"AbilityName": "Steel_R",
 		"Title": "Shield Slam",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Steel_R.T_Skill_Steel_R'"
 	},
 	{
 		"Name": "Sparrow_Pass",
+		"AbilityName": "Sparrow_Pass",
 		"Title": "Relentless",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Sparrow_Pass.T_Skill_Sparrow_Pass'"
 	},
 	{
 		"Name": "Sparrow_LMB",
+		"AbilityName": "Sparrow_LMB",
 		"Title": "Bow Shot",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Sparrow_LMB.T_Skill_Sparrow_LMB'"
 	},
 	{
 		"Name": "Sparrow_RMB",
+		"AbilityName": "Sparrow_RMB",
 		"Title": "Piercing Shot",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Sparrow_RMB.T_Skill_Sparrow_RMB'"
 	},
 	{
 		"Name": "Sparrow_Q",
+		"AbilityName": "Sparrow_Q",
 		"Title": "Hail of Arrows",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Sparrow_Q.T_Skill_Sparrow_Q'"
 	},
 	{
 		"Name": "Sparrow_E",
+		"AbilityName": "Sparrow_E",
 		"Title": "Invigorate",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Sparrow_E.T_Skill_Sparrow_E'"
 	},
 	{
 		"Name": "Sparrow_R",
+		"AbilityName": "Sparrow_R",
 		"Title": "Inner Fire",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Sparrow_R.T_Skill_Sparrow_R'"
 	},
 	{
 		"Name": "Sevarog_Pass",
+		"AbilityName": "Sevarog_Pass",
 		"Title": "Soul Trap",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Sevarog_Pass.T_Skill_Sevarog_Pass'"
 	},
 	{
 		"Name": "Sevarog_LMB",
+		"AbilityName": "Sevarog_LMB",
 		"Title": "Hammer",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Sevarog_LMB.T_Skill_Sevarog_LMB'"
 	},
 	{
 		"Name": "Sevarog_RMB",
+		"AbilityName": "Sevarog_RMB",
 		"Title": "Phantom Rush",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Sevarog_RMB.T_Skill_Sevarog_RMB'"
 	},
 	{
 		"Name": "Sevarog_Q",
+		"AbilityName": "Sevarog_Q",
 		"Title": "Siphon",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Sevarog_Q.T_Skill_Sevarog_Q'"
 	},
 	{
 		"Name": "Sevarog_E",
+		"AbilityName": "Sevarog_E",
 		"Title": "Subjugate",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Sevarog_E.T_Skill_Sevarog_E'"
 	},
 	{
 		"Name": "Sevarog_R",
+		"AbilityName": "Sevarog_R",
 		"Title": "Collosal Blow",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Sevarog_R.T_Skill_Sevarog_R'"
 	},
 	{
 		"Name": "Riktor_Pass",
+		"AbilityName": "Riktor_Pass",
 		"Title": "Invigorate",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Riktor_Pass.T_Skill_Riktor_Pass'"
 	},
 	{
 		"Name": "Riktor_LMB",
+		"AbilityName": "Riktor_LMB",
 		"Title": "Whip",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Riktor_LMB.T_Skill_Riktor_LMB'"
 	},
 	{
 		"Name": "Riktor_RMB",
+		"AbilityName": "Riktor_RMB",
 		"Title": "Shock Therapy",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Riktor_RMB.T_Skill_Riktor_RMB'"
 	},
 	{
 		"Name": "Riktor_Q",
+		"AbilityName": "Riktor_Q",
 		"Title": "Riplash",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Riktor_Q.T_Skill_Riktor_Q'"
 	},
 	{
 		"Name": "Riktor_E",
+		"AbilityName": "Riktor_E",
 		"Title": "Electrocute",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Riktor_E.T_Skill_Riktor_E'"
 	},
 	{
 		"Name": "Riktor_R",
+		"AbilityName": "Riktor_R",
 		"Title": "Skewer",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Riktor_R.T_Skill_Riktor_R'"
 	},
 	{
 		"Name": "Rampage_Pass",
+		"AbilityName": "Rampage_Pass",
 		"Title": "Invigorate",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Rampage_Pass.T_Skill_Rampage_Pass'"
 	},
 	{
 		"Name": "Rampage_LMB",
+		"AbilityName": "Rampage_LMB",
 		"Title": "Whip",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Rampage_LMB.T_Skill_Rampage_LMB'"
 	},
 	{
 		"Name": "Rampage_RMB",
+		"AbilityName": "Rampage_RMB",
 		"Title": "Pounce",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Rampage_RMB.T_Skill_Rampage_RMB'"
 	},
 	{
 		"Name": "Rampage_Q",
+		"AbilityName": "Rampage_Q",
 		"Title": "Boulder Throw",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Rampage_Q.T_Skill_Rampage_Q'"
 	},
 	{
 		"Name": "Rampage_E",
+		"AbilityName": "Rampage_E",
 		"Title": "Thick Skin",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Rampage_E.T_Skill_Rampage_E'"
 	},
 	{
 		"Name": "Rampage_R",
+		"AbilityName": "Rampage_R",
 		"Title": "Enraged",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Rampage_R.T_Skill_Rampage_R'"
 	},
 	{
 		"Name": "Muriel_Pass",
+		"AbilityName": "Muriel_Pass",
 		"Title": "Restoration",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Muriel_Pass.T_Skill_Muriel_Pass'"
 	},
 	{
 		"Name": "Muriel_LMB",
+		"AbilityName": "Muriel_LMB",
 		"Title": "Orb",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Muriel_LMB.T_Skill_Muriel_LMB'"
 	},
 	{
 		"Name": "Muriel_RMB",
+		"AbilityName": "Muriel_RMB",
 		"Title": "Alacrity",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Muriel_RMB.T_Skill_Muriel_RMB'"
 	},
 	{
 		"Name": "Muriel_Q",
+		"AbilityName": "Muriel_Q",
 		"Title": "Serenity",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Muriel_Q.T_Skill_Muriel_Q'"
 	},
 	{
 		"Name": "Muriel_E",
+		"AbilityName": "Muriel_E",
 		"Title": "Consecrated Ground",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Muriel_E.T_Skill_Muriel_E'"
 	},
 	{
 		"Name": "Muriel_R",
+		"AbilityName": "Muriel_R",
 		"Title": "Reversal of Fortune",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Muriel_R.T_Skill_Muriel_R'"
 	},
 	{
 		"Name": "Murdock_Pass",
+		"AbilityName": "Murdock_Pass",
 		"Title": "Hot Pursuit",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Murdock_Pass.T_Skill_Murdock_Pass'"
 	},
 	{
 		"Name": "Murdock_LMB",
+		"AbilityName": "Murdock_LMB",
 		"Title": "Basic Attack",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Murdock_LMB.T_Skill_Murdock_LMB'"
 	},
 	{
 		"Name": "Murdock_RMB",
+		"AbilityName": "Murdock_RMB",
 		"Title": "Shielding Shot",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Murdock_RMB.T_Skill_Murdock_RMB'"
 	},
 	{
 		"Name": "Murdock_Q",
+		"AbilityName": "Murdock_Q",
 		"Title": "Buckshot",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Murdock_Q.T_Skill_Murdock_Q'"
 	},
 	{
 		"Name": "Murdock_E",
+		"AbilityName": "Murdock_E",
 		"Title": "Static Trap",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Murdock_E.T_Skill_Murdock_E'"
 	},
 	{
 		"Name": "Murdock_R",
+		"AbilityName": "Murdock_R",
 		"Title": "Devastating Blast",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Murdock_R.T_Skill_Murdock_R'"
 	},
 	{
 		"Name": "Kallari_Pass",
+		"AbilityName": "Kallari_Pass",
 		"Title": "Marked for Death",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Kallari_Pass.T_Skill_Kallari_Pass'"
 	},
 	{
 		"Name": "Kallari_LMB",
+		"AbilityName": "Kallari_LMB",
 		"Title": "Slash",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Kallari_LMB.T_Skill_Kallari_LMB'"
 	},
 	{
 		"Name": "Kallari_RMB",
+		"AbilityName": "Kallari_RMB",
 		"Title": "Backflip",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Kallari_RMB.T_Skill_Kallari_RMB'"
 	},
 	{
 		"Name": "Kallari_Q",
+		"AbilityName": "Kallari_Q",
 		"Title": "Shadow Walk",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Kallari_Q.T_Skill_Kallari_Q'"
 	},
 	{
 		"Name": "Kallari_E",
+		"AbilityName": "Kallari_E",
 		"Title": "Blood Dagger",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Kallari_E.T_Skill_Kallari_E'"
 	},
 	{
 		"Name": "Kallari_R",
+		"AbilityName": "Kallari_R",
 		"Title": "Death Sentence",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Kallari_R.T_Skill_Kallari_R'"
 	},
 	{
 		"Name": "IggyScorch_Pass",
+		"AbilityName": "IggyScorch_Pass",
 		"Title": "Ignite",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_IggyScorch_Pass.T_Skill_IggyScorch_Pass'"
 	},
 	{
 		"Name": "IggyScorch_LMB",
+		"AbilityName": "IggyScorch_LMB",
 		"Title": "Basic Attack",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_IggyScorch_LMB.T_Skill_IggyScorch_LMB'"
 	},
 	{
 		"Name": "IggyScorch_RMB",
+		"AbilityName": "IggyScorch_RMB",
 		"Title": "Oil Trail",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_IggyScorch_RMB.T_Skill_IggyScorch_RMB'"
 	},
 	{
 		"Name": "IggyScorch_Q",
+		"AbilityName": "IggyScorch_Q",
 		"Title": "Flame Turret",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_IggyScorch_Q.T_Skill_IggyScorch_Q'"
 	},
 	{
 		"Name": "IggyScorch_E",
+		"AbilityName": "IggyScorch_E",
 		"Title": "Oil Trap",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_IggyScorch_E.T_Skill_IggyScorch_E'"
 	},
 	{
 		"Name": "IggyScorch_R",
+		"AbilityName": "IggyScorch_R",
 		"Title": "Flamethrower",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_IggyScorch_R.T_Skill_IggyScorch_R'"
 	},
 	{
 		"Name": "Howitzer_Pass",
+		"AbilityName": "Howitzer_Pass",
 		"Title": "Fast Reload",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Howitzer_Pass.T_Skill_Howitzer_Pass'"
 	},
 	{
 		"Name": "Howitzer_LMB",
+		"AbilityName": "Howitzer_LMB",
 		"Title": "Cannon",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Howitzer_LMB.T_Skill_Howitzer_LMB'"
 	},
 	{
 		"Name": "Howitzer_RMB",
+		"AbilityName": "Howitzer_RMB",
 		"Title": "Slow Grenades",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Howitzer_RMB.T_Skill_Howitzer_RMB'"
 	},
 	{
 		"Name": "Howitzer_Q",
+		"AbilityName": "Howitzer_Q",
 		"Title": "R2000 Missile",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Howitzer_Q.T_Skill_Howitzer_Q'"
 	},
 	{
 		"Name": "Howitzer_E",
+		"AbilityName": "Howitzer_E",
 		"Title": "Land Mine",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Howitzer_E.T_Skill_Howitzer_E'"
 	},
 	{
 		"Name": "Howitzer_R",
+		"AbilityName": "Howitzer_R",
 		"Title": "Make it Rain",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Howitzer_R.T_Skill_Howitzer_R'"
 	},
 	{
 		"Name": "Grux_Pass",
+		"AbilityName": "Grux_Pass",
 		"Title": "Only The Strong Survive",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Grux_Pass.T_Skill_Grux_Pass'"
 	},
 	{
 		"Name": "Grux_LMB",
+		"AbilityName": "Grux_LMB",
 		"Title": "Chop",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Grux_LMB.T_Skill_Grux_LMB'"
 	},
 	{
 		"Name": "Grux_RMB",
+		"AbilityName": "Grux_RMB",
 		"Title": "Double Pain",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Grux_RMB.T_Skill_Grux_RMB'"
 	},
 	{
 		"Name": "Grux_Q",
+		"AbilityName": "Grux_Q",
 		"Title": "Smash & Grab",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Grux_Q.T_Skill_Grux_Q'"
 	},
 	{
 		"Name": "Grux_E",
+		"AbilityName": "Grux_E",
 		"Title": "Charge",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Grux_E.T_Skill_Grux_E'"
 	},
 	{
 		"Name": "Grux_R",
+		"AbilityName": "Grux_R",
 		"Title": "Warlord's Challenge",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Grux_R.T_Skill_Grux_R'"
 	},
 	{
 		"Name": "Grim_Pass",
+		"AbilityName": "Grim_Pass",
 		"Title": "Overcharge",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Grim_Pass.T_Skill_Grim_Pass'"
 	},
 	{
 		"Name": "Grim_LMB",
+		"AbilityName": "Grim_LMB",
 		"Title": "Pulse Cannon",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Grim_LMB.T_Skill_Grim_LMB'"
 	},
 	{
 		"Name": "Grim_RMB",
+		"AbilityName": "Grim_RMB",
 		"Title": "Deflector Shield",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Grim_RMB.T_Skill_Grim_RMB'"
 	},
 	{
 		"Name": "Grim_Q",
+		"AbilityName": "Grim_Q",
 		"Title": "Displacement Blast",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Grim_Q.T_Skill_Grim_Q'"
 	},
 	{
 		"Name": "Grim_E",
+		"AbilityName": "Grim_E",
 		"Title": "Suppresion Mode",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Grim_E.T_Skill_Grim_E'"
 	},
 	{
 		"Name": "Grim_R",
+		"AbilityName": "Grim_R",
 		"Title": "GTFO",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Grim_R.T_Skill_Grim_R'"
 	},
 	{
 		"Name": "Gideon_Pass",
+		"AbilityName": "Gideon_Pass",
 		"Title": "Energy Penetration",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Gideon_Pass.T_Skill_Gideon_Pass'"
 	},
 	{
 		"Name": "Gideon_LMB",
+		"AbilityName": "Gideon_LMB",
 		"Title": "Basic Attack",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Gideon_LMB.T_Skill_Gideon_LMB'"
 	},
 	{
 		"Name": "Gideon_RMB",
+		"AbilityName": "Gideon_RMB",
 		"Title": "Burden",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Gideon_RMB.T_Skill_Gideon_RMB'"
 	},
 	{
 		"Name": "Gideon_Q",
+		"AbilityName": "Gideon_Q",
 		"Title": "Cosmic Rift",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Gideon_Q.T_Skill_Gideon_Q'"
 	},
 	{
 		"Name": "Gideon_E",
+		"AbilityName": "Gideon_E",
 		"Title": "Torn Space",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Gideon_E.T_Skill_Gideon_E'"
 	},
 	{
 		"Name": "Gideon_R",
+		"AbilityName": "Gideon_R",
 		"Title": "Black Hole",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Gideon_R.T_Skill_Gideon_R'"
 	},
 	{
 		"Name": "Gadget_Pass",
+		"AbilityName": "Gadget_Pass",
 		"Title": "Haywire",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Gadget_Pass.T_Skill_Gadget_Pass'"
 	},
 	{
 		"Name": "Gadget_LMB",
+		"AbilityName": "Gadget_LMB",
 		"Title": "Plasma Blast",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Gadget_LMB.T_Skill_Gadget_LMB'"
 	},
 	{
 		"Name": "Gadget_RMB",
+		"AbilityName": "Gadget_RMB",
 		"Title": "Seek & Destroy",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Gadget_RMB.T_Skill_Gadget_RMB'"
 	},
 	{
 		"Name": "Gadget_Q",
+		"AbilityName": "Gadget_Q",
 		"Title": "Sticky Mine",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Gadget_Q.T_Skill_Gadget_Q'"
 	},
 	{
 		"Name": "Gadget_E",
+		"AbilityName": "Gadget_E",
 		"Title": "Speed Gate",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Gadget_E.T_Skill_Gadget_E'"
 	},
 	{
 		"Name": "Gadget_R",
+		"AbilityName": "Gadget_R",
 		"Title": "Tesla Dome",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Gadget_R.T_Skill_Gadget_R'"
 	},
 	{
 		"Name": "FengMao_Pass",
+		"AbilityName": "FengMao_Pass",
 		"Title": "The Balance",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_FengMao_Pass.T_Skill_FengMao_Pass'"
 	},
 	{
 		"Name": "FengMao_LMB",
+		"AbilityName": "FengMao_LMB",
 		"Title": "Sweep",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_FengMao_LMB.T_Skill_FengMao_LMB'"
 	},
 	{
 		"Name": "FengMao_RMB",
+		"AbilityName": "FengMao_RMB",
 		"Title": "Conversion Shield",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_FengMao_RMB.T_Skill_FengMao_RMB'"
 	},
 	{
 		"Name": "FengMao_Q",
+		"AbilityName": "FengMao_Q",
 		"Title": "Reaping Dash",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_FengMao_Q.T_Skill_FengMao_Q'"
 	},
 	{
 		"Name": "FengMao_E",
+		"AbilityName": "FengMao_E",
 		"Title": "Hamstring",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_FengMao_E.T_Skill_FengMao_E'"
 	},
 	{
 		"Name": "FengMao_R",
+		"AbilityName": "FengMao_R",
 		"Title": "Earth Shatter",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_FengMao_R.T_Skill_FengMao_R'"
 	},
 	{
 		"Name": "Dekker_Pass",
+		"AbilityName": "Dekker_Pass",
 		"Title": "Mana Share",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Dekker_Pass.T_Skill_Dekker_Pass'"
 	},
 	{
 		"Name": "Dekker_LMB",
+		"AbilityName": "Dekker_LMB",
 		"Title": "Energy Orb",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Dekker_LMB.T_Skill_Dekker_LMB'"
 	},
 	{
 		"Name": "Dekker_RMB",
+		"AbilityName": "Dekker_RMB",
 		"Title": "Rocket Boots",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Dekker_RMB.T_Skill_Dekker_RMB'"
 	},
 	{
 		"Name": "Dekker_Q",
+		"AbilityName": "Dekker_Q",
 		"Title": "Stasis Bomb",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Dekker_Q.T_Skill_Dekker_Q'"
 	},
 	{
 		"Name": "Dekker_E",
+		"AbilityName": "Dekker_E",
 		"Title": "Slow Bubble",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Dekker_E.T_Skill_Dekker_E'"
 	},
 	{
 		"Name": "Dekker_R",
+		"AbilityName": "Dekker_R",
 		"Title": "Containment Fence",
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Dekker_R.T_Skill_Dekker_R'"
 	}

@@ -18,5 +18,8 @@ class DECKBUILDERDESKTOP_API UHeroFunctionLibrary : public UBlueprintFunctionLib
 
 public:
 	UFUNCTION(BlueprintCallable, Category = "Hero Function Library")
-	static UHeroListModel* ConstructHeroListFromHeroDataTable(UDataTable* HeroDataTable);
+	static UHeroListModel* ConstructHeroListFromHeroDataTable(UDataTable* HeroDataTable, UDataTable* HeroAbilityTable);
+
+	UFUNCTION(BlueprintCallable, Category = "Hero Function Library")
+	static UTexture2D* LoadKeyTextureNamed(const FString& KeyName);
 };
