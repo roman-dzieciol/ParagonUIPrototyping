@@ -1,0 +1,20 @@
+[
+	{
+		"Name": "PlayersVsPlayers",
+		"GameTypeName": "PlayersVsPlayers",
+		"Title": "Players vs. Players",
+		"Description": "Human teammates and opponents"
+	},
+	{
+		"Name": "CoopVsAI",
+		"GameTypeName": "CoopVsAI",
+		"Title": "Co-op vs. AI",
+		"Description": "Human teammates against AI opponents"
+	},
+	{
+		"Name": "SoloVsAI",
+		"GameTypeName": "SoloVsAI",
+		"Title": "Solo vs. AI",
+		"Description": "AI teammates and opponents"
+	}
+]
