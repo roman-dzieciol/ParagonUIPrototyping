@@ -45,6 +45,21 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero")
 		TArray<UHeroSkinModel*> Skins;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero")
+		FString Difficulty;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero")
+		int32 BasicAttack;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero")
+		int32 AbilityPower;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero")
+		int32 Durability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero")
+		int32 Mobility;
 	
 public:
 	static UHeroModel* ConstructFromHeroData(const FHeroData& HeroData, UDataTable* HeroAbilityTable, UDataTable* HeroSkinTable);

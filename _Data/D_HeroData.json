@@ -33,7 +33,12 @@
 			"Challenger",
 			"Master",
 			"Energized"
-		]
+		],
+		"Difficulty": "Easy",
+		"BasicAttack": 1,
+		"AbilityPower": 6,
+		"Durability": 4,
+		"Mobility": 6
 	},
 	{
 		"Name": "FengMao",
@@ -68,7 +73,12 @@
 			"Default",
 			"Challenger",
 			"Master"
-		]
+		],
+		"Difficulty": "Intermediate",
+		"BasicAttack": 7,
+		"AbilityPower": 2,
+		"Durability": 5,
+		"Mobility": 7
 	},
 	{
 		"Name": "Gadget",
@@ -101,7 +111,12 @@
 			"Challenger",
 			"Master",
 			"Guerilla"
-		]
+		],
+		"Difficulty": "Easy",
+		"BasicAttack": 2,
+		"AbilityPower": 8,
+		"Durability": 2,
+		"Mobility": 3
 	},
 	{
 		"Name": "Gideon",
@@ -136,7 +151,12 @@
 			"Default",
 			"Challenger",
 			"Master"
-		]
+		],
+		"Difficulty": "Easy",
+		"BasicAttack": 2,
+		"AbilityPower": 9,
+		"Durability": 3,
+		"Mobility": 7
 	},
 	{
 		"Name": "Grim",
@@ -171,7 +191,12 @@
 			"Default",
 			"Challenger",
 			"Master"
-		]
+		],
+		"Difficulty": "Easy",
+		"BasicAttack": 8,
+		"AbilityPower": 5,
+		"Durability": 3,
+		"Mobility": 1
 	},
 	{
 		"Name": "Grux",
@@ -207,7 +232,12 @@
 			"Challenger",
 			"Master",
 			"WarChief"
-		]
+		],
+		"Difficulty": "Advanced",
+		"BasicAttack": 6,
+		"AbilityPower": 1,
+		"Durability": 6,
+		"Mobility": 5
 	},
 	{
 		"Name": "Howitzer",
@@ -238,7 +268,12 @@
 			"Challenger",
 			"Master",
 			"Hotrod"
-		]
+		],
+		"Difficulty": "Easy",
+		"BasicAttack": 2,
+		"AbilityPower": 8,
+		"Durability": 3,
+		"Mobility": 4
 	},
 	{
 		"Name": "IggyScorch",
@@ -273,7 +308,12 @@
 			"Default",
 			"Challenger",
 			"Master"
-		]
+		],
+		"Difficulty": "Easy",
+		"BasicAttack": 3,
+		"AbilityPower": 7,
+		"Durability": 3,
+		"Mobility": 5
 	},
 	{
 		"Name": "Kallari",
@@ -307,7 +347,12 @@
 			"Default",
 			"Challenger",
 			"Master"
-		]
+		],
+		"Difficulty": "Expert",
+		"BasicAttack": 5,
+		"AbilityPower": 10,
+		"Durability": 1,
+		"Mobility": 8
 	},
 	{
 		"Name": "Murdock",
@@ -342,7 +387,12 @@
 			"Default",
 			"Challenger",
 			"Master"
-		]
+		],
+		"Difficulty": "Easy",
+		"BasicAttack": 10,
+		"AbilityPower": 5,
+		"Durability": 2,
+		"Mobility": 1
 	},
 	{
 		"Name": "Muriel",
@@ -378,7 +428,12 @@
 			"Challenger",
 			"Master",
 			"Sepia"
-		]
+		],
+		"Difficulty": "Easy",
+		"BasicAttack": 1,
+		"AbilityPower": 5,
+		"Durability": 3,
+		"Mobility": 6
 	},
 	{
 		"Name": "Rampage",
@@ -415,7 +470,12 @@
 			"Challenger",
 			"Master",
 			"Wasteland"
-		]
+		],
+		"Difficulty": "Easy",
+		"BasicAttack": 4,
+		"AbilityPower": 2,
+		"Durability": 8,
+		"Mobility": 7
 	},
 	{
 		"Name": "Sevarog",
@@ -451,7 +511,12 @@
 			"Default",
 			"Challenger",
 			"Master"
-		]
+		],
+		"Difficulty": "Easy",
+		"BasicAttack": 4,
+		"AbilityPower": 4,
+		"Durability": 10,
+		"Mobility": 3
 	},
 	{
 		"Name": "Sparrow",
@@ -487,7 +552,12 @@
 			"Challenger",
 			"Master",
 			"AutumnFire"
-		]
+		],
+		"Difficulty": "Easy",
+		"BasicAttack": 10,
+		"AbilityPower": 3,
+		"Durability": 2,
+		"Mobility": 1
 	},
 	{
 		"Name": "Steel",
@@ -523,7 +593,12 @@
 			"Default",
 			"Challenger",
 			"Master"
-		]
+		],
+		"Difficulty": "Easy",
+		"BasicAttack": 2,
+		"AbilityPower": 3,
+		"Durability": 10,
+		"Mobility": 5
 	},
 	{
 		"Name": "TwinBlast",
@@ -557,6 +632,11 @@
 			"Default",
 			"Challenger",
 			"Master"
-		]
+		],
+		"Difficulty": "Easy",
+		"BasicAttack": 9,
+		"AbilityPower": 4,
+		"Durability": 2,
+		"Mobility": 4
 	}
 ]

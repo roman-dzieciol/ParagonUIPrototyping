@@ -38,6 +38,21 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Data")
 		TArray<FString> Skins;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Data")
+		FString Difficulty;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Data")
+		int32 BasicAttack;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Data")
+		int32 AbilityPower;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Data")
+		int32 Durability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Data")
+		int32 Mobility;
+
 	friend bool operator==(const FHeroData& LHS, const FHeroData& RHS);
 };
 

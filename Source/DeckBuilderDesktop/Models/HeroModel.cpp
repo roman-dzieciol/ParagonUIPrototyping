@@ -22,6 +22,11 @@ UHeroModel* UHeroModel::ConstructFromHeroData(const FHeroData& HeroData, UDataTa
 	HeroModel->Affinities = HeroData.Affinities;
 	HeroModel->RecommendedStats = HeroData.RecommendedStats;
 	HeroModel->NotRecommendedStats = HeroData.NotRecommendedStats;
+	HeroModel->Difficulty = HeroData.Difficulty;
+	HeroModel->BasicAttack = HeroData.BasicAttack;
+	HeroModel->AbilityPower = HeroData.AbilityPower;
+	HeroModel->Durability = HeroData.Durability;
+	HeroModel->Mobility = HeroData.Mobility;
 
 	for (auto AbilityName : HeroData.Abilities)
 	{
