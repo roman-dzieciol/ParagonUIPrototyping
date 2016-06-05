@@ -8,6 +8,7 @@
 #include "HeroModel.generated.h"
 
 class UHeroAbilityModel;
+class UHeroSkinModel;
 
 /**
  * 
@@ -18,6 +19,9 @@ class DECKBUILDERDESKTOP_API UHeroModel : public UObject
 	GENERATED_UCLASS_BODY()
 	
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero")
+		FString HeroID;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero")
 		FString HeroName;
 
@@ -38,8 +42,11 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero")
 		TArray<UHeroAbilityModel*> Abilities;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero")
+		TArray<UHeroSkinModel*> Skins;
 	
 public:
-	static UHeroModel* ConstructFromHeroData(const FHeroData& HeroData, UDataTable* HeroAbilityTable);
+	static UHeroModel* ConstructFromHeroData(const FHeroData& HeroData, UDataTable* HeroAbilityTable, UDataTable* HeroSkinTable);
 	
 };

@@ -3,17 +3,19 @@
 #include "DeckBuilderDesktop.h"
 #include "HeroModel.h"
 #include "HeroAbilityModel.h"
+#include "HeroSkinModel.h"
 
 UHeroModel::UHeroModel(class FObjectInitializer const & ObjectInitializer)
 	: Super(ObjectInitializer)
 {
 }
 
-UHeroModel* UHeroModel::ConstructFromHeroData(const FHeroData& HeroData, UDataTable* HeroAbilityTable)
+UHeroModel* UHeroModel::ConstructFromHeroData(const FHeroData& HeroData, UDataTable* HeroAbilityTable, UDataTable* HeroSkinTable)
 {
 	check(HeroAbilityTable != nullptr);
 
 	auto HeroModel = NewObject<UHeroModel>(GetTransientPackage(), NAME_None);
+	HeroModel->HeroID = HeroData.HeroID;
 	HeroModel->HeroName = HeroData.HeroName;
 	HeroModel->AvatarTexture = HeroData.AvatarTexture;
 	HeroModel->HeroSelectTexture = HeroData.HeroSelectTexture;
@@ -29,6 +31,17 @@ UHeroModel* UHeroModel::ConstructFromHeroData(const FHeroData& HeroData, UDataTa
 		UHeroAbilityModel* AbilityModel = UHeroAbilityModel::ConstructFromHeroAbilityData(*AbilityRow);
 		check(AbilityModel != nullptr);
 		HeroModel->Abilities.Add(AbilityModel);
+	}
+
+	for (auto SkinName : HeroData.Skins)
+	{
+		auto SkinRowName = FString::Printf(TEXT("%s_%s"), *HeroModel->HeroID , *SkinName);
+		FHeroSkinData* SkinRow = HeroSkinTable->FindRow<FHeroSkinData>(FName(*SkinRowName, FNAME_Find), TEXT(" UHeroModel::ConstructFromHeroData"));
+		check(SkinRow != nullptr);
+
+		UHeroSkinModel* SkinModel = UHeroSkinModel::ConstructFromHeroSkinData(*SkinRow);
+		check(SkinModel != nullptr);
+		HeroModel->Skins.Add(SkinModel);
 	}
 
 	return HeroModel;

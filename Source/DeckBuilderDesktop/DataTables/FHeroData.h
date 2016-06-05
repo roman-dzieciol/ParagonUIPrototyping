@@ -12,6 +12,9 @@ public:
 	FHeroData(){}
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Data")
+		FString HeroID;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Data")
 		FString HeroName;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Data")
@@ -31,6 +34,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Data")
 		TArray<FString> Abilities;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Data")
+		TArray<FString> Skins;
 
 	friend bool operator==(const FHeroData& LHS, const FHeroData& RHS);
 };

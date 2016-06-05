@@ -27,5 +27,5 @@ public:
 	UHeroModel* GetHeroModelNamed(FString HeroName) const;
 
 public:
-	static UHeroListModel* ConstructFromHeroDataTable(UDataTable* HeroDataTable, UDataTable* HeroAbilityTable);
+	static UHeroListModel* ConstructFromHeroDataTable(UDataTable* HeroDataTable, UDataTable* HeroAbilityTable, UDataTable* HeroSkinTable);
 };

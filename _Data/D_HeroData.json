@@ -1,6 +1,7 @@
 [
 	{
 		"Name": "Dekker",
+		"HeroID": "Dekker",
 		"HeroName": "Dekker",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Dekker.T_Dekker'",
 		"HeroSelectTexture": "Texture2D'/Game/Art/Heroes/HeroSelect/T_HeroSelect_Dekker.T_HeroSelect_Dekker'",
@@ -26,10 +27,17 @@
 			"Dekker_Q",
 			"Dekker_E",
 			"Dekker_R"
+		],
+		"Skins": [
+			"Default",
+			"Challenger",
+			"Master",
+			"Energized"
 		]
 	},
 	{
 		"Name": "FengMao",
+		"HeroID": "FengMao",
 		"HeroName": "Feng Mao",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_FengMao.T_FengMao'",
 		"HeroSelectTexture": "Texture2D'/Game/Art/Heroes/HeroSelect/T_HeroSelect_FengMao.T_HeroSelect_FengMao'",
@@ -55,10 +63,16 @@
 			"FengMao_Q",
 			"FengMao_E",
 			"FengMao_R"
+		],
+		"Skins": [
+			"Default",
+			"Challenger",
+			"Master"
 		]
 	},
 	{
 		"Name": "Gadget",
+		"HeroID": "Gadget",
 		"HeroName": "Gadget",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Gadget.T_Gadget'",
 		"HeroSelectTexture": "Texture2D'/Game/Art/Heroes/HeroSelect/T_HeroSelect_Gadget.T_HeroSelect_Gadget'",
@@ -81,10 +95,17 @@
 			"Gadget_Q",
 			"Gadget_E",
 			"Gadget_R"
+		],
+		"Skins": [
+			"Default",
+			"Challenger",
+			"Master",
+			"Guerilla"
 		]
 	},
 	{
 		"Name": "Gideon",
+		"HeroID": "Gideon",
 		"HeroName": "Gideon",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Gideon.T_Gideon'",
 		"HeroSelectTexture": "Texture2D'/Game/Art/Heroes/HeroSelect/T_HeroSelect_Gideon.T_HeroSelect_Gideon'",
@@ -110,10 +131,16 @@
 			"Gideon_Q",
 			"Gideon_E",
 			"Gideon_R"
+		],
+		"Skins": [
+			"Default",
+			"Challenger",
+			"Master"
 		]
 	},
 	{
 		"Name": "Grim",
+		"HeroID": "Grim",
 		"HeroName": "Grim.exe",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Grim.T_Grim'",
 		"HeroSelectTexture": "Texture2D'/Game/Art/Heroes/HeroSelect/T_HeroSelect_Grim.T_HeroSelect_Grim'",
@@ -139,10 +166,16 @@
 			"Grim_Q",
 			"Grim_E",
 			"Grim_R"
+		],
+		"Skins": [
+			"Default",
+			"Challenger",
+			"Master"
 		]
 	},
 	{
 		"Name": "Grux",
+		"HeroID": "Grux",
 		"HeroName": "Grux",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Grux.T_Grux'",
 		"HeroSelectTexture": "Texture2D'/Game/Art/Heroes/HeroSelect/T_HeroSelect_Grux.T_HeroSelect_Grux'",
@@ -168,10 +201,17 @@
 			"Grux_Q",
 			"Grux_E",
 			"Grux_R"
+		],
+		"Skins": [
+			"Default",
+			"Challenger",
+			"Master",
+			"WarChief"
 		]
 	},
 	{
 		"Name": "Howitzer",
+		"HeroID": "Howitzer",
 		"HeroName": "Howitzer",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Howitzer.T_Howitzer'",
 		"HeroSelectTexture": "Texture2D'/Game/Art/Heroes/HeroSelect/T_HeroSelect_Howitzer.T_HeroSelect_Howitzer'",
@@ -192,10 +232,17 @@
 			"Howitzer_Q",
 			"Howitzer_E",
 			"Howitzer_R"
+		],
+		"Skins": [
+			"Default",
+			"Challenger",
+			"Master",
+			"Hotrod"
 		]
 	},
 	{
 		"Name": "IggyScorch",
+		"HeroID": "IggyScorch",
 		"HeroName": "Iggy & Scorch",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_IggyScorch.T_IggyScorch'",
 		"HeroSelectTexture": "Texture2D'/Game/Art/Heroes/HeroSelect/T_HeroSelect_IggyScorch.T_HeroSelect_IggyScorch'",
@@ -221,10 +268,16 @@
 			"IggyScorch_Q",
 			"IggyScorch_E",
 			"IggyScorch_R"
+		],
+		"Skins": [
+			"Default",
+			"Challenger",
+			"Master"
 		]
 	},
 	{
 		"Name": "Kallari",
+		"HeroID": "Kallari",
 		"HeroName": "Kallari",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Kallari.T_Kallari'",
 		"HeroSelectTexture": "Texture2D'/Game/Art/Heroes/HeroSelect/T_HeroSelect_Kallari.T_HeroSelect_Kallari'",
@@ -249,10 +302,16 @@
 			"Kallari_Q",
 			"Kallari_E",
 			"Kallari_R"
+		],
+		"Skins": [
+			"Default",
+			"Challenger",
+			"Master"
 		]
 	},
 	{
 		"Name": "Murdock",
+		"HeroID": "Murdock",
 		"HeroName": "Murdock",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Murdock.T_Murdock'",
 		"HeroSelectTexture": "Texture2D'/Game/Art/Heroes/HeroSelect/T_HeroSelect_Murdock.T_HeroSelect_Murdock'",
@@ -278,10 +337,16 @@
 			"Murdock_Q",
 			"Murdock_E",
 			"Murdock_R"
+		],
+		"Skins": [
+			"Default",
+			"Challenger",
+			"Master"
 		]
 	},
 	{
 		"Name": "Muriel",
+		"HeroID": "Muriel",
 		"HeroName": "Muriel",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Muriel.T_Muriel'",
 		"HeroSelectTexture": "Texture2D'/Game/Art/Heroes/HeroSelect/T_HeroSelect_Muriel.T_HeroSelect_Muriel'",
@@ -307,10 +372,17 @@
 			"Muriel_Q",
 			"Muriel_E",
 			"Muriel_R"
+		],
+		"Skins": [
+			"Default",
+			"Challenger",
+			"Master",
+			"Sepia"
 		]
 	},
 	{
 		"Name": "Rampage",
+		"HeroID": "Rampage",
 		"HeroName": "Rampage",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Rampage.T_Rampage'",
 		"HeroSelectTexture": "Texture2D'/Game/Art/Heroes/HeroSelect/T_HeroSelect_Rampage.T_HeroSelect_Rampage'",
@@ -337,10 +409,17 @@
 			"Rampage_Q",
 			"Rampage_E",
 			"Rampage_R"
+		],
+		"Skins": [
+			"Default",
+			"Challenger",
+			"Master",
+			"Wasteland"
 		]
 	},
 	{
 		"Name": "Sevarog",
+		"HeroID": "Sevarog",
 		"HeroName": "Sevarog",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Sevarog.T_Sevarog'",
 		"HeroSelectTexture": "Texture2D'/Game/Art/Heroes/HeroSelect/T_HeroSelect_Sevarog.T_HeroSelect_Sevarog'",
@@ -367,10 +446,16 @@
 			"Sevarog_Q",
 			"Sevarog_E",
 			"Sevarog_R"
+		],
+		"Skins": [
+			"Default",
+			"Challenger",
+			"Master"
 		]
 	},
 	{
 		"Name": "Sparrow",
+		"HeroID": "Sparrow",
 		"HeroName": "Sparrow",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Sparrow.T_Sparrow'",
 		"HeroSelectTexture": "Texture2D'/Game/Art/Heroes/HeroSelect/T_HeroSelect_Sparrow.T_HeroSelect_Sparrow'",
@@ -396,10 +481,17 @@
 			"Sparrow_Q",
 			"Sparrow_E",
 			"Sparrow_R"
+		],
+		"Skins": [
+			"Default",
+			"Challenger",
+			"Master",
+			"AutumnFire"
 		]
 	},
 	{
 		"Name": "Steel",
+		"HeroID": "Steel",
 		"HeroName": "Steel",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Steel.T_Steel'",
 		"HeroSelectTexture": "Texture2D'/Game/Art/Heroes/HeroSelect/T_HeroSelect_Steel.T_HeroSelect_Steel'",
@@ -426,10 +518,16 @@
 			"Steel_Q",
 			"Steel_E",
 			"Steel_R"
+		],
+		"Skins": [
+			"Default",
+			"Challenger",
+			"Master"
 		]
 	},
 	{
 		"Name": "TwinBlast",
+		"HeroID": "TwinBlast",
 		"HeroName": "TwinBlast",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_TwinBlast.T_TwinBlast'",
 		"HeroSelectTexture": "Texture2D'/Game/Art/Heroes/HeroSelect/T_HeroSelect_TwinBlast.T_HeroSelect_TwinBlast'",
@@ -454,6 +552,11 @@
 			"TwinBlast_Q",
 			"TwinBlast_E",
 			"TwinBlast_R"
+		],
+		"Skins": [
+			"Default",
+			"Challenger",
+			"Master"
 		]
 	}
 ]

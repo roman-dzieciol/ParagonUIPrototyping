@@ -4,9 +4,9 @@
 #include "HeroFunctionLibrary.h"
 #include "Models/HeroListModel.h"
 
-UHeroListModel* UHeroFunctionLibrary::ConstructHeroListFromHeroDataTable(UDataTable* HeroDataTable, UDataTable* HeroAbilityTable)
+UHeroListModel* UHeroFunctionLibrary::ConstructHeroListFromHeroDataTable(UDataTable* HeroDataTable, UDataTable* HeroAbilityTable, UDataTable* HeroSkinTable)
 {
-	return UHeroListModel::ConstructFromHeroDataTable(HeroDataTable, HeroAbilityTable);
+	return UHeroListModel::ConstructFromHeroDataTable(HeroDataTable, HeroAbilityTable, HeroSkinTable);
 }
 
 

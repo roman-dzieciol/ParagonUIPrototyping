@@ -1,0 +1,297 @@
+[
+	{
+		"Name": "TwinBlast_Default",
+		"SkinName": "TwinBlast_Default",
+		"Title": "Default TwinBlast"
+	},
+	{
+		"Name": "TwinBlast_Challenger",
+		"SkinName": "TwinBlast_Challenger",
+		"Title": "Challenger TwinBlast"
+	},
+	{
+		"Name": "TwinBlast_Master",
+		"SkinName": "TwinBlast_Master",
+		"Title": "Master TwinBlast"
+	},
+	{
+		"Name": "Steel_Default",
+		"SkinName": "Steel_Default",
+		"Title": "Default Steel"
+	},
+	{
+		"Name": "Steel_Challenger",
+		"SkinName": "Steel_Challenger",
+		"Title": "Challenger Steel"
+	},
+	{
+		"Name": "Steel_Master",
+		"SkinName": "Steel_Master",
+		"Title": "Master Steel"
+	},
+	{
+		"Name": "Sparrow_Default",
+		"SkinName": "Sparrow_Default",
+		"Title": "Default Sparrow"
+	},
+	{
+		"Name": "Sparrow_Challenger",
+		"SkinName": "Sparrow_Challenger",
+		"Title": "Challenger Sparrow"
+	},
+	{
+		"Name": "Sparrow_Master",
+		"SkinName": "Sparrow_Master",
+		"Title": "Master Sparrow"
+	},
+	{
+		"Name": "Sparrow_AutumnFire",
+		"SkinName": "Sparrow_AutumnFire",
+		"Title": "Autumn Fire Sparrow"
+	},
+	{
+		"Name": "Sevarog_Default",
+		"SkinName": "Sevarog_Default",
+		"Title": "Default Sevarog"
+	},
+	{
+		"Name": "Sevarog_Challenger",
+		"SkinName": "Sevarog_Challenger",
+		"Title": "Challenger Sevarog"
+	},
+	{
+		"Name": "Sevarog_Master",
+		"SkinName": "Sevarog_Master",
+		"Title": "Master Sevarog"
+	},
+	{
+		"Name": "Riktor_Default",
+		"SkinName": "Riktor_Default",
+		"Title": "Default Riktor"
+	},
+	{
+		"Name": "Riktor_Challenger",
+		"SkinName": "Riktor_Challenger",
+		"Title": "Challenger Riktor"
+	},
+	{
+		"Name": "Riktor_Master",
+		"SkinName": "Riktor_Master",
+		"Title": "Master Riktor"
+	},
+	{
+		"Name": "Riktor_BronzeWarden",
+		"SkinName": "Riktor_BronzeWarden",
+		"Title": "Bronze Warden Riktor"
+	},
+	{
+		"Name": "Rampage_Default",
+		"SkinName": "Rampage_Default",
+		"Title": "Default Rampage"
+	},
+	{
+		"Name": "Rampage_Challenger",
+		"SkinName": "Rampage_Challenger",
+		"Title": "Challenger Rampage"
+	},
+	{
+		"Name": "Rampage_Master",
+		"SkinName": "Rampage_Master",
+		"Title": "Master Rampage"
+	},
+	{
+		"Name": "Rampage_Wasteland",
+		"SkinName": "Rampage_Wasteland",
+		"Title": "Wasteland Rampage"
+	},
+	{
+		"Name": "Muriel_Default",
+		"SkinName": "Muriel_Default",
+		"Title": "Default Muriel"
+	},
+	{
+		"Name": "Muriel_Challenger",
+		"SkinName": "Muriel_Challenger",
+		"Title": "Challenger Muriel"
+	},
+	{
+		"Name": "Muriel_Master",
+		"SkinName": "Muriel_Master",
+		"Title": "Master Muriel"
+	},
+	{
+		"Name": "Muriel_Sepia",
+		"SkinName": "Muriel_Sepia",
+		"Title": "Sepia Muriel"
+	},
+	{
+		"Name": "Murdock_Default",
+		"SkinName": "Murdock_Default",
+		"Title": "Default Murdock"
+	},
+	{
+		"Name": "Murdock_Challenger",
+		"SkinName": "Murdock_Challenger",
+		"Title": "Challenger Murdock"
+	},
+	{
+		"Name": "Murdock_Master",
+		"SkinName": "Murdock_Master",
+		"Title": "Master Murdock"
+	},
+	{
+		"Name": "Kallari_Default",
+		"SkinName": "Kallari_Default",
+		"Title": "Default Kallari"
+	},
+	{
+		"Name": "Kallari_Challenger",
+		"SkinName": "Kallari_Challenger",
+		"Title": "Challenger Kallari"
+	},
+	{
+		"Name": "Kallari_Master",
+		"SkinName": "Kallari_Master",
+		"Title": "Master Kallari"
+	},
+	{
+		"Name": "IggyScorch_Default",
+		"SkinName": "IggyScorch_Default",
+		"Title": "Default IggyScorch"
+	},
+	{
+		"Name": "IggyScorch_Challenger",
+		"SkinName": "IggyScorch_Challenger",
+		"Title": "Challenger IggyScorch"
+	},
+	{
+		"Name": "IggyScorch_Master",
+		"SkinName": "IggyScorch_Master",
+		"Title": "Master IggyScorch"
+	},
+	{
+		"Name": "Howitzer_Default",
+		"SkinName": "Howitzer_Default",
+		"Title": "Default Howitzer"
+	},
+	{
+		"Name": "Howitzer_Challenger",
+		"SkinName": "Howitzer_Challenger",
+		"Title": "Challenger Howitzer"
+	},
+	{
+		"Name": "Howitzer_Master",
+		"SkinName": "Howitzer_Master",
+		"Title": "Master Howitzer"
+	},
+	{
+		"Name": "Howitzer_Hotrod",
+		"SkinName": "Howitzer_Hotrod",
+		"Title": "Hotrod Howitzer"
+	},
+	{
+		"Name": "Grux_Default",
+		"SkinName": "Grux_Default",
+		"Title": "Default Grux"
+	},
+	{
+		"Name": "Grux_Challenger",
+		"SkinName": "Grux_Challenger",
+		"Title": "Challenger Grux"
+	},
+	{
+		"Name": "Grux_Master",
+		"SkinName": "Grux_Master",
+		"Title": "Master Grux"
+	},
+	{
+		"Name": "Grux_WarChief",
+		"SkinName": "Grux_WarChief",
+		"Title": "War Chief Grux"
+	},
+	{
+		"Name": "Grim_Default",
+		"SkinName": "Grim_Default",
+		"Title": "Default Grim"
+	},
+	{
+		"Name": "Grim_Challenger",
+		"SkinName": "Grim_Challenger",
+		"Title": "Challenger Grim"
+	},
+	{
+		"Name": "Grim_Master",
+		"SkinName": "Grim_Master",
+		"Title": "Master Grim"
+	},
+	{
+		"Name": "Gideon_Default",
+		"SkinName": "Gideon_Default",
+		"Title": "Default Gideon"
+	},
+	{
+		"Name": "Gideon_Challenger",
+		"SkinName": "Gideon_Challenger",
+		"Title": "Challenger Gideon"
+	},
+	{
+		"Name": "Gideon_Master",
+		"SkinName": "Gideon_Master",
+		"Title": "Master Gideon"
+	},
+	{
+		"Name": "Gadget_Default",
+		"SkinName": "Gadget_Default",
+		"Title": "Default Gadget"
+	},
+	{
+		"Name": "Gadget_Challenger",
+		"SkinName": "Gadget_Challenger",
+		"Title": "Challenger Gadget"
+	},
+	{
+		"Name": "Gadget_Master",
+		"SkinName": "Gadget_Master",
+		"Title": "Master Gadget"
+	},
+	{
+		"Name": "Gadget_Guerilla",
+		"SkinName": "Gadget_Guerilla",
+		"Title": "Guerilla Gadget"
+	},
+	{
+		"Name": "FengMao_Default",
+		"SkinName": "FengMao_Default",
+		"Title": "Default FengMao"
+	},
+	{
+		"Name": "FengMao_Challenger",
+		"SkinName": "FengMao_Challenger",
+		"Title": "Challenger FengMao"
+	},
+	{
+		"Name": "FengMao_Master",
+		"SkinName": "FengMao_Master",
+		"Title": "Master FengMao"
+	},
+	{
+		"Name": "Dekker_Default",
+		"SkinName": "Dekker_Default",
+		"Title": "Default Dekker"
+	},
+	{
+		"Name": "Dekker_Challenger",
+		"SkinName": "Dekker_Challenger",
+		"Title": "Challenger Dekker"
+	},
+	{
+		"Name": "Dekker_Master",
+		"SkinName": "Dekker_Master",
+		"Title": "Master Dekker"
+	},
+	{
+		"Name": "Dekker_Energized",
+		"SkinName": "Dekker_Energized",
+		"Title": "Energized Dekker"
+	}
+]
