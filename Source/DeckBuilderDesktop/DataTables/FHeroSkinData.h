@@ -15,6 +15,12 @@ public:
 		FString SkinName;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Skin Data")
+		UTexture2D* IconTexture;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Skin Data")
+		TAssetPtr<class UTexture2D> PreviewTexture;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Skin Data")
 		FString Title;
 
 	friend bool operator==(const FHeroSkinData& LHS, const FHeroSkinData& RHS);

@@ -23,6 +23,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Skin")
 		UTexture2D* IconTexture;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Skin")
+		TAssetPtr<class UTexture2D> PreviewTexture;
 	
 public:
 

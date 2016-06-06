@@ -18,7 +18,6 @@ UHeroModel* UHeroModel::ConstructFromHeroData(const FHeroData& HeroData, UDataTa
 	HeroModel->HeroID = HeroData.HeroID;
 	HeroModel->HeroName = HeroData.HeroName;
 	HeroModel->AvatarTexture = HeroData.AvatarTexture;
-	HeroModel->HeroSelectTexture = HeroData.HeroSelectTexture;
 	HeroModel->Affinities = HeroData.Affinities;
 	HeroModel->RecommendedStats = HeroData.RecommendedStats;
 	HeroModel->NotRecommendedStats = HeroData.NotRecommendedStats;

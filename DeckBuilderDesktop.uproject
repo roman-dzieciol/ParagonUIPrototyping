@@ -18,5 +18,8 @@
 				"JsonUtilities"
 			]
 		}
+	],
+	"TargetPlatforms": [
+		"WindowsNoEditor"
 	]
 }

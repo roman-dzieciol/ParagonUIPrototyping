@@ -2,296 +2,414 @@
 	{
 		"Name": "TwinBlast_Default",
 		"SkinName": "TwinBlast_Default",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_TwinBlast_Default.T_HeroPreview_TwinBlast_Default",
 		"Title": "Default TwinBlast"
 	},
 	{
 		"Name": "TwinBlast_Challenger",
 		"SkinName": "TwinBlast_Challenger",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_TwinBlast_Challenger.T_HeroPreview_TwinBlast_Challenger",
 		"Title": "Challenger TwinBlast"
 	},
 	{
 		"Name": "TwinBlast_Master",
 		"SkinName": "TwinBlast_Master",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_TwinBlast_Master.T_HeroPreview_TwinBlast_Master",
 		"Title": "Master TwinBlast"
 	},
 	{
 		"Name": "Steel_Default",
 		"SkinName": "Steel_Default",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Steel_Default.T_HeroPreview_Steel_Default",
 		"Title": "Default Steel"
 	},
 	{
 		"Name": "Steel_Challenger",
 		"SkinName": "Steel_Challenger",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Steel_Challenger.T_HeroPreview_Steel_Challenger",
 		"Title": "Challenger Steel"
 	},
 	{
 		"Name": "Steel_Master",
 		"SkinName": "Steel_Master",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Steel_Master.T_HeroPreview_Steel_Master",
 		"Title": "Master Steel"
 	},
 	{
 		"Name": "Sparrow_Default",
 		"SkinName": "Sparrow_Default",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Sparrow_Default.T_HeroPreview_Sparrow_Default",
 		"Title": "Default Sparrow"
 	},
 	{
 		"Name": "Sparrow_Challenger",
 		"SkinName": "Sparrow_Challenger",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Sparrow_Challenger.T_HeroPreview_Sparrow_Challenger",
 		"Title": "Challenger Sparrow"
 	},
 	{
 		"Name": "Sparrow_Master",
 		"SkinName": "Sparrow_Master",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Sparrow_Master.T_HeroPreview_Sparrow_Master",
 		"Title": "Master Sparrow"
 	},
 	{
 		"Name": "Sparrow_AutumnFire",
 		"SkinName": "Sparrow_AutumnFire",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Sparrow_AutumnFire.T_HeroPreview_Sparrow_AutumnFire",
 		"Title": "Autumn Fire Sparrow"
 	},
 	{
 		"Name": "Sevarog_Default",
 		"SkinName": "Sevarog_Default",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Sevarog_Default.T_HeroPreview_Sevarog_Default",
 		"Title": "Default Sevarog"
 	},
 	{
 		"Name": "Sevarog_Challenger",
 		"SkinName": "Sevarog_Challenger",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Sevarog_Challenger.T_HeroPreview_Sevarog_Challenger",
 		"Title": "Challenger Sevarog"
 	},
 	{
 		"Name": "Sevarog_Master",
 		"SkinName": "Sevarog_Master",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Sevarog_Master.T_HeroPreview_Sevarog_Master",
 		"Title": "Master Sevarog"
 	},
 	{
 		"Name": "Riktor_Default",
 		"SkinName": "Riktor_Default",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Riktor_Default.T_HeroPreview_Riktor_Default",
 		"Title": "Default Riktor"
 	},
 	{
 		"Name": "Riktor_Challenger",
 		"SkinName": "Riktor_Challenger",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Riktor_Challenger.T_HeroPreview_Riktor_Challenger",
 		"Title": "Challenger Riktor"
 	},
 	{
 		"Name": "Riktor_Master",
 		"SkinName": "Riktor_Master",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Riktor_Master.T_HeroPreview_Riktor_Master",
 		"Title": "Master Riktor"
 	},
 	{
 		"Name": "Riktor_BronzeWarden",
 		"SkinName": "Riktor_BronzeWarden",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Riktor_BronzeWarden.T_HeroPreview_Riktor_BronzeWarden",
 		"Title": "Bronze Warden Riktor"
 	},
 	{
 		"Name": "Rampage_Default",
 		"SkinName": "Rampage_Default",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Rampage_Default.T_HeroPreview_Rampage_Default",
 		"Title": "Default Rampage"
 	},
 	{
 		"Name": "Rampage_Challenger",
 		"SkinName": "Rampage_Challenger",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Rampage_Challenger.T_HeroPreview_Rampage_Challenger",
 		"Title": "Challenger Rampage"
 	},
 	{
 		"Name": "Rampage_Master",
 		"SkinName": "Rampage_Master",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Rampage_Master.T_HeroPreview_Rampage_Master",
 		"Title": "Master Rampage"
 	},
 	{
 		"Name": "Rampage_Wasteland",
 		"SkinName": "Rampage_Wasteland",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Rampage_Wasteland.T_HeroPreview_Rampage_Wasteland",
 		"Title": "Wasteland Rampage"
 	},
 	{
 		"Name": "Muriel_Default",
 		"SkinName": "Muriel_Default",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Muriel_Default.T_HeroPreview_Muriel_Default",
 		"Title": "Default Muriel"
 	},
 	{
 		"Name": "Muriel_Challenger",
 		"SkinName": "Muriel_Challenger",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Muriel_Challenger.T_HeroPreview_Muriel_Challenger",
 		"Title": "Challenger Muriel"
 	},
 	{
 		"Name": "Muriel_Master",
 		"SkinName": "Muriel_Master",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Muriel_Master.T_HeroPreview_Muriel_Master",
 		"Title": "Master Muriel"
 	},
 	{
 		"Name": "Muriel_Sepia",
 		"SkinName": "Muriel_Sepia",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Muriel_Sepia.T_HeroPreview_Muriel_Sepia",
 		"Title": "Sepia Muriel"
 	},
 	{
 		"Name": "Murdock_Default",
 		"SkinName": "Murdock_Default",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Murdock_Default.T_HeroPreview_Murdock_Default",
 		"Title": "Default Murdock"
 	},
 	{
 		"Name": "Murdock_Challenger",
 		"SkinName": "Murdock_Challenger",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Murdock_Challenger.T_HeroPreview_Murdock_Challenger",
 		"Title": "Challenger Murdock"
 	},
 	{
 		"Name": "Murdock_Master",
 		"SkinName": "Murdock_Master",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Murdock_Master.T_HeroPreview_Murdock_Master",
 		"Title": "Master Murdock"
 	},
 	{
 		"Name": "Kallari_Default",
 		"SkinName": "Kallari_Default",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Kallari_Default.T_HeroPreview_Kallari_Default",
 		"Title": "Default Kallari"
 	},
 	{
 		"Name": "Kallari_Challenger",
 		"SkinName": "Kallari_Challenger",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Kallari_Challenger.T_HeroPreview_Kallari_Challenger",
 		"Title": "Challenger Kallari"
 	},
 	{
 		"Name": "Kallari_Master",
 		"SkinName": "Kallari_Master",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Kallari_Master.T_HeroPreview_Kallari_Master",
 		"Title": "Master Kallari"
 	},
 	{
 		"Name": "IggyScorch_Default",
 		"SkinName": "IggyScorch_Default",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_IggyScorch_Default.T_HeroPreview_IggyScorch_Default",
 		"Title": "Default IggyScorch"
 	},
 	{
 		"Name": "IggyScorch_Challenger",
 		"SkinName": "IggyScorch_Challenger",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_IggyScorch_Challenger.T_HeroPreview_IggyScorch_Challenger",
 		"Title": "Challenger IggyScorch"
 	},
 	{
 		"Name": "IggyScorch_Master",
 		"SkinName": "IggyScorch_Master",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_IggyScorch_Master.T_HeroPreview_IggyScorch_Master",
 		"Title": "Master IggyScorch"
 	},
 	{
 		"Name": "Howitzer_Default",
 		"SkinName": "Howitzer_Default",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Howitzer_Default.T_HeroPreview_Howitzer_Default",
 		"Title": "Default Howitzer"
 	},
 	{
 		"Name": "Howitzer_Challenger",
 		"SkinName": "Howitzer_Challenger",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Howitzer_Challenger.T_HeroPreview_Howitzer_Challenger",
 		"Title": "Challenger Howitzer"
 	},
 	{
 		"Name": "Howitzer_Master",
 		"SkinName": "Howitzer_Master",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Howitzer_Master.T_HeroPreview_Howitzer_Master",
 		"Title": "Master Howitzer"
 	},
 	{
 		"Name": "Howitzer_Hotrod",
 		"SkinName": "Howitzer_Hotrod",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Howitzer_Hotrod.T_HeroPreview_Howitzer_Hotrod",
 		"Title": "Hotrod Howitzer"
 	},
 	{
 		"Name": "Grux_Default",
 		"SkinName": "Grux_Default",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Grux_Default.T_HeroPreview_Grux_Default",
 		"Title": "Default Grux"
 	},
 	{
 		"Name": "Grux_Challenger",
 		"SkinName": "Grux_Challenger",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Grux_Challenger.T_HeroPreview_Grux_Challenger",
 		"Title": "Challenger Grux"
 	},
 	{
 		"Name": "Grux_Master",
 		"SkinName": "Grux_Master",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Grux_Master.T_HeroPreview_Grux_Master",
 		"Title": "Master Grux"
 	},
 	{
 		"Name": "Grux_WarChief",
 		"SkinName": "Grux_WarChief",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Grux_WarChief.T_HeroPreview_Grux_WarChief",
 		"Title": "War Chief Grux"
 	},
 	{
 		"Name": "Grim_Default",
 		"SkinName": "Grim_Default",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Grim_Default.T_HeroPreview_Grim_Default",
 		"Title": "Default Grim"
 	},
 	{
 		"Name": "Grim_Challenger",
 		"SkinName": "Grim_Challenger",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Grim_Challenger.T_HeroPreview_Grim_Challenger",
 		"Title": "Challenger Grim"
 	},
 	{
 		"Name": "Grim_Master",
 		"SkinName": "Grim_Master",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Grim_Master.T_HeroPreview_Grim_Master",
 		"Title": "Master Grim"
 	},
 	{
 		"Name": "Gideon_Default",
 		"SkinName": "Gideon_Default",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Gideon_Default.T_HeroPreview_Gideon_Default",
 		"Title": "Default Gideon"
 	},
 	{
 		"Name": "Gideon_Challenger",
 		"SkinName": "Gideon_Challenger",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Gideon_Challenger.T_HeroPreview_Gideon_Challenger",
 		"Title": "Challenger Gideon"
 	},
 	{
 		"Name": "Gideon_Master",
 		"SkinName": "Gideon_Master",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Gideon_Master.T_HeroPreview_Gideon_Master",
 		"Title": "Master Gideon"
 	},
 	{
 		"Name": "Gadget_Default",
 		"SkinName": "Gadget_Default",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Gadget_Default.T_HeroPreview_Gadget_Default",
 		"Title": "Default Gadget"
 	},
 	{
 		"Name": "Gadget_Challenger",
 		"SkinName": "Gadget_Challenger",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Gadget_Challenger.T_HeroPreview_Gadget_Challenger",
 		"Title": "Challenger Gadget"
 	},
 	{
 		"Name": "Gadget_Master",
 		"SkinName": "Gadget_Master",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Gadget_Master.T_HeroPreview_Gadget_Master",
 		"Title": "Master Gadget"
 	},
 	{
 		"Name": "Gadget_Guerilla",
 		"SkinName": "Gadget_Guerilla",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Gadget_Guerilla.T_HeroPreview_Gadget_Guerilla",
 		"Title": "Guerilla Gadget"
 	},
 	{
 		"Name": "FengMao_Default",
 		"SkinName": "FengMao_Default",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_FengMao_Default.T_HeroPreview_FengMao_Default",
 		"Title": "Default FengMao"
 	},
 	{
 		"Name": "FengMao_Challenger",
 		"SkinName": "FengMao_Challenger",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_FengMao_Challenger.T_HeroPreview_FengMao_Challenger",
 		"Title": "Challenger FengMao"
 	},
 	{
 		"Name": "FengMao_Master",
 		"SkinName": "FengMao_Master",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_FengMao_Master.T_HeroPreview_FengMao_Master",
 		"Title": "Master FengMao"
 	},
 	{
 		"Name": "Dekker_Default",
 		"SkinName": "Dekker_Default",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Dekker_Default.T_HeroPreview_Dekker_Default",
 		"Title": "Default Dekker"
 	},
 	{
 		"Name": "Dekker_Challenger",
 		"SkinName": "Dekker_Challenger",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Dekker_Challenger.T_HeroPreview_Dekker_Challenger",
 		"Title": "Challenger Dekker"
 	},
 	{
 		"Name": "Dekker_Master",
 		"SkinName": "Dekker_Master",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Dekker_Master.T_HeroPreview_Dekker_Master",
 		"Title": "Master Dekker"
 	},
 	{
 		"Name": "Dekker_Energized",
 		"SkinName": "Dekker_Energized",
+		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
+		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Dekker_Energized.T_HeroPreview_Dekker_Energized",
 		"Title": "Energized Dekker"
 	}
 ]

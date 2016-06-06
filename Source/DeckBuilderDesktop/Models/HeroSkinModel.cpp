@@ -15,7 +15,8 @@ UHeroSkinModel* UHeroSkinModel::ConstructFromHeroSkinData(const FHeroSkinData& H
 	auto HeroSkinModel = NewObject<UHeroSkinModel>(GetTransientPackage(), NAME_None);
 	HeroSkinModel->SkinName = HeroSkinData.SkinName;
 	HeroSkinModel->Title = HeroSkinData.Title;
-	//HeroSkinModel->IconTexture = HeroSkinData.IconTexture;
+	HeroSkinModel->IconTexture = HeroSkinData.IconTexture;
+	HeroSkinModel->PreviewTexture = HeroSkinData.PreviewTexture;
 	return HeroSkinModel;
 }
 
