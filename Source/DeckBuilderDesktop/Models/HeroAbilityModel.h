@@ -22,6 +22,15 @@ public:
 		FString Title;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Ability")
+		FString Description;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Ability")
+		TArray<float> ManaCost;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Ability")
+		TArray<float> Cooldown;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Ability")
 		UTexture2D* IconTexture;
 	
 public:

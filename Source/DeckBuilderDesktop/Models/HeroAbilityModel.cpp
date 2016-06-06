@@ -15,6 +15,9 @@ UHeroAbilityModel* UHeroAbilityModel::ConstructFromHeroAbilityData(const FHeroAb
 	auto HeroAbilityModel = NewObject<UHeroAbilityModel>(GetTransientPackage(), NAME_None);
 	HeroAbilityModel->AbilityName = HeroAbilityData.AbilityName;
 	HeroAbilityModel->Title = HeroAbilityData.Title;
+	HeroAbilityModel->Description = HeroAbilityData.Description;
+	HeroAbilityModel->ManaCost = HeroAbilityData.ManaCost;
+	HeroAbilityModel->Cooldown = HeroAbilityData.Cooldown;
 	HeroAbilityModel->IconTexture = HeroAbilityData.IconTexture;
 	return HeroAbilityModel;
 }
