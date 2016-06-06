@@ -3,612 +3,1292 @@
 		"Name": "TwinBlast_Pass",
 		"AbilityName": "TwinBlast_Pass",
 		"Title": "On A Roll",
+		"Description": "Twinblast has increased default Attack Speed.",
+		"ManaCost": [
+		],
+		"Cooldown": [
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_TwinBlast_Pass.T_Skill_TwinBlast_Pass'"
 	},
 	{
 		"Name": "TwinBlast_LMB",
 		"AbilityName": "TwinBlast_LMB",
 		"Title": "Doubleshot",
+		"Description": "Ranged basic attack dealing 33.317 Physical Damage.",
+		"ManaCost": [
+			0
+		],
+		"Cooldown": [
+			1
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_TwinBlast_LMB.T_Skill_TwinBlast_LMB'"
 	},
 	{
 		"Name": "TwinBlast_RMB",
 		"AbilityName": "TwinBlast_RMB",
 		"Title": "Rocket Dash",
+		"Description": "Twinblast dashes in the direction he’s moving.",
+		"ManaCost": [
+			50.4
+		],
+		"Cooldown": [
+			17
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_TwinBlast_RMB.T_Skill_TwinBlast_RMB'"
 	},
 	{
 		"Name": "TwinBlast_Q",
 		"AbilityName": "TwinBlast_Q",
 		"Title": "Nitro",
+		"Description": "Twinblast boosts his Passive Attack Speed by an additional {BPH} for 5 seconds.",
+		"ManaCost": [
+			46.8
+		],
+		"Cooldown": [
+			12
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_TwinBlast_Q.T_Skill_TwinBlast_Q'"
 	},
 	{
 		"Name": "TwinBlast_E",
 		"AbilityName": "TwinBlast_E",
 		"Title": "Grenade!",
+		"Description": "Twinblast fires a grenade to a target location. After a short delay the grenade explodes dealing 12.5 Physical Damage and slowing enemies.",
+		"ManaCost": [
+			50.4
+		],
+		"Cooldown": [
+			17
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_TwinBlast_E.T_Skill_TwinBlast_E'"
 	},
 	{
 		"Name": "TwinBlast_R",
 		"AbilityName": "TwinBlast_R",
 		"Title": "Barrage",
+		"Description": "Twinblast fires a salvo of rockets that pierce through minions and deals 60 Physical Damage in the area they hit.",
+		"ManaCost": [
+			100
+		],
+		"Cooldown": [
+			100
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_TwinBlast_R.T_Skill_TwinBlast_R'"
 	},
 	{
 		"Name": "Steel_Pass",
 		"AbilityName": "Steel_Pass",
 		"Title": "Unstoppable Force",
+		"Description": "Steel has 15% crowd control reduction.",
+		"ManaCost": [
+		],
+		"Cooldown": [
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Steel_Pass.T_Skill_Steel_Pass'"
 	},
 	{
 		"Name": "Steel_LMB",
 		"AbilityName": "Steel_LMB",
 		"Title": "Punch",
+		"Description": "Steel does a melee attack dealing 43.956 Physical Damage.",
+		"ManaCost": [
+			0
+		],
+		"Cooldown": [
+			1.32
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Steel_LMB.T_Skill_Steel_LMB'"
 	},
 	{
 		"Name": "Steel_RMB",
 		"AbilityName": "Steel_RMB",
 		"Title": "Shield Block",
+		"Description": "Steel’s shield reduces incoming damage by giving him extra Physical Armor and Energy Armor.",
+		"ManaCost": [
+			46.8
+		],
+		"Cooldown": [
+			13.5
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Steel_RMB.T_Skill_Steel_RMB'"
 	},
 	{
 		"Name": "Steel_Q",
 		"AbilityName": "Steel_Q",
 		"Title": "Charge",
+		"Description": "Steel charges forward dealing 100 Physical Damage and applying Knock Back to any enemies he hits.",
+		"ManaCost": [
+			46.8
+		],
+		"Cooldown": [
+			15
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Steel_Q.T_Skill_Steel_Q'"
 	},
 	{
 		"Name": "Steel_E",
 		"AbilityName": "Steel_E",
 		"Title": "Force Shield",
+		"Description": "Steel creates an energy wall that blocks enemy projectiles, applies Slow to enemies that touch it and Shield to teammates that touch it.",
+		"ManaCost": [
+			50.4
+		],
+		"Cooldown": [
+			23.8
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Steel_E.T_Skill_Steel_E'"
 	},
 	{
 		"Name": "Steel_R",
 		"AbilityName": "Steel_R",
 		"Title": "Shield Slam",
+		"Description": "Steel slams down at a targeted area, knocking up all enemies, dealing 308 Physical Damage and also applying a short Stun.",
+		"ManaCost": [
+			100
+		],
+		"Cooldown": [
+			100
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Steel_R.T_Skill_Steel_R'"
 	},
 	{
 		"Name": "Sparrow_Pass",
 		"AbilityName": "Sparrow_Pass",
 		"Title": "Relentless",
+		"Description": "Successive hits on the same target deal an additional 1.5 x hero level Physcial Damage. This effect stacks and is triggered by any damage from Sparrow.",
+		"ManaCost": [
+		],
+		"Cooldown": [
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Sparrow_Pass.T_Skill_Sparrow_Pass'"
 	},
 	{
 		"Name": "Sparrow_LMB",
 		"AbilityName": "Sparrow_LMB",
 		"Title": "Bow Shot",
+		"Description": "Ranged basic attack dealing 39.96 Physical Damage.",
+		"ManaCost": [
+			0
+		],
+		"Cooldown": [
+			1.5
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Sparrow_LMB.T_Skill_Sparrow_LMB'"
 	},
 	{
 		"Name": "Sparrow_RMB",
 		"AbilityName": "Sparrow_RMB",
 		"Title": "Piercing Shot",
+		"Description": "While holding, Sparrow charges a powerful arrow that does up 50 Physical Damage to all enemies in a line, up to 2500 units away.",
+		"ManaCost": [
+			46.8
+		],
+		"Cooldown": [
+			10
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Sparrow_RMB.T_Skill_Sparrow_RMB'"
 	},
 	{
 		"Name": "Sparrow_Q",
 		"AbilityName": "Sparrow_Q",
 		"Title": "Hail of Arrows",
+		"Description": "Sparrow rains down arrows in an area, dealing 22 Physical Damage over 4 seconds.",
+		"ManaCost": [
+			46.8
+		],
+		"Cooldown": [
+			12
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Sparrow_Q.T_Skill_Sparrow_Q'"
 	},
 	{
 		"Name": "Sparrow_E",
 		"AbilityName": "Sparrow_E",
 		"Title": "Invigorate",
+		"Description": "Sparrow gains 40 Attack Speed for the next 3 shots.",
+		"ManaCost": [
+			50.4
+		],
+		"Cooldown": [
+		20.06
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Sparrow_E.T_Skill_Sparrow_E'"
 	},
 	{
 		"Name": "Sparrow_R",
 		"AbilityName": "Sparrow_R",
 		"Title": "Inner Fire",
+		"Description": "Every shot fires 3 piercing arrows in a cone for the next 10 seconds. Side arrows deal 30/60/90% of your primary attack damage.",
+		"ManaCost": [
+			100
+		],
+		"Cooldown": [
+			100
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Sparrow_R.T_Skill_Sparrow_R'"
 	},
 	{
 		"Name": "Sevarog_Pass",
 		"AbilityName": "Sevarog_Pass",
 		"Title": "Soul Trap",
+		"Description": "Sevarog gains soul stacks that give him Health when he kills an enemy with Siphon (Q). Sevarog grows in power at 20/40/60/80/ soul stacks.",
+		"ManaCost": [
+		],
+		"Cooldown": [
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Sevarog_Pass.T_Skill_Sevarog_Pass'"
 	},
 	{
 		"Name": "Sevarog_LMB",
 		"AbilityName": "Sevarog_LMB",
 		"Title": "Hammer",
+		"Description": "Sevarog swings his hammer cuasing 49.95 Physical Damage.",
+		"ManaCost": [
+			0
+		],
+		"Cooldown": [
+			1.5
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Sevarog_LMB.T_Skill_Sevarog_LMB'"
 	},
 	{
 		"Name": "Sevarog_RMB",
 		"AbilityName": "Sevarog_RMB",
 		"Title": "Phantom Rush",
+		"Description": "Sevarog rushes forward with a short-distance dash, gliding through any enemies in his path.",
+		"ManaCost": [
+			46.8
+		],
+		"Cooldown": [
+			20.25
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Sevarog_RMB.T_Skill_Sevarog_RMB'"
 	},
 	{
 		"Name": "Sevarog_Q",
 		"AbilityName": "Sevarog_Q",
 		"Title": "Siphon",
+		"Description": "Targets the area in front of him and causes 88 Physical Damage to all enemies in the targeted area. Sevarog gains Soul Stacks when he gets a kill using this ability. Siphon gains Damage Bonus each time Sevarog grows from collecting souls.",
+		"ManaCost": [
+			35.1
+		],
+		"Cooldown": [
+			10.02
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Sevarog_Q.T_Skill_Sevarog_Q'"
 	},
 	{
 		"Name": "Sevarog_E",
 		"AbilityName": "Sevarog_E",
 		"Title": "Subjugate",
+		"Description": "Sevarog targets a circle on the ground and calls down a burst of dark energy that does 55 Physical Damage and applies a Root and then a Slow to any enemies hit.",
+		"ManaCost": [
+			50.4
+		],
+		"Cooldown": [
+			17
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Sevarog_E.T_Skill_Sevarog_E'"
 	},
 	{
 		"Name": "Sevarog_R",
 		"AbilityName": "Sevarog_R",
 		"Title": "Collosal Blow",
+		"Description": "Sevarog gives one mighty swing of his hammer and deals 88 Physical Damage and Knock Back to enemy heroes. Enemy minions will be instantly killed. Sevarog does an extra Damage Bonus each time he grows from collecting souls.",
+		"ManaCost": [
+			75
+		],
+		"Cooldown": [
+			70
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Sevarog_R.T_Skill_Sevarog_R'"
 	},
 	{
 		"Name": "Riktor_Pass",
 		"AbilityName": "Riktor_Pass",
 		"Title": "Invigorate",
+		"Description": "Riktor gives nearby friendly heroes a movement speed increase.",
+		"ManaCost": [
+		],
+		"Cooldown": [
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Riktor_Pass.T_Skill_Riktor_Pass'"
 	},
 	{
 		"Name": "Riktor_LMB",
 		"AbilityName": "Riktor_LMB",
 		"Title": "Whip",
+		"Description": "Basic melee attack dealing 49.95 Energy Ddamage",
+		"ManaCost": [
+			0
+		],
+		"Cooldown": [
+			1.5
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Riktor_LMB.T_Skill_Riktor_LMB'"
 	},
 	{
 		"Name": "Riktor_RMB",
 		"AbilityName": "Riktor_RMB",
 		"Title": "Shock Therapy",
+		"Description": "Once activated, next Whip attack does 60 Energy Damage and applies Silence and Slow for 1.5sec",
+		"ManaCost": [
+			46.8
+		],
+		"Cooldown": [
+			18
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Riktor_RMB.T_Skill_Riktor_RMB'"
 	},
 	{
 		"Name": "Riktor_Q",
 		"AbilityName": "Riktor_Q",
 		"Title": "Riplash",
+		"Description": "Long range chain whip that pulls enemies in if hit. Deals 100 Energy Damage.",
+		"ManaCost": [
+			56.16
+		],
+		"Cooldown": [
+			21
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Riktor_Q.T_Skill_Riktor_Q'"
 	},
 	{
 		"Name": "Riktor_E",
 		"AbilityName": "Riktor_E",
 		"Title": "Electrocute",
+		"Description": "AOE around Riktor that does 77 total Energy Damage over 5 sec.",
+		"ManaCost": [
+			50.4
+		],
+		"Cooldown": [
+			17
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Riktor_E.T_Skill_Riktor_E'"
 	},
 	{
 		"Name": "Riktor_R",
 		"AbilityName": "Riktor_R",
 		"Title": "Skewer",
+		"Description": "Riktor targets a wedge in front of him and skewers that area dealing Energy Damage and applying a Stun for 1.3 sec.  After the stun Riktor rips his Skewers out dealing more Energy Damage. Total damage adds up to 308.",
+		"ManaCost": [
+			100
+		],
+		"Cooldown": [
+			100
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Riktor_R.T_Skill_Riktor_R'"
 	},
 	{
 		"Name": "Rampage_Pass",
 		"AbilityName": "Rampage_Pass",
 		"Title": "Invigorate",
+		"Description": "Health Regen increased up to 2x based on missing health.  All healing effects increased by 20% while in the Jungle.",
+		"ManaCost": [
+		],
+		"Cooldown": [
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Rampage_Pass.T_Skill_Rampage_Pass'"
 	},
 	{
 		"Name": "Rampage_LMB",
 		"AbilityName": "Rampage_LMB",
-		"Title": "Whip",
+		"Title": "Swipe",
+		"Description": "Melee basic attack dealing 36.454 Physical Damage.",
+		"ManaCost": [
+			0
+		],
+		"Cooldown": [
+			1.95
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Rampage_LMB.T_Skill_Rampage_LMB'"
 	},
 	{
 		"Name": "Rampage_RMB",
 		"AbilityName": "Rampage_RMB",
 		"Title": "Pounce",
+		"Description": "Short leap dealing 60 Physical Damage to all nearby enemies. 30% bonus Physical Damaage is caused to critically wounded targets. Roar greatly increases the range of Pounce. Swipe causes Rampage to slam down early.",
+		"ManaCost": [
+			30.42
+		],
+		"Cooldown": [
+			15.03
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Rampage_RMB.T_Skill_Rampage_RMB'"
 	},
 	{
 		"Name": "Rampage_Q",
 		"AbilityName": "Rampage_Q",
 		"Title": "Boulder Throw",
+		"Description": "Throws a boulder that deals 100 Physical Damage and stuns the enemy for 2 seconds.",
+		"ManaCost": [
+			60.84
+		],
+		"Cooldown": [
+			18
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Rampage_Q.T_Skill_Rampage_Q'"
 	},
 	{
 		"Name": "Rampage_E",
 		"AbilityName": "Rampage_E",
 		"Title": "Thick Skin",
+		"Description": "AOE 54 Max Movement Speed buff to himself and nearby allies for 8 seconds. While active, Pounce range is greatly increased.",
+		"ManaCost": [
+			50.4
+		],
+		"Cooldown": [
+			15.062
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Rampage_E.T_Skill_Rampage_E'"
 	},
 	{
 		"Name": "Rampage_R",
 		"AbilityName": "Rampage_R",
 		"Title": "Enraged",
+		"Description": "Rampage becomes enranged, gaining 1,300 Health and up to 10% bonus Physical Damage for the next 15.5 seconds. Activation resets Pounce cooldown and maxes its range. Can be canceled early by reactivating.",
+		"ManaCost": [
+			100
+		],
+		"Cooldown": [
+			100
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Rampage_R.T_Skill_Rampage_R'"
 	},
 	{
 		"Name": "Muriel_Pass",
 		"AbilityName": "Muriel_Pass",
 		"Title": "Restoration",
+		"Description": "Nearby allies that have a Shield receive increased Health Regeneration.",
+		"ManaCost": [
+		],
+		"Cooldown": [
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Muriel_Pass.T_Skill_Muriel_Pass'"
 	},
 	{
 		"Name": "Muriel_LMB",
 		"AbilityName": "Muriel_LMB",
 		"Title": "Orb",
+		"Description": "Basic ranged attack dealing 49.95 Energy Damage.",
+		"ManaCost": [
+			0
+		],
+		"Cooldown": [
+			1.5
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Muriel_LMB.T_Skill_Muriel_LMB'"
 	},
 	{
 		"Name": "Muriel_RMB",
 		"AbilityName": "Muriel_RMB",
 		"Title": "Alacrity",
+		"Description": "Orb that applies a +180 Shield and extra Max Movement Speed to allied heroes.",
+		"ManaCost": [
+			52
+		],
+		"Cooldown": [
+			15
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Muriel_RMB.T_Skill_Muriel_RMB'"
 	},
 	{
 		"Name": "Muriel_Q",
 		"AbilityName": "Muriel_Q",
 		"Title": "Serenity",
+		"Description": "Muriel fires a projectile that passes through enemy minions dealing 75 Energy Damage and hits enemy heroes dealing 75 Energy Damage and applying a slow.",
+		"ManaCost": [
+			52
+		],
+		"Cooldown": [
+			15
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Muriel_Q.T_Skill_Muriel_Q'"
 	},
 	{
 		"Name": "Muriel_E",
 		"AbilityName": "Muriel_E",
 		"Title": "Consecrated Ground",
+		"Description": "Muriel deploys an AOE bubble that applies a +120 Shield to allies and does 60 Energy Damage to enemies touching it when it pops.",
+		"ManaCost": [
+			56
+		],
+		"Cooldown": [
+			18
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Muriel_E.T_Skill_Muriel_E'"
 	},
 	{
 		"Name": "Muriel_R",
 		"AbilityName": "Muriel_R",
 		"Title": "Reversal of Fortune",
+		"Description": "Muriel flies to a targeted ally anywhere on the map. The ally instantly receives a Shield and upon arrival all nearby allies receive a 700 Shield and all enemies get a Knock Back.",
+		"ManaCost": [
+			100
+		],
+		"Cooldown": [
+			130
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Muriel_R.T_Skill_Muriel_R'"
 	},
 	{
 		"Name": "Murdock_Pass",
 		"AbilityName": "Murdock_Pass",
 		"Title": "Hot Pursuit",
+		"Description": "Murdock has 18 bonus Max Movement Speed.",
+		"ManaCost": [
+		],
+		"Cooldown": [
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Murdock_Pass.T_Skill_Murdock_Pass'"
 	},
 	{
 		"Name": "Murdock_LMB",
 		"AbilityName": "Murdock_LMB",
 		"Title": "Basic Attack",
+		"Description": "Ranged basic attack dealing 39.96 Energy Damage.",
+		"ManaCost": [
+			0
+		],
+		"Cooldown": [
+			1.2
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Murdock_LMB.T_Skill_Murdock_LMB'"
 	},
 	{
 		"Name": "Murdock_RMB",
 		"AbilityName": "Murdock_RMB",
 		"Title": "Shielding Shot",
+		"Description": "Blocks 0.1% of damage in front of him for 6 seconds. Confirm to deal 20 Energy Damage and Knock Back nearby enemies.",
+		"ManaCost": [
+			60.84
+		],
+		"Cooldown": [
+			13.95
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Murdock_RMB.T_Skill_Murdock_RMB'"
 	},
 	{
 		"Name": "Murdock_Q",
 		"AbilityName": "Murdock_Q",
 		"Title": "Buckshot",
+		"Description": "Fires a blast in a cone that deals 54 Energy Damage and reduces Energy Armor by -16",
+		"ManaCost": [
+			58.5
+		],
+		"Cooldown": [
+			14.4
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Murdock_Q.T_Skill_Murdock_Q'"
 	},
 	{
 		"Name": "Murdock_E",
 		"AbilityName": "Murdock_E",
 		"Title": "Static Trap",
+		"Description": "Place a trap that deals 50 Energy Damage and applies a 50% Slow for 2 seconds to the first enemy Hero that walks over it.",
+		"ManaCost": [
+			50.4
+		],
+		"Cooldown": [
+			17
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Murdock_E.T_Skill_Murdock_E'"
 	},
 	{
 		"Name": "Murdock_R",
 		"AbilityName": "Murdock_R",
 		"Title": "Devastating Blast",
+		"Description": "Long range blast that can be shot through anything and deals 340 Energy Damage.",
+		"ManaCost": [
+			100
+		],
+		"Cooldown": [
+			100
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Murdock_R.T_Skill_Murdock_R'"
 	},
 	{
 		"Name": "Kallari_Pass",
 		"AbilityName": "Kallari_Pass",
 		"Title": "Marked for Death",
+		"Description": "Kallari and teammates gain vision of any Hero below 25% health.",
+		"ManaCost": [
+		],
+		"Cooldown": [
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Kallari_Pass.T_Skill_Kallari_Pass'"
 	},
 	{
 		"Name": "Kallari_LMB",
 		"AbilityName": "Kallari_LMB",
 		"Title": "Slash",
+		"Description": "Basic attack dealing 34.965 Physical Damage",
+		"ManaCost": [
+			0
+		],
+		"Cooldown": [
+			1.05
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Kallari_LMB.T_Skill_Kallari_LMB'"
 	},
 	{
 		"Name": "Kallari_RMB",
 		"AbilityName": "Kallari_RMB",
 		"Title": "Backflip",
+		"Description": "Flip into the air up to two times. Each flip costs 26 mana.",
+		"ManaCost": [
+			26
+		],
+		"Cooldown": [
+			8
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Kallari_RMB.T_Skill_Kallari_RMB'"
 	},
 	{
 		"Name": "Kallari_Q",
 		"AbilityName": "Kallari_Q",
 		"Title": "Shadow Walk",
+		"Description": "Enter the Shadow Plane and gain +113 Max Movement Speed. Killing an enemy Hero lowers cooldown by 15 seconds.",
+		"ManaCost": [
+			26
+		],
+		"Cooldown": [
+			20
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Kallari_Q.T_Skill_Kallari_Q'"
 	},
 	{
 		"Name": "Kallari_E",
 		"AbilityName": "Kallari_E",
 		"Title": "Blood Dagger",
+		"Description": "Kallari throws a dagger dealing 120 Physical Damage and applyign 1 Bleed stack, which does 1% target’s Health over 4 seconds.",
+		"ManaCost": [
+			56
+		],
+		"Cooldown": [
+			17
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Kallari_E.T_Skill_Kallari_E'"
 	},
 	{
 		"Name": "Kallari_R",
 		"AbilityName": "Kallari_R",
 		"Title": "Death Sentence",
+		"Description": "Dash in a line passing through enemies dealing 400 Physical Damage. Kallari penetrates all Physical Armor of targets who are Marked for Death.",
+		"ManaCost": [
+			100
+		],
+		"Cooldown": [
+			75
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Kallari_R.T_Skill_Kallari_R'"
 	},
 	{
 		"Name": "IggyScorch_Pass",
 		"AbilityName": "IggyScorch_Pass",
 		"Title": "Ignite",
+		"Description": "Scorch can apply an oil effect to enemies that causes Iggy’s fire to apply Burn.",
+		"ManaCost": [
+		],
+		"Cooldown": [
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_IggyScorch_Pass.T_Skill_IggyScorch_Pass'"
 	},
 	{
 		"Name": "IggyScorch_LMB",
 		"AbilityName": "IggyScorch_LMB",
 		"Title": "Basic Attack",
+		"Description": "Deals 44.955 Energy Damage and leaves a pool of fire on the ground where it lands that applies Burn. Leveling the ability makes the ground fires last longer.",
+		"ManaCost": [
+			0
+		],
+		"Cooldown": [
+			1.5
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_IggyScorch_LMB.T_Skill_IggyScorch_LMB'"
 	},
 	{
 		"Name": "IggyScorch_RMB",
 		"AbilityName": "IggyScorch_RMB",
 		"Title": "Oil Trail",
+		"Description": "Scorch gains 120 movement speed and leaves a trail of flammable Oil behind him. The trail can be ignited with fire to apply Burn.",
+		"ManaCost": [
+			52
+		],
+		"Cooldown": [
+			18
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_IggyScorch_RMB.T_Skill_IggyScorch_RMB'"
 	},
 	{
 		"Name": "IggyScorch_Q",
 		"AbilityName": "IggyScorch_Q",
 		"Title": "Flame Turret",
+		"Description": "Throws out a turret that deals 200 Energy Damage. Turrets have limited fuel and will prioritize targets that Iggy is damaging.",
+		"ManaCost": [
+			41.6
+		],
+		"Cooldown": [
+			18
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_IggyScorch_Q.T_Skill_IggyScorch_Q'"
 	},
 	{
 		"Name": "IggyScorch_E",
 		"AbilityName": "IggyScorch_E",
 		"Title": "Oil Trap",
+		"Description": "Scorch spills out a blob that applies Oil and deals 80 Energy Damage and applies Burn when ignited by Fire.",
+		"ManaCost": [
+			44.8
+		],
+		"Cooldown": [
+			17
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_IggyScorch_E.T_Skill_IggyScorch_E'"
 	},
 	{
 		"Name": "IggyScorch_R",
 		"AbilityName": "IggyScorch_R",
 		"Title": "Flamethrower",
+		"Description": "Spews flames from its mouth dealing 450 Energy Damage over 2.5 seconds and applying Burn. At the end of the duration, Scorch belches and enemies in the cone are knocked back.",
+		"ManaCost": [
+			100
+		],
+		"Cooldown": [
+			100
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_IggyScorch_R.T_Skill_IggyScorch_R'"
 	},
 	{
 		"Name": "Howitzer_Pass",
 		"AbilityName": "Howitzer_Pass",
 		"Title": "Fast Reload",
+		"Description": "Kills or assists reduce active cooldowns by 20%",
+		"ManaCost": [
+		],
+		"Cooldown": [
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Howitzer_Pass.T_Skill_Howitzer_Pass'"
 	},
 	{
 		"Name": "Howitzer_LMB",
 		"AbilityName": "Howitzer_LMB",
 		"Title": "Cannon",
+		"Description": "Ranged attack dealing 49.95 Energy Damage and 10% splash damage to nearby enemies.",
+		"ManaCost": [
+			0
+		],
+		"Cooldown": [
+			1.5
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Howitzer_LMB.T_Skill_Howitzer_LMB'"
 	},
 	{
 		"Name": "Howitzer_RMB",
 		"AbilityName": "Howitzer_RMB",
 		"Title": "Slow Grenades",
+		"Description": "Fires 3 proximity bombs in an arc that explode for 50 Energy Damage and slow enemies.",
+		"ManaCost": [
+			52
+		],
+		"Cooldown": [
+			15
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Howitzer_RMB.T_Skill_Howitzer_RMB'"
 	},
 	{
 		"Name": "Howitzer_Q",
 		"AbilityName": "Howitzer_Q",
 		"Title": "R2000 Missile",
+		"Description": "Fires a long range rocket that deals 85 Energy Damage.",
+		"ManaCost": [
+			52
+		],
+		"Cooldown": [
+			12
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Howitzer_Q.T_Skill_Howitzer_Q'"
 	},
 	{
 		"Name": "Howitzer_E",
 		"AbilityName": "Howitzer_E",
 		"Title": "Land Mine",
+		"Description": "Places a mine that will explode after 5 seconds, knocking nany enemies (and Howitzer) back and dealing 50 Energy Damage. Ability can be reactivated to detonate early.",
+		"ManaCost": [
+			56
+		],
+		"Cooldown": [
+			17
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Howitzer_E.T_Skill_Howitzer_E'"
 	},
 	{
 		"Name": "Howitzer_R",
 		"AbilityName": "Howitzer_R",
 		"Title": "Make it Rain",
+		"Description": "Howitzer rockets into the air and fires down a volley of missiles in the targeted area for 45. Energy Damage over 4 seconds. Last missile does 50% of total damage.",
+		"ManaCost": [
+			100
+		],
+		"Cooldown": [
+			100
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Howitzer_R.T_Skill_Howitzer_R'"
 	},
 	{
 		"Name": "Grux_Pass",
 		"AbilityName": "Grux_Pass",
 		"Title": "Only The Strong Survive",
+		"Description": "Grux permanently gains + 2 health every time he kills a unit. The bonus caps at 200 Health.",
+		"ManaCost": [
+		],
+		"Cooldown": [
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Grux_Pass.T_Skill_Grux_Pass'"
 	},
 	{
 		"Name": "Grux_LMB",
 		"AbilityName": "Grux_LMB",
 		"Title": "Chop",
+		"Description": "Melee basic attack dealing 38.292 Phyical Damage.",
+		"ManaCost": [
+			0
+		],
+		"Cooldown": [
+			1.5
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Grux_LMB.T_Skill_Grux_LMB'"
 	},
 	{
 		"Name": "Grux_RMB",
 		"AbilityName": "Grux_RMB",
 		"Title": "Double Pain",
+		"Description": "Melee cleave attack dealing 50 Physical Damage and applying Bleed to all enemies. Bleed does 1% of the target’s Health over 5 seconds.",
+		"ManaCost": [
+			37.44
+		],
+		"Cooldown": [
+			10
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Grux_RMB.T_Skill_Grux_RMB'"
 	},
 	{
 		"Name": "Grux_Q",
 		"AbilityName": "Grux_Q",
 		"Title": "Smash & Grab",
+		"Description": "Cone AOE that pulls all enemy units to Grux and eeals 80 Physical Damage.",
+		"ManaCost": [
+			60.84
+		],
+		"Cooldown": [
+			19.08
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Grux_Q.T_Skill_Grux_Q'"
 	},
 	{
 		"Name": "Grux_E",
 		"AbilityName": "Grux_E",
 		"Title": "Charge",
+		"Description": "Grux charges forward 1200 units dealing 50 Physical Damage to all enemies in his path.",
+		"ManaCost": [
+			55.44
+		],
+		"Cooldown": [
+			16.15
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Grux_E.T_Skill_Grux_E'"
 	},
 	{
 		"Name": "Grux_R",
 		"AbilityName": "Grux_R",
 		"Title": "Warlord's Challenge",
+		"Description": "Grux stuns all nearby enemies for .5 seconds and gains Bleed on basic attacks, 15 for 8 seconds.",
+		"ManaCost": [
+			100
+		],
+		"Cooldown": [
+			100
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Grux_R.T_Skill_Grux_R'"
 	},
 	{
 		"Name": "Grim_Pass",
 		"AbilityName": "Grim_Pass",
 		"Title": "Overcharge",
+		"Description": "Every 8 sec GRIM. exe’s next basic attack deals 25 bonus Energy Damage and reduces the target’s Energy Armor by -22.",
+		"ManaCost": [
+		],
+		"Cooldown": [
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Grim_Pass.T_Skill_Grim_Pass'"
 	},
 	{
 		"Name": "Grim_LMB",
 		"AbilityName": "Grim_LMB",
 		"Title": "Pulse Cannon",
+		"Description": "Basic attack dealing 39.96 Energy Damage.",
+		"ManaCost": [
+			0
+		],
+		"Cooldown": [
+			1.2
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Grim_LMB.T_Skill_Grim_LMB'"
 	},
 	{
 		"Name": "Grim_RMB",
 		"AbilityName": "Grim_RMB",
 		"Title": "Deflector Shield",
+		"Description": "GRIM. exe briefly generates a shield that blocks the next incoming enemy ability. It the shield successfully blocks an ability, GRIM.exe gains 90 Mana.",
+		"ManaCost": [
+			70.2
+		],
+		"Cooldown": [
+			20
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Grim_RMB.T_Skill_Grim_RMB'"
 	},
 	{
 		"Name": "Grim_Q",
 		"AbilityName": "Grim_Q",
 		"Title": "Displacement Blast",
+		"Description": "Lobbed shot that deals 20 Energy Damage and applies Knock Back from the center of the explosion.",
+		"ManaCost": [
+			46.8
+		],
+		"Cooldown": [
+			18
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Grim_Q.T_Skill_Grim_Q'"
 	},
 	{
 		"Name": "Grim_E",
 		"AbilityName": "Grim_E",
 		"Title": "Suppresion Mode",
+		"Description": "Toggle: Basic attacks consume -25 Mana and apply a -40 Slow for 1.5 seconds.",
+		"ManaCost": [
+			25
+		],
+		"Cooldown": [
+			1
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Grim_E.T_Skill_Grim_E'"
 	},
 	{
 		"Name": "Grim_R",
 		"AbilityName": "Grim_R",
 		"Title": "GTFO",
+		"Description": "GRIM.exe locks on to an enemy hero. After a short channel, a Gyro Targeted Force Orb is launched. The orb will pass through the world and non-hero units, dealing 340 Energy Damage upon hitting a hero.",
+		"ManaCost": [
+			100
+		],
+		"Cooldown": [
+			100
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Grim_R.T_Skill_Grim_R'"
 	},
 	{
 		"Name": "Gideon_Pass",
 		"AbilityName": "Gideon_Pass",
 		"Title": "Energy Penetration",
+		"Description": "Gideon has a small amount of free Energy Pen.",
+		"ManaCost": [
+		],
+		"Cooldown": [
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Gideon_Pass.T_Skill_Gideon_Pass'"
 	},
 	{
 		"Name": "Gideon_LMB",
 		"AbilityName": "Gideon_LMB",
 		"Title": "Basic Attack",
+		"Description": "Ranged basic attack dealing 49.95 Energy Damage.",
+		"ManaCost": [
+			0
+		],
+		"Cooldown": [
+			1.5
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Gideon_LMB.T_Skill_Gideon_LMB'"
 	},
 	{
 		"Name": "Gideon_RMB",
 		"AbilityName": "Gideon_RMB",
 		"Title": "Burden",
+		"Description": "Projectile that creates a tether to an enemy hero dealing 50 Energy Damage and slowing them for 3 seconds.",
+		"ManaCost": [
+			52
+		],
+		"Cooldown": [
+			15
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Gideon_RMB.T_Skill_Gideon_RMB'"
 	},
 	{
 		"Name": "Gideon_Q",
 		"AbilityName": "Gideon_Q",
 		"Title": "Cosmic Rift",
+		"Description": "Meteors fall from the sky dealing 100 Energy Damage over 2 seconds.",
+		"ManaCost": [
+			52
+		],
+		"Cooldown": [
+			13
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Gideon_Q.T_Skill_Gideon_Q'"
 	},
 	{
 		"Name": "Gideon_E",
 		"AbilityName": "Gideon_E",
 		"Title": "Torn Space",
+		"Description": "Teleport to a targeted location 850 units away.",
+		"ManaCost": [
+			56
+		],
+		"Cooldown": [
+			15.13
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Gideon_E.T_Skill_Gideon_E'"
 	},
 	{
 		"Name": "Gideon_R",
 		"AbilityName": "Gideon_R",
 		"Title": "Black Hole",
+		"Description": "Channeled ability that slowly pulls enemies towards Gideon, dealing 450 Energy Damage over 5 seconds. Gideon gains a small shield and is immune to crowd control when he is finished channeling the ability.",
+		"ManaCost": [
+			100
+		],
+		"Cooldown": [
+			100
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Gideon_R.T_Skill_Gideon_R'"
 	},
 	{
 		"Name": "Gadget_Pass",
 		"AbilityName": "Gadget_Pass",
 		"Title": "Haywire",
+		"Description": "Gadget deals 5% increased damage to minions.",
+		"ManaCost": [
+		],
+		"Cooldown": [
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Gadget_Pass.T_Skill_Gadget_Pass'"
 	},
 	{
 		"Name": "Gadget_LMB",
 		"AbilityName": "Gadget_LMB",
 		"Title": "Plasma Blast",
+		"Description": "Ranged basic attack dealing 49.95 Energy Damage.",
+		"ManaCost": [
+			0
+		],
+		"Cooldown": [
+			1.5
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Gadget_LMB.T_Skill_Gadget_LMB'"
 	},
 	{
 		"Name": "Gadget_RMB",
 		"AbilityName": "Gadget_RMB",
 		"Title": "Seek & Destroy",
+		"Description": "Gadget fires a slow moving bot that can be reactivated to stop and begin dealing 100 Energy Damage and slowing enemies in range for 3 sec.",
+		"ManaCost": [
+			52
+		],
+		"Cooldown": [
+			13.5
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Gadget_RMB.T_Skill_Gadget_RMB'"
 	},
 	{
 		"Name": "Gadget_Q",
 		"AbilityName": "Gadget_Q",
 		"Title": "Sticky Mine",
+		"Description": "Tosses a mine that will attach to any unit within the area (enemies are prioritized).  After 4.5 seconds, the mine explodes, dealing 100 Energy Damage.",
+		"ManaCost": [
+			52
+		],
+		"Cooldown": [
+			15
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Gadget_Q.T_Skill_Gadget_Q'"
 	},
 	{
 		"Name": "Gadget_E",
 		"AbilityName": "Gadget_E",
 		"Title": "Speed Gate",
+		"Description": "Deploys a gate that will speed up allies and deal up to 50 Energy Damage to enemies inside of it.",
+		"ManaCost": [
+			56
+		],
+		"Cooldown": [
+			20.06
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Gadget_E.T_Skill_Gadget_E'"
 	},
 	{
 		"Name": "Gadget_R",
 		"AbilityName": "Gadget_R",
 		"Title": "Tesla Dome",
+		"Description": "Tesla Dome deals 450 Energy Damage over 5 seconds to all enemies in the area.",
+		"ManaCost": [
+			100
+		],
+		"Cooldown": [
+			100
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Gadget_R.T_Skill_Gadget_R'"
 	},
 	{
 		"Name": "FengMao_Pass",
 		"AbilityName": "FengMao_Pass",
 		"Title": "The Balance",
+		"Description": "Feng Mao builds stacks of offensive and defensive power through the use of his abilities. Blocking with Conversion Shield or using Reaping Dash ability will add offensive stacks for Sweep damage. Dealing damage with Sweep or using Hamstring ability will add defensive stacks for Conversion Shield. Stacks only last for a short period of time.",
+		"ManaCost": [
+		],
+		"Cooldown": [
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_FengMao_Pass.T_Skill_FengMao_Pass'"
 	},
 	{
 		"Name": "FengMao_LMB",
 		"AbilityName": "FengMao_LMB",
 		"Title": "Sweep",
+		"Description": "Melee basic attack dealing 49.95 Physical Damage every 1.5 sec.",
+		"ManaCost": [
+			0
+		],
+		"Cooldown": [
+			1.5
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_FengMao_LMB.T_Skill_FengMao_LMB'"
 	},
 	{
 		"Name": "FengMao_RMB",
 		"AbilityName": "FengMao_RMB",
 		"Title": "Conversion Shield",
+		"Description": "Get a +150 Shield that lasts for 2 seconds. Feng Mao generates an offensive stack for each hit he takes while Conversion Shield is active.",
+		"ManaCost": [
+			37.44
+		],
+		"Cooldown": [
+			15
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_FengMao_RMB.T_Skill_FengMao_RMB'"
 	},
 	{
 		"Name": "FengMao_Q",
 		"AbilityName": "FengMao_Q",
 		"Title": "Reaping Dash",
+		"Description": "Throw out an image of himself. When it collides with an enemy hero or reaches max distance, he will teleport to the image. The image deals 40 Physical Damage to all minions it passes through and a single hero it collides with Feng Mao is granted an offensive stack upon use.",
+		"ManaCost": [
+			46.8
+		],
+		"Cooldown": [
+			19.2
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_FengMao_Q.T_Skill_FengMao_Q'"
 	},
 	{
 		"Name": "FengMao_E",
 		"AbilityName": "FengMao_E",
 		"Title": "Hamstring",
+		"Description": "AOE attack that deals 60 Physical Damage and slows enemies. Feng Mao generates a defensive stack upon use.",
+		"ManaCost": [
+			50.4
+		],
+		"Cooldown": [
+			17
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_FengMao_E.T_Skill_FengMao_E'"
 	},
 	{
 		"Name": "FengMao_R",
 		"AbilityName": "FengMao_R",
 		"Title": "Earth Shatter",
+		"Description": "Slam his blade on the ground ealing 325 Physical Damage to all enemies in a line in front of him. During the attack, he briefly gains a +100 Shield.",
+		"ManaCost": [
+			100
+		],
+		"Cooldown": [
+			100
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_FengMao_R.T_Skill_FengMao_R'"
 	},
 	{
 		"Name": "Dekker_Pass",
 		"AbilityName": "Dekker_Pass",
 		"Title": "Mana Share",
+		"Description": "When Dekker uses an ability, she grants nearby allies a percentage of the mana she expended to cast it.",
+		"ManaCost": [
+		],
+		"Cooldown": [
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Dekker_Pass.T_Skill_Dekker_Pass'"
 	},
 	{
 		"Name": "Dekker_LMB",
 		"AbilityName": "Dekker_LMB",
 		"Title": "Energy Orb",
+		"Description": "Ranged basic attack dealing 49.95 Energy Damage.",
+		"ManaCost": [
+			0
+		],
+		"Cooldown": [
+			1.5
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Dekker_LMB.T_Skill_Dekker_LMB'"
 	},
 	{
 		"Name": "Dekker_RMB",
 		"AbilityName": "Dekker_RMB",
 		"Title": "Rocket Boots",
+		"Description": "Directional leap that grans nearby allies 150 Max Movement speed for 3 seconds",
+		"ManaCost": [
+			52
+		],
+		"Cooldown": [
+			15
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Dekker_RMB.T_Skill_Dekker_RMB'"
 	},
 	{
 		"Name": "Dekker_Q",
 		"AbilityName": "Dekker_Q",
 		"Title": "Stasis Bomb",
+		"Description": "Bouncing bomb that deals 75 Energy Damage in an area and stuns on direct hit. Stun duration is increased base on how far it traveled.",
+		"ManaCost": [
+			52
+		],
+		"Cooldown": [
+			19
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Dekker_Q.T_Skill_Dekker_Q'"
 	},
 	{
 		"Name": "Dekker_E",
 		"AbilityName": "Dekker_E",
 		"Title": "Slow Bubble",
+		"Description": "AOE bubble that slows enemies and deals 60 Energy Damage once it pops.",
+		"ManaCost": [
+			56
+		],
+		"Cooldown": [
+			17
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Dekker_E.T_Skill_Dekker_E'"
 	},
 	{
 		"Name": "Dekker_R",
 		"AbilityName": "Dekker_R",
 		"Title": "Containment Fence",
+		"Description": "Circular fence that lasts for 5 seconds",
+		"ManaCost": [
+			100
+		],
+		"Cooldown": [
+			100
+		],
 		"IconTexture": "Texture2D'/Game/Art/Abilities/T_Skill_Dekker_R.T_Skill_Dekker_R'"
 	}
 ]

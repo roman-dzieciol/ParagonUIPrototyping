@@ -18,6 +18,15 @@ public:
 		FString Title;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Ability Data")
+		FString Description;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Ability Data")
+		TArray<float> ManaCost;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Ability Data")
+		TArray<float> Cooldown;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Ability Data")
 		UTexture2D* IconTexture;
 
 	friend bool operator==(const FHeroAbilityData& LHS, const FHeroAbilityData& RHS);
