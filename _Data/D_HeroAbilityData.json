@@ -3,7 +3,7 @@
 		"Name": "TwinBlast_Pass",
 		"AbilityName": "TwinBlast_Pass",
 		"Title": "On A Roll",
-		"Description": "Twinblast has increased default Attack Speed.",
+		"Description": "Twinblast has increased default <span color=\"#FFFFFF\"> Attack Speed</>.",
 		"ManaCost": [
 		],
 		"Cooldown": [
@@ -14,7 +14,7 @@
 		"Name": "TwinBlast_LMB",
 		"AbilityName": "TwinBlast_LMB",
 		"Title": "Doubleshot",
-		"Description": "Ranged basic attack dealing 33.317 Physical Damage.",
+		"Description": "Ranged basic attack dealing 33.317 <span color=\"#FFFFFF\"> Physical Damage</>.",
 		"ManaCost": [
 			0
 		],
@@ -40,7 +40,7 @@
 		"Name": "TwinBlast_Q",
 		"AbilityName": "TwinBlast_Q",
 		"Title": "Nitro",
-		"Description": "Twinblast boosts his Passive Attack Speed by an additional {BPH} for 5 seconds.",
+		"Description": "Twinblast boosts his Passive <span color=\"#FFFFFF\"> Attack Speed</> by an additional {BPH} for 5 seconds.",
 		"ManaCost": [
 			46.8
 		],
@@ -53,7 +53,7 @@
 		"Name": "TwinBlast_E",
 		"AbilityName": "TwinBlast_E",
 		"Title": "Grenade!",
-		"Description": "Twinblast fires a grenade to a target location. After a short delay the grenade explodes dealing 12.5 Physical Damage and slowing enemies.",
+		"Description": "Twinblast fires a grenade to a target location. After a short delay the grenade explodes dealing 12.5 <span color=\"#FFFFFF\"> Physical Damage</> and slowing enemies.",
 		"ManaCost": [
 			50.4
 		],
@@ -66,7 +66,7 @@
 		"Name": "TwinBlast_R",
 		"AbilityName": "TwinBlast_R",
 		"Title": "Barrage",
-		"Description": "Twinblast fires a salvo of rockets that pierce through minions and deals 60 Physical Damage in the area they hit.",
+		"Description": "Twinblast fires a salvo of rockets that pierce through minions and deals 60 <span color=\"#FFFFFF\"> Physical Damage</> in the area they hit.",
 		"ManaCost": [
 			100
 		],
@@ -90,7 +90,7 @@
 		"Name": "Steel_LMB",
 		"AbilityName": "Steel_LMB",
 		"Title": "Punch",
-		"Description": "Steel does a melee attack dealing 43.956 Physical Damage.",
+		"Description": "Steel does a melee attack dealing 43.956 <span color=\"#FFFFFF\"> Physical Damage</>.",
 		"ManaCost": [
 			0
 		],
@@ -103,7 +103,7 @@
 		"Name": "Steel_RMB",
 		"AbilityName": "Steel_RMB",
 		"Title": "Shield Block",
-		"Description": "Steel’s shield reduces incoming damage by giving him extra Physical Armor and Energy Armor.",
+		"Description": "Steel’s shield reduces incoming damage by giving him extra <span color=\"#FFFFFF\"> Physical Armor</> and <span color=\"#FFFFFF\"> Energy Armor</>.",
 		"ManaCost": [
 			46.8
 		],
@@ -116,7 +116,7 @@
 		"Name": "Steel_Q",
 		"AbilityName": "Steel_Q",
 		"Title": "Charge",
-		"Description": "Steel charges forward dealing 100 Physical Damage and applying Knock Back to any enemies he hits.",
+		"Description": "Steel charges forward dealing 100 <span color=\"#FFFFFF\"> Physical Damage</> and applying Knock Back to any enemies he hits.",
 		"ManaCost": [
 			46.8
 		],
@@ -129,7 +129,7 @@
 		"Name": "Steel_E",
 		"AbilityName": "Steel_E",
 		"Title": "Force Shield",
-		"Description": "Steel creates an energy wall that blocks enemy projectiles, applies Slow to enemies that touch it and Shield to teammates that touch it.",
+		"Description": "Steel creates an energy wall that blocks enemy projectiles, applies -180 <span color=\"#FFFFFF\"> Max Movement Speed</> to enemies that touch it and <span color=\"#FFFFFF\"> Shield</> to teammates that touch it.",
 		"ManaCost": [
 			50.4
 		],
@@ -142,7 +142,7 @@
 		"Name": "Steel_R",
 		"AbilityName": "Steel_R",
 		"Title": "Shield Slam",
-		"Description": "Steel slams down at a targeted area, knocking up all enemies, dealing 308 Physical Damage and also applying a short Stun.",
+		"Description": "Steel slams down at a targeted area, knocking up all enemies, dealing 308 <span color=\"#FFFFFF\"> Physical Damage</> and also applying a short <span color=\"#FFFFFF\">Stun</>.",
 		"ManaCost": [
 			100
 		],
@@ -155,7 +155,7 @@
 		"Name": "Sparrow_Pass",
 		"AbilityName": "Sparrow_Pass",
 		"Title": "Relentless",
-		"Description": "Successive hits on the same target deal an additional 1.5 x hero level Physcial Damage. This effect stacks and is triggered by any damage from Sparrow.",
+		"Description": "Successive hits on the same target deal an additional 1.5 x hero level <span color=\"#FFFFFF\"> Physical Damage</>. This effect stacks and is triggered by any damage from Sparrow.",
 		"ManaCost": [
 		],
 		"Cooldown": [
@@ -166,7 +166,7 @@
 		"Name": "Sparrow_LMB",
 		"AbilityName": "Sparrow_LMB",
 		"Title": "Bow Shot",
-		"Description": "Ranged basic attack dealing 39.96 Physical Damage.",
+		"Description": "Ranged basic attack dealing 39.96 <span color=\"#FFFFFF\"> Physical Damage</>.",
 		"ManaCost": [
 			0
 		],
@@ -179,7 +179,7 @@
 		"Name": "Sparrow_RMB",
 		"AbilityName": "Sparrow_RMB",
 		"Title": "Piercing Shot",
-		"Description": "While holding, Sparrow charges a powerful arrow that does up 50 Physical Damage to all enemies in a line, up to 2500 units away.",
+		"Description": "While holding, Sparrow charges a powerful arrow that does up 50 <span color=\"#FFFFFF\"> Physical Damage</> to all enemies in a line, up to 2500 units away.",
 		"ManaCost": [
 			46.8
 		],
@@ -192,7 +192,7 @@
 		"Name": "Sparrow_Q",
 		"AbilityName": "Sparrow_Q",
 		"Title": "Hail of Arrows",
-		"Description": "Sparrow rains down arrows in an area, dealing 22 Physical Damage over 4 seconds.",
+		"Description": "Sparrow rains down arrows in an area, dealing 22 <span color=\"#FFFFFF\"> Physical Damage</> over 4 seconds.",
 		"ManaCost": [
 			46.8
 		],
@@ -205,7 +205,7 @@
 		"Name": "Sparrow_E",
 		"AbilityName": "Sparrow_E",
 		"Title": "Invigorate",
-		"Description": "Sparrow gains 40 Attack Speed for the next 3 shots.",
+		"Description": "Sparrow gains 40 <span color=\"#FFFFFF\"> Attack Speed</> for the next 3 shots.",
 		"ManaCost": [
 			50.4
 		],
@@ -231,7 +231,7 @@
 		"Name": "Sevarog_Pass",
 		"AbilityName": "Sevarog_Pass",
 		"Title": "Soul Trap",
-		"Description": "Sevarog gains soul stacks that give him Health when he kills an enemy with Siphon (Q). Sevarog grows in power at 20/40/60/80/ soul stacks.",
+		"Description": "Sevarog gains soul stacks that give him <span color=\"#FFFFFF\"> Health</> when he kills an enemy with Siphon (Q). Sevarog grows in power at 20/40/60/80/ soul stacks.",
 		"ManaCost": [
 		],
 		"Cooldown": [
@@ -242,7 +242,7 @@
 		"Name": "Sevarog_LMB",
 		"AbilityName": "Sevarog_LMB",
 		"Title": "Hammer",
-		"Description": "Sevarog swings his hammer cuasing 49.95 Physical Damage.",
+		"Description": "Sevarog swings his hammer cuasing 49.95 <span color=\"#FFFFFF\"> Physical Damage</>.",
 		"ManaCost": [
 			0
 		],
@@ -268,7 +268,7 @@
 		"Name": "Sevarog_Q",
 		"AbilityName": "Sevarog_Q",
 		"Title": "Siphon",
-		"Description": "Targets the area in front of him and causes 88 Physical Damage to all enemies in the targeted area. Sevarog gains Soul Stacks when he gets a kill using this ability. Siphon gains Damage Bonus each time Sevarog grows from collecting souls.",
+		"Description": "Targets the area in front of him and causes 88 <span color=\"#FFFFFF\"> Physical Damage</> to all enemies in the targeted area. Sevarog gains Soul Stacks when he gets a kill using this ability. Siphon gains Damage Bonus each time Sevarog grows from collecting souls.",
 		"ManaCost": [
 			35.1
 		],
@@ -281,7 +281,7 @@
 		"Name": "Sevarog_E",
 		"AbilityName": "Sevarog_E",
 		"Title": "Subjugate",
-		"Description": "Sevarog targets a circle on the ground and calls down a burst of dark energy that does 55 Physical Damage and applies a Root and then a Slow to any enemies hit.",
+		"Description": "Sevarog targets a circle on the ground and calls down a burst of dark energy that does 55 <span color=\"#FFFFFF\"> Physical Damage</> and applies a <span color=\"#FFFFFF\">Root</> and then a <span color=\"#FFFFFF\">Slow</> to any enemies hit.",
 		"ManaCost": [
 			50.4
 		],
@@ -294,7 +294,7 @@
 		"Name": "Sevarog_R",
 		"AbilityName": "Sevarog_R",
 		"Title": "Collosal Blow",
-		"Description": "Sevarog gives one mighty swing of his hammer and deals 88 Physical Damage and Knock Back to enemy heroes. Enemy minions will be instantly killed. Sevarog does an extra Damage Bonus each time he grows from collecting souls.",
+		"Description": "Sevarog gives one mighty swing of his hammer and deals 88 <span color=\"#FFFFFF\"> Physical Damage</> and <span color=\"#FFFFFF\">Knock Back</> to enemy heroes. Enemy minions will be instantly killed. Sevarog does an extra Damage Bonus each time he grows from collecting souls.",
 		"ManaCost": [
 			75
 		],
@@ -307,7 +307,7 @@
 		"Name": "Riktor_Pass",
 		"AbilityName": "Riktor_Pass",
 		"Title": "Invigorate",
-		"Description": "Riktor gives nearby friendly heroes a movement speed increase.",
+		"Description": "Riktor gives nearby friendly heroes a +20 <span color=\"#FFFFFF\"> Max Movement Speed</> increase.",
 		"ManaCost": [
 		],
 		"Cooldown": [
@@ -318,7 +318,7 @@
 		"Name": "Riktor_LMB",
 		"AbilityName": "Riktor_LMB",
 		"Title": "Whip",
-		"Description": "Basic melee attack dealing 49.95 Energy Ddamage",
+		"Description": "Basic melee attack dealing 49.95 <span color=\"#FFFFFF\"> Energy Damage</>",
 		"ManaCost": [
 			0
 		],
@@ -331,7 +331,7 @@
 		"Name": "Riktor_RMB",
 		"AbilityName": "Riktor_RMB",
 		"Title": "Shock Therapy",
-		"Description": "Once activated, next Whip attack does 60 Energy Damage and applies Silence and Slow for 1.5sec",
+		"Description": "Once activated, next Whip attack does 60 <span color=\"#FFFFFF\"> Energy Damage</> and applies <span color=\"#FFFFFF\">Silence</> and <span color=\"#FFFFFF\">Slow</> for 1.5sec",
 		"ManaCost": [
 			46.8
 		],
@@ -344,7 +344,7 @@
 		"Name": "Riktor_Q",
 		"AbilityName": "Riktor_Q",
 		"Title": "Riplash",
-		"Description": "Long range chain whip that pulls enemies in if hit. Deals 100 Energy Damage.",
+		"Description": "Long range chain whip that pulls enemies in if hit. Deals 100 <span color=\"#FFFFFF\"> Energy Damage</>.",
 		"ManaCost": [
 			56.16
 		],
@@ -357,7 +357,7 @@
 		"Name": "Riktor_E",
 		"AbilityName": "Riktor_E",
 		"Title": "Electrocute",
-		"Description": "AOE around Riktor that does 77 total Energy Damage over 5 sec.",
+		"Description": "AOE around Riktor that does 77 total <span color=\"#FFFFFF\"> Energy Damage</> over 5 sec.",
 		"ManaCost": [
 			50.4
 		],
@@ -370,7 +370,7 @@
 		"Name": "Riktor_R",
 		"AbilityName": "Riktor_R",
 		"Title": "Skewer",
-		"Description": "Riktor targets a wedge in front of him and skewers that area dealing Energy Damage and applying a Stun for 1.3 sec.  After the stun Riktor rips his Skewers out dealing more Energy Damage. Total damage adds up to 308.",
+		"Description": "Riktor targets a wedge in front of him and skewers that area dealing <span color=\"#FFFFFF\"> Energy Damage</> and applying a <span color=\"#FFFFFF\">Stun</> for 1.3 sec.  After the <span color=\"#FFFFFF\">Stun</> Riktor rips his Skewers out dealing more <span color=\"#FFFFFF\"> Energy Damage</>. Total damage adds up to 308.",
 		"ManaCost": [
 			100
 		],
@@ -383,7 +383,7 @@
 		"Name": "Rampage_Pass",
 		"AbilityName": "Rampage_Pass",
 		"Title": "Invigorate",
-		"Description": "Health Regen increased up to 2x based on missing health.  All healing effects increased by 20% while in the Jungle.",
+		"Description": "<span color=\"#FFFFFF\"> Health Regen</> increased up to 2x based on missing health.  All healing effects increased by 20% while in the Jungle.",
 		"ManaCost": [
 		],
 		"Cooldown": [
@@ -394,7 +394,7 @@
 		"Name": "Rampage_LMB",
 		"AbilityName": "Rampage_LMB",
 		"Title": "Swipe",
-		"Description": "Melee basic attack dealing 36.454 Physical Damage.",
+		"Description": "Melee basic attack dealing 36.454 <span color=\"#FFFFFF\"> Physical Damage</>.",
 		"ManaCost": [
 			0
 		],
@@ -407,7 +407,7 @@
 		"Name": "Rampage_RMB",
 		"AbilityName": "Rampage_RMB",
 		"Title": "Pounce",
-		"Description": "Short leap dealing 60 Physical Damage to all nearby enemies. 30% bonus Physical Damaage is caused to critically wounded targets. Roar greatly increases the range of Pounce. Swipe causes Rampage to slam down early.",
+		"Description": "Short leap dealing 60 <span color=\"#FFFFFF\"> Physical Damage</> to all nearby enemies. 30% bonus <span color=\"#FFFFFF\"> Physical Damage</> is caused to critically wounded targets. Roar greatly increases the range of Pounce. Swipe causes Rampage to slam down early.",
 		"ManaCost": [
 			30.42
 		],
@@ -420,7 +420,7 @@
 		"Name": "Rampage_Q",
 		"AbilityName": "Rampage_Q",
 		"Title": "Boulder Throw",
-		"Description": "Throws a boulder that deals 100 Physical Damage and stuns the enemy for 2 seconds.",
+		"Description": "Throws a boulder that deals 100 <span color=\"#FFFFFF\"> Physical Damage</> and stuns the enemy for 2 seconds.",
 		"ManaCost": [
 			60.84
 		],
@@ -433,7 +433,7 @@
 		"Name": "Rampage_E",
 		"AbilityName": "Rampage_E",
 		"Title": "Thick Skin",
-		"Description": "AOE 54 Max Movement Speed buff to himself and nearby allies for 8 seconds. While active, Pounce range is greatly increased.",
+		"Description": "AOE 54 <span color=\"#FFFFFF\"> Max Movement Speed</> Speed buff to himself and nearby allies for 8 seconds. While active, Pounce range is greatly increased.",
 		"ManaCost": [
 			50.4
 		],
@@ -446,7 +446,7 @@
 		"Name": "Rampage_R",
 		"AbilityName": "Rampage_R",
 		"Title": "Enraged",
-		"Description": "Rampage becomes enranged, gaining 1,300 Health and up to 10% bonus Physical Damage for the next 15.5 seconds. Activation resets Pounce cooldown and maxes its range. Can be canceled early by reactivating.",
+		"Description": "Rampage becomes enranged, gaining 1,300 <span color=\"#FFFFFF\"> Health</> and up to 10% bonus <span color=\"#FFFFFF\"> Physical Damage</> for the next 15.5 seconds. Activation resets Pounce cooldown and maxes its range. Can be canceled early by reactivating.",
 		"ManaCost": [
 			100
 		],
@@ -459,7 +459,7 @@
 		"Name": "Muriel_Pass",
 		"AbilityName": "Muriel_Pass",
 		"Title": "Restoration",
-		"Description": "Nearby allies that have a Shield receive increased Health Regeneration.",
+		"Description": "Nearby allies that have a <span color=\"#FFFFFF\"> Shield</> receive increased <span color=\"#FFFFFF\"> Health Regeneration</>.",
 		"ManaCost": [
 		],
 		"Cooldown": [
@@ -470,7 +470,7 @@
 		"Name": "Muriel_LMB",
 		"AbilityName": "Muriel_LMB",
 		"Title": "Orb",
-		"Description": "Basic ranged attack dealing 49.95 Energy Damage.",
+		"Description": "Basic ranged attack dealing 49.95 <span color=\"#FFFFFF\"> Energy Damage</>.",
 		"ManaCost": [
 			0
 		],
@@ -483,7 +483,7 @@
 		"Name": "Muriel_RMB",
 		"AbilityName": "Muriel_RMB",
 		"Title": "Alacrity",
-		"Description": "Orb that applies a +180 Shield and extra Max Movement Speed to allied heroes.",
+		"Description": "Orb that applies a +180 <span color=\"#FFFFFF\"> Shield</> and extra <span color=\"#FFFFFF\"> Max Movement Speed</> to allied heroes.",
 		"ManaCost": [
 			52
 		],
@@ -496,7 +496,7 @@
 		"Name": "Muriel_Q",
 		"AbilityName": "Muriel_Q",
 		"Title": "Serenity",
-		"Description": "Muriel fires a projectile that passes through enemy minions dealing 75 Energy Damage and hits enemy heroes dealing 75 Energy Damage and applying a slow.",
+		"Description": "Muriel fires a projectile that passes through enemy minions dealing 75 <span color=\"#FFFFFF\"> Energy Damage</> and hits enemy heroes dealing 75 <span color=\"#FFFFFF\"> Energy Damage</> and applying a slow.",
 		"ManaCost": [
 			52
 		],
@@ -509,7 +509,7 @@
 		"Name": "Muriel_E",
 		"AbilityName": "Muriel_E",
 		"Title": "Consecrated Ground",
-		"Description": "Muriel deploys an AOE bubble that applies a +120 Shield to allies and does 60 Energy Damage to enemies touching it when it pops.",
+		"Description": "Muriel deploys an AOE bubble that applies a +120 <span color=\"#FFFFFF\"> Shield</> to allies and does 60 <span color=\"#FFFFFF\"> Energy Damage</> to enemies touching it when it pops.",
 		"ManaCost": [
 			56
 		],
@@ -522,7 +522,7 @@
 		"Name": "Muriel_R",
 		"AbilityName": "Muriel_R",
 		"Title": "Reversal of Fortune",
-		"Description": "Muriel flies to a targeted ally anywhere on the map. The ally instantly receives a Shield and upon arrival all nearby allies receive a 700 Shield and all enemies get a Knock Back.",
+		"Description": "Muriel flies to a targeted ally anywhere on the map. The ally instantly receives a <span color=\"#FFFFFF\"> Shield</> and upon arrival all nearby allies receive a 700 <span color=\"#FFFFFF\"> Shield</> and all enemies get a Knock Back.",
 		"ManaCost": [
 			100
 		],
@@ -535,7 +535,7 @@
 		"Name": "Murdock_Pass",
 		"AbilityName": "Murdock_Pass",
 		"Title": "Hot Pursuit",
-		"Description": "Murdock has 18 bonus Max Movement Speed.",
+		"Description": "Murdock has 18 bonus <span color=\"#FFFFFF\"> Max Movement Speed</>.",
 		"ManaCost": [
 		],
 		"Cooldown": [
@@ -546,7 +546,7 @@
 		"Name": "Murdock_LMB",
 		"AbilityName": "Murdock_LMB",
 		"Title": "Basic Attack",
-		"Description": "Ranged basic attack dealing 39.96 Energy Damage.",
+		"Description": "Ranged basic attack dealing 39.96 <span color=\"#FFFFFF\"> Energy Damage</>.",
 		"ManaCost": [
 			0
 		],
@@ -559,7 +559,7 @@
 		"Name": "Murdock_RMB",
 		"AbilityName": "Murdock_RMB",
 		"Title": "Shielding Shot",
-		"Description": "Blocks 0.1% of damage in front of him for 6 seconds. Confirm to deal 20 Energy Damage and Knock Back nearby enemies.",
+		"Description": "Blocks 0.1% of damage in front of him for 6 seconds. Confirm to deal 20 <span color=\"#FFFFFF\"> Energy Damage</> and <span color=\"#FFFFFF\">Knock Back</> nearby enemies.",
 		"ManaCost": [
 			60.84
 		],
@@ -572,7 +572,7 @@
 		"Name": "Murdock_Q",
 		"AbilityName": "Murdock_Q",
 		"Title": "Buckshot",
-		"Description": "Fires a blast in a cone that deals 54 Energy Damage and reduces Energy Armor by -16",
+		"Description": "Fires a blast in a cone that deals 54 <span color=\"#FFFFFF\"> Energy Damage</> and reduces <span color=\"#FFFFFF\"> Energy Armor</> by -16",
 		"ManaCost": [
 			58.5
 		],
@@ -585,7 +585,7 @@
 		"Name": "Murdock_E",
 		"AbilityName": "Murdock_E",
 		"Title": "Static Trap",
-		"Description": "Place a trap that deals 50 Energy Damage and applies a 50% Slow for 2 seconds to the first enemy Hero that walks over it.",
+		"Description": "Place a trap that deals 50 <span color=\"#FFFFFF\"> Energy Damage</> and applies a 50% <span color=\"#FFFFFF\">Slow</> for 2 seconds to the first enemy Hero that walks over it.",
 		"ManaCost": [
 			50.4
 		],
@@ -598,7 +598,7 @@
 		"Name": "Murdock_R",
 		"AbilityName": "Murdock_R",
 		"Title": "Devastating Blast",
-		"Description": "Long range blast that can be shot through anything and deals 340 Energy Damage.",
+		"Description": "Long range blast that can be shot through anything and deals 340 <span color=\"#FFFFFF\"> Energy Damage</>.",
 		"ManaCost": [
 			100
 		],
@@ -622,7 +622,7 @@
 		"Name": "Kallari_LMB",
 		"AbilityName": "Kallari_LMB",
 		"Title": "Slash",
-		"Description": "Basic attack dealing 34.965 Physical Damage",
+		"Description": "Basic attack dealing 34.965 <span color=\"#FFFFFF\"> Physical Damage</>",
 		"ManaCost": [
 			0
 		],
@@ -635,7 +635,7 @@
 		"Name": "Kallari_RMB",
 		"AbilityName": "Kallari_RMB",
 		"Title": "Backflip",
-		"Description": "Flip into the air up to two times. Each flip costs 26 mana.",
+		"Description": "Flip into the air up to two times. Each flip costs 26 <span color=\"#FFFFFF\"> Mana</>.",
 		"ManaCost": [
 			26
 		],
@@ -648,7 +648,7 @@
 		"Name": "Kallari_Q",
 		"AbilityName": "Kallari_Q",
 		"Title": "Shadow Walk",
-		"Description": "Enter the Shadow Plane and gain +113 Max Movement Speed. Killing an enemy Hero lowers cooldown by 15 seconds.",
+		"Description": "Enter the Shadow Plane and gain +113 <span color=\"#FFFFFF\"> Max Movement Speed</>. Killing an enemy Hero lowers cooldown by 15 seconds.",
 		"ManaCost": [
 			26
 		],
@@ -661,7 +661,7 @@
 		"Name": "Kallari_E",
 		"AbilityName": "Kallari_E",
 		"Title": "Blood Dagger",
-		"Description": "Kallari throws a dagger dealing 120 Physical Damage and applyign 1 Bleed stack, which does 1% target’s Health over 4 seconds.",
+		"Description": "Kallari throws a dagger dealing 120 <span color=\"#FFFFFF\"> Physical Damage</> and applyign 1 <span color=\"#FFFFFF\">Bleed</> stack, which does 1% target’s <span color=\"#FFFFFF\"> Health</> over 4 seconds.",
 		"ManaCost": [
 			56
 		],
@@ -674,7 +674,7 @@
 		"Name": "Kallari_R",
 		"AbilityName": "Kallari_R",
 		"Title": "Death Sentence",
-		"Description": "Dash in a line passing through enemies dealing 400 Physical Damage. Kallari penetrates all Physical Armor of targets who are Marked for Death.",
+		"Description": "Dash in a line passing through enemies dealing 400 <span color=\"#FFFFFF\"> Physical Damage</>. Kallari penetrates all <span color=\"#FFFFFF\"> Physical Armor</> of targets who are Marked for Death.",
 		"ManaCost": [
 			100
 		],
@@ -687,7 +687,7 @@
 		"Name": "IggyScorch_Pass",
 		"AbilityName": "IggyScorch_Pass",
 		"Title": "Ignite",
-		"Description": "Scorch can apply an oil effect to enemies that causes Iggy’s fire to apply Burn.",
+		"Description": "Scorch can apply an oil effect to enemies that causes Iggy’s fire to apply <span color=\"#FFFFFF\">Burn</>.",
 		"ManaCost": [
 		],
 		"Cooldown": [
@@ -698,7 +698,7 @@
 		"Name": "IggyScorch_LMB",
 		"AbilityName": "IggyScorch_LMB",
 		"Title": "Basic Attack",
-		"Description": "Deals 44.955 Energy Damage and leaves a pool of fire on the ground where it lands that applies Burn. Leveling the ability makes the ground fires last longer.",
+		"Description": "Deals 44.955 <span color=\"#FFFFFF\"> Energy Damage</> and leaves a pool of fire on the ground where it lands that applies <span color=\"#FFFFFF\">Burn</>. Leveling the ability makes the ground fires last longer.",
 		"ManaCost": [
 			0
 		],
@@ -711,7 +711,7 @@
 		"Name": "IggyScorch_RMB",
 		"AbilityName": "IggyScorch_RMB",
 		"Title": "Oil Trail",
-		"Description": "Scorch gains 120 movement speed and leaves a trail of flammable Oil behind him. The trail can be ignited with fire to apply Burn.",
+		"Description": "Scorch gains 120 <span color=\"#FFFFFF\"> Max Movement Speed</> and leaves a trail of flammable Oil behind him. The trail can be ignited with fire to apply <span color=\"#FFFFFF\">Burn</>.",
 		"ManaCost": [
 			52
 		],
@@ -724,7 +724,7 @@
 		"Name": "IggyScorch_Q",
 		"AbilityName": "IggyScorch_Q",
 		"Title": "Flame Turret",
-		"Description": "Throws out a turret that deals 200 Energy Damage. Turrets have limited fuel and will prioritize targets that Iggy is damaging.",
+		"Description": "Throws out a turret that deals 200 <span color=\"#FFFFFF\"> Energy Damage</>. Turrets have limited fuel and will prioritize targets that Iggy is damaging.",
 		"ManaCost": [
 			41.6
 		],
@@ -737,7 +737,7 @@
 		"Name": "IggyScorch_E",
 		"AbilityName": "IggyScorch_E",
 		"Title": "Oil Trap",
-		"Description": "Scorch spills out a blob that applies Oil and deals 80 Energy Damage and applies Burn when ignited by Fire.",
+		"Description": "Scorch spills out a blob that applies Oil and deals 80 <span color=\"#FFFFFF\"> Energy Damage</> and applies <span color=\"#FFFFFF\">Burn</> when ignited by Fire.",
 		"ManaCost": [
 			44.8
 		],
@@ -750,7 +750,7 @@
 		"Name": "IggyScorch_R",
 		"AbilityName": "IggyScorch_R",
 		"Title": "Flamethrower",
-		"Description": "Spews flames from its mouth dealing 450 Energy Damage over 2.5 seconds and applying Burn. At the end of the duration, Scorch belches and enemies in the cone are knocked back.",
+		"Description": "Spews flames from its mouth dealing 450 <span color=\"#FFFFFF\"> Energy Damage</> over 2.5 seconds and applying <span color=\"#FFFFFF\">Burn</>. At the end of the duration, Scorch belches and enemies in the cone are knocked back.",
 		"ManaCost": [
 			100
 		],
@@ -774,7 +774,7 @@
 		"Name": "Howitzer_LMB",
 		"AbilityName": "Howitzer_LMB",
 		"Title": "Cannon",
-		"Description": "Ranged attack dealing 49.95 Energy Damage and 10% splash damage to nearby enemies.",
+		"Description": "Ranged attack dealing 49.95 <span color=\"#FFFFFF\"> Energy Damage</> and 10% splash damage to nearby enemies.",
 		"ManaCost": [
 			0
 		],
@@ -787,7 +787,7 @@
 		"Name": "Howitzer_RMB",
 		"AbilityName": "Howitzer_RMB",
 		"Title": "Slow Grenades",
-		"Description": "Fires 3 proximity bombs in an arc that explode for 50 Energy Damage and slow enemies.",
+		"Description": "Fires 3 proximity bombs in an arc that explode for 50 <span color=\"#FFFFFF\"> Energy Damage</> and slow enemies.",
 		"ManaCost": [
 			52
 		],
@@ -800,7 +800,7 @@
 		"Name": "Howitzer_Q",
 		"AbilityName": "Howitzer_Q",
 		"Title": "R2000 Missile",
-		"Description": "Fires a long range rocket that deals 85 Energy Damage.",
+		"Description": "Fires a long range rocket that deals 85 <span color=\"#FFFFFF\"> Energy Damage</>.",
 		"ManaCost": [
 			52
 		],
@@ -813,7 +813,7 @@
 		"Name": "Howitzer_E",
 		"AbilityName": "Howitzer_E",
 		"Title": "Land Mine",
-		"Description": "Places a mine that will explode after 5 seconds, knocking nany enemies (and Howitzer) back and dealing 50 Energy Damage. Ability can be reactivated to detonate early.",
+		"Description": "Places a mine that will explode after 5 seconds, knocking nany enemies (and Howitzer) back and dealing 50 <span color=\"#FFFFFF\"> Energy Damage</>. Ability can be reactivated to detonate early.",
 		"ManaCost": [
 			56
 		],
@@ -826,7 +826,7 @@
 		"Name": "Howitzer_R",
 		"AbilityName": "Howitzer_R",
 		"Title": "Make it Rain",
-		"Description": "Howitzer rockets into the air and fires down a volley of missiles in the targeted area for 45. Energy Damage over 4 seconds. Last missile does 50% of total damage.",
+		"Description": "Howitzer rockets into the air and fires down a volley of missiles in the targeted area for 45. <span color=\"#FFFFFF\"> Energy Damage</> over 4 seconds. Last missile does 50% of total damage.",
 		"ManaCost": [
 			100
 		],
@@ -839,7 +839,7 @@
 		"Name": "Grux_Pass",
 		"AbilityName": "Grux_Pass",
 		"Title": "Only The Strong Survive",
-		"Description": "Grux permanently gains + 2 health every time he kills a unit. The bonus caps at 200 Health.",
+		"Description": "Grux permanently gains +2 <span color=\"#FFFFFF\"> Health</> every time he kills a unit. The bonus caps at 200 <span color=\"#FFFFFF\"> Health</>.",
 		"ManaCost": [
 		],
 		"Cooldown": [
@@ -850,7 +850,7 @@
 		"Name": "Grux_LMB",
 		"AbilityName": "Grux_LMB",
 		"Title": "Chop",
-		"Description": "Melee basic attack dealing 38.292 Phyical Damage.",
+		"Description": "Melee basic attack dealing 38.292 <span color=\"#FFFFFF\"> Physical Damage</>.",
 		"ManaCost": [
 			0
 		],
@@ -863,7 +863,7 @@
 		"Name": "Grux_RMB",
 		"AbilityName": "Grux_RMB",
 		"Title": "Double Pain",
-		"Description": "Melee cleave attack dealing 50 Physical Damage and applying Bleed to all enemies. Bleed does 1% of the target’s Health over 5 seconds.",
+		"Description": "Melee cleave attack dealing 50 <span color=\"#FFFFFF\"> Physical Damage</> and applying Bleed to all enemies. <span color=\"#FFFFFF\">Bleed</> does 1% of the target’s <span color=\"#FFFFFF\"> Health</> over 5 seconds.",
 		"ManaCost": [
 			37.44
 		],
@@ -876,7 +876,7 @@
 		"Name": "Grux_Q",
 		"AbilityName": "Grux_Q",
 		"Title": "Smash & Grab",
-		"Description": "Cone AOE that pulls all enemy units to Grux and eeals 80 Physical Damage.",
+		"Description": "Cone AOE that pulls all enemy units to Grux and eeals 80 <span color=\"#FFFFFF\"> Physical Damage</>.",
 		"ManaCost": [
 			60.84
 		],
@@ -889,7 +889,7 @@
 		"Name": "Grux_E",
 		"AbilityName": "Grux_E",
 		"Title": "Charge",
-		"Description": "Grux charges forward 1200 units dealing 50 Physical Damage to all enemies in his path.",
+		"Description": "Grux charges forward 1200 units dealing 50 <span color=\"#FFFFFF\"> Physical Damage</> to all enemies in his path.",
 		"ManaCost": [
 			55.44
 		],
@@ -915,7 +915,7 @@
 		"Name": "Grim_Pass",
 		"AbilityName": "Grim_Pass",
 		"Title": "Overcharge",
-		"Description": "Every 8 sec GRIM. exe’s next basic attack deals 25 bonus Energy Damage and reduces the target’s Energy Armor by -22.",
+		"Description": "Every 8 sec GRIM. exe’s next basic attack deals 25 bonus <span color=\"#FFFFFF\"> Energy Damage</> and reduces the target’s <span color=\"#FFFFFF\"> Energy Armor</> by -22.",
 		"ManaCost": [
 		],
 		"Cooldown": [
@@ -926,7 +926,7 @@
 		"Name": "Grim_LMB",
 		"AbilityName": "Grim_LMB",
 		"Title": "Pulse Cannon",
-		"Description": "Basic attack dealing 39.96 Energy Damage.",
+		"Description": "Basic attack dealing 39.96 <span color=\"#FFFFFF\"> Energy Damage</>.",
 		"ManaCost": [
 			0
 		],
@@ -939,7 +939,7 @@
 		"Name": "Grim_RMB",
 		"AbilityName": "Grim_RMB",
 		"Title": "Deflector Shield",
-		"Description": "GRIM. exe briefly generates a shield that blocks the next incoming enemy ability. It the shield successfully blocks an ability, GRIM.exe gains 90 Mana.",
+		"Description": "GRIM. exe briefly generates a <span color=\"#FFFFFF\"> Shield</> that blocks the next incoming enemy ability. It the <span color=\"#FFFFFF\"> Shield</> successfully blocks an ability, GRIM.exe gains 90 <span color=\"#FFFFFF\"> Mana</>.",
 		"ManaCost": [
 			70.2
 		],
@@ -952,7 +952,7 @@
 		"Name": "Grim_Q",
 		"AbilityName": "Grim_Q",
 		"Title": "Displacement Blast",
-		"Description": "Lobbed shot that deals 20 Energy Damage and applies Knock Back from the center of the explosion.",
+		"Description": "Lobbed shot that deals 20 <span color=\"#FFFFFF\"> Energy Damage</> and applies <span color=\"#FFFFFF\">Knock Back</> from the center of the explosion.",
 		"ManaCost": [
 			46.8
 		],
@@ -965,7 +965,7 @@
 		"Name": "Grim_E",
 		"AbilityName": "Grim_E",
 		"Title": "Suppresion Mode",
-		"Description": "Toggle: Basic attacks consume -25 Mana and apply a -40 Slow for 1.5 seconds.",
+		"Description": "Toggle: Basic attacks consume -25 <span color=\"#FFFFFF\"> Mana</> and apply a -40 Slow for 1.5 seconds.",
 		"ManaCost": [
 			25
 		],
@@ -978,7 +978,7 @@
 		"Name": "Grim_R",
 		"AbilityName": "Grim_R",
 		"Title": "GTFO",
-		"Description": "GRIM.exe locks on to an enemy hero. After a short channel, a Gyro Targeted Force Orb is launched. The orb will pass through the world and non-hero units, dealing 340 Energy Damage upon hitting a hero.",
+		"Description": "GRIM.exe locks on to an enemy hero. After a short channel, a Gyro Targeted Force Orb is launched. The orb will pass through the world and non-hero units, dealing 340 <span color=\"#FFFFFF\"> Energy Damage</> upon hitting a hero.",
 		"ManaCost": [
 			100
 		],
@@ -991,7 +991,7 @@
 		"Name": "Gideon_Pass",
 		"AbilityName": "Gideon_Pass",
 		"Title": "Energy Penetration",
-		"Description": "Gideon has a small amount of free Energy Pen.",
+		"Description": "Gideon has a small amount of free <span color=\"#FFFFFF\"> Energy Penetration</>.",
 		"ManaCost": [
 		],
 		"Cooldown": [
@@ -1002,7 +1002,7 @@
 		"Name": "Gideon_LMB",
 		"AbilityName": "Gideon_LMB",
 		"Title": "Basic Attack",
-		"Description": "Ranged basic attack dealing 49.95 Energy Damage.",
+		"Description": "Ranged basic attack dealing 49.95 <span color=\"#FFFFFF\"> Energy Damage</>.",
 		"ManaCost": [
 			0
 		],
@@ -1015,7 +1015,7 @@
 		"Name": "Gideon_RMB",
 		"AbilityName": "Gideon_RMB",
 		"Title": "Burden",
-		"Description": "Projectile that creates a tether to an enemy hero dealing 50 Energy Damage and slowing them for 3 seconds.",
+		"Description": "Projectile that creates a tether to an enemy hero dealing 50 <span color=\"#FFFFFF\"> Energy Damage</> and slowing them for 3 seconds.",
 		"ManaCost": [
 			52
 		],
@@ -1028,7 +1028,7 @@
 		"Name": "Gideon_Q",
 		"AbilityName": "Gideon_Q",
 		"Title": "Cosmic Rift",
-		"Description": "Meteors fall from the sky dealing 100 Energy Damage over 2 seconds.",
+		"Description": "Meteors fall from the sky dealing 100 <span color=\"#FFFFFF\"> Energy Damage</> over 2 seconds.",
 		"ManaCost": [
 			52
 		],
@@ -1054,7 +1054,7 @@
 		"Name": "Gideon_R",
 		"AbilityName": "Gideon_R",
 		"Title": "Black Hole",
-		"Description": "Channeled ability that slowly pulls enemies towards Gideon, dealing 450 Energy Damage over 5 seconds. Gideon gains a small shield and is immune to crowd control when he is finished channeling the ability.",
+		"Description": "Channeled ability that slowly pulls enemies towards Gideon, dealing 450 <span color=\"#FFFFFF\"> Energy Damage</> over 5 seconds. Gideon gains a small shield and is immune to crowd control when he is finished channeling the ability.",
 		"ManaCost": [
 			100
 		],
@@ -1078,7 +1078,7 @@
 		"Name": "Gadget_LMB",
 		"AbilityName": "Gadget_LMB",
 		"Title": "Plasma Blast",
-		"Description": "Ranged basic attack dealing 49.95 Energy Damage.",
+		"Description": "Ranged basic attack dealing 49.95 <span color=\"#FFFFFF\"> Energy Damage</>.",
 		"ManaCost": [
 			0
 		],
@@ -1091,7 +1091,7 @@
 		"Name": "Gadget_RMB",
 		"AbilityName": "Gadget_RMB",
 		"Title": "Seek & Destroy",
-		"Description": "Gadget fires a slow moving bot that can be reactivated to stop and begin dealing 100 Energy Damage and slowing enemies in range for 3 sec.",
+		"Description": "Gadget fires a slow moving bot that can be reactivated to stop and begin dealing 100 <span color=\"#FFFFFF\"> Energy Damage</> and slowing enemies in range for 3 sec.",
 		"ManaCost": [
 			52
 		],
@@ -1104,7 +1104,7 @@
 		"Name": "Gadget_Q",
 		"AbilityName": "Gadget_Q",
 		"Title": "Sticky Mine",
-		"Description": "Tosses a mine that will attach to any unit within the area (enemies are prioritized).  After 4.5 seconds, the mine explodes, dealing 100 Energy Damage.",
+		"Description": "Tosses a mine that will attach to any unit within the area (enemies are prioritized).  After 4.5 seconds, the mine explodes, dealing 100 <span color=\"#FFFFFF\"> Energy Damage</>.",
 		"ManaCost": [
 			52
 		],
@@ -1117,7 +1117,7 @@
 		"Name": "Gadget_E",
 		"AbilityName": "Gadget_E",
 		"Title": "Speed Gate",
-		"Description": "Deploys a gate that will speed up allies and deal up to 50 Energy Damage to enemies inside of it.",
+		"Description": "Deploys a gate that will speed up allies and deal up to 50 <span color=\"#FFFFFF\"> Energy Damage</> to enemies inside of it.",
 		"ManaCost": [
 			56
 		],
@@ -1130,7 +1130,7 @@
 		"Name": "Gadget_R",
 		"AbilityName": "Gadget_R",
 		"Title": "Tesla Dome",
-		"Description": "Tesla Dome deals 450 Energy Damage over 5 seconds to all enemies in the area.",
+		"Description": "Tesla Dome deals 450 <span color=\"#FFFFFF\"> Energy Damage</> over 5 seconds to all enemies in the area.",
 		"ManaCost": [
 			100
 		],
@@ -1154,7 +1154,7 @@
 		"Name": "FengMao_LMB",
 		"AbilityName": "FengMao_LMB",
 		"Title": "Sweep",
-		"Description": "Melee basic attack dealing 49.95 Physical Damage every 1.5 sec.",
+		"Description": "Melee basic attack dealing 49.95 <span color=\"#FFFFFF\"> Physical Damage</> every 1.5 sec.",
 		"ManaCost": [
 			0
 		],
@@ -1167,7 +1167,7 @@
 		"Name": "FengMao_RMB",
 		"AbilityName": "FengMao_RMB",
 		"Title": "Conversion Shield",
-		"Description": "Get a +150 Shield that lasts for 2 seconds. Feng Mao generates an offensive stack for each hit he takes while Conversion Shield is active.",
+		"Description": "Get a +150 <span color=\"#FFFFFF\"> Shield</> that lasts for 2 seconds. Feng Mao generates an offensive stack for each hit he takes while Conversion Shield is active.",
 		"ManaCost": [
 			37.44
 		],
@@ -1180,7 +1180,7 @@
 		"Name": "FengMao_Q",
 		"AbilityName": "FengMao_Q",
 		"Title": "Reaping Dash",
-		"Description": "Throw out an image of himself. When it collides with an enemy hero or reaches max distance, he will teleport to the image. The image deals 40 Physical Damage to all minions it passes through and a single hero it collides with Feng Mao is granted an offensive stack upon use.",
+		"Description": "Throw out an image of himself. When it collides with an enemy hero or reaches max distance, he will teleport to the image. The image deals 40 <span color=\"#FFFFFF\"> Physical Damage</> to all minions it passes through and a single hero it collides with Feng Mao is granted an offensive stack upon use.",
 		"ManaCost": [
 			46.8
 		],
@@ -1193,7 +1193,7 @@
 		"Name": "FengMao_E",
 		"AbilityName": "FengMao_E",
 		"Title": "Hamstring",
-		"Description": "AOE attack that deals 60 Physical Damage and slows enemies. Feng Mao generates a defensive stack upon use.",
+		"Description": "AOE attack that deals 60 <span color=\"#FFFFFF\"> Physical Damage</> and slows enemies. Feng Mao generates a defensive stack upon use.",
 		"ManaCost": [
 			50.4
 		],
@@ -1206,7 +1206,7 @@
 		"Name": "FengMao_R",
 		"AbilityName": "FengMao_R",
 		"Title": "Earth Shatter",
-		"Description": "Slam his blade on the ground ealing 325 Physical Damage to all enemies in a line in front of him. During the attack, he briefly gains a +100 Shield.",
+		"Description": "Slam his blade on the ground ealing 325 <span color=\"#FFFFFF\"> Physical Damage</> to all enemies in a line in front of him. During the attack, he briefly gains a +100 <span color=\"#FFFFFF\"> Shield</>.",
 		"ManaCost": [
 			100
 		],
@@ -1219,7 +1219,7 @@
 		"Name": "Dekker_Pass",
 		"AbilityName": "Dekker_Pass",
 		"Title": "Mana Share",
-		"Description": "When Dekker uses an ability, she grants nearby allies a percentage of the mana she expended to cast it.",
+		"Description": "When Dekker uses an ability, she grants nearby allies a percentage of the <span color=\"#FFFFFF\"> Mana</> she expended to cast it.",
 		"ManaCost": [
 		],
 		"Cooldown": [
@@ -1230,7 +1230,7 @@
 		"Name": "Dekker_LMB",
 		"AbilityName": "Dekker_LMB",
 		"Title": "Energy Orb",
-		"Description": "Ranged basic attack dealing 49.95 Energy Damage.",
+		"Description": "Ranged basic attack dealing 49.95 <span color=\"#FFFFFF\"> Energy Damage</>.",
 		"ManaCost": [
 			0
 		],
@@ -1243,7 +1243,7 @@
 		"Name": "Dekker_RMB",
 		"AbilityName": "Dekker_RMB",
 		"Title": "Rocket Boots",
-		"Description": "Directional leap that grans nearby allies 150 Max Movement speed for 3 seconds",
+		"Description": "Directional leap that grans nearby allies 150 <span color=\"#FFFFFF\"> Max Movement Speed</> for 3 seconds",
 		"ManaCost": [
 			52
 		],
@@ -1256,7 +1256,7 @@
 		"Name": "Dekker_Q",
 		"AbilityName": "Dekker_Q",
 		"Title": "Stasis Bomb",
-		"Description": "Bouncing bomb that deals 75 Energy Damage in an area and stuns on direct hit. Stun duration is increased base on how far it traveled.",
+		"Description": "Bouncing bomb that deals 75 <span color=\"#FFFFFF\"> Energy Damage</> in an area and stuns on direct hit. <span color=\"#FFFFFF\">Stun</> duration is increased base on how far it traveled.",
 		"ManaCost": [
 			52
 		],
@@ -1269,7 +1269,7 @@
 		"Name": "Dekker_E",
 		"AbilityName": "Dekker_E",
 		"Title": "Slow Bubble",
-		"Description": "AOE bubble that slows enemies and deals 60 Energy Damage once it pops.",
+		"Description": "AOE bubble that slows enemies and deals 60 <span color=\"#FFFFFF\"> Energy Damage</> once it pops.",
 		"ManaCost": [
 			56
 		],
