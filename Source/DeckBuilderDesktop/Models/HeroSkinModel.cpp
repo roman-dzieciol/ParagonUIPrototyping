@@ -17,6 +17,7 @@ UHeroSkinModel* UHeroSkinModel::ConstructFromHeroSkinData(const FHeroSkinData& H
 	HeroSkinModel->Title = HeroSkinData.Title;
 	HeroSkinModel->IconTexture = HeroSkinData.IconTexture;
 	HeroSkinModel->PreviewTexture = HeroSkinData.PreviewTexture;
+	HeroSkinModel->Cost = HeroSkinData.Cost;
 	return HeroSkinModel;
 }
 
