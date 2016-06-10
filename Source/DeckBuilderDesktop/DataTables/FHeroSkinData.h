@@ -24,6 +24,9 @@ public:
 		FString Title;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Skin Data")
+		FString Description;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Skin Data")
 		int32 Cost;
 
 	friend bool operator==(const FHeroSkinData& LHS, const FHeroSkinData& RHS);

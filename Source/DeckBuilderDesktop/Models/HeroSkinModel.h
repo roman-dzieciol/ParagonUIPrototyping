@@ -22,6 +22,9 @@ public:
 		FString Title;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Skin")
+		FString Description;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Skin")
 		UTexture2D* IconTexture;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Skin")
