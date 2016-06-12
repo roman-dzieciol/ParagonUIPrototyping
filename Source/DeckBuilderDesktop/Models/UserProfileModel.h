@@ -45,6 +45,36 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Profile")
 		FDateTime BoostReputationTime;
-	
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Profile")
+		FTimespan TimePlayed;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Profile")
+		int32 TotalGames;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Profile")
+		int32 TotalWins;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Profile")
+		int32 TowerTakedowns;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Profile")
+		int32 InhibitorTakedowns;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Profile")
+		int32 CoreTakedowns;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Profile")
+		int32 HeroKills;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Profile")
+		int32 HeroAssists;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Profile")
+		int32 HarvestersPlaced;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Profile")
+		int32 HarvestersDestroyed;
 	
 };
