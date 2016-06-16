@@ -18,6 +18,9 @@ public:
 		FString HeroName;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Data")
+		TAssetPtr<class UTexture2D> TutorialTexture;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Data")
 		UTexture2D* AvatarTexture;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero Data")

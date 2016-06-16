@@ -3,6 +3,7 @@
 		"Name": "Dekker",
 		"HeroID": "Dekker",
 		"HeroName": "Dekker",
+		"TutorialTexture": "/Game/Art/Heroes/Tutorial/T_Dekker_Tutorial.T_Dekker_Tutorial",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Dekker.T_Dekker'",
 		"Affinities": [
 			"Growth",
@@ -43,6 +44,7 @@
 		"Name": "FengMao",
 		"HeroID": "FengMao",
 		"HeroName": "Feng Mao",
+		"TutorialTexture": "/Game/Art/Heroes/Tutorial/T_FengMao_Tutorial.T_FengMao_Tutorial",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_FengMao.T_FengMao'",
 		"Affinities": [
 			"Fury",
@@ -82,6 +84,7 @@
 		"Name": "Gadget",
 		"HeroID": "Gadget",
 		"HeroName": "Gadget",
+		"TutorialTexture": "/Game/Art/Heroes/Tutorial/T_Gadget_Tutorial.T_Gadget_Tutorial",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Gadget.T_Gadget'",
 		"Affinities": [
 			"Intellect"
@@ -119,6 +122,7 @@
 		"Name": "Gideon",
 		"HeroID": "Gideon",
 		"HeroName": "Gideon",
+		"TutorialTexture": "/Game/Art/Heroes/Tutorial/T_Gideon_Tutorial.T_Gideon_Tutorial",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Gideon.T_Gideon'",
 		"Affinities": [
 			"Intellect",
@@ -158,6 +162,7 @@
 		"Name": "Grim",
 		"HeroID": "Grim",
 		"HeroName": "Grim.exe",
+		"TutorialTexture": "/Game/Art/Heroes/Tutorial/T_Grim_Tutorial.T_Grim_Tutorial",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Grim.T_Grim'",
 		"Affinities": [
 			"Intellect",
@@ -197,6 +202,7 @@
 		"Name": "Grux",
 		"HeroID": "Grux",
 		"HeroName": "Grux",
+		"TutorialTexture": "/Game/Art/Heroes/Tutorial/T_Grux_Tutorial.T_Grux_Tutorial",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Grux.T_Grux'",
 		"Affinities": [
 			"Fury",
@@ -237,6 +243,7 @@
 		"Name": "Howitzer",
 		"HeroID": "Howitzer",
 		"HeroName": "Howitzer",
+		"TutorialTexture": "/Game/Art/Heroes/Tutorial/T_Howitzer_Tutorial.T_Howitzer_Tutorial",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Howitzer.T_Howitzer'",
 		"Affinities": [
 			"Fury",
@@ -272,6 +279,7 @@
 		"Name": "IggyScorch",
 		"HeroID": "IggyScorch",
 		"HeroName": "Iggy & Scorch",
+		"TutorialTexture": "/Game/Art/Heroes/Tutorial/T_IggyScorch_Tutorial.T_IggyScorch_Tutorial",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_IggyScorch.T_IggyScorch'",
 		"Affinities": [
 			"Fury",
@@ -311,6 +319,7 @@
 		"Name": "Kallari",
 		"HeroID": "Kallari",
 		"HeroName": "Kallari",
+		"TutorialTexture": "/Game/Art/Heroes/Tutorial/T_Kallari_Tutorial.T_Kallari_Tutorial",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Kallari.T_Kallari'",
 		"Affinities": [
 			"Corruption"
@@ -349,6 +358,7 @@
 		"Name": "Murdock",
 		"HeroID": "Murdock",
 		"HeroName": "Murdock",
+		"TutorialTexture": "/Game/Art/Heroes/Tutorial/T_Murdock_Tutorial.T_Murdock_Tutorial",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Murdock.T_Murdock'",
 		"Affinities": [
 			"Fury",
@@ -388,6 +398,7 @@
 		"Name": "Muriel",
 		"HeroID": "Muriel",
 		"HeroName": "Muriel",
+		"TutorialTexture": "/Game/Art/Heroes/Tutorial/T_Muriel_Tutorial.T_Muriel_Tutorial",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Muriel.T_Muriel'",
 		"Affinities": [
 			"Growth",
@@ -428,6 +439,7 @@
 		"Name": "Rampage",
 		"HeroID": "Rampage",
 		"HeroName": "Rampage",
+		"TutorialTexture": "/Game/Art/Heroes/Tutorial/T_Rampage_Tutorial.T_Rampage_Tutorial",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Rampage.T_Rampage'",
 		"Affinities": [
 			"Growth",
@@ -469,6 +481,7 @@
 		"Name": "Sevarog",
 		"HeroID": "Sevarog",
 		"HeroName": "Sevarog",
+		"TutorialTexture": "/Game/Art/Heroes/Tutorial/T_Sevarog_Tutorial.T_Sevarog_Tutorial",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Sevarog.T_Sevarog'",
 		"Affinities": [
 			"Growth",
@@ -509,6 +522,7 @@
 		"Name": "Sparrow",
 		"HeroID": "Sparrow",
 		"HeroName": "Sparrow",
+		"TutorialTexture": "/Game/Art/Heroes/Tutorial/T_Sparrow_Tutorial.T_Sparrow_Tutorial",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Sparrow.T_Sparrow'",
 		"Affinities": [
 			"Growth",
@@ -549,6 +563,7 @@
 		"Name": "Steel",
 		"HeroID": "Steel",
 		"HeroName": "Steel",
+		"TutorialTexture": "/Game/Art/Heroes/Tutorial/T_Steel_Tutorial.T_Steel_Tutorial",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_Steel.T_Steel'",
 		"Affinities": [
 			"Intellect",
@@ -589,6 +604,7 @@
 		"Name": "TwinBlast",
 		"HeroID": "TwinBlast",
 		"HeroName": "TwinBlast",
+		"TutorialTexture": "/Game/Art/Heroes/Tutorial/T_TwinBlast_Tutorial.T_TwinBlast_Tutorial",
 		"AvatarTexture": "Texture2D'/Game/Art/HeroIcons/T_TwinBlast.T_TwinBlast'",
 		"Affinities": [
 			"Fury"

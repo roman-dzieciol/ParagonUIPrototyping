@@ -17,6 +17,7 @@ UHeroModel* UHeroModel::ConstructFromHeroData(const FHeroData& HeroData, UDataTa
 	auto HeroModel = NewObject<UHeroModel>(GetTransientPackage(), NAME_None);
 	HeroModel->HeroID = HeroData.HeroID;
 	HeroModel->HeroName = HeroData.HeroName;
+	HeroModel->TutorialTexture = HeroData.TutorialTexture;
 	HeroModel->AvatarTexture = HeroData.AvatarTexture;
 	HeroModel->Affinities = HeroData.Affinities;
 	HeroModel->RecommendedStats = HeroData.RecommendedStats;
