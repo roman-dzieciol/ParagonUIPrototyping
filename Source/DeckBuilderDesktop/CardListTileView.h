@@ -53,6 +53,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Appearance")
 	void SetScrollOffset(const float InScrollOffset);
 
+	UFUNCTION(BlueprintCallable, Category = "Selection")
+	void SetSelection(UObject* SoleSelectedItem, ESelectInfo::Type SelectInfo = ESelectInfo::Direct);
+
 	// UVisual interface
 	virtual void ReleaseSlateResources(bool bReleaseChildren) override;
 	// End of UVisual interface

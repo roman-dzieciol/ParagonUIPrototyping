@@ -14,7 +14,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_TwinBlast_Challenger.T_HeroPreview_TwinBlast_Challenger",
 		"Title": "Challenger TwinBlast",
-		"Description": "",
+		"Description": "Unlocked by beginning the Master Challenge.",
 		"Cost": 0
 	},
 	{
@@ -23,7 +23,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_TwinBlast_Master.T_HeroPreview_TwinBlast_Master",
 		"Title": "Master TwinBlast",
-		"Description": "",
+		"Description": "Unlocked by earning the title of Master.",
 		"Cost": 0
 	},
 	{
@@ -41,7 +41,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Steel_Challenger.T_HeroPreview_Steel_Challenger",
 		"Title": "Challenger Steel",
-		"Description": "",
+		"Description": "Unlocked by beginning the Master Challenge.",
 		"Cost": 0
 	},
 	{
@@ -50,7 +50,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Steel_Master.T_HeroPreview_Steel_Master",
 		"Title": "Master Steel",
-		"Description": "",
+		"Description": "Unlocked by earning the title of Master.",
 		"Cost": 0
 	},
 	{
@@ -68,7 +68,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Sparrow_Challenger.T_HeroPreview_Sparrow_Challenger",
 		"Title": "Challenger Sparrow",
-		"Description": "",
+		"Description": "Unlocked by beginning the Master Challenge.",
 		"Cost": 0
 	},
 	{
@@ -77,7 +77,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Sparrow_Master.T_HeroPreview_Sparrow_Master",
 		"Title": "Master Sparrow",
-		"Description": "",
+		"Description": "Unlocked by earning the title of Master.",
 		"Cost": 0
 	},
 	{
@@ -104,7 +104,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Sevarog_Challenger.T_HeroPreview_Sevarog_Challenger",
 		"Title": "Challenger Sevarog",
-		"Description": "",
+		"Description": "Unlocked by beginning the Master Challenge.",
 		"Cost": 0
 	},
 	{
@@ -113,7 +113,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Sevarog_Master.T_HeroPreview_Sevarog_Master",
 		"Title": "Master Sevarog",
-		"Description": "",
+		"Description": "Unlocked by earning the title of Master.",
 		"Cost": 0
 	},
 	{
@@ -122,7 +122,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Riktor_Default.T_HeroPreview_Riktor_Default",
 		"Title": "Default Riktor",
-		"Description": "The Bronze Warden joins the fray.",
+		"Description": "",
 		"Cost": 0
 	},
 	{
@@ -131,7 +131,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Riktor_Challenger.T_HeroPreview_Riktor_Challenger",
 		"Title": "Challenger Riktor",
-		"Description": "",
+		"Description": "Unlocked by beginning the Master Challenge.",
 		"Cost": 0
 	},
 	{
@@ -140,7 +140,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Riktor_Master.T_HeroPreview_Riktor_Master",
 		"Title": "Master Riktor",
-		"Description": "",
+		"Description": "Unlocked by earning the title of Master.",
 		"Cost": 0
 	},
 	{
@@ -149,7 +149,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Riktor_BronzeWarden.T_HeroPreview_Riktor_BronzeWarden",
 		"Title": "Bronze Warden Riktor",
-		"Description": "",
+		"Description": "The Bronze Warden joins the fray.",
 		"Cost": 500
 	},
 	{
@@ -167,7 +167,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Rampage_Challenger.T_HeroPreview_Rampage_Challenger",
 		"Title": "Challenger Rampage",
-		"Description": "",
+		"Description": "Unlocked by beginning the Master Challenge.",
 		"Cost": 0
 	},
 	{
@@ -176,7 +176,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Rampage_Master.T_HeroPreview_Rampage_Master",
 		"Title": "Master Rampage",
-		"Description": "",
+		"Description": "Unlocked by earning the title of Master.",
 		"Cost": 0
 	},
 	{
@@ -203,7 +203,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Muriel_Challenger.T_HeroPreview_Muriel_Challenger",
 		"Title": "Challenger Muriel",
-		"Description": "",
+		"Description": "Unlocked by beginning the Master Challenge.",
 		"Cost": 0
 	},
 	{
@@ -212,7 +212,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Muriel_Master.T_HeroPreview_Muriel_Master",
 		"Title": "Master Muriel",
-		"Description": "",
+		"Description": "Unlocked by earning the title of Master.",
 		"Cost": 0
 	},
 	{
@@ -239,7 +239,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Murdock_Challenger.T_HeroPreview_Murdock_Challenger",
 		"Title": "Challenger Murdock",
-		"Description": "",
+		"Description": "Unlocked by beginning the Master Challenge.",
 		"Cost": 0
 	},
 	{
@@ -248,7 +248,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Murdock_Master.T_HeroPreview_Murdock_Master",
 		"Title": "Master Murdock",
-		"Description": "",
+		"Description": "Unlocked by earning the title of Master.",
 		"Cost": 0
 	},
 	{
@@ -266,7 +266,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Kallari_Challenger.T_HeroPreview_Kallari_Challenger",
 		"Title": "Challenger Kallari",
-		"Description": "",
+		"Description": "Unlocked by beginning the Master Challenge.",
 		"Cost": 0
 	},
 	{
@@ -275,7 +275,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Kallari_Master.T_HeroPreview_Kallari_Master",
 		"Title": "Master Kallari",
-		"Description": "",
+		"Description": "Unlocked by earning the title of Master.",
 		"Cost": 0
 	},
 	{
@@ -293,7 +293,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_IggyScorch_Challenger.T_HeroPreview_IggyScorch_Challenger",
 		"Title": "Challenger IggyScorch",
-		"Description": "",
+		"Description": "Unlocked by beginning the Master Challenge.",
 		"Cost": 0
 	},
 	{
@@ -302,7 +302,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_IggyScorch_Master.T_HeroPreview_IggyScorch_Master",
 		"Title": "Master IggyScorch",
-		"Description": "",
+		"Description": "Unlocked by earning the title of Master.",
 		"Cost": 0
 	},
 	{
@@ -320,7 +320,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Howitzer_Challenger.T_HeroPreview_Howitzer_Challenger",
 		"Title": "Challenger Howitzer",
-		"Description": "",
+		"Description": "Unlocked by beginning the Master Challenge.",
 		"Cost": 0
 	},
 	{
@@ -329,7 +329,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Howitzer_Master.T_HeroPreview_Howitzer_Master",
 		"Title": "Master Howitzer",
-		"Description": "",
+		"Description": "Unlocked by earning the title of Master.",
 		"Cost": 0
 	},
 	{
@@ -338,7 +338,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Howitzer_Hotrod.T_HeroPreview_Howitzer_Hotrod",
 		"Title": "Hotrod Howitzer",
-		"Description": "",
+		"Description": "Unlocked by purchasing either a Challenger or Master Founder's Pack.",
 		"Cost": 0
 	},
 	{
@@ -356,7 +356,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Grux_Challenger.T_HeroPreview_Grux_Challenger",
 		"Title": "Challenger Grux",
-		"Description": "",
+		"Description": "Unlocked by beginning the Master Challenge.",
 		"Cost": 0
 	},
 	{
@@ -365,7 +365,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Grux_Master.T_HeroPreview_Grux_Master",
 		"Title": "Master Grux",
-		"Description": "",
+		"Description": "Unlocked by earning the title of Master.",
 		"Cost": 0
 	},
 	{
@@ -392,7 +392,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Grim_Challenger.T_HeroPreview_Grim_Challenger",
 		"Title": "Challenger Grim",
-		"Description": "",
+		"Description": "Unlocked by beginning the Master Challenge.",
 		"Cost": 0
 	},
 	{
@@ -401,7 +401,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Grim_Master.T_HeroPreview_Grim_Master",
 		"Title": "Master Grim",
-		"Description": "",
+		"Description": "Unlocked by earning the title of Master.",
 		"Cost": 0
 	},
 	{
@@ -419,7 +419,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Gideon_Challenger.T_HeroPreview_Gideon_Challenger",
 		"Title": "Challenger Gideon",
-		"Description": "",
+		"Description": "Unlocked by beginning the Master Challenge.",
 		"Cost": 0
 	},
 	{
@@ -428,7 +428,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Gideon_Master.T_HeroPreview_Gideon_Master",
 		"Title": "Master Gideon",
-		"Description": "",
+		"Description": "Unlocked by earning the title of Master.",
 		"Cost": 0
 	},
 	{
@@ -446,7 +446,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Gadget_Challenger.T_HeroPreview_Gadget_Challenger",
 		"Title": "Challenger Gadget",
-		"Description": "",
+		"Description": "Unlocked by beginning the Master Challenge.",
 		"Cost": 0
 	},
 	{
@@ -455,7 +455,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Gadget_Master.T_HeroPreview_Gadget_Master",
 		"Title": "Master Gadget",
-		"Description": "",
+		"Description": "Unlocked by earning the title of Master.",
 		"Cost": 0
 	},
 	{
@@ -482,7 +482,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_FengMao_Challenger.T_HeroPreview_FengMao_Challenger",
 		"Title": "Challenger FengMao",
-		"Description": "",
+		"Description": "Unlocked by beginning the Master Challenge.",
 		"Cost": 0
 	},
 	{
@@ -491,7 +491,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_FengMao_Master.T_HeroPreview_FengMao_Master",
 		"Title": "Master FengMao",
-		"Description": "",
+		"Description": "Unlocked by earning the title of Master.",
 		"Cost": 0
 	},
 	{
@@ -509,7 +509,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Dekker_Challenger.T_HeroPreview_Dekker_Challenger",
 		"Title": "Challenger Dekker",
-		"Description": "",
+		"Description": "Unlocked by beginning the Master Challenge.",
 		"Cost": 0
 	},
 	{
@@ -518,7 +518,7 @@
 		"IconTexture": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'",
 		"PreviewTexture": "/Game/Art/Heroes/Preview/T_HeroPreview_Dekker_Master.T_HeroPreview_Dekker_Master",
 		"Title": "Master Dekker",
-		"Description": "",
+		"Description": "Unlocked by earning the title of Master.",
 		"Cost": 0
 	},
 	{

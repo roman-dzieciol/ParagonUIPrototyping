@@ -10,6 +10,8 @@
 class UHeroAbilityModel;
 class UHeroSkinModel;
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FHeroModelUpdated);
+
 /**
  * 
  */
@@ -17,7 +19,7 @@ UCLASS(Blueprintable, BlueprintType)
 class DECKBUILDERDESKTOP_API UHeroModel : public UObject
 {
 	GENERATED_UCLASS_BODY()
-	
+
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero")
 		FString HeroID;
@@ -60,7 +62,18 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero")
 		int32 Mobility;
-	
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Hero")
+		UHeroSkinModel* SelectedSkin;
+
+	UFUNCTION(BlueprintCallable, Category = "Hero")
+		void SelectSkin(UHeroSkinModel* HeroSkinModel);
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintAssignable, Category = "Hero")
+		FHeroModelUpdated OnHeroModelUpdated;
+
 public:
 	static UHeroModel* ConstructFromHeroData(const FHeroData& HeroData, UDataTable* HeroAbilityTable, UDataTable* HeroSkinTable);
 	

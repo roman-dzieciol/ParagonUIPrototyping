@@ -49,5 +49,16 @@ UHeroModel* UHeroModel::ConstructFromHeroData(const FHeroData& HeroData, UDataTa
 		HeroModel->Skins.Add(SkinModel);
 	}
 
+	if (HeroModel->Skins.Num() > 0)
+	{
+		HeroModel->SelectedSkin = HeroModel->Skins[0];
+	}
+
 	return HeroModel;
+}
+
+void UHeroModel::SelectSkin(UHeroSkinModel* HeroSkinModel)
+{
+	SelectedSkin = HeroSkinModel;
+	OnHeroModelUpdated.Broadcast();
 }

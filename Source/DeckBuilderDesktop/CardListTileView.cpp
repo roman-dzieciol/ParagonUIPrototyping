@@ -114,6 +114,11 @@ void UCardListTileView::SetScrollOffset(const float InScrollOffset)
 	MyTileView->SetScrollOffset(InScrollOffset);
 }
 
+void UCardListTileView::SetSelection(UObject* SoleSelectedItem, ESelectInfo::Type SelectInfo)
+{
+	MyTileView->SetSelection(SoleSelectedItem, SelectInfo);
+}
+
 /////////////////////////////////////////////////////
 
 #undef LOCTEXT_NAMESPACE
