@@ -70,6 +70,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Hero")
 		void SelectSkin(UHeroSkinModel* HeroSkinModel);
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hero")
+		int32 HeroLevel;
+
 public:
 	UPROPERTY(EditAnywhere, BlueprintAssignable, Category = "Hero")
 		FHeroModelUpdated OnHeroModelUpdated;

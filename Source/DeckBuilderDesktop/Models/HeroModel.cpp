@@ -54,6 +54,8 @@ UHeroModel* UHeroModel::ConstructFromHeroData(const FHeroData& HeroData, UDataTa
 		HeroModel->SelectedSkin = HeroModel->Skins[0];
 	}
 
+	HeroModel->HeroLevel = FMath::RandRange(1, 10);
+
 	return HeroModel;
 }
 
