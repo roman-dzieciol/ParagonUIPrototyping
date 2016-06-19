@@ -1,0 +1,82 @@
+[
+	{
+		"Name": "HeroLevel1",
+		"ID": "HeroLevel1",
+		"Title": "Hero Level 1",
+		"Reward": "ChallengerSkin",
+		"MatchXPBoost": 5.0,
+		"MatchTeamXPBoost": 1.0
+	},
+	{
+		"Name": "HeroLevel2",
+		"ID": "HeroLevel2",
+		"Title": "Hero Level 2",
+		"Reward": "Random",
+		"MatchXPBoost": 5.0,
+		"MatchTeamXPBoost": 1.0
+	},
+	{
+		"Name": "HeroLevel3",
+		"ID": "HeroLevel3",
+		"Title": "Hero Level 3",
+		"Reward": "CardPack",
+		"MatchXPBoost": 5.0,
+		"MatchTeamXPBoost": 1.0
+	},
+	{
+		"Name": "HeroLevel4",
+		"ID": "HeroLevel4",
+		"Title": "Hero Level 4",
+		"Reward": "Random",
+		"MatchXPBoost": 5.0,
+		"MatchTeamXPBoost": 1.0
+	},
+	{
+		"Name": "HeroLevel5",
+		"ID": "HeroLevel5",
+		"Title": "Hero Level 5",
+		"Reward": "CardPack",
+		"MatchXPBoost": 5.0,
+		"MatchTeamXPBoost": 1.0
+	},
+	{
+		"Name": "HeroLevel6",
+		"ID": "HeroLevel6",
+		"Title": "Hero Level 6",
+		"Reward": "MasterTribute",
+		"MatchXPBoost": 6.0,
+		"MatchTeamXPBoost": 1.0
+	},
+	{
+		"Name": "HeroLevel7",
+		"ID": "HeroLevel7",
+		"Title": "Hero Level 7",
+		"Reward": "MasterTribute",
+		"MatchXPBoost": 7.0,
+		"MatchTeamXPBoost": 1.0
+	},
+	{
+		"Name": "HeroLevel8",
+		"ID": "HeroLevel8",
+		"Title": "Hero Level 8",
+		"Reward": "Emote",
+		"MatchXPBoost": 8.0,
+		"MatchTeamXPBoost": 1.0
+	},
+	{
+		"Name": "HeroLevel9",
+		"ID": "HeroLevel9",
+		"Title": "Hero Level 9",
+		"Reward": "MasterTribute",
+		"MatchXPBoost": 9.0,
+		"MatchTeamXPBoost": 1.0
+	},
+	{
+		"Name": "HeroLevel10",
+		"ID": "HeroLevel10",
+		"Title": "Hero Level 10",
+		"Reward": "MasterSkin",
+		"MatchXPBoost": 10.0,
+		"MatchTeamXPBoost": 1.0
+	}
+]

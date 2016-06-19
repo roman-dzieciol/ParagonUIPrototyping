@@ -1,0 +1,121 @@
+[
+	{
+		"Name": "DekkerEmote",
+		"ID": "DekkerEmote",
+		"Title": "Friendly Wave",
+		"Description": "Always looking to be supportive, Dekker leans on her staff and gives a friendly wave.",
+		"Icon": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'"
+	},
+	{
+		"Name": "FengMaoEmote",
+		"ID": "FengMaoEmote",
+		"Title": "Blade Whirl",
+		"Description": "Feng Mao casually spins his blade to flaunt his formidable skill.",
+		"Icon": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'"
+	},
+	{
+		"Name": "GadgetEmote",
+		"ID": "GadgetEmote",
+		"Title": "Chill Out",
+		"Description": "Gadget takes a brief respite to relax on her robo-arm.",
+		"Icon": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'"
+	},
+	{
+		"Name": "GideonEmote",
+		"ID": "GideonEmote",
+		"Title": "Levitate",
+		"Description": "Gideon channels the void as he levitates into the air.",
+		"Icon": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'"
+	},
+	{
+		"Name": "GrimEmote",
+		"ID": "GrimEmote",
+		"Title": "Demo Mode",
+		"Description": "Demonstrates the complex motor capabilities of this Sentry Combat Robot. Floor models only - not for resale. - SCR Sales Manual, p. 29",
+		"Icon": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'"
+	},
+	{
+		"Name": "GruxEmote",
+		"ID": "GruxEmote",
+		"Title": "Battlecry",
+		"Description": "Grux bangs his hammers and unleashes a mighty warlord's roar.",
+		"Icon": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'"
+	},
+	{
+		"Name": "HowitzerEmote",
+		"ID": "HowitzerEmote",
+		"Title": "Why I Oughta!",
+		"Description": "Fueled by (liquid) courage, Howitzer springs from safety of his Mech to shake a taunting fist at his foes.",
+		"Icon": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'"
+	},
+	{
+		"Name": "IggyScorchEmote",
+		"ID": "IggyScorchEmote",
+		"Title": "Yeehaw!",
+		"Description": "Iggy provokes Scorch on purpose and rides the bull!",
+		"Icon": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'"
+	},
+	{
+		"Name": "KallariEmote",
+		"ID": "KallariEmote",
+		"Title": "Dagger Flourish",
+		"Description": "Kallari deftly flourishes her daggers as she surveys the battlefield for unsuspecting foes.",
+		"Icon": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'"
+	},
+	{
+		"Name": "MurdockEmote",
+		"ID": "MurdockEmote",
+		"Title": "Seven Shot Salute",
+		"Description": "Murdock gets pumped up and fires celebratory shots into the air.",
+		"Icon": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'"
+	},
+	{
+		"Name": "MurielEmote",
+		"ID": "MurielEmote",
+		"Title": "Angelic Pride",
+		"Description": "Muriel flaunts her beautiful wings and spins with graceful style.",
+		"Icon": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'"
+	},
+	{
+		"Name": "RampageEmote",
+		"ID": "RampageEmote",
+		"Title": "Get Mad!",
+		"Description": "Rampage gets... intense.",
+		"Icon": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'"
+	},
+	{
+		"Name": "RiktorEmote",
+		"ID": "RiktorEmote",
+		"Title": "Back to Work!",
+		"Description": "Riktor cracks the whip, fair warning to any who step out of line.",
+		"Icon": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'"
+	},
+	{
+		"Name": "SevarogEmote",
+		"ID": "SevarogEmote",
+		"Title": "The Babe",
+		"Description": "Sevarog holds his ground and points out his next victim.",
+		"Icon": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'"
+	},
+	{
+		"Name": "SparrowEmote",
+		"ID": "SparrowEmote",
+		"Title": "Yes My Liege",
+		"Description": "Sparrow gracefully pays tribute to those that have fallen before her.",
+		"Icon": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'"
+	},
+	{
+		"Name": "SteelEmote",
+		"ID": "SteelEmote",
+		"Title": "Bring It On!",
+		"Description": "Steel slams his shield furiously and bellows a challenge to his enemies.",
+		"Icon": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'"
+	},
+	{
+		"Name": "TwinblastEmote",
+		"ID": "TwinblastEmote",
+		"Title": "Watch This",
+		"Description": "Twinblast displays some impressive gunplay, twirling his pistols and flipping one into the air.",
+		"Icon": "Texture2D'/Game/Art/Widgets/T_SkinIcon.T_SkinIcon'"
+	}
+]

@@ -5,6 +5,7 @@
 #include "DataTables/FRewardData.h"
 #include "Models/DailyRewardModel.h"
 #include "Models/DailyRewardListModel.h"
+#include "Models/HeroRewardModel.h"
 
 
 UDailyRewardListModel* URewardFunctionLibrary::ConstructSampleDailyRewardListFromDataTable(FString CurrentReward, int32 CurrentDay, bool bEarned, TArray<FString> UpcomingRewards, UDataTable* RewardDataTable)
@@ -31,4 +32,8 @@ UDailyRewardListModel* URewardFunctionLibrary::ConstructSampleDailyRewardListFro
 	return RewardListModel;
 }
 
+UHeroRewardModel* URewardFunctionLibrary::ConstructHeroReward(const FHeroRewardData& HeroRewardData, FString HeroName, UDataTable* RewardTable, UDataTable* HeroSkinTable, UDataTable* HeroEmoteTable)
+{
+	return UHeroRewardModel::ConstructFromHeroRewardData(HeroRewardData, HeroName, RewardTable, HeroSkinTable, HeroEmoteTable);
+}
 

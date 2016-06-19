@@ -7,6 +7,13 @@
 		"Icon": "Texture2D'/Game/Art/Widgets/T_Random.T_Random'"
 	},
 	{
+		"Name": "MasterTribute",
+		"RewardName": "Random Reward",
+		"RewardType": "Master Tribute",
+		"Description": "A random reward of uncommon quality or better.",
+		"Icon": "Texture2D'/Game/Art/Widgets/T_Random.T_Random'"
+	},
+	{
 		"Name": "DeckSlot",
 		"RewardName": "Deck Slot",
 		"RewardType": "",
@@ -19,5 +26,12 @@
 		"RewardType": "Reputation",
 		"Description": "A medium amount of reputation to acknowledge your accomplishments.",
 		"Icon": "Texture2D'/Game/Art/Widgets/T_ReputationLarge.T_ReputationLarge'"
+	},
+	{
+		"Name": "CardPack",
+		"RewardName": "Card Pack",
+		"RewardType": "Card Pack",
+		"Description": "Contains five random cards. At least one is guaranteed to be uncommon quality or better.",
+		"Icon": "Texture2D'/Game/Art/Widgets/T_CardPack.T_CardPack'"
 	}
 ]
