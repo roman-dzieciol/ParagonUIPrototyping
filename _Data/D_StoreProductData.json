@@ -1,0 +1,232 @@
+[
+	{
+		"Name": "Product_CardPack_Weekly",
+		"ID": "Product_CardPack_Weekly",
+		"Title": "Weekly Pack",
+		"Description": "A pack of specific cards",
+		"Tooltip": "",
+		"Price": 15000,
+		"Currency": "Reputation",
+		"Icon": "/Game/Art/Widgets/T_StoreCardPack.T_StoreCardPack"
+	},
+	{
+		"Name": "Product_CardPack_Five",
+		"ID": "Product_CardPack_Five",
+		"Title": "Card Pack",
+		"Description": "A pack of five random cards",
+		"Tooltip": "Contains five random cards. At least one is guaranteed to be uncommon quality or better.",
+		"Price": 10000,
+		"Currency": "Reputation",
+		"Icon": "/Game/Art/Widgets/T_StoreCardPack.T_StoreCardPack"
+	},
+	{
+		"Name": "Product_CardPack_One",
+		"ID": "Product_CardPack_One",
+		"Title": "A Random Card",
+		"Description": "One random card for any affinity",
+		"Tooltip": "Contains one random card for any affinity.",
+		"Price": 2250,
+		"Currency": "Reputation",
+		"Icon": "/Game/Art/Widgets/T_StoreCardPack.T_StoreCardPack"
+	},
+	{
+		"Name": "Product_CardPack_Order",
+		"ID": "Product_CardPack_Order",
+		"Title": "An Order card",
+		"Description": "One random Order card",
+		"Tooltip": "Contains one random Order affinity card.",
+		"Price": 4500,
+		"Currency": "Reputation",
+		"Icon": "/Game/Art/Widgets/T_StoreCardPack.T_StoreCardPack"
+	},
+	{
+		"Name": "Product_CardPack_Corruption",
+		"ID": "Product_CardPack_Corruption",
+		"Title": "A Corruption card",
+		"Description": "One random Corruption card",
+		"Tooltip": "Contains one random Corruption affinity card.",
+		"Price": 4500,
+		"Currency": "Reputation",
+		"Icon": "/Game/Art/Widgets/T_StoreCardPack.T_StoreCardPack"
+	},
+	{
+		"Name": "Product_CardPack_Fury",
+		"ID": "Product_CardPack_Fury",
+		"Title": "A Fury card",
+		"Description": "One random Fury card",
+		"Tooltip": "Contains one random Fury affinity card.",
+		"Price": 4500,
+		"Currency": "Reputation",
+		"Icon": "/Game/Art/Widgets/T_StoreCardPack.T_StoreCardPack"
+	},
+	{
+		"Name": "Product_CardPack_Growth",
+		"ID": "Product_CardPack_Growth",
+		"Title": "A Growth card",
+		"Description": "One random Growth card",
+		"Tooltip": "Contains one random Growth affinity card.",
+		"Price": 4500,
+		"Currency": "Reputation",
+		"Icon": "/Game/Art/Widgets/T_StoreCardPack.T_StoreCardPack"
+	},
+	{
+		"Name": "Product_CardPack_Intellect",
+		"ID": "Product_CardPack_Intellect",
+		"Title": "An Intellect card",
+		"Description": "One random Intellect card",
+		"Tooltip": "Contains one random Intellect affinity card.",
+		"Price": 4500,
+		"Currency": "Reputation",
+		"Icon": "/Game/Art/Widgets/T_StoreCardPack.T_StoreCardPack"
+	},
+	{
+		"Name": "Product_CardPack_Universal",
+		"ID": "Product_CardPack_Universal",
+		"Title": "A Universal card",
+		"Description": "One random Universal card",
+		"Tooltip": "Contains one random Universal affinity card.",
+		"Price": 4500,
+		"Currency": "Reputation",
+		"Icon": "/Game/Art/Widgets/T_StoreCardPack.T_StoreCardPack"
+	},
+	{
+		"Name": "Product_XPBoost_1Day",
+		"ID": "Product_XPBoost_1Day",
+		"Title": "XP Boost: 24 hours",
+		"Description": "+100% XP for 24 hours.",
+		"Tooltip": "Earn an additional 100% experience from every match you complete over the next 24 hours.",
+		"Price": 100,
+		"Currency": "Reputation",
+		"Icon": "/Game/Art/Widgets/T_StoreXPCircle.T_StoreXPCircle"
+	},
+	{
+		"Name": "Product_XPBoost_3Day",
+		"ID": "Product_XPBoost_3Day",
+		"Title": "XP Boost: Three days",
+		"Description": "+100% XP for 3 days.",
+		"Tooltip": "Earn an additional 100% experience from every match you complete over the next 3 days.",
+		"Price": 200,
+		"Currency": "Coins",
+		"Icon": "/Game/Art/Widgets/T_StoreXPCircle.T_StoreXPCircle"
+	},
+	{
+		"Name": "Product_XPBoost_10Day",
+		"ID": "Product_XPBoost_10Day",
+		"Title": "XP Boost: 10 days",
+		"Description": "+100% XP for 10 days.",
+		"Tooltip": "Earn an additional 100% experience from every match you complete over the next 10 days.",
+		"Price": 550,
+		"Currency": "Coins",
+		"Icon": "/Game/Art/Widgets/T_StoreXPCircle.T_StoreXPCircle"
+	},
+	{
+		"Name": "Product_XPBoost_30Day",
+		"ID": "Product_XPBoost_30Day",
+		"Title": "XP Boost: 30 days",
+		"Description": "+100% XP for 30 days.",
+		"Tooltip": "Earn an additional 100% experience from every match you complete over the next 30 days.",
+		"Price": 1200,
+		"Currency": "Coins",
+		"Icon": "/Game/Art/Widgets/T_StoreXPCircle.T_StoreXPCircle"
+	},
+	{
+		"Name": "Product_XPBoost_3Wins",
+		"ID": "Product_XPBoost_3Wins",
+		"Title": "XP Boost: Three Wins",
+		"Description": "Your next three wins give +100% XP.",
+		"Tooltip": "Earn an additional 100% experience from your next three match victories.",
+		"Price": 200,
+		"Currency": "Coins",
+		"Icon": "/Game/Art/Widgets/T_StoreXPBanner.T_StoreXPBanner"
+	},
+	{
+		"Name": "Product_XPBoost_10Wins",
+		"ID": "Product_XPBoost_10Wins",
+		"Title": "XP Boost: 10 Wins",
+		"Description": "Your next 10 wins give +100% XP.",
+		"Tooltip": "Earn an additional 100% experience from your next 10 match victories.",
+		"Price": 550,
+		"Currency": "Coins",
+		"Icon": "/Game/Art/Widgets/T_StoreXPBanner.T_StoreXPBanner"
+	},
+	{
+		"Name": "Product_XPBoost_30Wins",
+		"ID": "Product_XPBoost_30Wins",
+		"Title": "XP Boost: 30 Wins",
+		"Description": "Your next 30 wins give +100% XP.",
+		"Tooltip": "Earn an additional 100% experience from your next 30 match victories.",
+		"Price": 1200,
+		"Currency": "Coins",
+		"Icon": "/Game/Art/Widgets/T_StoreXPBanner.T_StoreXPBanner"
+	},
+	{
+		"Name": "Product_ReputationBoost_1Day",
+		"ID": "Product_ReputationBoost_1Day",
+		"Title": "Reputation Boost: 24 hours",
+		"Description": "+100% Reputation for 24 hours.",
+		"Tooltip": "Earn an additional 100% reputation from every match you complete over the next 24 hours.",
+		"Price": 200,
+		"Currency": "Coins",
+		"Icon": "/Game/Art/Widgets/T_StoreReputationCircle.T_StoreReputationCircle"
+	},
+	{
+		"Name": "Product_ReputationBoost_3Day",
+		"ID": "Product_ReputationBoost_3Day",
+		"Title": "Reputation Boost: Three days",
+		"Description": "+100% Reputation for 3 days.",
+		"Tooltip": "Earn an additional 100% reputation from every match you complete over the next 3 days.",
+		"Price": 350,
+		"Currency": "Coins",
+		"Icon": "/Game/Art/Widgets/T_StoreReputationCircle.T_StoreReputationCircle"
+	},
+	{
+		"Name": "Product_ReputationBoost_10Day",
+		"ID": "Product_ReputationBoost_10Day",
+		"Title": "Reputation Boost: 10 days",
+		"Description": "+100% Reputation for 10 days.",
+		"Tooltip": "Earn an additional 100% reputation from every match you complete over the next 10 days.",
+		"Price": 950,
+		"Currency": "Coins",
+		"Icon": "/Game/Art/Widgets/T_StoreReputationCircle.T_StoreReputationCircle"
+	},
+	{
+		"Name": "Product_ReputationBoost_30Day",
+		"ID": "Product_ReputationBoost_30Day",
+		"Title": "Reputation Boost: 30 days",
+		"Description": "+100% Reputation for 30 days.",
+		"Tooltip": "Earn an additional 100% reputation from every match you complete over the next 30 days.",
+		"Price": 2000,
+		"Currency": "Coins",
+		"Icon": "/Game/Art/Widgets/T_StoreReputationCircle.T_StoreReputationCircle"
+	},
+	{
+		"Name": "Product_ReputationBoost_3Wins",
+		"ID": "Product_ReputationBoost_3Wins",
+		"Title": "Reputation Boost: Three Wins",
+		"Description": "Your next three wins give +100% Reputation.",
+		"Tooltip": "Earn an additional 100% reputation from your next three match victories.",
+		"Price": 350,
+		"Currency": "Coins",
+		"Icon": "/Game/Art/Widgets/T_StoreReputationBanner.T_StoreReputationBanner"
+	},
+	{
+		"Name": "Product_ReputationBoost_10Wins",
+		"ID": "Product_ReputationBoost_10Wins",
+		"Title": "Reputation Boost: 10 Wins",
+		"Description": "Your next 10 wins give +100% Reputation.",
+		"Tooltip": "Earn an additional 100% reputation from your next 10 match victories.",
+		"Price": 950,
+		"Currency": "Coins",
+		"Icon": "/Game/Art/Widgets/T_StoreReputationBanner.T_StoreReputationBanner"
+	},
+	{
+		"Name": "Product_ReputationBoost_30Wins",
+		"ID": "Product_ReputationBoost_30Wins",
+		"Title": "Reputation Boost: 30 Wins",
+		"Description": "Your next 30 wins give +100% Reputation.",
+		"Tooltip": "Earn an additional 100% reputation from your next 30 match victories.",
+		"Price": 2000,
+		"Currency": "Coins",
+		"Icon": "/Game/Art/Widgets/T_StoreReputationBanner.T_StoreReputationBanner"
+	}
+]
