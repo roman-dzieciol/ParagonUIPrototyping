@@ -23,6 +23,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Appearance)
 		float ItemHeight;
 
+	/** The padding area between the rows */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Layout")
+		FMargin RowPadding;
+
 	/**  */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Content)
 		TArray<UObject*> Items;

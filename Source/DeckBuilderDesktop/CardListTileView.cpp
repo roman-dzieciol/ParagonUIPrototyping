@@ -51,6 +51,7 @@ TSharedRef<ITableRow> UCardListTileView::HandleOnGenerateTile(UObject* Item, con
 		if (Widget != NULL)
 		{
 			return SNew(STableRow< UObject* >, OwnerTable)
+				.Padding( RowPadding )
 				[
 					Widget->TakeWidget()
 				];
