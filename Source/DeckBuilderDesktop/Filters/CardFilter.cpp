@@ -32,7 +32,7 @@ FText UCardFilter::GetDisplayValue() const
 	return LocalizedValue;
 }
 
-void UCardFilter::RemoveFiltersMatching(FName FilterName, FText DisplayName, FText DisplayValue)
+void UCardFilter::RemoveFiltersMatching(FName Name, FText DisplayName, FText DisplayValue)
 {
 
 }
@@ -53,7 +53,7 @@ void UCardFilter::RemoveThisFilter()
 	}
 }
 
-TArray<UCardFilter*> UCardFilter::FindFiltersMatching(FName FilterName, FText DisplayName, FText DisplayValue) const
+TArray<UCardFilter*> UCardFilter::FindFiltersMatching(FName Name, FText DisplayName, FText DisplayValue) const
 {
 	return TArray<UCardFilter*>();
 }
