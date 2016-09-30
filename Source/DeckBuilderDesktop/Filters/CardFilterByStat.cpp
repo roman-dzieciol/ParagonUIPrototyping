@@ -71,10 +71,10 @@ FText UCardFilterByStat::GetDisplayValue() const
 	}
 }
 
-TArray<UCardFilter*> UCardFilterByStat::FindFiltersMatching(FName FilterName, FText DisplayName, FText DisplayValue) const
+TArray<UCardFilter*> UCardFilterByStat::FindFiltersMatching(FName Name, FText DisplayName, FText DisplayValue) const
 {
 	TArray<UCardFilter*> Result;
-	if ((FilterName == NAME_None || this->FilterName.IsEqual(FilterName)) &&
+	if ((Name == NAME_None || this->FilterName.IsEqual(Name)) &&
 		(DisplayName.IsEmpty() || LocalizedName.EqualTo(DisplayName)) &&
 		(DisplayValue.IsEmpty() || LocalizedValue.EqualTo(DisplayValue)))
 	{

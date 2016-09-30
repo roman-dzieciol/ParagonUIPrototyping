@@ -62,10 +62,10 @@ bool UCardFilterGroup::IsMatching(UCardModel* CardModel) const
 }
 
 
-void UCardFilterGroup::RemoveFiltersMatching(FName FilterName, FText DisplayName, FText DisplayValue)
+void UCardFilterGroup::RemoveFiltersMatching(FName Name, FText DisplayName, FText DisplayValue)
 {
 	Filters.RemoveAll([=](UCardFilter* Filter) {
-		if (!FilterName.IsEqual(NAME_None) && !Filter->FilterName.IsEqual(FilterName)) {
+		if (!FilterName.IsEqual(NAME_None) && !Filter->FilterName.IsEqual(Name)) {
 			return false;
 		}
 		if (!DisplayName.IsEmptyOrWhitespace() && !Filter->GetDisplayName().EqualToCaseIgnored(DisplayName)) {
@@ -78,7 +78,7 @@ void UCardFilterGroup::RemoveFiltersMatching(FName FilterName, FText DisplayName
 	});
 	for (auto Filter : Filters)
 	{
-		Filter->RemoveFiltersMatching(FilterName, DisplayName, DisplayValue);
+		Filter->RemoveFiltersMatching(Name, DisplayName, DisplayValue);
 	}
 }
 
@@ -111,12 +111,12 @@ void UCardFilterGroup::RemoveAllFilters()
 	Filters.Empty();
 }
 
-TArray<UCardFilter*> UCardFilterGroup::FindFiltersMatching(FName FilterName, FText DisplayName, FText DisplayValue) const
+TArray<UCardFilter*> UCardFilterGroup::FindFiltersMatching(FName Name, FText DisplayName, FText DisplayValue) const
 {
 	TArray<UCardFilter*> Result;
 	for (auto Filter : Filters)
 	{
-		Result.Append(Filter->FindFiltersMatching(FilterName, DisplayName, DisplayValue));
+		Result.Append(Filter->FindFiltersMatching(Name, DisplayName, DisplayValue));
 	}
 	return Result;
 }

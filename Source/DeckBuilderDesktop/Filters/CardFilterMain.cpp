@@ -162,7 +162,9 @@ void UCardFilterMain::FilterByCostValues(const TArray<int32> CostValues)
 {
 	check(CostValueFilterGroup != nullptr);
 	check(CostValueFilterGroup->IsValidLowLevel());
-	UE_LOG(Deck, Verbose, TEXT("UCardFilterMain::FilterByCostValues: %s"), *FString::Join(CostValues, TEXT(", ")));
+
+	//FString::Join does not support TArray<int32>?
+	//UE_LOG(Deck, Verbose, TEXT("UCardFilterMain::FilterByCostValues: %s"), *FString::Join(CostValues, TEXT(", ")));
 
 	CostValueFilterGroup->RemoveAllFilters();
 	for (auto CostValue : CostValues)
